@@ -1,0 +1,2500 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ExpertPdf.HtmlToPdf</name>
+    </assembly>
+    <members>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfSecurityOptions">
+            <summary>
+            This class encapsulates the options to control the PDF document
+            security options. The PDFConverter class define 
+            a reference to an object of this type
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.CanAssembleDocument">
+            <summary>
+            Can assembling of the document (create bookmarks, thumbnail images or insert, rotate, delete
+            pages).
+            </summary>
+            <remarks>This property has effect if 128 bit key set.</remarks>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.CanCopyContent">
+            <summary>
+            Can to copy document content.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.CanEditAnnotations">
+            <summary>
+            Can to edit PDF document annotations.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.CanEditContent">
+            <summary>
+            Can to edit PDF document content.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.CanFillFormFields">
+            <summary>
+            Can the fill form fields.
+            /// </summary>
+            <remarks>This property works only if 128 bit key set.</remarks>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.CanPrint">
+            <summary>
+            Can print the document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.KeySize">
+            <summary>
+            The dimension of the encryption key.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.OwnerPassword">
+            <summary>
+            The password required to change permissions of the PDF document.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfSecurityOptions.UserPassword">
+            <summary>
+            The password required to open the PDF document.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfFooterOptions">
+            <summary>
+            This class encapsulates the options to control the appearance of the 
+            footer in the rendered PDF document. The PDFConverter class contains a 
+            reference to an object of this type. If the ShowFooter property from PDFDocumentOptions 
+            object is false, the footer options have no efect
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.HtmlToPdfArea">
+            <summary>
+            Set this property with a HtmlToPdfElement object to render HTML code or URL in footer.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.TextArea">
+            <summary>
+            Set this property with a TextArea object to render a text in header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.ImageArea">
+            <summary>
+            Set this property with an ImageArea object to render an image in header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterBackColor">
+            <summary>
+            The background color of the footer
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterImage">
+            <summary>
+            The image to be displayed in the footer. The image will be displayed at full size
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterImageLocation">
+            <summary>
+            The location in points inside the footer where to display the image. By default it is displayed in 
+            the top left corner of the header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterHeight">
+            <summary>
+            The height in points of PDF footer
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterText">
+            <summary>
+            The text to appear in the rendered PDF document footer
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterTextYLocation">
+            <summary>
+            The Y location in points of the footer text
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterTextWidth">
+            <summary>
+            The footer text width in points. Default is -1 which means page width
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterTextColor">
+            <summary>
+            The color of the text displayed in the footer
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterTextFontType">
+            <summary>
+            The font type of the text displayed in the footer
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.FooterTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.ShowPageNumber">
+            <summary>
+            When true, the page numbers. The default value is true. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.DrawFooterLine">
+            <summary>
+            When true, a line is displayed above the footer area. The default value is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.PageNumberText">
+            <summary>
+            The text to be displayed before the page number. The default value is 'Page'
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.PageNumberTextFontType">
+            <summary>
+            The font type of the text displayed in the footer page number text
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.PageNumberTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the footer page number text
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.PageNumberTextColor">
+            <summary>
+            The color of the text displayed in the footer page number text
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.PageNumberYLocation">
+            <summary>
+            The Y location in points of the page numbering
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.ShowOnOddPages">
+            <summary>
+            Show or not the header on odd pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.ShowOnEvenPages">
+            <summary>
+            Show or not the header on even pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfFooterOptions.ShowOnFirstPage">
+            <summary>
+            Show or not the header on first page. If true, the header will be printed on first page if 
+            showing the header on odd pages is also true.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.ImgConverter">
+            <summary>
+            This class offers the necessary API to create images in various formats from
+            a specified web page
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.#ctor">
+            <summary>
+            Creates an image converter to autodetect the width and height
+            of the web page
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.#ctor(System.Int32)">
+            <summary>
+            Creates an image converter for a web page with the specified width and 
+            an autodected height
+            </summary>
+            <param name="pageWidth">The web page width </param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates an image converter for a web page with the specified width and height
+            </summary>
+            <param name="pageWidth">The web page width</param>
+            <param name="pageHeight">The web page height</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromUrl(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified URL in the 
+            the specified System.Drawing.Imaging.ImageFormat format
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML file in the 
+            the specified System.Drawing.Imaging.ImageFormat format
+            </summary>
+            <param name="htmlFilePath">The HTMl file full path</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter. 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the HTML
+            string in a temporary file
+            </summary>
+            <param name="htmlString">The HTML string to be converted to PDF</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the HTML
+            string in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlString">The HTML string to be converted to PDF</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the
+            stream in a temporary file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets an System.Drawing.Image object from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format by writing first the
+            stream in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The rendered System.Drawing.Image object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageFromUrlBytes(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified URL in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML file in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlFilePath">The full path of the HTML file to be converted to image</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlString(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlString is first saved into  
+            a temporary file before performing the conversion
+            The bytes can be further written in
+            any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlStringWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML string in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlString is first saved into  
+            a temporary file before performing the conversion. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The bytes can be further written in
+            any stream like a disk file or a web response. 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter. 
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlStream is first saved in a temporary file.
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetImageBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            Gets binary format of an image generated from the specified HTML stream in the 
+            the specified System.Drawing.Imaging.ImageFormat format. The htmlStream is first saved in a temporary file.
+            The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter. 
+            The bytes can be further written in any stream like a disk file or a web response.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The image format</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>The binary representation of the image as byte[] object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromUrlToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified URL in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlFileToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML file in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlFilePath">The HTML file full path to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStringToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStringToFile(System.String,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file. The existing file will be 
+            overwritten
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStringToFileWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file by writing first the HTML string into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStringToFileWithTempFile(System.String,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML string in the specified format
+            and saves the image in the specified disk file by writing first the HTML string into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlString">The HTML string to be converted to image</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file by writing first the HTML stream into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.SaveImageFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.Drawing.Imaging.ImageFormat,System.String,System.String)">
+            <summary>
+            This method produces a image from the specified HTML stream in the specified format
+            and saves the image in the specified disk file by writing first the HTML stream into a temporary file. 
+            The existing file will be overwritten.
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="format">The output image format</param>
+            <param name="outFile">The output file full path</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetMetafileFromUrl(System.String,Winnovative.Common.HTMLParseInfo@)">
+            <summary>
+            Gets an System.Drawing.Metafile object from the specified URL 
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="htmlParseInfo">Additional HTML parsing info</param>
+            <returns>The Metafile object</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetMetafileFromHtmlStringWithTempFile(System.String,Winnovative.Common.HTMLParseInfo@)">
+            <summary>
+            Gets an System.Drawing.Metafile object from the specified HTML string 
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="htmlParseInfo">The HTML parse info</param>
+            <returns>The resulted metafile</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImgConverter.GetMetafileFromHtmlStringWithTempFile(System.String,System.String,Winnovative.Common.HTMLParseInfo@)">
+            <summary>
+            Gets an System.Drawing.Metafile object from the specified HTML string 
+            </summary>
+            <param name="htmlString">The HTML string to convert</param>
+            <param name="baseURL">The HTML string base URL</param>
+            <param name="htmlParseInfo">The HTML parse info</param>
+            <returns>The resulted metafile object</returns>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.PageWidth">
+            <summary>
+            Gets or sets the web page width
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.LicenseKey">
+            <summary>
+            Gets or sets the license key
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.PageHeight">
+            <summary>
+            Gets or sets the web page height. If the width was not set aswell, 
+            this property has no effect
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.BatchConversion">
+            <summary>
+            Set this true when using the converter for batch conversion
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.ScriptsEnabled">
+            <summary>
+            Enable scripts when rendering HTML to image. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.ActiveXEnabled">
+            <summary>
+            Enable ActiveX controls when rendering HTML to image. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.AuthenticationUsername">
+            <summary>
+            Optionally set the Username property to authenticate to web server
+            before accessing the URL to be converted (e.g handles any IIS authentication method)
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.AuthenticationPassword">
+            <summary>
+            Optionally set the Password property to authenticate to web server
+            before accessing the URL to be converted (e.g handles any IIS authentication method)
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImgConverter.ConversioDelay">
+            <summary>
+            An additional time in seconds to wait for asynchronous items to be loaded
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.VerticalTextAlign">
+            <summary>
+            Specifies vertical alignment of text.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.VerticalTextAlign.Top">
+            <summary>
+            Top aligned.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.VerticalTextAlign.Middle">
+            <summary>
+            Center aligned.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.VerticalTextAlign.Bottom">
+            <summary>
+            Bottom alligned.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.UnitsConverter">
+            <summary>
+            Converts between various graphic units (pixels, points, etc)
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.UnitsConverter.PointsToPixels(System.Single)">
+            <summary>
+            Converts from points to pixels. The result of this method takes into account the 
+            current screen resolution.
+            </summary>
+            <param name="points">The value in points to convert.</param>
+            <returns>The value in pixels.</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.UnitsConverter.PixelsToPoints(System.Single)">
+            <summary>
+            Converts from pixels to points. The result of this method takes into account the 
+            current screen resolution.
+            </summary>
+            <param name="pixels">The value in pixels to convert.</param>
+            <returns>The value in points.</returns>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfDocumentInfo">
+            <summary>
+            This class encapsulates the options to control the PDF document
+            description (author, title, keywords, etc). The PDFConverter class define 
+            a reference to an object of this type
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentInfo.AuthorName">
+            <summary>
+            Gets or sets name of the document author.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentInfo.CreatedDate">
+            <summary>
+            Gets or sets the date and time when the document was created.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentInfo.Keywords">
+            <summary>
+            Gets or sets document keywords.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentInfo.Application">
+            <summary>
+            Gets or sets the name of the application that produced this document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentInfo.Subject">
+            <summary>
+            Gets or sets the subject of the document.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentInfo.Title">
+            <summary>
+            Gets or sets document title.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfFontType">
+            <summary>
+            The list of supported fonts for the header and footer
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.Helvetica">
+            <summary>
+            Helvetica
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.HelveticaBold">
+            <summary>
+            HelveticaBold
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.HelveticaOblique">
+            <summary>
+            HelveticaOblique
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.HelvetivaBoldOblique">
+            <summary>
+            HelvetivaBoldOblique
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.Courier">
+            <summary>
+            Courier
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.CourierBold">
+            <summary>
+            CourierBold
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.CourierOblique">
+            <summary>
+            CourierOblique
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.CourierBoldOblique">
+            <summary>
+            CourierBoldOblique
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.TimesRoman">
+            <summary>
+            TimesRoman
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.TimesBold">
+            <summary>
+            TimesBold
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.TimesBoldItalic">
+            <summary>
+            TimesBoldItalic
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.TimesItalic">
+            <summary>
+            TimesItalic
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.Symbol">
+            <summary>
+            Symbol
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfFontType.ZapfDingbats">
+            <summary>
+            ZapfDingbats
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfPageSize">
+            <summary>
+            The PDF document size
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Custom">
+            <summary>
+            When the PDF page size is set to custom, the dimensions from CustomPdfSize will be applied
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Letter">
+            <summary>
+            Letter format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Note">
+            <summary>
+            Note format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Legal">
+            <summary>
+            Legal format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A0">
+            <summary>
+            A0 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A1">
+            <summary>
+            A1 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A2">
+            <summary>
+            A2 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A3">
+            <summary>
+            A3 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A4">
+            <summary>
+            A4 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A5">
+            <summary>
+            A5 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A6">
+            <summary>
+            A6 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A7">
+            <summary>
+            A7 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A8">
+            <summary>
+            A8 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A9">
+            <summary>
+            A9 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.A10">
+            <summary>
+            A0 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.B0">
+            <summary>
+            B0 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.B1">
+            <summary>
+            B1 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.B2">
+            <summary>
+            B2 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.B3">
+            <summary>
+            B3 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.B4">
+            <summary>
+            B4 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.B5">
+            <summary>
+            B5 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.ArchE">
+            <summary>
+            ArchE format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.ArchD">
+            <summary>
+            ArchD format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.ArchC">
+            <summary>
+            ArchC format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.ArchB">
+            <summary>
+            ArchB format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.ArchA">
+            <summary>
+            ArchA format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Flsa">
+            <summary>
+            Flsa format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.HalfLetter">
+            <summary>
+            HalfLetter format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Letter11x17">
+            <summary>
+            11x17 format
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfPageSize.Ledger">
+            <summary>
+            Ledger format
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfCompressionLevel">
+            <summary>
+            The rendered PDF compression level
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfCompressionLevel.AboveNormal">
+            <summary>
+            Better compression but takes more time to compress
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfCompressionLevel.BelowNormal">
+            <summary>
+            Something middle between normal and BestSpeed compressions
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfCompressionLevel.Best">
+            <summary>
+            Use the best compression but takes more time to compress
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfCompressionLevel.BestSpeed">
+            <summary>
+            The compression speed is high but the compression percentage is low
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfCompressionLevel.NoCompression">
+            <summary>
+            Does not do any compression
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PdfCompressionLevel.Normal">
+            <summary>
+            Use normal compression, a balance between compression speed and resulted size
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.BeforeCreateNextPageHandler">
+            <summary>
+            BeforeCreateNextPage event handler
+            </summary>
+            <param name="bcnpEventArgs">The BeforeCreateNextPage event handler</param>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.BeforeCreateNextPageEventArgs">
+            <summary>
+            BeforeCreateNextPage event arguments
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.BeforeCreateNextPageEventArgs.Cancel">
+            <summary>
+            Set this property true to cancel automatic creation of next page. 
+            This will also end the rendering of the next page.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PDFPageOrientation">
+            <summary>
+            PDF page orientation
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PDFPageOrientation.Portrait">
+            <summary>
+            Portrait
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.PDFPageOrientation.Landscape">
+            <summary>
+            Landscape
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfDocumentOptions">
+            <summary>
+            This class encapsulates the options to control the PDF document
+            redering process. The PDFConverter class define 
+            a reference to an object of this type
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.LeftMargin">
+            <summary>
+            The rendered PDF document left margin
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.RightMargin">
+            <summary>
+            The rendered PDF document right margin
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.TopMargin">
+            <summary>
+            The rendered PDF document top margin
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.BottomMargin">
+            <summary>
+            The rendered PDF document bottom margin
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.PdfCompressionLevel">
+            <summary>
+            This property controls the compression level of the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.PdfPageSize">
+            <summary>
+            This property controls the size of the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.CustomPdfPageSize">
+            <summary>
+            This property gives the PDF page size when the PdfPageSize property is set Custom
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.FitWidth">
+            <summary>
+            When this property is true the HTML content will be resized if necessary to fit the available width in PDF page.
+            When false the HTML content will be rendered at the real size. By default this property is true and 
+            the content will be resized if necessary to fit the available width in PDF page
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.PdfPageOrientation">
+            <summary>
+            This property controls the page orientation of the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.GenerateSelectablePdf">
+            <summary>
+            When true, this property  will instruct the PDF renderer to embed a metafile instead of an image 
+            in the rendered PDF document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.ShowHeader">
+            <summary>
+            This property controls the whether the header appears or not in the rendered PDF document. 
+            The header properties can be further customized by setting the properties of the PDFHeaderOptions 
+            object exposed by the PDFHeaderOptions property of the PDFConverter class.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.EmbedFonts">
+            <summary>
+            When true this options instructs the converter to embed all the true type fonts into the PDF document. 
+            The default value is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.LiveUrlsEnabled">
+            <summary>
+            When true this options instructs the converter to convert the html links in PDF links. 
+            The default value is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.ShowFooter">
+            <summary>
+            This property controls the whether the footer appears or not in the rendered PDF document. 
+            The footer properties can be further customized by setting the properties of the PDFFooterOptions 
+            object exposed by the PDFFooterOptions property of the PDFConverter class.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.AppendPDFFile">
+            <summary>
+            The full path of an existing PDF document to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.AppendPDFFileArray">
+            <summary>
+            An array of full paths of existing PDF documents to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.AppendPDFStream">
+            <summary>
+            The PDF stream to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfDocumentOptions.AppendPDFStreamArray">
+            <summary>
+            An array of PDF streams to be appended to the PDF
+            document resulted after conversion
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.HtmlToPdfArea">
+            <summary>
+            A HTML string or URL to be added to the header or footer of the rendered PDF document. The PdfConverter.PdfHeaderOptions.HtmlToPdfArea
+            property should be set with an object of this type.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.HtmlToPdfArea.DEFAULT_HTML_VIEWER_WIDTH_PX">
+            <summary>
+            The default virtual browser width in pixels
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.String,System.String)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.String)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.String,System.String)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.String)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed
+            the destination width will be given by the available width in page</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.String)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.String,System.Int32)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Int32)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a HTML string to PDF converter element at the specified x and y coordinates with the specified
+            width. The HTML string to convert is given by the htmlStringToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="height">The destination height in points  for the rendered content. If the specified height is less or equal 0,
+            the destination height will be auto determined so all the content can be rendered. Please note that the specified height is 
+            the effective height that will be rendered in the PDF document and does not include for example 
+            the empty spaces introduced by custom or auomatic page breaks.</param>
+            <param name="htmlStringToConvert">The HTML string convert to PDF.</param>
+            <param name="htmlStringBaseURL">The full URL of the page from where this string was taken used to resolve the images and CSS
+            files referenced by a relative URL in the HTML string. This parameter is optional and the default value is NULL.
+            When this parameter is NULL no base URL will be used. This paramter has effect only if the specified HTML string contains
+            a HEAD element because a <BASE HREF="baseURL"></BASE> will be inserted  automatically by the converter.</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page.</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.HtmlToPdfArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create a URL to PDF converter element at the specified x and y coordinates with the specified
+            width and height. The URL to converter is given by the urlToConvert parameter. 
+            The virtual browser width and height in pixels are specified by the htmlViewerWidth and
+            htmlViewerHeight paramenters.
+            </summary>
+            <param name="x">The x position in points where the rendered content will be placed </param>
+            <param name="y">The y position in points where the rendered content will be placed</param>
+            <param name="width">The destination width in points  for the rendered content. If the specified with is less or equal 0,
+            the destination width will be given by the available width in page</param>
+            <param name="height">The destination height in points  for the rendered content. If the specified height is less or equal 0,
+            the destination height will be auto determined so all the content can be rendered. Please note that the specified height is 
+            the effective height that will be rendered in the PDF document and does not include for example 
+            the empty spaces introduced by custom or auomatic page breaks.</param>
+            <param name="urlToConvert">The URL to convert to PDF</param>
+            <param name="htmlViewerWidth">The virtual browser width in pixels. The default value is 1024 pixels. The effect of this parameter
+            is similar with viewing the HTML page in a browser window with the specified width. When this parameter is less or equal 0, the
+            converter will try to auto-determine the HTML page width from the body element width.</param>
+            <param name="htmlViewerHeight">The virtual browser height in pixels. The default value is 0 which means the height will
+            be auto-determined. The effect of this parameter is similar with viewing the HTML page in a browser window `
+            with the specified width and height. When this paramter is less or equal 0, the converter will try to auto-determine the 
+            HTML page height from the body element height.</param>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.LicenseKey">
+            <summary>
+            Gets or sets the license key
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.HtmlViewerWidth">
+            <summary>
+            Gets or sets the HTML viewer width in pixels
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.HtmlViewerHeight">
+            <summary>
+            Gets or sets the HTML viewer height in pixels. If the viewer width was not set, 
+            this property has no effect
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.AvoidTextBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the text between PDF pages
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.AvoidImageBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the images between PDF pages
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.FitWidth">
+            <summary>
+            When this property is true the HTML content will be resized if necessary to fit the available width in PDF page.
+            When false the HTML content will be rendered at the real size. By default this property is true and 
+            the content will be resized if necessary to fit the available width in PDF page
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.AdjustBorderSize">
+            <summary>
+            There are situations when a fraction of the right and bottom borders of an image or 
+            table cell are overwritten by the image content or table cell background when the PDF document is viewed with Adobe Reader. 
+            The AdjustBorderSize value is subtracted from the background width and height. 
+            The default value is 0 points. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.BkgTransparency">
+            <summary>
+            Modify background transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.ImgTransparency">
+            <summary>
+            Modify images transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.AlphaBlendEnabled">
+            <summary>
+            Enables or disables alpha blending for transparent images. Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.MaskBltEnabled">
+            <summary>
+            Enables or disables masking for transparent images. Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.RightToLeftEnabled">
+            <summary>
+            Set this true if the web page text is in a right-to-left language like Hebrew or Arabic
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.BatchConversion">
+            <summary>
+            Set this true when using the converter for batch conversion in a loop
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.ScriptsEnabled">
+            <summary>
+            Enable scripts when rendering HTML to selectable PDF. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.ScriptsEnabledInImage">
+            <summary>
+            Enable scripts when rendering HTML to image. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.ActiveXEnabled">
+            <summary>
+            Enable ActiveX when rendering HTML to selectable PDF. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.ActiveXEnabledInImage">
+            <summary>
+            Enable ActiveX when rendering HTML to image. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.EmbedFonts">
+            <summary>
+            When true this options instructs the converter to embed all the true type fonts into the PDF document. 
+            The default value is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.LiveUrlsEnabled">
+            <summary>
+            When true this options instructs the converter to convert the html links in PDF links. 
+            The default value is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.HtmlToPdfArea.AuthenticationOptions">
+            <summary>
+            Server authentication options (e.g IIS authentication)
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.BeforeRenderNextPageHandler">
+            <summary>
+            BeforeRenderNextPage event handler
+            </summary>
+            <param name="brnpEventArgs">The BeforeRenderNextPage event handler</param>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.BeforeRenderNextPageEventArgs">
+            <summary>
+            BeforeRenderNextPage event arguments
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.BeforeRenderNextPageEventArgs.#ctor(System.Int32,System.Drawing.RectangleF)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="pageIndex">The next page index</param>
+            <param name="rectangle">The rectangle rendered on the next page</param>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.BeforeRenderNextPageEventArgs.Cancel">
+            <summary>
+            Set this property true to cancel rendering on next page
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.BeforeRenderNextPageEventArgs.Rectangle">
+            <summary>
+            The rectangle that will be rendered on the next page
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.BeforeRenderNextPageEventArgs.PageIndex">
+            <summary>
+            The index of the next page
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfHeaderOptions">
+            <summary>
+            This class encapsulates the options to control the appearance of the 
+            header in the rendered PDF document. The PDFConverter class contains a 
+            reference to an object of this type. If the ShowHeader property of the PDFDocumentOptions 
+            object is false, the header options have no efect
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HtmlToPdfArea">
+            <summary>
+            Set this property with a HtmlToPdfArea object to render HTML code or URL in header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.TextArea">
+            <summary>
+            Set this property with a TextArea object to render a text in header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.ImageArea">
+            <summary>
+            Set this property with an ImageArea object to render an image in header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderBackColor">
+            <summary>
+            The background color of the header
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderImage">
+            <summary>
+            The image to be displayed in the header. The image will be displayed at full size
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderImageLocation">
+            <summary>
+            The location in points inside the header where to display the image. By default it is displayed in 
+            the top left corner of the header.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderHeight">
+            <summary>
+            The height in points of PDF header
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderText">
+            <summary>
+            The text to appear in the rendered PDF document title. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderTextYLocation">
+            <summary>
+            The Y location of the header text in points
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderTextAlign">
+            <summary>
+            The header text alignment
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderTextColor">
+            <summary>
+            The color of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderTextFontType">
+            <summary>
+            The font type of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the header
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderSubtitleText">
+            <summary>
+            A PDF document header subtitle.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderSubtitleTextColor">
+            <summary>
+            The color of the text displayed in the header subtitle
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderSubtitleTextFontType">
+            <summary>
+            The font type of the text displayed in the header subtitle
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderSubtitleTextFontSize">
+            <summary>
+            The font size in points of the text displayed in the header subtitle
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.HeaderTitleSubtitleYSpacing">
+            <summary>
+            The Y distance in points between the title and the subtitle
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.DrawHeaderLine">
+            <summary>
+            When true, a line is displayed under the header area. The default value is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.ShowOnOddPages">
+            <summary>
+            Show or not the header on odd pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.ShowOnEvenPages">
+            <summary>
+            Show or not the header on even pages. By default the header is displayed both on odd and even pages.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfHeaderOptions.ShowOnFirstPage">
+            <summary>
+            Show or not the header on first page. If true, the header will be printed on first page if 
+            showing the header on odd pages is also true.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.ImageArea">
+            <summary>
+            A image to be added to the header or footer of the rendered PDF document. The PdfConverter.PdfHeaderOptions.ImageArea
+            property should be set with an object of this type.
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImageArea.#ctor(System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Creates an ImageElement from the specified file that will be rendered at the position (x,y)
+            with the destWidth width and an auto detected height.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="filePath">The image file path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImageArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String)">
+            <summary>
+            Creates an ImageElement from the specified file that will be rendered at the position (x,y)
+            with the (destWidth,destHeight) size.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="destHeight">The destination rectangle height</param>
+            <param name="filePath">The image file path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImageArea.#ctor(System.Single,System.Single,System.Single,System.Drawing.Image)">
+            <summary>
+            Creates an ImageElement from the specified System.Drawing.Image object that will be rendered at the position (x,y)
+            with the destWidth width and an auto detected height.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="imageObj">The image file path</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ImageArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.Drawing.Image)">
+            <summary>
+            Creates an ImageElement from the specified System.Drawing.Image object that will be rendered at the position (x,y)
+            with the (destWidth,destHeight) size.
+            </summary>
+            <param name="x">The X location where this element will be rendered</param>
+            <param name="y">The Y location where this element will be rendered</param>
+            <param name="destWidth">The destination rectangle width</param>
+            <param name="destHeight">The destination rectangle height</param>
+            <param name="imageObj">The image file path</param>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.XLocation">
+            <summary>
+            Gets or sets the image location on X
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.YLocation">
+            <summary>
+            Gets or sets the image location on Y
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.DestWidth">
+            <summary>
+            Gets or sets the image destination width
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.DestHeight">
+            <summary>
+            Gets or sets the image destination height
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.ImageObj">
+            <summary>
+            Gets the underlying image object
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.ImageWidth">
+            <summary>
+            Gets the underlying image width.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.ImageHeight">
+            <summary>
+            Gets the underlying image height.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.ImageArea.Transparency">
+            <summary>
+            Gets or sets element transparency. The transparency is expressed as a value between 0 and 100. 
+            0 means completely transparent and 100 completely opaque.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.RenderImageFormat">
+            <summary>
+            The supporter image formats
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.RenderImageFormat.Bmp">
+            <summary>
+            Bmp
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.RenderImageFormat.Gif">
+            <summary>
+            Gif
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.RenderImageFormat.Jpeg">
+            <summary>
+            Jpeg
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.RenderImageFormat.Png">
+            <summary>
+            Png
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.RenderImageFormat.Tiff">
+            <summary>
+            Tiff
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.RenderImageFormatConverter">
+            <summary>
+            This class converts a RenderImageFormat to System.Drawing.ImageFormat
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.RenderImageFormatConverter.GetImageFormat(ExpertPdf.HtmlToPdf.RenderImageFormat)">
+            <summary>
+            Converts a RenderImageFormat to System.Drawing.ImageFormat
+            </summary>
+            <param name="format">The RenderImageFormat to convert</param>
+            <returns>The converted ImageFormat</returns>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.HorizontalTextAlign">
+            <summary>
+            Specifies horizontal alignment of text.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.HorizontalTextAlign.Default">
+            <summary>
+            Align default.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.HorizontalTextAlign.Left">
+            <summary>
+            Align left.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.HorizontalTextAlign.Center">
+            <summary>
+            Align center.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.HorizontalTextAlign.Right">
+            <summary>
+            Align right.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.HorizontalTextAlign.Justify">
+            <summary>
+            Align justify.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.ConverterUtils">
+            <summary>
+            HTML converter utilities
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ConverterUtils.GetHtmlFromURL(System.String)">
+            <summary>
+            Get the HTML code from the specified URL. Use the autodetermined page encoding
+            to create the resulted string object. The default code page is UTF8 if the page
+            has no encoding specified
+            </summary>
+            <param name="url">The URL from where to get the HTML</param>
+            <returns>The page HTML string</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ConverterUtils.GetHtmlFromURL(System.String,System.Text.Encoding)">
+            <summary>
+            Get the HTML code from the specified URL. Use the specified page encoding
+            to create the resulted string object. 
+            </summary>
+            <param name="url">The URL from where to get the HTML</param>
+            <param name="pageEncoding">The encoding used to build the resulted string object</param>
+            <returns>The page HTML string</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ConverterUtils.GetHtmlFromURL(System.Net.HttpWebRequest,System.Text.Encoding)">
+            <summary>
+            
+            </summary>
+            <param name="request">The HttpWebRequest object to to make the HTTP request</param>
+            <param name="pageEncoding">The encoding used to build the resulted string object</param>
+            <returns>The page HTML string</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.ConverterUtils.RenderHtmlFromURL(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Retrieves the HTML code from a URL and executes the JavaScript code. 
+            The GetHtmlFromURL only retrieves the HTML code as returned by the server
+            </summary>
+            <param name="url"></param>
+            <param name="scriptsEnabled">Enable scripts when rendering the HTML string</param>
+            <param name="activeXEnabled">Enable Active X controls when rendering the HTML string</param>
+            <returns></returns>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfConverter">
+            <summary>
+            This class offers the necessary API to create a PDF document from
+            a specified web page
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.#ctor">
+            <summary>
+            Creates a web page to PDF converter which will autodetect the width and height
+            of the web page
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.#ctor(System.Int32)">
+            <summary>
+            Creates a web page to PDF converter which will autodetect the height
+            of the web page.
+            </summary>
+            <param name="pageWidth">The web page width</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a web page to PDF converter for a web page with the specified width and height
+            </summary>
+            <param name="pageWidth">The web page width</param>
+            <param name="pageHeight">The web page height</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfFromUrlBytes(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified web page URL
+            </summary>
+            <param name="url">The web page URL</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlFile(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified web page URL
+            </summary>
+            <param name="htmlFilePath">The full path of the HTML file</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlString(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlString(System.String,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the htmlString parameter
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML code 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlStream(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML code. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream containg a HTML string in the specified encoding</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlStringWithTempFile(System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string by writing first the HTML string in a temporary file
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlStringWithTempFile(System.String,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified HTML string by writing first the HTML string in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the htmlStream parameter 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML code by writing first the HTML string 
+            in a temporary file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.GetPdfBytesFromHtmlStreamWithTempFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Gets the binary representation of the rendered PDF document from the 
+            specified stream containing the HTML stream by writing first the HTML stream
+            in a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream containg the HTML code to be converted</param>
+            <param name="streamEncoding">The encoding of the HTML stream</param>
+            <param name="urlBase">The URL base of the page</param>
+            <returns>An array of bytes containing the binary representation of the PDF document</returns>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromUrlToFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified URL into the specified 
+            disk file
+            </summary>
+            <param name="url">The web page URL</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlFileToFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML file into the specified 
+            disk file
+            </summary>
+            <param name="htmlFilePath">The HTML file full path</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStringToFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file. 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStringToFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStreamToFile(System.IO.Stream,System.Text.Encoding,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStringToFileWithTempFile(System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file by writing first the HTML string into a temporary file
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStringToFileWithTempFile(System.String,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML string into the specified 
+            disk file by writing first the HTML string into a temporary file. The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlString parameter 
+            </summary>
+            <param name="htmlString">The HTML string</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML stream into the specified 
+            disk file by writing first the HTML stream into a temporary file
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.PdfConverter.SavePdfFromHtmlStreamToFileWithTempFile(System.IO.Stream,System.Text.Encoding,System.String,System.String)">
+            <summary>
+            Saves the rendered PDF document from the specified HTML stream into the specified 
+            disk file by writing first the HTML stream into a temporary file.The urlBase parameter allows the converter to
+            determine the full URLs from relative URLs for images and CSS files appearing 
+            in the HTML code from htmlStream parameter 
+            </summary>
+            <param name="htmlStream">The HTML stream</param>
+            <param name="streamEncoding">The HTML stream encoding</param>
+            <param name="outFile">The full path of the file where to save the rendered PDF document</param>
+            <param name="urlBase">The URL base of the page</param>
+        </member>
+        <member name="E:ExpertPdf.HtmlToPdf.PdfConverter.BeforeCreateNextPageEvent">
+            <summary>
+            This event is raised when the next page is about to be created to continue rendering.
+            The element rendering can be cancelled from the event handler of this event.
+            </summary>
+        </member>
+        <member name="E:ExpertPdf.HtmlToPdf.PdfConverter.BeforeRenderNextPageEvent">
+            <summary>
+            This is event is raised before rendering the content on a page, including the intial page.
+            The element rendering can be cancelled from the event handler of this event.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.LicenseKey">
+            <summary>
+            Gets or sets the license key
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PageWidth">
+            <summary>
+            Gets or sets the web page width
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PageHeight">
+            <summary>
+            Gets or sets the web page height. If the width was not set aswell, 
+            this property has no effect
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PdfDocumentOptions">
+            <summary>
+            Gets a reference to the object controlling the generated PDF 
+            document options
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.AuthenticationOptions">
+            <summary>
+            Optionally set this object Username and Password properties to authenticate to web server
+            before accessing the URL to be converted (e.g handles any IIS authentication method)
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PdfDocumentInfo">
+            <summary>
+            Gets a reference to the object to controlling the generated PDF 
+            document description
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PdfSecurityOptions">
+            <summary>
+            Gets a reference to the object to controlling the generated PDF 
+            document security settings
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PdfHeaderOptions">
+            <summary>
+            Gets a reference to an object to control the generated PDF 
+            document header options
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PdfFooterOptions">
+            <summary>
+            Gets a reference to an object to control the generated PDF 
+            document footer options
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.PdfBookmarkOptions">
+            <summary>
+            Gets a reference to the object controlling the bookmarks creation for the rendered PDF document.
+            In order to enable creation of bookmarks you have to set the TagNames property of PdfBookmarkOptions
+            with the names of the HTML tags you want to bookmark.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.AvoidTextBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the text between PDF pages
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.AvoidImageBreak">
+            <summary>
+            When true this property instructs the converter to try to
+            avoid cutting off the images between PDF pages
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.RightToLeftEnabled">
+            <summary>
+            Set this true if the web page text is in a right-to-left language like Hebrew or Arabic
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.BatchConversion">
+            <summary>
+            Set this true when using the converter for batch conversion
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ScriptsEnabled">
+            <summary>
+            Enable scripts when rendering HTML to selectable PDF. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ScriptsEnabledInImage">
+            <summary>
+            Enable scripts when rendering HTML to image. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ActiveXEnabled">
+            <summary>
+            Enable ActiveX when rendering HTML to selectable PDF. 
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ActiveXEnabledInImage">
+            <summary>
+            Enable ActiveX when rendering HTML to image. 
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ExternalSampling">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.SampleHtmlString">
+            <summary>
+            Internal use only
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.AdjustBorderSize">
+            <summary>
+            There are situations when a fraction of the right and bottom borders of an image or 
+            table cell are overwritten by the image content or table cell background when the PDF document is viewed with Adobe Reader. 
+            The AdjustBorderSize value is subtracted from the background width and height. 
+            The default value is 0 points. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.BkgTransparency">
+            <summary>
+            Modify background transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ImgTransparency">
+            <summary>
+            Modify images transparency. 0 means transparent, 100 means opaque.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.AlphaBlendEnabled">
+            <summary>
+            Enables or disables alpha blending for transparent images. Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.MaskBltEnabled">
+            <summary>
+            Enables or disables masking for transparent images. Default is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.UseCrossRefStreams">
+            <summary>
+            When true, the generated PDF will store the PDF cross-reference table and PDF trailer in cross-reference streams.
+            Set this false for compatibility with third party tools unable to understand the cross-reference streams.
+            The default value is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfConverter.ConversioDelay">
+            <summary>
+            An additional time in seconds to wait for asynchronous items to be loaded
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.EncryptionKeySize">
+            <summary>
+            The length of the encryption key
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.EncryptionKeySize.EncryptKey128Bit">
+            <summary>
+            A 128 bit length.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.EncryptionKeySize.EncryptKey40Bit">
+            <summary>
+            A 40 bit length.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.AuthenticationOptions">
+            <summary>
+            Authentication options for accessing a URL in HTML to PDF converter (e.g IIS authentication). 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.AuthenticationOptions.Username">
+            <summary>
+            The username
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.AuthenticationOptions.Password">
+            <summary>
+            The password
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.TextArea">
+            <summary>
+            A text to be added to the header or footer of the rendered PDF document. The PdfConverter.PdfHeaderOptions.TextArea
+            property should be set with an object of this type.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.text">
+            <summary>
+            The string to be written
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.x">
+            <summary>
+            The start x position
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.y">
+            <summary>
+            The start y position
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.width">
+            <summary>
+            The width of destination rectangle
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.height">
+            <summary>
+            The height of the destination rectangle 
+            Is optional
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.font">
+            <summary>
+            The text font
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.multiPageText">
+            <summary>
+            When true a paginable text is rendered
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.paginate">
+            <summary>
+            When true the text can be paginated
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.textAlign">
+            <summary>
+            Horizontal text alignment.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.verticalTextAlign">
+            <summary>
+            Vertical text alignment.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.rightToLeft">
+            <summary>
+            Indicates whether RTL should be checked.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.characterSpacing">
+            <summary>
+            Character spacing value.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.wordSpacing">
+            <summary>
+            Word spacing value.
+            </summary>
+        </member>
+        <member name="F:ExpertPdf.HtmlToPdf.TextArea.leading">
+            <summary>
+            Text leading.
+            </summary>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.TextArea.#ctor(System.Single,System.Single,System.String,System.Drawing.Font)">
+            <summary>
+            Contructs a text element that will be rendered at the specified (x,y) position using the specified width and font. 
+            The height of the rendered text will be auto-determined. The width is the available width in page.
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.TextArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Drawing.Font)">
+            <summary>
+            Contructs a text element that will be rendered at the specified (x,y) position using the specified width and font. 
+            The height of the rendered text will be auto-determined.
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.TextArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.Drawing.Font)">
+            <summary>
+            Contructs a text element that will be rendered in the specified rectangle using the specified font. 
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="height">The height of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.TextArea.#ctor(System.Single,System.Single,System.Single,System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Contructs a text element that will be rendered at the specified (x,y) position using the specified width, font and color. 
+            The height of the rendered text will be auto-determined.
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+            <param name="textColor">The text color</param>
+        </member>
+        <member name="M:ExpertPdf.HtmlToPdf.TextArea.#ctor(System.Single,System.Single,System.Single,System.Single,System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Contructs a text element that will be rendered in the specified rectangle using the specified font and color. 
+            </summary>
+            <param name="x">The start x coordinate where the text will be rendered</param>
+            <param name="y">The start y coordinate where the text </param>
+            <param name="width">The width of the destination rectangle</param>
+            <param name="height">The height of the destination rectangle</param>
+            <param name="text">The text to be rendered</param>
+            <param name="font">The text font</param>
+            <param name="textColor">The text color</param>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.TextAlign">
+            <summary>
+            Gets or sets the text alignment.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.VerticalTextAlign">
+            <summary>
+            Gets or sets the vertical text alignment.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.RightToLeftLanguage">
+            <summary>
+            Set this property true if the text is in a RTL language.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.CharacterSpacing">
+            <summary>
+            Gets or sets an additional spacing between characters.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.WordSpacing">
+            <summary>
+            Gets or sets an aditional spacing between words. The words separator is consider the 
+            space character with code 32
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.LineSpacing">
+            <summary>
+            Gets or sets value that indicates the vertical distance between the baselines of adjacent lines of text.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.TextAngle">
+            <summary>
+            Gets or sets an angle to control text counter-clockwise direction. The default value is 0.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.TextRise">
+            <summary>
+            Gets or sets the distance to move the text baseline up or down from its default location.
+            Adjustments to the baseline are useful for drawing superscripts or subscripts.
+            Positive values of text rise move the baseline up and creates a superscript text. 
+            Negative values of text rise move the baseline down and creates a subscript text. 
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.BackColor">
+            <summary>
+            Gets or sets element background color.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.ForeColor">
+            <summary>
+            Gets or sets the element foreground color.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.Text">
+            <summary>
+            The string to be written
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.X">
+            <summary>
+            The start x position
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.Y">
+            <summary>
+            The start y position
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.Width">
+            <summary>
+            The width of destination rectangle
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.Height">
+            <summary>
+            The height of the destination rectangle 
+            Is optional
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.TextFont">
+            <summary>
+            The text font
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.EmbedTextFont">
+            <summary>
+            A flag indicating if the text area font will be embedded in the PDF document
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.TextArea.Transparency">
+            <summary>
+            Gets or sets element transparency. The transparency is expressed as a value between 0 and 100. 
+            0 means completely transparent and 100 completely opaque.
+            </summary>
+        </member>
+        <member name="T:ExpertPdf.HtmlToPdf.PdfBookmarkOptions">
+            <summary>
+            Controls the bookmark generation
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.TagNames">
+            <summary>
+            Gets or sets the names of the HTML tags to be bookmarked, e.g. "H1".
+            If null or empty no bookmark will be generated for the PDF document.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.ClassNameFilter">
+            <summary>
+            An additional filter to be applied to the tag name filter. This must be identical with the string
+            set for the 'class' atttribute of the HTML tag.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.AllowDefaultTitle">
+            <summary>
+            By default the converter will not generate bookmarks for the tags that don't have a text (e.g IMG tag).
+            Setting this property true will instruct the converter to use the DefaultTitle or the tag outer HTML as 
+            bookmark title. The default value is false and therefore the converter will ignore the bookmarks for which a title
+            cannot be automatically determined.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.DefaultTitle">
+            <summary>
+            Gets or sets the default title to be used for bookmarks that don't have an associated text. This property has effect only if AllowDefaultTitle
+            is true and DefaultTitleToOuterHtml is false. This property defaults to "Bookmark" text.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.DefaultTitleToOuterHtml">
+            <summary>
+            When is true this property instructs the converter to use the tag outer HTML code as title when a correct title cannot be automatically determined
+            for the bookmark. This property has effect only when the AllowDefaultTitle property is true and it has priority over the 
+            DefaultTitle property. The default value is false.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.BookmarkHiddenElements">
+            <summary>
+            When this property is true the converter will generate bookmarks for hidden HTML elements. 
+            Default value is true.
+            </summary>
+        </member>
+        <member name="P:ExpertPdf.HtmlToPdf.PdfBookmarkOptions.MaxTitleLength">
+            <summary>
+            Gets or sets the maximum accepted length of the bookmark title string. If a positive value is set for this 
+            property the bookmark title will be truncated if necessasry. The default value is -1 and the bookmark  title will not be truncated.
+            </summary>
+        </member>
+    </members>
+</doc>

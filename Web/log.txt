@@ -1,0 +1,230 @@
+sp_rgen_insertaRequisito @requisitoId, 
+@nombre, 
+@descripcion, 
+@ucrea, 
+ 
+sp_rgen_insertaRequisito null,
+Cotización del Agente de Aduana, por los gastos que implican la importaciòn de los bienes a reponer, como consecuencia del siniestro. ,
+Cotización del Agente de Aduana, por los gastos que implican la importaciòn de los bienes a reponer, como consecuencia del siniestro. ,
+fcossio,
+24/01/2008 10:52:34 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 10:52:34 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 425
+24/01/2008 11:04:09 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 11:04:22 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 11:04:22 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 11:04:23 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:27:02 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:28:49 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:36:48 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:38:29 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:38:29 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:38:31 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 12:48:12 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 01:00:31 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/01/2008 05:09:23 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 10:58:10 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 11:30:12 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 11:50:58 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 11:52:08 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 11:52:09 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------   
+25/01/2008 11:52:10 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 11:59:47 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 02:48:07 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:44:03 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:44:03 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 357
+25/01/2008 03:44:34 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:44:34 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:44:34 p.m. -- aparentenmente no se está actualizando el registro Inicial del Ajuste, no se han afectado filas. ventana vEditorRegistroInicialAjuste.aspx
+25/01/2008 03:45:13 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:45:13 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 357
+25/01/2008 03:46:04 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:46:04 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:46:04 p.m. -- aparentenmente no se está actualizando el registro Inicial del Ajuste, no se han afectado filas. ventana vEditorRegistroInicialAjuste.aspx
+25/01/2008 03:47:24 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:47:24 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 03:47:29 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 05:46:31 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:05:52 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:17:18 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:26:35 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:41:43 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:42:07 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:42:07 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 316
+25/01/2008 06:42:41 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:42:42 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 316
+25/01/2008 06:46:34 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:46:35 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+25/01/2008 06:46:35 p.m. -- aparentenmente no se está actualizando el registro Inicial del Ajuste, no se han afectado filas. ventana vEditorRegistroInicialAjuste.aspx
+26/01/2008 10:32:12 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 10:32:29 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 11:33:59 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 11:37:30 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 11:52:52 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 01:48:20 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 01:49:22 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 01:49:22 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 01:49:28 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:44:15 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:44:15 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 260
+26/01/2008 02:44:49 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:44:49 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:44:49 p.m. -- aparentenmente no se está actualizando el registro Inicial del Ajuste, no se han afectado filas. ventana vEditorRegistroInicialAjuste.aspx
+26/01/2008 02:45:14 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:45:14 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:45:16 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 02:47:02 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 03:14:28 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 03:14:28 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 316
+26/01/2008 03:15:40 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 03:15:40 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 03:15:41 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 03:18:14 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 04:52:40 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 05:07:17 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 05:16:54 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 05:17:02 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 05:17:02 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+26/01/2008 05:17:04 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 10:33:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 10:34:38 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 10:34:55 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 10:34:56 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 10:34:56 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:30:51 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:32:45 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:32:45 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 501
+27/01/2008 11:39:09 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:39:16 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:39:16 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:39:17 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:40:08 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:40:08 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 11:40:09 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 01:47:40 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 01:48:11 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 01:48:11 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+27/01/2008 01:48:15 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:22:12 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:22:34 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:22:34 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 454
+28/01/2008 10:26:49 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:26:49 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 454
+28/01/2008 10:31:03 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:31:03 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 454
+28/01/2008 10:38:37 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:38:37 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 454
+28/01/2008 10:41:06 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:41:07 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 10:41:13 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 03:50:32 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 03:55:35 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 03:59:11 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 03:59:54 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 03:59:57 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 03:59:58 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 04:32:49 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 06:01:47 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 06:27:42 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 06:58:28 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 06:59:27 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 06:59:27 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/01/2008 06:59:29 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:06:58 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:06:58 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 67
+29/01/2008 11:07:41 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:09:06 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:09:06 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:09:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:17:50 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+29/01/2008 11:17:50 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 278
+08/02/2008 12:43:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:43:14 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:43:14 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:43:14 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:43:14 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:18 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:14 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:43:14 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:14 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:43:18 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:43:18 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:46:31 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:46:31 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:46:31 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:46:31 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:46:31 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:46:31 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 12:46:31 a.m. -- No hay ninguna fila en la posición 0.
+08/02/2008 12:46:31 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 12:46:31 a.m. -- Referencia a objeto no establecida como instancia de un objeto.
+08/02/2008 07:59:18 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+08/02/2008 07:59:24 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 10:04:00 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 10:04:00 p.m. -- Error en la transacción. La respuesta del servidor fue: 5.7.1 <ivan.garcia@ccsolsite.com>: Relay access denied
+11/02/2008 11:01:29 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:01:29 p.m. -- Parámetro de comando no implementado. La respuesta del servidor fue: <core2duo>: Helo command rejected: need fully-qualified hostname
+11/02/2008 11:02:33 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:02:33 p.m. -- Error en la transacción. La respuesta del servidor fue: 5.7.1 <royriojas@gmail.com>: Relay access denied
+11/02/2008 11:11:57 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:11:57 p.m. -- Se excedió el tiempo de espera de la operación.
+11/02/2008 11:19:38 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:19:38 p.m. -- Se excedió el tiempo de espera de la operación.
+11/02/2008 11:25:16 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:25:16 p.m. -- Se excedió el tiempo de espera de la operación.
+11/02/2008 11:30:52 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:30:52 p.m. -- El servidor no admite conexiones seguras.
+11/02/2008 11:31:24 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:31:24 p.m. -- El buzón de correo no está disponible. La respuesta del servidor fue: Relay not accepted
+11/02/2008 11:49:51 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:50:12 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+11/02/2008 11:50:21 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 01:30:06 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 01:30:06 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 01:34:19 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 01:34:19 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 01:36:12 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 01:36:12 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 01:36:56 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 01:36:56 a.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 11:41:26 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:41:26 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 11:41:37 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:42:36 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:42:36 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 11:42:57 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:42:57 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:42:57 p.m. -- aparentenmente no se está actualizando el registro Inicial del Ajuste, no se han afectado filas. ventana vEditorRegistroInicialAjuste.aspx
+12/02/2008 11:44:05 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:44:05 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+12/02/2008 11:44:23 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:44:23 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:44:23 p.m. -- aparentenmente no se está actualizando el registro Inicial del Ajuste, no se han afectado filas. ventana vEditorRegistroInicialAjuste.aspx
+12/02/2008 11:49:21 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+12/02/2008 11:49:21 p.m. -- no se pudo encontrar dentro de la coleccion de valores del combobox un valor con el valor de Id : 130
+13/02/2008 12:24:59 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:25:04 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:25:27 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:25:54 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:26:19 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:27:24 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:27:24 a.m. -- no se pudo encontrar el campo txtTipoSiniestroId dentro del FormView1
+13/02/2008 12:27:42 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:28:35 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:29:05 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:29:05 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 12:29:06 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+13/02/2008 01:50:09 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+06/02/2009 11:30:15 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/03/2009 09:51:52 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+24/03/2009 09:57:27 a.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+17/04/2009 03:19:34 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------
+28/04/2009 03:16:07 p.m. --  ------------------------------ INICIO TRANSACCION --------------------------------

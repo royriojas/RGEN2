@@ -1,0 +1,61 @@
+#CuerpoTabbed {
+	background: url(../img/tabbedControl/fondoTabbedControl.gif);
+	width:999px;
+	position:relative;
+	text-align:left;
+}
+#TabControl {
+	width: 999px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+#tab1_Text {
+	width: 201px;
+	position: absolute;
+	left: 13px;
+	top: 6px;
+}
+#tab2_Text {
+	width: 201px;
+	position: absolute;
+	left: 13px;
+	top: 6px;
+}
+#botonera {
+	height:32px;
+}
+#botonera #tab1 {
+	height: 32px;
+	width: 222px;
+	position: absolute;
+	left: 223px;
+	top: 0px;
+}
+#botonera a:link, #botonera a:visited {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;	
+}
+#botonera #tab2 {
+	height: 32px;
+	width: 222px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.labelStyle {
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+}
+#CuerpoTabbed #ContentPanel {
+	
+}
+#TabControl #footerTabbedControl {
+	background-image: url(../img/tabbedControl/BottomTabbedControl.gif);
+	height: 13px;
+	width: 999px;
+}

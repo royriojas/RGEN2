@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnviaMensaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sistemaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgDe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgPara" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgConCopia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgAsunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgCuerpo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgArchivoAdjunto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="msFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaEnvio" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaMensajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaMensajeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaMensajeRecurrente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sistemaId" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgDe" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgPara" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgConCopia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgAsunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgCuerpo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msgArchivoAdjunto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fechaEnvio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="duracion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="frecuencia" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaMensajeRecurrenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaMensajeRecurrenteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelarRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarTodosLosRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoRequest" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sistemaId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarTodosLosRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelarTodosLosRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviaMensajeSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaMensaje" />
+  </wsdl:message>
+  <wsdl:message name="EnviaMensajeSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaMensajeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviaMensajeRecurrenteSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaMensajeRecurrente" />
+  </wsdl:message>
+  <wsdl:message name="EnviaMensajeRecurrenteSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaMensajeRecurrenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelarRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarTodosLosRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarTodosLosRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelarTodosLosRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarTodosLosRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="EnviaMensaje">
+      <wsdl:input message="tns:EnviaMensajeSoapIn" />
+      <wsdl:output message="tns:EnviaMensajeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensajeRecurrente">
+      <wsdl:input message="tns:EnviaMensajeRecurrenteSoapIn" />
+      <wsdl:output message="tns:EnviaMensajeRecurrenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarRequest">
+      <wsdl:input message="tns:CancelarRequestSoapIn" />
+      <wsdl:output message="tns:CancelarRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarTodosLosRequest">
+      <wsdl:input message="tns:CancelarTodosLosRequestSoapIn" />
+      <wsdl:output message="tns:CancelarTodosLosRequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviaMensaje">
+      <soap:operation soapAction="http://tempuri.org/EnviaMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensajeRecurrente">
+      <soap:operation soapAction="http://tempuri.org/EnviaMensajeRecurrente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarRequest">
+      <soap:operation soapAction="http://tempuri.org/CancelarRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarTodosLosRequest">
+      <soap:operation soapAction="http://tempuri.org/CancelarTodosLosRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviaMensaje">
+      <soap12:operation soapAction="http://tempuri.org/EnviaMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensajeRecurrente">
+      <soap12:operation soapAction="http://tempuri.org/EnviaMensajeRecurrente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarRequest">
+      <soap12:operation soapAction="http://tempuri.org/CancelarRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarTodosLosRequest">
+      <soap12:operation soapAction="http://tempuri.org/CancelarTodosLosRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.1.5/GoNote/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.1.5/GoNote/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

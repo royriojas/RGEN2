@@ -1,0 +1,128 @@
+/****************************************************/
+/* FORM CSS                                         */
+/****************************************************/
+
+
+
+select, input, button, textarea { font-family: inherit; font-size:13px; }
+
+
+div.FormCSS div.Legend { background: url(assets/gray-grad.png) repeat-x; padding:5px;  }
+div.FormCSS div.Group div.Legend { background: #0C69B3; color:white; margin-bottom: 5px; padding-left:5px; font-weight: bold;   }
+div.FormCSS div.Legend h2 { color: #0060AE; font-size:18px; font-weight:bold; /*font-size:107%;*/ }
+
+div.FormCSS div.Group div.Legend h2 { color:#FFF; font-size: 14px;  }
+
+div.FormCSS  h2 {  /*font-size:107%;*/ }
+
+div.FormCSS div.Group h2 { font-size: 12px;  }
+
+
+div.FormCSS { padding: 5px; }
+div.FormCSS .Field { border-top:1px solid #eee;padding:0 0 0px 5px; margin-bottom: 5px;  }
+div.FormCSS .Field.First { border-top:none; }
+
+div.FormCSS .Field label { display: block; color: #0C69B3; margin: 5px 2px 2px 0px; }
+hr, div.Divider { background-color:#ccc;border:0 none;color:#E6F0F1;height:1px;}
+div.FormCSS div.Group { border: 1px solid #ccc; padding:0px;}
+div.FormCSS div.Group .Group-Content { padding:0 5px 5px;}
+div.FormCSS div.Group div.Group { border:none; padding: 0 5px 5px 20px;}
+div.Separator { border-bottom: 2px solid #E6F0F1; height: 0px; margin-bottom: 10px; margin-top: 10px; }
+
+div.FormCSS .Field span { /*font-size: 14px;*/ }
+div.FormCSS span.NotificationMessage { /*font-size: 16px;*/ font-style: italic; color: black; }
+div.FormCSS span.NotificationMessage.Error { color: red; }
+
+input.FormText, 
+select.FormText,
+textarea.FormText { border: 1px solid #D2E1E3; color:#333; font-size:12px; width:100%; padding-top: 2px; }
+
+input.FormText,
+textarea.FormText { background: url(assets/field_bg.png) repeat-x; }
+
+input.FormText, 
+select.FormText { height: 18px; line-height: 20px; font-family:inherit;}
+select.FormText { height: 22px; line-height: 22px;}
+
+
+input.FormText:focus,
+textarea.FormText:focus { border: 1px solid #61A1DF; }
+
+p.Validator { display:none; margin:2px;margin-left: 0px; font-weight:normal; font-size: :11px; color:#D12F19  }
+
+.Toolbar { padding:10px; border-top: 1px solid #ccc;  background:#eee; position:relative; *height:1%  }
+
+.Toolbar.Little { padding:5px; margin-bottom:5px; }
+
+a.LinkButton { background:url(assets/white-grad.png) repeat-x; display:block; width: 100px;  text-align:center; cursor:pointer; text-decoration:none; color: #005494; float:left;height:25px;line-height:25px;margin-right:5px; border:1px solid #ddd; padding:0px; }
+
+a.LinkButton.Little { height:20px; line-height: 20px; padding: 0px}
+
+a.LinkButton:hover { border: 1px solid #bbb; }
+
+a.LinkButton.Right { float: right;}
+
+a.LinkButton.DisabledButton,
+a.LinkButton.DisabledButton:hover { background: #ccc; }
+
+a.LinkButton.focus { border: 1px solid #bbb; }
+
+a.LinkButton.DisabledButton.focus { border: 1px solid #ccc; }
+
+
+
+.doClear { clear:both; height:1px; }
+
+div.FormCSS .EmptyContainer { padding : 10px 20px 20px; border: 5px solid #caca00; background:#0abba0; color: white; }
+div.FormCSS .EmptyContainer h2 { font-size: 24px; font-weight:bold; }
+
+div.InlineErrorMessage { padding: 5px 5px; position:relative;}
+div.InlineErrorMessage .InlineWrapper { background:#FFE073; border:1px solid #BF9F30; padding:5px;  }
+div.InlineErrorMessage div.message { font-size: 11px; color: #A68100; text-align:center; margin-bottom:0px; }
+a.CloseInlineMessage { color:#A68100;cursor:pointer;font-size:11px;font-weight:bold;position:absolute;right:7px;text-decoration:none;top:8px; }
+a.CloseInlineMessage span { padding:2px; }
+a.CloseInlineMessage:hover { background:#FFE073; color:#BF8F30;}
+
+.Field div.RadioGroup label, 
+.Field div.RadioGroup input{ margin:0px; float:left; }
+
+.Field div.RadioGroup input { margin: 5px 10px 0px 5px; *margin:2px 10px 0px 5px; }
+.Field div.CheckGroup { padding-top: 2px;}
+.Field div.CheckGroup  label, .Field div.CheckGroup input{ margin:0px; float:left; }
+.Field div.CheckGroup input { margin: 1px 5px 0px 0px;*margin:-3px 5px 0px 0px; }
+
+div.FormCSS.OneLine .Field div.RadioGroup label, 
+div.FormCSS.OneLine .Field div.RadioGroup input{ margin:0px; float:left; }
+
+div.FormCSS.OneLine .Field div.RadioGroup input { margin: 5px 10px 0px 5px; *margin:2px 10px 0px 5px; }
+div.FormCSS.OneLine .Field div.CheckGroup { padding-top: 2px;}
+div.FormCSS.OneLine .Field div.CheckGroup  label, 
+div.FormCSS.OneLine .Field div.CheckGroup input{ margin:0px; float:left; }
+div.FormCSS.OneLine .Field div.CheckGroup input { margin: 1px 5px 0px 0px;*margin:-3px 5px 0px 0px; }
+
+
+
+div.FormCSS .Field ul.Filters li { display:block; float:left; width:150px; margin-right: 10px; }
+div.FormCSS .Field ul.Filters li label { font-size: 11px; margin: 0px; padding: 5px 0px}
+div.FormCSS .Field ul.Filters li input.FormText, ul.Filters li select.FormText { width:100%; }
+
+div.FormCSS.OneLine .Field { padding: 5px; margin-bottom: 0px;}
+div.FormCSS.OneLine .Field label {float:left;line-height:16px;margin:5px 5px 5px 0;width:130px;	}
+div.FormCSS.OneLine p.Validator { margin-left:85px;  }
+
+div.FormCSS .Field.OneLine { padding: 5px; margin-bottom: 0px; }
+div.FormCSS .Field.OneLine label {float:left;line-height:16px;margin:5px 5px 5px 0;width:130px;	}
+div.FormCSS .Field.OneLine p.Validator { margin-left:130px;  }
+
+.Fail { border : 1px solid #D12F19 !important; color: #D12F19 !important; }
+
+.Field-wrapper { }
+.Blocking { position:relative; }
+
+div.InlineErrorMessage div.message p { font-size: 13px; }
+
+.FormNotify { width:500px; position:absolute; right:5px;top:5px;width:600px; }
+
+.Disabled { border: 1px solid #ccc !important; background:#eee !important; }
+
+/****************************************************/

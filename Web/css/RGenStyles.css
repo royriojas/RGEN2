@@ -1,0 +1,67 @@
+#MenuSecundario {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 30px;
+	width: 980px;
+	margin-top: 5px;
+/*	margin-right: auto;*/
+	margin-left:5px;
+	margin-bottom: 5px;
+/*	margin-left: auto;*/
+	text-align: left;
+	line-height: 20px;
+
+}
+#MenuSecundario a:link, #MenuSecundario a:visited, #MenuSecundario a:active{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration:none;
+
+	margin-top: 6px;	
+	line-height: 20px;
+}
+
+#MenuSecundario a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: underline;
+	
+	margin-top: 6px;	
+	line-height: 20px;
+}
+#noticiasDiv {
+	position:absolute;
+	z-index:200;
+	background-color: #C5DDF7;
+	visibility: visible;
+	left: 503px; 
+	top: 19px; 
+	height: 108px; 
+	width: 332px;
+}
+#estadoTipoDiv {
+	position:absolute;
+	left: 610px; 
+	top: 421px; 
+	height: 52px; 
+	width: 227px;
+	z-index:201;
+	background-color: #2F75B1;
+}
+
+#tooltipContent{
+    position:absolute; 
+    color:#000000; 
+    background-color:#ffff99; 
+    border:1px solid #000000; 
+    padding:6px; 
+    visibility:hidden; 
+    -moz-opacity:0%;
+	z-index:250;
+    }

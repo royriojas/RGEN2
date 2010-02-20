@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--<DLIB Descripcion="Días límite para informe básico">5</DLIB>
+  <DLIP Descripcion="Días límite para informe preliminar">2</DLIP>
+  <DL1C Descripcion="Días límite para primer complementario">10</DL1C>
+  <DLIFR Descripcion="Días límite para informe rápido final">11</DLIFR>-->
+<SubAcceso>
+  <DLERS Descripcion="Días límite para recordatorios solicitudes">12</DLERS>
+</SubAcceso>

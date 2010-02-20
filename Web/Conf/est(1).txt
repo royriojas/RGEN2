@@ -1,0 +1,276 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: 
+Date: Sat, 15 Jul 2006 08:02:05 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="CCSOL.document_parts"
+Content-Transfer-Encoding: quoted-printable
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.2869
+
+--CCSOL.document_parts
+Content-Type: text/html;
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:x =3D=20
+"urn:schemas-microsoft-com:office:excel"><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"><LINK=20
+href=3D"reporte_archivos/filelist.xml" rel=3DFile-List><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+x\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]-->
+<STYLE id=3DCopia_de_formato_reporte_15243_Styles>TABLE {
+	mso-displayed-decimal-separator: "."; mso-displayed-thousand-separator: =
+","
+}
+.xl1515243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 400; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial; WHITE-SPACE: =
+nowrap; TEXT-DECORATION: none; mso-ignore: padding; =
+mso-generic-font-family: auto; mso-font-charset: 0; mso-number-format: =
+General; mso-background-source: auto; mso-pattern: auto
+}
+.xl6515243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-DECORATION: none; mso-ignore: padding; =
+mso-font-charset: 0; mso-number-format: General; mso-background-source: =
+auto; mso-pattern: auto
+}
+.xl6615243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial; WHITE-SPACE: =
+nowrap; TEXT-DECORATION: none; mso-ignore: padding; =
+mso-generic-font-family: auto; mso-font-charset: 0; mso-number-format: =
+General; mso-background-source: auto; mso-pattern: auto
+}
+.xl6715243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-DECORATION: underline; mso-ignore: padding; =
+mso-font-charset: 0; mso-number-format: General; mso-background-source: =
+auto; mso-pattern: auto; text-underline-style: single
+}
+.xl6815243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+9pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: #666699; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-ALIGN: center; TEXT-DECORATION: none; =
+mso-ignore: padding; mso-font-charset: 0; mso-number-format: General; =
+mso-background-source: auto; mso-pattern: auto
+}
+.xl6915243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Verdana, sans-serif; =
+WHITE-SPACE: normal; TEXT-ALIGN: center; TEXT-DECORATION: none; =
+mso-ignore: padding; mso-font-charset: 0; mso-number-format: General; =
+mso-background-source: auto; mso-pattern: auto
+}
+.xl7015243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 400; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-ALIGN: center; TEXT-DECORATION: none; =
+mso-ignore: padding; mso-font-charset: 0; mso-number-format: General; =
+mso-background-source: auto; mso-pattern: auto
+}
+.xl7115243 {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: windowtext =
+0.5pt solid; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: 10pt; =
+BACKGROUND: silver; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; =
+BORDER-LEFT: windowtext 0.5pt solid; COLOR: windowtext; PADDING-TOP: =
+0px; BORDER-BOTTOM: windowtext 0.5pt solid; FONT-STYLE: normal; =
+FONT-FAMILY: Verdana, sans-serif; WHITE-SPACE: normal; TEXT-ALIGN: =
+center; TEXT-DECORATION: none; mso-ignore: padding; mso-font-charset: 0; =
+mso-number-format: General; mso-pattern: black none
+}
+.xl7215243 {
+	BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 0px; BORDER-TOP: =
+windowtext 0.5pt solid; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+10pt; BACKGROUND: silver; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; =
+BORDER-LEFT: medium none; COLOR: windowtext; PADDING-TOP: 0px; =
+BORDER-BOTTOM: windowtext 0.5pt solid; FONT-STYLE: normal; FONT-FAMILY: =
+Verdana, sans-serif; WHITE-SPACE: normal; TEXT-ALIGN: center; =
+TEXT-DECORATION: none; mso-ignore: padding; mso-font-charset: 0; =
+mso-number-format: General; mso-pattern: black none
+}
+.xl7315243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+14pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-ALIGN: center; TEXT-DECORATION: none; =
+mso-ignore: padding; mso-font-charset: 0; mso-number-format: General; =
+mso-background-source: auto; mso-pattern: auto
+}
+.xl7415243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 700; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-ALIGN: center; TEXT-DECORATION: none; =
+mso-ignore: padding; mso-font-charset: 0; mso-number-format: General; =
+mso-background-source: auto; mso-pattern: auto
+}
+.xl7515243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 400; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial, sans-serif; =
+WHITE-SPACE: nowrap; TEXT-ALIGN: left; TEXT-DECORATION: none; =
+mso-ignore: padding; mso-font-charset: 0; mso-number-format: General; =
+mso-background-source: auto; mso-pattern: auto
+}
+.xl7615243 {
+	BORDER-RIGHT: windowtext 0.5pt solid; PADDING-RIGHT: 0px; BORDER-TOP: =
+windowtext 0.5pt solid; PADDING-LEFT: 0px; FONT-WEIGHT: 400; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; BORDER-LEFT: =
+windowtext 0.5pt solid; COLOR: windowtext; PADDING-TOP: 0px; =
+BORDER-BOTTOM: windowtext 0.5pt solid; FONT-STYLE: normal; FONT-FAMILY: =
+Verdana, sans-serif; WHITE-SPACE: normal; TEXT-ALIGN: center; =
+TEXT-DECORATION: none; mso-ignore: padding; mso-font-charset: 0; =
+mso-number-format: General; mso-background-source: auto; mso-pattern: =
+auto
+}
+.xl7715243 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: 400; FONT-SIZE: =
+10pt; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: bottom; COLOR: windowtext; =
+PADDING-TOP: 0px; FONT-STYLE: normal; FONT-FAMILY: Arial; WHITE-SPACE: =
+nowrap; TEXT-ALIGN: center; TEXT-DECORATION: none; mso-ignore: padding; =
+mso-generic-font-family: auto; mso-font-charset: 0; mso-number-format: =
+General; mso-background-source: auto; mso-pattern: auto
+}
+
+.xl819756
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:Arial, sans-serif;
+	mso-font-charset:0;
+	mso-number-format:"Short Date";
+	text-align:left;
+	vertical-align:bottom;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+</STYLE>
+
+<META content=3D"MSHTML 6.00.5450.4" name=3DGENERATOR></HEAD>
+<BODY><!--[if !excel]>&nbsp;&nbsp;<![endif]--> <!--La siguiente =
+informaci=F3n se gener=F3 mediante la caracter=EDstica Publicar como
+p=E1gina Web de Microsoft Office Excel.--><!--Si se vuelve a publicar el =
+mismo elemento desde Excel, se reemplazar=E1 toda
+la informaci=F3n comprendida entre las etiquetas =
+DIV.--><!-----------------------------><!--INICIO DE LOS RESULTADOS DEL =
+ASISTENTE PARA PUBLICAR COMO P=C1GINA WEB DE
+EXCEL --><!----------------------------->
+<DIV id=3DCopia_de_formato_reporte_15243 align=3Dcenter =
+x:publishsource=3D"Excel">
+<TABLE style=3D"TABLE-LAYOUT: fixed; WIDTH: 475pt; BORDER-COLLAPSE: =
+collapse"=20
+cellSpacing=3D0 cellPadding=3D0 width=3D629 border=3D0>
+  <COLGROUP>
+  <COL style=3D"WIDTH: 13pt; mso-width-source: userset; mso-width-alt: =
+621"=20
+  width=3D17>
+  <COL style=3D"WIDTH: 77pt; mso-width-source: userset; mso-width-alt: =
+3730"=20
+  span=3D6 width=3D102>
+  <TBODY>
+  <TR style=3D"HEIGHT: 8.25pt; mso-height-source: userset" height=3D11>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 13pt; HEIGHT: 8.25pt" =
+width=3D17=20
+    height=3D11></TD>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl1515243 style=3D"WIDTH: 77pt" width=3D102></TD></TR>
+  <TR style=3D"HEIGHT: 18pt" height=3D24>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 18pt" height=3D24></TD>
+    <TD class=3Dxl7315243 colSpan=3D6>ESTAD=CDSTICAS</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7415243 colSpan=3D6>Preventores Asociados =
+S.A.</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7015243></TD>
+    <TD class=3Dxl7015243></TD>
+    <TD class=3Dxl7015243></TD>
+    <TD class=3Dxl7015243></TD>
+    <TD class=3Dxl7015243></TD>
+    <TD class=3Dxl7015243></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6515243>Fecha Emisi=F3n</TD>
+    <TD class=3Dxl819756>{FECHA}</TD>
+    <TD class=3Dxl6515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl6515243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6615243>Usuario</TD>
+    <TD class=3Dxl7515243>{USUARIO}</TD>
+    <TD class=3Dxl6615243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl6615243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6715243>Filtrado por</TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+  <TR style=3D"HEIGHT: 2.45pt; mso-height-source: userset" height=3D3>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 2.45pt" height=3D3></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7415243>Criterio</TD>
+    <TD class=3Dxl7715243>{CRITERIO}</TD>
+    <TD class=3Dxl7415243>Operaci=F3n</TD>
+    <TD class=3Dxl7715243>{OPERACION}</TD>
+    <TD class=3Dxl7415243>A=F1o</TD>
+    <TD class=3Dxl7715243>{YEAR}</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+ 

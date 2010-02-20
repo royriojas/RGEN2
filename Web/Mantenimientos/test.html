@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Test Page</title>
+
+<script type="text/javascript" src="../Scripts/lib/x.js"></script>
+<script type="text/javascript" src="../Scripts/functions.js"></script>
+
+
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:35px;
+	top:10px;
+	width:72px;
+	height:67px;
+	z-index:0;
+	background-color: #CC0033;
+}
+
+
+
+
+-->
+</style>
+
+<script type="text/javascript"  src="../Scripts/lib/xDropDownMenu.js"></script>
+<script type="text/javascript">	
+	var xMenu 
+	window.onload = function () {
+		//$('MenuItem1').v_alue = 2;
+		var a = null;
+		//alert((a != null) && (a == "rosa"));
+		//alert (typeof(a));
+		xMenu = new xDropDownMenu('ContextMenuId','Layer2','d','mouseover','left');
+		//xAddEventListener($('MenuItem1'),'click',doMenuAction,false);
+		xMenuContext = new xDropDownMenu('ContextMenuId','Layer1');
+		//xAddEventListener('Layer2','click',onclickHandler,false);
+	}
+
+function onclickHandler() {
+	alert('hi im a click handler');
+}
+</script>
+<link href="../Scripts/xMenuCSS/xmenu.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body  >
+<div id="ContextMenuId" class="ContextMenu">
+<div class="MenuGroup">
+	<div style="background-color:#D0E6EA;height:20px;border:1px solid #0066CC;border-bottom:none;"><p style="font-weight:bold;margin:0px; margin-left:5px;margin-top:2px;color:#006699">Make A Selection</p></div>
+	<a id="MenuItem1" class="MenuItem" href="http://www.google.com" >	
+	<div style="padding:2px;margin-left:40px;">
+	<h4><strong>Propiedades</strong></h4> 
+	<p>Vea y elija las propiedades que desea cambiar por cada uno de los bloques que está construyendo...</p>
+	</div><img class="MenuItemIco"  src="../newItems/14_layer_novisible.png" />	 </a>
+	<a class="MenuItem" href="http://www.google.com" onclick="return false;" >
+	<div style="padding:2px;margin-left:40px;">
+	<h4><strong>Propiedades</strong></h4> 
+	<p>Vea y elija las propiedades que desea cambiar por cada uno de los bloques que está construyendo...</p>
+	</div><img class="MenuItemIco"  src="../newItems/mail_forward.png" width="16" height="16" /> </a>
+	<a class="MenuItem" href="http://www.google.com" ><div style="padding:2px;margin-left:40px;">
+	<h4><strong>Propiedades</strong></h4> 
+	<p>Vea y elija las propiedades que desea cambiar por cada uno de los bloques que está construyendo...</p>
+	</div><img class="MenuItemIco"  src="../newItems/14_layer_novisible.png" /> </a>
+	<a class="MenuItem" href="http://www.google.com" ><div style="padding:2px;margin-left:40px;">
+	<h4><strong>Propiedades</strong></h4> 
+	<p>Vea y elija las propiedades que desea cambiar por cada uno de los bloques que está construyendo...</p>
+	</div> <img class="MenuItemIco"  src="../newItems/mail_forward.png" width="16" height="16" /> </a>
+	<div style="background-color:#D0E6EA;height:10px;border:1px solid #0066CC;"></div>
+	
+  </div>
+</div>
+<div id="Layer1" oncontextmenu="return false;"></div>
+<div id="Layer2" style="position:absolute; left: 151px; width: 143px; height: 37px; top: 10px; background-color: #FFCC00; layer-background-color: #FFCC00; border: 1px none #000000;" ></div>
+</body>
+</html>

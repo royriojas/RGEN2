@@ -1,0 +1,39 @@
+/* CSS Document */
+body { font-family:Arial, Helvetica, sans-serif; font-size:20px;line-height:150%; padding:5px; text-align:justify; }
+div.ImageTitle { font-size:14px !important; line-height:100%; padding:6px;}
+td, span, div, p { text-align:justify;font-size:20px  }
+
+h1 { text-decoration:underline; margin-bottom:3px; }
+h2 { font-size:22px; color:#000; text-decoration:underline; }
+
+.Negrita { font-weight:bold; text-align:left; }
+
+table.ReportCell td { padding: 5px 0px 5px 0px; }
+table.ReportCellHeader td { padding: 2px 0px 2px 0px; font-size:17px; }
+h1.TitInforme span { font-size:27px; line-height:30px; }
+
+table.ReportCellNotJustify td { padding: 5px 0px 5px 0px; text-align:left;}
+.GridViewNotJustify { border-collapse:collapse; }
+.GridViewNotJustify th { text-align:center; border: 1px solid #000000; padding:2px;}
+.GridViewNotJustify td { border: 1px solid #000000; padding: 2px; text-align:left; }
+.GridViewNotJustify tr.header { background:#EBEBEB; }
+
+
+div.line { line-height:0px; font-size:0px; background:black; height: 2px; }
+
+.GridView { border-collapse:collapse; }
+.GridView th { text-align:center; border: 1px solid #000000; padding:2px;}
+.GridView td { border: 1px solid #000000; padding: 2px; }
+.GridView tr.header { background:#EBEBEB; }
+div.ImageContainer {width:455px; height:450px; float:left; margin-right:20px; margin-bottom:16px; overflow:hidden;}
+div.ImageContainer img{ width:455px;height:335px; }
+
+p { margin-top: 0px;}
+
+li { list-style:disc  }
+br { margin-bottom: 20px; }
+
+
+div.ImgHolder img { width:455px; height:335px; }
+div.txtInfo {font-size:14px !important; line-height:100%; padding:6px; }
+

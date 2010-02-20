@@ -1,0 +1,14 @@
+﻿
+#tooltipContent
+{
+	position:absolute;
+	color:#003366;
+	background-color:#F9F7D0;
+	border:1px solid #000000;
+	padding:5px;
+	visibility:hidden;
+	-moz-opacity:0%;	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 11px;
+}
+

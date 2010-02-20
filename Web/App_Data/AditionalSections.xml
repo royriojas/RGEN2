@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<sections>
+  <section>
+    <KeyName>SUMA_ASEGURADA</KeyName>
+    <Title>Suma Asegurada</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>BIEN_AFECTADO</KeyName>
+    <Title>Bien Afectado</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>DANO_PERDIDA</KeyName>
+    <Title>Daños y/o Pérdidas</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>MATERIA_ASEGURADA</KeyName>
+    <Title>Materia Asegurada</Title>
+    <Level>2</Level>
+  </section> 
+  <section>
+    <KeyName>UBICACION_RIESGO</KeyName>
+    <Title>Ubicación del Riesgo</Title>
+    <Level>2</Level>    
+  </section>
+  <section>
+    <KeyName>SECCION</KeyName>
+    <Title>Seccion</Title>
+    <Level>2</Level>
+  </section>
+
+  <section>
+    <KeyName>CUMPLIMIENTO_GARANTIAS</KeyName>
+    <Title>Cumplimiento de garantias / Prescripción de Seguridad</Title>
+    <Level>2</Level>
+  </section>
+
+  <section>
+    <KeyName>RESERVA</KeyName>
+    <Title>Reserva</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>INFRASEGURO</KeyName>
+    <Title>Infraseguro</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>SALVAMENTO/RECUPERO</KeyName>
+    <Title>Salvamento/Recupero</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>MEDIDAS_CORRECTIVAS</KeyName>
+    <Title>Medidas Correctivas</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>SITUACION_ACTUAL</KeyName>
+    <Title>Situacion Actual</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>OBSERVACIONES</KeyName>
+    <Title>Observaciones</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>ANALISIS_COBERTURA</KeyName>
+    <Title>Analisis de la Cobertura</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>RECLAMO_AJUSTE</KeyName>
+    <Title>Reclamo de Ajuste y Pérdida</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>SUGERENCIAS</KeyName>
+    <Title>Sugerencias Para Mejorar el Riesgo</Title>
+    <Level>2</Level>
+  </section>
+  <section>
+    <KeyName>RESUMEN_COMENTARIOS</KeyName>
+    <Title>Resumen y Comentarios</Title>
+    <Level>2</Level>
+  </section>
+
+</sections>

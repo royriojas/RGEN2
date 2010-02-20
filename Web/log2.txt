@@ -1,0 +1,12 @@
+sp_rgen_ClausulasInsert @ClausulasId, 
+@PolizaId, 
+@nombre, 
+@contenido, 
+@usuario, 
+ 
+sp_rgen_ClausulasInsert null,
+524,
+INC085 TODO RIESGO,
+INC085 TODO RIESGO,
+rlopez,
+                                                                                                              

@@ -1,0 +1,545 @@
+.container {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	background-color:#3c75bc;
+	font-size:10px;
+	padding-bottom:8px;	
+}
+
+.pnlStyle3D {
+	border-bottom: 1px solid #244497;
+	border-left: 1px solid #a3c7e4;
+	border-top: 1px solid #a3c7e4;
+	border-right: 1px solid #244497;
+	background-color:#3c75bc;
+	float:left;
+	padding: 5px;
+	margin:4px 0px 0px 4px;
+}
+.pnlForm {			
+	padding:5px;
+	background:#a3c7e4;
+	color:#3d5891;
+}
+
+.pnlGridContainer {
+	padding:0px 5px 5px 0px;
+	background:#a3c7e4;
+	overflow: auto;		
+}
+.PanelEncabezado
+{
+	height: 16px;
+	margin-bottom: 4px; /*background-color:#d46420; 	padding:5px;*/
+}
+.PanelEncabezado img {
+	float: right;
+	top:5px;
+	right:2px;
+}
+.PanelEncabezado .BtnSeparar {
+	float:left;
+	margin-left:30px;
+	top:5px;
+	cursor:pointer;
+}
+.PanelEncabezado SPAN
+{
+	float: left; 
+	height: 16px; 
+	font-size: 14px; 
+	font-weight:bold; 
+	font-family: Verdana; 
+	cursor: pointer;
+}
+
+.btnCollapse 
+{	cursor: pointer;
+	position:absolute;
+	right:24px; 
+	top: 13px;
+}
+
+.panelMensaje {
+	cursor:pointer;
+	background-color:#FFCC00;
+	color:#CC3300;
+	padding-top:5px;
+	font-weight:bold;	
+}
+
+.panelMensaje span {
+	font-size: 10px;	
+	font-family: Verdana;
+	font-weight:bold;
+	color:#39458c;
+}
+
+.panelMensaje div.icoIdea {
+	width:16px;
+	height:16px;
+	background:url(../Images/idea.jpg) no-repeat;
+	float:left;
+	margin-left:3px;
+	margin-right: 2px;
+}
+
+.PanelStyle
+{
+	/*margin-top: 8px;*/
+	padding: 5px;
+	border-bottom: 1px solid #244497;
+	border-left: 1px solid #a3c7e4;
+	border-top: 1px solid #a3c7e4;
+	border-right: 1px solid #244497;
+	
+}
+
+
+
+
+
+
+
+
+
+
+.NUMBERS 
+{
+	text-align:right;
+}
+body {
+	background: #417EC2 url(../images/BgGradBlue.jpg) repeat-x;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	margin:0px;
+}
+#TableHeader
+{
+	background-image:url(../images/HeaderIn.gif);
+}
+div.Header { 
+	background:url(../images/HeaderIn.gif) #F00 repeat-x; 
+	height:69px; font: 0px/0px verdana; margin-top:2px;
+}
+div.HeaderLeft { 
+	background:url(../images/HeaderLeft.gif) no-repeat; 
+	float:left; width:230px; height:69px;	font: 0.6em/10px tahoma; 
+	vertical-align:bottom; color: #191970;
+	text-align:left; padding-left: 15px; margin-bottom:0px;
+}
+div.HeaderRight { 
+	background:url(../images/HeaderRight.jpg) no-repeat; 
+	float:right; width:373px; height:69px; font: 0px/0px verdana;
+}
+#LoginImage{
+	background: #417EC2 url(../images/LogImagex.jpg) no-repeat; 
+	margin-top:5px; 
+	width:304px; 
+	height:104px;
+}
+#Form {margin:0px; padding:0px}
+.FormText{
+	font-family:Verdana;
+	color:#003C77;
+	border-top:1px solid #41778B;
+	border-right:1px solid #D6D3CE;
+	border-bottom:1px solid #D6D3CE;
+	border-left:1px solid #42758C;
+	font-size:10px;
+	/*background-image:url(../imgRGen/fondo_FormText.gif);
+	background-repeat:repeat-x;	*/
+}
+.FormCheck{
+	
+	font-size:10px;
+	padding:0px;
+	margin:-5px;
+}
+.FormTextVacio {
+	font-family:Verdana;
+	color:#003C77;
+	border-top:1px solid #41778B;
+	border-right:1px solid #D6D3CE;
+	border-bottom:1px solid #D6D3CE;
+	border-left:1px solid #42758C;
+	font-size:10px;
+	background-color:#FFFFCC;
+	background-repeat:repeat-x;
+}
+.FormLabel{
+	font-family:Verdana;
+	color:#652101;
+	background-color:#F2C797;
+	border:solid 1px #F2C797;
+	  font-size:10px;
+}
+.FormSelect{
+	font-family:Verdana;
+	color:#003C77;
+	border-top:1px solid #D6D3CE;
+	border-right:1px solid #41778B;
+	border-bottom:1px solid #42758C;
+	border-left:1px solid #D6D3CE;
+	 font-size:10px;
+}
+.FormRadio{
+	color:#FFFFFF;
+	  font-size:10px;
+	padding:0px;
+	margin:-5px;
+}
+.FormButton{
+	font-family:Verdana;
+	color:#003C77;
+	border-top:none;/*1px solid #D6D3CE;*/
+	border-right:1px solid #42758C;
+	border-bottom:1px solid #41778B;
+	border-left:none;/*1px solid #D6D3CE;*/
+	font-size:10px;
+	cursor:hand;
+	cursor:pointer;
+	background-image:url(../imgRGen/fondo_form_btn.gif);
+	background-repeat:repeat-x;
+}
+.hr{
+	MARGIN: 5px 0px; 
+	PADDING: 0px 15px;
+	FONT: 1px/1px monospace; 
+	HEIGHT: 2px; 
+	BACKGROUND:url(../images/Division.gif) repeat-x left top;
+	text-align:left;
+}
+HTML .hr{
+	HEIGHT: 2px
+}
+#Data{
+	width:95%
+}
+.DataTable{background-color: #A3C7E4;
+	/*padding:5px 0px;*/
+	/*z-index:20;*/}
+.DataTable TD{color:#541C01; /*padding: 0px 2px;*/}
+.DataImage{
+	background: #417EC2 url(../images/Morten600Image.gif) no-repeat; 
+	margin-top:5px; 
+	width:604px; 
+	height:69px;
+}
+.DataTable a:link,a:visited,a:hover {
+	color:#FFFFFF;	
+}
+.DataLabel
+{
+	  font-size:10px;
+	color:#541C01;	
+	background-color:#F2C797;
+	padding: 0px 2px;
+}
+.DataLabelDark
+{
+	  font-size:10px;
+	color:#FFF;
+	background-color:#541C01;	
+	font-weight: bold;
+	padding: 2px;
+}
+.DataLabelBig
+{
+	 font-size:10px;
+	font-weight: bold;
+}
+
+.DataValidator
+{
+	font-family:Verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:#FFCC00;
+	text-align:left;
+	margin:0px;
+}
+
+div.DataTop {
+	background:url(../images/DataTopLine.gif) repeat-x;
+	height:6px; font: 0px/0px verdana; 
+}
+div.DataTopLeft { 
+	background:url(../images/DataTopLeft.gif) no-repeat; 
+	float:left; width:7px; height:6px; font: 0px/0px verdana;
+}
+div.DataTopRight { 
+	background:url(../images/DataTopRight.gif) no-repeat; 
+	float:right; width:7px; height:6px;	font: 0px/0px verdana;
+	text-align:left;
+}
+div.DataContent { 
+	background: url(../images/DataContentLeft.gif) #417EC2 repeat-y ; 
+	
+	
+}
+div.DataContentRight { 
+	background: url(../images/DataContentRight.gif) repeat-y right; 
+	padding:0px 10px;
+	position:relative;
+}
+HTML div.DataContentRight {
+	padding:0px 10px;
+	text-align:left;
+	position:relative;
+}
+div.DataContentRight Table{
+	font-size:11px;
+	color:#FFFFFF;
+	position:relative;
+	height: 20;
+}
+div.DataContentRight H2{
+	margin:0px; 
+	padding:0px 6px 0px 0px; 
+	font-size:20px; 
+	font-weight:bold;	
+	color:#FFFFFF;
+}
+div.DataContentRight H5{margin:3px 0px -5px; padding:0px; font-weight:bold;}
+div.DataBottom { 
+	height:7px; 
+	background:url(../images/DataBottomLine.gif) repeat-x; 
+	font: 0px/0px verdana;
+}
+div.DataBottomLeft { 
+	float:left; 
+	background:url(../images/DataBottomLeft.gif) no-repeat; 
+	width:7px; 
+	height:7px;
+	font: 0px/0px verdana;
+}
+div.DataBottomRight { 
+	float:right; 
+	background:url(../images/DataBottomRight.gif) no-repeat; 
+	width:7px; 
+	height:7px;
+	font: 0px/0px verdana;
+}
+.DataActions{padding: 0px 0px 5px 0px; margin:0px;TEXT-ALIGN:right}
+.GridLista{	font: 10px Verdana;}
+.HeaderStyle
+{
+	background-color: #191970;
+	text-align:center;
+	font-size:10px;
+	text-align: center;
+	background: #0A6394 url(../images/hsBG.png) repeat-x top;
+	height: 18px;
+}
+.HeaderStyle TD
+{
+	color: #FFFFFF;
+	background-color: #191970;
+	font-weight: bold;
+	padding: 0px 2px;
+	text-align: center;
+	font-size:10px;
+}
+.HeaderStyle TD, a:link, a:hover,a:visited{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.HeaderStyle TH, a:link, a:hover,a:visited{
+	color:#FFFFFF;
+	text-decoration: none;
+}
+.HiddenStyle
+{
+	display:none;
+}
+.ItemStyle
+{
+	color: #541C01;
+	background-color: #A3C7E4;
+	padding: 0px 2px;
+	height: 15px;
+	font-size:10px;
+}
+
+.ItemStyle_white
+{
+	color: #333366;
+	background-color: #FFFFFF;
+	padding: 0px 2px;
+	height: 15px;
+	font-size:10px;
+}
+
+.DataTableEstadisticas {
+	border-collapse:collapse;
+	border:#999999 solid 1px;
+}
+
+.DataTableEstadisticas TD {
+	border-collapse:collapse;
+	border:#999999 solid 1px;
+}
+
+.ItemStyleTable {
+	color: #541C01;
+	font-size:10px;
+}
+
+.ItemStyleOver{
+	color:#541C01;	
+	background-color:#B0D6E1;
+	font-size:10px;
+	cursor:pointer;
+	padding:0px 2px;
+	height:15px;
+}
+
+.PagerStyle{
+	color:#000066;	
+	background-color:#F7DCBF;
+	padding:2px 2px;
+	text-align:left;
+}
+#MenuLink{
+	height:25px;
+	background:url(../images/MainLnkOut.gif) repeat-x;
+	margin-bottom:2px;
+}
+#MenuLink DIV{
+	float:left;
+	height:25px;
+}
+#MenuLink A{
+	height:25px;
+	text-decoration:none;
+	font-weight:bold;
+	  font-size:10px;
+	color:#FFF;
+	float:left;
+	padding:6px 6px 0px 6px;
+	margin-bottom:-10px;
+}
+#MenuLink SPAN
+{
+	padding-top:0px;
+}
+#MenuLink A:visited{color:#FFF;}
+#MenuLink A:hover{color:#40408C; background:url(../images/MainLnkOver.gif) repeat-x;}
+#MenuLink DIV.separador{
+	MARGIN: 0px; 
+	PADDING: 0px;
+	FONT: 0px/0px monospace; 
+	width:2px;
+	HEIGHT: 25px; 
+	background-color:#417EC2;
+	border-right:1px solid #CADBEE;
+}
+HTML #MenuLink DIV.separador{width:1px; height:25px}
+A.LnkVineta{
+	color:#FFFFFF; 
+	font-size:11px; 
+	font-weight:bold; 
+	text-decoration:none;
+	padding:2px 2px 0px 2px;
+	margin:2px 0px 0px 0px;
+	height:18px;
+	background-color:#EA9537;
+}
+#MenuLink A.MenuItemOver 
+{
+	color:#40408C;background:url(../images/MainLnkOver.gif) repeat-x;
+}
+#MenuLink A.MenuItemOver:visited
+{
+	color:#40408C;background:url(../images/MainLnkOver.gif) repeat-x;
+}
+
+
+PanelImages{
+	overflow:auto;
+}
+.PanelResp{
+	border: solid 1px #541C01;
+	width:200;
+	height:20;
+	font-size: 9px;
+	font-family: Curier;
+
+	color: #541C01;
+	background-color: #FFEC9D;
+	visibility: hidden;
+	position: absolute;
+	text-align: left;
+	padding: 3px;
+}
+.PanelResp P{
+	margin: -1px 0px 0px 0px;
+	font-size: 0.95em;
+	font-family: Arial;
+}
+
+.textos{
+	color:#FFFFFF;
+	height:25px;
+	text-decoration:none;
+	font-weight:bold;
+	font-size:10px;
+
+	float:left;
+	padding:6px 6px 0px 6px;
+	margin-bottom:-10px;
+	
+}
+.labels {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+.collapsibleContent {
+	background-color: #A3C7E4;
+	width: 835px;
+	border: 1px solid #3399CC;
+	display:none;
+}
+p.labels {
+	margin-top: 8px;
+	margin-right: 2px;
+	margin-bottom: 4px;
+	margin-left: 2px;
+}
+
+.invisible  
+{
+    display:none;
+}
+
+
+
+
+/*This section have to be moved to its own css file*/
+#m_container { width:950px; margin-left:auto; margin-right:auto; }
+
+div.dt { background:url(../images/DataTopLine.gif) repeat-x;	height:6px; font: 0px/0px verdana; }
+div.dtl{ background:url(../images/DataTopLeft.gif) no-repeat; float:left; width:7px; height:6px; font: 0px/0px verdana; }
+div.dtr {	background:url(../images/DataTopRight.gif) no-repeat; float:right; width:7px; height:6px;	font: 0px/0px verdana; text-align:left;}
+div.dc { background: url(../images/DataContentLeft.gif) #417EC2 repeat-y ; }
+div.dcr { background: url(../images/DataContentRight.gif) repeat-y right; padding:1%;}
+
+div.db { height:7px; background:url(../images/DataBottomLine.gif) repeat-x; font: 0px/0px verdana;}
+div.dbl{ float:left; 	background:url(../images/DataBottomLeft.gif) no-repeat; 	width:7px; 	height:7px;	font: 0px/0px verdana;}
+div.dbr { float:right; background:url(../images/DataBottomRight.gif) no-repeat; width:7px; height:7px;font: 0px/0px verdana;}
+
+div.dcr h2{ font-size:18px; font-weight:bold; margin:0px 2px 4px 2px; color:white}
+
+div.tableForm{ background: #A3C7E4;color:Black; padding:5px; }
+
+#__AjaxCall_Wait { z-index:200; }

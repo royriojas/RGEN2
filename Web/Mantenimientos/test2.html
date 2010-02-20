@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Test Page</title>
+
+<script type="text/javascript" src="../Scripts/lib/x.js"></script>
+<script type="text/javascript" src="../Scripts/functions.js"></script>
+
+
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:35px;
+	top:10px;
+	width:72px;
+	height:67px;
+	z-index:0;
+	background-color: #CC0033;
+}
+
+a.HorizontalMenuItem {
+	width:80px;
+	height:30px;
+	background-color:#C5E3E9;
+	border:1px solid #006699;
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:center;
+	position:relative;
+	display:block;
+	left: -2px;
+}
+
+-->
+</style>
+
+<script type="text/javascript"  src="../Scripts/lib/xDropDownMenu.js"></script>
+<script type="text/javascript">	
+	var xMenu = new Array();
+	window.onload = function () {
+		//$('MenuItem1').v_alue = 2;
+		var a = null;
+		//alert((a != null) && (a == "rosa"));
+		//alert (typeof(a));
+		
+		xMenu[0] = new xDropDownMenu('ContextMenuId','trg_menu1','d','mouseover','left');
+		xMenu[1] = new xDropDownMenu('ContextMenuId','trg_menu5','d','mouseover','left');
+		/*
+		xMenu[0] = new xMenu1('trg_menu1', 'ContextMenuId', 0, 'mouseover');
+
+		//
+		xMenu[1] =  new xMenu1('trg_menu2', 'ContextMenuId', 0, 'mouseover');
+		xMenu[2] =  new xMenu1('trg_menu3', 'ContextMenuId', 0, 'mouseover');
+		xMenu[3] =  new xMenu1('trg_menu4', 'ContextMenuId', 0, 'mouseover');
+		xMenu[4] =  new xMenu1('trg_menu5', 'ContextMenuId', 0, 'mouseover');
+		*/
+		
+		//xAddEventListener($('MenuItem1'),'click',doMenuAction,false);
+		xMenuContext = new xDropDownMenu('ContextMenuId','Layer1');
+		//xAddEventListener('Layer2','click',onclickHandler,false);
+	}
+
+</script>
+<link href="../Scripts/xMenuCSS/xmenu.css" rel="stylesheet" type="text/css" /></head>
+
+<body style="margin:0px;">
+<div id="header" style="background:#E3EFF2;position:relative;" class="Header"> 
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;">
+<a href="" id="trg_menu1" class="HorizontalMenuItem"  >Menu 1</a>
+
+<a href="" id="trg_menu2" class="HorizontalMenuItem" >Menu 2</a>
+<a href="" id="trg_menu3" class="HorizontalMenuItem" >Menu 3</a>
+<a href="" id="trg_menu4" class="HorizontalMenuItem" >Menu 4</a>
+<a href="" id="trg_menu5" class="HorizontalMenuItem" style="position:absolute;top:9px;left:117px;" >Menu 5</a>
+
+<div id="ContextMenuId" class="ContextMenu">
+      <div class="MenuGroup">
+        <div class="MenuHeader">
+          <p class="MenuTitle">Elija Una Opci&oacute;n </p>
+        </div>
+        <a id="MenuItem1" class="MenuItem" href="http://www.google.com" >
+        <div class="MenuItemTextHolder">
+          <h4><strong>B&uacute;squeda de Productos </strong></h4>
+          <p>&iquest;Desea un producto en part&iacute;cular?, Pruebe nuestro nuevo buscador </p>
+        </div>
+          <img class="MenuItemIco"  src="../newItems/14_layer_novisible.png" /> </a> <a class="MenuItem" href="http://www.google.com" >
+            <div class="MenuItemTextHolder">
+          <h4><strong>Lo Nuevo</strong></h4>
+              <p>&iquest;&iquest;&iquest;Es de los impacientes y le encantan las novedades???</p>
+              <p>Entonces esta es su secci&oacute;n... </p>
+            </div>
+            <img class="MenuItemIco"  src="../newItems/mail_forward.png" width="16" height="16" /> </a>
+        <div style="background-color:#D0E6EA;height:10px;border:1px solid #0066CC;"></div>
+      </div>
+  </div>
+    
+</div>
+
+</body>
+</html>

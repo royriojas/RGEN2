@@ -1,0 +1,40 @@
+﻿body, html { font-family: Calibri, Trebuchet MS; font-size:12px; background:#59a1c2; }
+.Field { width: 48%; float:left; margin-right:5px; }
+.Field.TextEdit {  width: 97%; float:none; }
+.Group { background:#fff;}
+
+span.RadioList input, 
+div.FormCSS .Field span.RadioList label,
+span.RadioList label { float: left; display:block; line-height: 16px; margin:0px  } 
+
+span.RadioList input { margin-right:5px; margin-left:5px; }
+
+.mceToolbarTop * { float:left; }
+.mceToolbarTop select { width:auto!important; }
+.mceToolbarTop option { float:none; }
+
+.InlineElements select, .InlineElements input { float:left; margin:0 5px 0 0;  }
+
+.Montos .InlineElements input { width: 100px; }
+.Montos .InlineElements select { width: 60px; }
+
+.CommandButtons a.LinkButton.Little { width: 16px; height:16px; border:none; }
+.CommandButtons a.LinkButton.Little span { display:none;}
+
+a.LinkButton.Save { background:url(scripts/css/assets/save.gif) no-repeat; }
+a.LinkButton.Generate { background:url(scripts/css/assets/approve.jpg) no-repeat;}
+a.LinkButton.Observate { background:url(scripts/css/assets/reject.gif) no-repeat;}
+a.LinkButton.Preview { background:url(scripts/css/assets/previewInforme.jpg) no-repeat;}
+a.LinkButton.PreviewPDF { background:url(scripts/css/assets/previewpdf.jpg) no-repeat;}
+.Group .Legend  { position:relative; }
+.ActionBar.CommandButtons { width: 110px; height: 17px; right:0px; position:absolute; top:5px; display:none; }
+
+.Group .Legend.hover .ActionBar.CommandButtons {  display: block; }
+/*.InitialHide {display:none;}*/
+
+table.Grid th,table.Grid td{ border: 1px solid #cccc; border-collapse:collapse; }
+
+table.Grid tr.header { background:#EEE;  }
+table.Grid td,table.Grid th { padding:3px; }
+table.Grid tr.header td, table.Grid tr.header th { background:#EEE;font-weight:bold;  }
+.List ul li { list-style:disc outside none; margin-left:15px; }

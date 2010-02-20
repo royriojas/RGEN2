@@ -1,0 +1,79 @@
+ <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6515243>Por Cantidad</TD>
+    <TD class=3Dxl6815243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7115243 style=3D"BORDER-RIGHT: black 0.5pt solid; =
+WIDTH: 154pt"=20
+    width=3D204 colSpan=3D2>Descripci=F3n</TD>
+    <TD class=3Dxl7115243=20
+    style=3D"BORDER-RIGHT: black 0.5pt solid; BORDER-LEFT: medium none; =
+WIDTH: 154pt"=20
+    width=3D204 colSpan=3D2>Cantidad</TD>
+    <TD class=3Dxl7115243=20
+    style=3D"BORDER-RIGHT: black 0.5pt solid; BORDER-LEFT: medium none; =
+WIDTH: 154pt"=20
+    width=3D204 colSpan=3D2>%</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7615243 style=3D"WIDTH: 154pt" width=3D204=20
+    colSpan=3D2>{DESCRIPCION}</TD>
+    <TD class=3Dxl7615243 style=3D"BORDER-LEFT: medium none; WIDTH: =
+154pt" width=3D204=20
+    colSpan=3D2>{CANTIDAD}</TD>
+    <TD class=3Dxl7615243 style=3D"BORDER-LEFT: medium none; WIDTH: =
+154pt" width=3D204=20
+    colSpan=3D2>{PORCENTAJE}</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6515243>Por Reserva</TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD>
+    <TD class=3Dxl1515243></TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7115243 style=3D"BORDER-RIGHT: black 0.5pt solid; =
+WIDTH: 154pt"=20
+    width=3D204 colSpan=3D2>Descripci=F3n</TD>
+    <TD class=3Dxl7115243=20
+    style=3D"BORDER-RIGHT: black 0.5pt solid; BORDER-LEFT: medium none; =
+WIDTH: 154pt"=20
+    width=3D204 colSpan=3D2>Reserva Neta</TD>
+    <TD class=3Dxl7115243=20
+    style=3D"BORDER-RIGHT: black 0.5pt solid; BORDER-LEFT: medium none; =
+WIDTH: 154pt"=20
+    width=3D204 colSpan=3D2>%</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl7615243 style=3D"WIDTH: 154pt" width=3D204=20
+    colSpan=3D2>{DESCRIPCION}</TD>
+    <TD class=3Dxl7615243 style=3D"BORDER-LEFT: medium none; WIDTH: =
+154pt" width=3D204=20
+    colSpan=3D2>{RESERVA}</TD>
+    <TD class=3Dxl7615243 style=3D"BORDER-LEFT: medium none; WIDTH: =
+154pt" width=3D204=20
+    colSpan=3D2>{PORCENTAJE}</TD></TR>
+  <TR style=3D"HEIGHT: 12.75pt" height=3D17>
+    <TD class=3Dxl1515243 style=3D"HEIGHT: 12.75pt" height=3D17></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD>
+    <TD class=3Dxl6915243 style=3D"WIDTH: 77pt" width=3D102></TD></TR>
+  

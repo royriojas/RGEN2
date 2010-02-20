@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	
+		<head>
+		
+		<link rel="stylesheet" type="text/css" media="all" href="calendar-blue2.css" title="win2k-col\d-1" />
+
+    
+		<title>phpGroupWare Demo [Calendar]</title>
+		<!--JS Imports from phpGW javascript class -->
+<script type="text/javascript" src="calendar.js"></script>
+  <script type="text/javascript" src="calendar-es.js"></script>
+
+<script type="text/javascript" src="calendar-setup.js">
+</script>
+
+
+	</head>
+	<body>
+
+  <form  runat="server">
+<input type="text" name="date" id="f_date_a" />
+<input type="text" name="date" id="f_calcdate" />
+
+
+<script type="text/javascript">
+    function catcalc(cal) {
+        var date = cal.date;
+        var time = date.getTime()
+        // use the _other_ field
+        var field = document.getElementById('f_calcdate');
+        if (field == cal.params.inputField) {
+            field = document.getElementById('f_date_a');
+            time -= Date.WEEK; // substract one week
+        } else {
+            time += Date.WEEK; // add one week
+        }
+        var date2 = new Date(time);
+        field.value = date2.print('%Y-%m-%d %H:%M');
+    }
+    Calendar.setup({
+        inputField     :    'f_date_a',   // id of the input field
+        ifFormat       :    '%Y-%m-%d %H:%M',       // format of the input field
+        showsTime      :    true,
+        timeFormat     :    '24',
+        onUpdate       :    catcalc
+    });
+    Calendar.setup({
+        inputField     :    'f_calcdate',
+        ifFormat       :    '%Y-%m-%d %H:%M',
+        showsTime      :    true,
+        timeFormat     :    '24',
+        onUpdate       :    catcalc
+    });
+</script>
+  <table width="200" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="190">
+                                                        <span style="width: 83%">
+                                                        <script type="text/javascript">
+                                                            document.write('<input id="txtFechaHoraAviso" type="text" />');
+                                                        </script>
+                                                        </span>
+                                                    </td>
+                                                    <td width="10">
+                                                    <script type="text/javascript">
+                                                        document.write('<button id="btn_FechaHoraAviso"  class="FormButton" style="width:16px;height:16px;"><img src="img/cal.gif" width="16" height="16" border="0" alt="Escoja una fecha" /></button>');
+                                                            </script>
+                                                            <script type="text/javascript">
+                                                                  Calendar.setup({
+        inputField     :    'txtFechaHoraAviso',
+        ifFormat       :    '%Y-%m-%d %H:%M',
+        button         :    'btn_FechaHoraAviso',
+        showsTime      :    true,
+        timeFormat     :    '24'
+    });                             
+                                                            </script>
+                                                            </td>
+                                                </tr>
+                                            </table>
+                                            
+                                            </form>
+
+</BODY>
+</HTML>
