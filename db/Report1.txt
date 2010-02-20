@@ -1,0 +1,1212 @@
+Generate Script Progress
+
+- Determining objects in database 'rgen2' that will be scripted. (Success)
+
+- dbo.RGN_PRODUCTO (Success)
+
+- dbo.RGN_ATRIBUTOPOLIZA (Success)
+
+- dbo.sp_rgen_TipoSiniestroSelectAllByFilters (Success)
+
+- dbo.RGN_TIPOSINIESTRO (Success)
+
+- dbo.sp_rgen_PolizaEditorUpdate (Success)
+
+- dbo.sp_rgen_PolizaPdfSelect (Success)
+
+- dbo.ADM_PERSONA (Success)
+
+- dbo.dameDistrito (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameDistrito]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_SubAcceso (Success)
+
+- dbo.ADM_CLIENTE (Success)
+
+- dbo.RGN_PRODUCTOXRAMO (Success)
+
+- dbo.sp_rgenx_brokersAutoCompleteByPersonName (Success)
+
+- dbo.sp_rgenx_EjecutivoAutoCompleteByNameAndCompany (Success)
+
+- dbo.getPersonaJuridicaBit (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[getPersonaJuridicaBit]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.ADM_TDOCID (Success)
+
+- dbo.ADM_TPERSONA (Success)
+
+- dbo.sp_rgen_documentosXriesgoSelect (Success)
+
+- dbo.ADM_TTELEFONO (Success)
+
+- dbo.RGN_REQUISITOS (Success)
+
+- dbo.ADM_UBIGEO (Success)
+
+- dbo.TiempoTranscurrido (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[TiempoTranscurrido]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.rgn_temp_informebasicodelainspeccion (Success)
+
+- dbo.quitaespacios (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[quitaespacios]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.QStr (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[QStr]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.rgn_temp_informebasicogenerales (Success)
+
+- dbo.sp_rgen_datosgenerales_update (Success)
+
+- dbo.dt_verstamp006 (Success)
+
+- dbo.dt_verstamp007 (Success)
+
+- dbo.dt_displayoaerror (Success)
+
+- dbo.RGN_PARRAFO (Success)
+
+- dbo.doInsert (Success)
+
+- dbo.sp_rgn_PolizaListaFiltros2 (Success)
+
+- dbo.ADM_PARAMETRO (Success)
+
+- dbo.sp_rgen_ProductoSelectAll (Success)
+
+- dbo.sp_rgenx_companiasAutoCompleteByPersonName (Success)
+
+- dbo.dt_vcsenabled (Success)
+
+- dbo.sp_rgen_documentosXRiesgoListaFiltro (Success)
+
+- dbo.sp_rgen_AjusteListaSelectAjustadorNull (Success)
+
+- dbo.RGN_TINFORME (Success)
+
+- dbo.RGN_TIPOACTIVIDAD (Success)
+
+- dbo.sp_rgen_BienAfectadoInsert (Success)
+
+- dbo.ADM_MONEDA (Success)
+
+- dbo.sp_Rgn_UsuarioLista (Success)
+
+- dbo.sp_rgen_BienAfectadoUpdate (Success)
+
+- dbo.SYS_APP (Success)
+
+- dbo.SYS_ROL (Success)
+
+- dbo.SYS_USUARIO (Success)
+
+- dbo.fn_rgn_toBit (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[fn_rgn_toBit]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.RGN_POLIZAS_ASOCIADAS (Success)
+
+- dbo.RGN_TIPOAJUSTE (Success)
+
+- dbo.RGN_ESTADOAJUSTE (Success)
+
+- dbo.RGN_RAMO (Success)
+
+- dbo.sp_rgen_PolizaAsegurado (Success)
+
+- dbo.CambiarRotulo (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[CambiarRotulo]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.RGN_TIPOCOMUNICACION (Success)
+
+- dbo.sp_rgen_PolizaInsert (Success)
+
+- dbo.RGN_TIPOCONTACTO (Success)
+
+- dbo.sp_rgen_PolizaLista (Success)
+
+- dbo.sp_rgen_PolizaListaById (Success)
+
+- dbo.sp_rgen_PolizaSelectById (Success)
+
+- dbo.sp_rgen_PolizaUpdate (Success)
+
+- dbo.sp_rgen_estadistica_general (Success)
+
+- dbo.sp_rgen_UbigeoLista (Success)
+
+- dbo.SYS_TRACE (Success)
+
+- dbo.sp_rgen_registroPolizaRapidoNuevo (Success)
+
+- dbo.proc_Ramo_GetByRamo (Success)
+
+- dbo.tprueba (Success)
+
+- dbo.sp_rgen_estadistica (Success)
+
+- dbo.rgn_temp_informebasicofechas (Success)
+
+- dbo.RGN_CLAUSULAS_COMUNES (Success)
+
+- dbo.RGN_REQUISITO_RAMO (Success)
+
+- dbo.sp_rgen_DocumentosTipoSiniestroId (Success)
+
+- dbo.sp_rgen_CoberturaSelectAllByFilters (Success)
+
+- dbo.sp_rgen_registro_caso_ajuste_ajustador (Success)
+
+- dbo.sp_rgen_ClausulasComunesSelect (Success)
+
+- dbo.AjustesporAsegurado (Success)
+
+- dbo.RGN_RIESGO_COBERTURA (Success)
+
+- dbo.generaNumeroAjustepasa (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[generaNumeroAjustepasa]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgn_PolizaListaFiltros (Success)
+
+- dbo.RGN_POLIZA (Success)
+
+- dbo.RGN_ATRIBUTOPOLIZA_AJUSTE (Success)
+
+- dbo.RGN_SINIESTRO (Success)
+
+- dbo.SYS_ACCESO (Success)
+
+- dbo.SYS_SUBACCESO (Success)
+
+- dbo.ADM_AJUSTADOR (Success)
+
+- dbo.ADM_ASEGURADO (Success)
+
+- dbo.ADM_BROKER (Success)
+
+- dbo.ADM_DIRECCIONPERSONA (Success)
+
+- dbo.ADM_DOCID (Success)
+
+- dbo.ADM_TELEFONOXPERSONA (Success)
+
+- dbo.ADM_EJECUTIVOSINIESTROS (Success)
+
+- dbo.RGN_AJUSTE (Success)
+
+- dbo.RGN_PARRAFO_ASEGURADO (Success)
+
+- dbo.RGN_POLIZA_AJUSTE (Success)
+
+- dbo.RGN_CLAUSULAS (Success)
+
+- dbo.RGN_ITEMASEGURADO (Success)
+
+- dbo.RGN_CONFIGURACIONXASEGURADORA (Success)
+
+- dbo.RGN_AJUSTE_RGN_REQUERIMIENTO (Success)
+
+- dbo.RGN_PERDIDA (Success)
+
+- dbo.RGN_RESERVA (Success)
+
+- dbo.RGN_INFORMACIONRELEVANTE (Success)
+
+- dbo.RGN_ITEMASEGURADO_AJUSTE (Success)
+
+- dbo.RGN_ESTADOSAJUSTE (Success)
+
+- dbo.RGN_EQUIPO (Success)
+
+- dbo.RGN_GASTO (Success)
+
+- dbo.RGN_SOLICITUDDOCUMENTOS (Success)
+
+- dbo.RGN_SECCIONESAJUSTE (Success)
+
+- dbo.RGN_ANEXO (Success)
+
+- dbo.RGN_COMUNICACION (Success)
+
+- dbo.RGN_AJUSTE_CLAUSULAS (Success)
+
+- dbo.RGN_ADELANTO (Success)
+
+- dbo.RGN_RECLAMO (Success)
+
+- dbo.RGN_CONVENIOAJUSTE (Success)
+
+- dbo.RGN_BIENAFECTADO (Success)
+
+- dbo.RGN_INFORME (Success)
+
+- dbo.RGN_ACTIVIDAD (Success)
+
+- dbo.RGN_CONTACTOS_AJUSTE (Success)
+
+- dbo.RGN_PARRAFO_RIESGO (Success)
+
+- dbo.ADM_TIPOCAMBIO (Success)
+
+- dbo.SYS_MODULO (Success)
+
+- dbo.SYS_FUNCIONALIDAD (Success)
+
+- dbo.SYS_ROLUSUARIO (Success)
+
+- dbo.RGN_CONDICIONES (Success)
+
+- dbo.sp_rgen_productoDeleteX (Success)
+
+- dbo.sp_rgen_ProductoInsertX (Success)
+
+- dbo.sp_rgen_productoUpdateX (Success)
+
+- dbo.sp_rgen_productoSelect (Success)
+
+- dbo.sp_rgen_polizaEditorSelect (Success)
+
+- dbo.sp_rgen_productoDelete (Success)
+
+- dbo.sp_rgen_productoUpdate (Success)
+
+- dbo.sp_rgen_productoInsert (Success)
+
+- dbo.sp_rgen_productoSelectById (Success)
+
+- dbo.sp_rgen_informebasico_delapoliza_cabecera (Success)
+
+- dbo.sp_rgen_ProductoCombo (Success)
+
+- dbo.sp_rgen_polizaPrincipalRimac (Success)
+
+- dbo.sp_rgen_AtributosPolizaInsert (Success)
+
+- dbo.sp_Rgen_AtributosPolizaDelete (Success)
+
+- dbo.sp_Rgen_PolizaDelete (Success)
+
+- dbo.sp_rgen_informebasico_deducibles (Success)
+
+- dbo.sp_rgen_AtributoPolizaSelectById (Success)
+
+- dbo.dimeTipoSiniestro (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dimeTipoSiniestro]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgnx_selectTipoSiniestroByRamoId (Success)
+
+- dbo.sp_rgen_TipoSiniestroInsert (Success)
+
+- dbo.sp_rgen_TipoSiniestroUpdate (Success)
+
+- dbo.sp_rgen_TipoSiniestroSelect (Success)
+
+- dbo.sp_rgen_TipoSiniestroSelectById (Success)
+
+- dbo.sp_rgen_TipoSiniestroDelete (Success)
+
+- dbo.fn_rgen_dameTipoSiniestro (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[fn_rgen_dameTipoSiniestro]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_informebasico_delaocurrencia_cabecera (Success)
+
+- dbo.sp_rgen_TipoSiniestroCombo (Success)
+
+- dbo.sp_rgen_getAccesoAFuncionalidades (Success)
+
+- dbo.sp_rgen_tieneFuncionalidad_SegundoNivel (Success)
+
+- dbo.sp_rgen_tieneFuncionalidad_SegundoNivel_Broker (Success)
+
+- dbo.sp_rgen_SubAccesoInsert (Success)
+
+- dbo.dameAseguradora (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameAseguradora]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.dameAsegurado (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameAsegurado]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.borraPersona (Success)
+
+- dbo.dimeQuePersonaEs (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dimeQuePersonaEs]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_PersonaDelete (Success)
+
+- dbo.sp_rgen_aseguradoUpdate (Success)
+
+- dbo.sp_rgen_brokerUpdate (Success)
+
+- dbo.sp_rgen_aseguradoraUpdate (Success)
+
+- dbo.sp_rgen_BrokerInsert (Success)
+
+- dbo.sp_rgen_AseguradoInsert (Success)
+
+- dbo.dameBroker (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameBroker]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_correoPersonaUpdate (Success)
+
+- dbo.sp_rgen_dameEmailAjustador (Success)
+
+- dbo.sp_rgen_correoPersonaSelect (Success)
+
+- dbo.sp_rgen_CiaCombo (Success)
+
+- dbo.sp_rgen_informebasico_generales (Success)
+
+- dbo.sp_rgen_BrokerListabyName (Success)
+
+- dbo.sp_rgen_BrokerCombo (Success)
+
+- dbo.insertar_broker (Success)
+
+- dbo.sp_Rgn_UsuarioInsert (Success)
+
+- dbo.sp_rgen_dameCompaniaNombre (Success)
+
+- dbo.sp_rgen_dameCompaniaUsuario (Success)
+
+- dbo.sp_rgen_AjustadorCombo (Success)
+
+- dbo.sp_rgen_brokersAutoComplete (Success)
+
+- dbo.sp_Rgn_UsuarioUpdate (Success)
+
+- dbo.sp_creaPersonaBroker (Success)
+
+- dbo.sp_Rgn_UsuarioEditor (Success)
+
+- dbo.sp_rgen_AseguradoraInsert (Success)
+
+- dbo.sp_rgen_usuarioByPersonaId (Success)
+
+- dbo.sp_rgen_asocia_usuario_a_persona (Success)
+
+- dbo.proc_rgen_Ajuste_Total_Rapido_Select (Success)
+
+- dbo.sp_rgn_nueva_persona (Success)
+
+- dbo.sp_rgen_SelectPersonaByTipoAndName (Success)
+
+- dbo.sp_rgen_asegurados_by_name (Success)
+
+- dbo.sp_rgen_registroPoliza_Juridica (Success)
+
+- dbo.sp_rgen_registroPoliza_Natural (Success)
+
+- dbo.sp_rgen_Ajuste_Total_Select (Success)
+
+- dbo.sp_rgen_Ajuste_Parcial_Select (Success)
+
+- dbo.sp_rgen_datosRecepcionCasoRimac (Success)
+
+- dbo.sp_rgen_EjecutivoSiniestrosCombo (Success)
+
+- dbo.dameTipoPersona (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameTipoPersona]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_informacionInspeccionRimac (Success)
+
+- dbo.sp_rgen_Ocurrencia_select (Success)
+
+- dbo.sp_rgen_ActividadLista (Success)
+
+- dbo.sp_rgen_InspeccionSelect (Success)
+
+- dbo.sp_rgen_informebasico_delainspeccion (Success)
+
+- dbo.dameGiroNegocio (Success)
+
+- dbo.dameACtividad (Success)
+
+- dbo.sp_rgen_registroPolizaRapidaNatural (Success)
+
+- dbo.proc_informacionAjusteRimacUpdate (Success)
+
+- dbo.proc_informacionAjusteRimac (Success)
+
+- dbo.proc_get_CodigoAseguradora_By_AjusteId (Success)
+
+- dbo.borrar (Success)
+
+- dbo.sp_rgen_solicitudDocumentosXInsert (Success)
+
+- dbo.sp_rgen_Requisitos (Success)
+
+- dbo.sp_rgen_SolicitudDocumentosLista (Success)
+
+- dbo.sp_rgen_dameUltimaSolicitud (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[sp_rgen_dameUltimaSolicitud]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_solicitudDocumentosDelete (Success)
+
+- dbo.sp_rgen_SeccionesAjusteSelect (Success)
+
+- dbo.sp_rgen_SeccionesAjusteInsert (Success)
+
+- dbo.sp_rgen_SeccionesAjusteDelete (Success)
+
+- dbo.sp_rgen_SeccionesTotalPacifico (Success)
+
+- dbo.sp_rgen_InformeSeccionesAjusteSelectPacifico (Success)
+
+- dbo.proc_secciones_ajuste_update (Success)
+
+- dbo.sp_rgen_InformeSeccionesAjusteSelect (Success)
+
+- dbo.sp_rgen_SeccionesAjusteUpdate (Success)
+
+- dbo.sp_rgen_SeccionesFinalInsert (Success)
+
+- dbo.sp_rgen_SeccionesFinalDelete (Success)
+
+- dbo.sp_rgen_SeccionesFinalSelect (Success)
+
+- dbo.sp_rgen_SeccionesSubtituloFinal (Success)
+
+- dbo.sp_rgen_SeccionesSubtituloInsert (Success)
+
+- dbo.sp_rgen_SeccionesTotal (Success)
+
+- dbo.sp_rgen_Ajuste_Parcial_Update (Success)
+
+- dbo.sp_rgen_AjusteSelect (Success)
+
+- dbo.sp_rgen_Ajustador_AjusteSelect (Success)
+
+- dbo.sp_rgen_InspeccionLista (Success)
+
+- dbo.sp_rgen_InspeccionUpdate (Success)
+
+- dbo.sp_rgen_informebasico_fechaavisoycoordinacion (Success)
+
+- dbo.sp_rgen_Ajuste_Total_Update (Success)
+
+- dbo.sp_rgen_EliminarAjuste (Success)
+
+- dbo.sp_rgen_AjusteSelectbyId (Success)
+
+- dbo.sp_rgen_Ocurrencia_update (Success)
+
+- dbo.sp_rgen_ObservacionInsert (Success)
+
+- dbo.sp_rgen_AjusteInsert (Success)
+
+- dbo.sp_rgen_AjusteDelete (Success)
+
+- dbo.sp_rgen_InformacionComplementariaUpdate (Success)
+
+- dbo.sp_rgen_getNumeroAjuste (Success)
+
+- dbo.sp_rgen_informebasico_delainspeccionUpdate (Success)
+
+- dbo.sp_rgen_FechaHoraCoordinacion_select (Success)
+
+- dbo.proc_informebasicoReclamoRimacUpdate (Success)
+
+- dbo.sp_updateUbigeo (Success)
+
+- dbo.getDocumentoIdentidadPrincipalPersona (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[getDocumentoIdentidadPrincipalPersona]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.getDocumentoporPersona (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[getDocumentoporPersona]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgenx_RamosSelectByProductoId (Success)
+
+- dbo.sp_rgen_ramoxProductoInsert (Success)
+
+- dbo.sp_rgen_ramosByProductoIdToChk (Success)
+
+- dbo.sp_rgen_ramoxPRoductoDelete (Success)
+
+- dbo.sp_rgen_dameTelefonoPrincipalPersona (Success)
+
+- dbo.sp_rgen_dameTelefonosPersona (Success)
+
+- dbo.getTelefonoPorTipo (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[getTelefonoPorTipo]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_ObtenerTipoCambio (Success)
+
+- dbo.sp_rgen_requerimientos_ajuste_select (Success)
+
+- dbo.sp_rgen_elimina_requisitos (Success)
+
+- dbo.sp_rgen_informebasico_documentacionsolicitada (Success)
+
+- dbo.sp_rgen_documentosDelete (Success)
+
+- dbo.sp_rgen_insertaRequisito (Success)
+
+- dbo.doInsertUbigeo (Success)
+
+- dbo.sp_rgen_dameDatosActividad (Success)
+
+- dbo.FechaAnsiString (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[FechaAnsiString]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_Rgen_PolizaAsociadaDelete (Success)
+
+- dbo.sp_rgen_ClausulasAjusteInsert (Success)
+
+- dbo.sp_rgen_informebasico_delapoliza_clausulas (Success)
+
+- dbo.sp_Rgen_ClausulasAjusteDelete (Success)
+
+- dbo.sp_rgen_ClausulasSelectById (Success)
+
+- dbo.sp_Rgen_ClausulasDelete (Success)
+
+- dbo.sp_rgen_AnexoDelete (Success)
+
+- dbo.sp_rgen_AnexoInsert (Success)
+
+- dbo.sp_rgen_AnexoUpdate (Success)
+
+- dbo.sp_rgen_informebasico_imagenes (Success)
+
+- dbo.sp_rgen_AnexoSelect (Success)
+
+- dbo.sp_rgen_SelectThumbNail (Success)
+
+- dbo.dameUltimosAnexos (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameUltimosAnexos]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_SelectContents (Success)
+
+- dbo.sp_rgen_DeduciblesAjusteInsert (Success)
+
+- dbo.sp_Rgen_AtributosPolizaAjusteDelete (Success)
+
+- dbo.sp_rgen_ComunicacionDelete (Success)
+
+- dbo.sp_rgen_ComunicacionInsert (Success)
+
+- dbo.dameUltimasComunicaciones (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameUltimasComunicaciones]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_ComunicacionUpdate (Success)
+
+- dbo.sp_rgen_ComunicacionSelect (Success)
+
+- dbo.sp_rgen_ComunicacionLista (Success)
+
+- dbo.sp_rgen_EquipoSelect (Success)
+
+- dbo.sp_rgen_EquipoInsert (Success)
+
+- dbo.sp_rgen_EquipoDelete (Success)
+
+- dbo.TiempoEnElEstado (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[TiempoEnElEstado]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_administraEstados (Success)
+
+- dbo.pTiempoEnElEstado (Success)
+
+- dbo.UltimoCodigoEstadoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoCodigoEstadoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_cambiaEstadoAjusteAdmin (Success)
+
+- dbo.sp_rgen_ActualizaEstadoAjuste (Success)
+
+- dbo.sp_rgen_cambiaEstadoAjuste (Success)
+
+- dbo.UltimoEstadoAjusteId (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoEstadoAjusteId]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.FechaUltimoEstadoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[FechaUltimoEstadoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.UltimoEstadoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoEstadoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_TiempoEnElEstado (Success)
+
+- dbo.sp_rgen_administraFechaCambio (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[sp_rgen_administraFechaCambio]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.dt_adduserobject_vcs (Success)
+
+- dbo.dt_checkinobject (Success)
+
+- dbo.dt_whocheckedout (Success)
+
+- dbo.dt_validateloginparams (Success)
+
+- dbo.dt_getpropertiesbyid_u (Success)
+
+- dbo.dt_droppropertiesbyid (Success)
+
+- dbo.dt_dropuserobjectbyid (Success)
+
+- dbo.dt_getobjwithprop_u (Success)
+
+- dbo.dt_getpropertiesbyid_vcs (Success)
+
+- dbo.dt_generateansiname (Success)
+
+- dbo.dt_adduserobject (Success)
+
+- dbo.dt_setpropertybyid (Success)
+
+- dbo.dt_getobjwithprop (Success)
+
+- dbo.dt_getpropertiesbyid (Success)
+
+- dbo.dameFechaHoraSiniestro (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameFechaHoraSiniestro]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_InformacionRelevanteSelect (Success)
+
+- dbo.sp_rgen_InformacionRelevanteDelete (Success)
+
+- dbo.sp_rgen_InformacionRelevanteInsert (Success)
+
+- dbo.sp_Rgen_ItemAseguradoDelete (Success)
+
+- dbo.sp_rgen_ItemAseguradoSelectById (Success)
+
+- dbo.sp_Rgen_ItemAseguradoAjusteDelete (Success)
+
+- dbo.sp_rgen_ItemAsegurado_Poliza_Ajuste (Success)
+
+- dbo.sp_rgen_informebasico_delapoliza_detalle (Success)
+
+- dbo.sp_rgen_ItemsAseguradosAjusteInsert (Success)
+
+- dbo.dt_addtosourcecontrol (Success)
+
+- dbo.dt_displayoaerror_u (Success)
+
+- dbo.sp_rgen_correosADM_update (Success)
+
+- dbo.sp_rgen_correosADM_delete (Success)
+
+- dbo.sp_rgen_generaNumeroAjustepasa (Success)
+
+- dbo.sp_rgen_numeroComunicacionActualUpdate (Success)
+
+- dbo.sp_rgen_actualizaNumeroCartaUpdate (Success)
+
+- dbo.sp_rgen_numeroComunicacionActual (Success)
+
+- dbo.sp_rgen_generaNumeroComunicacion (Success)
+
+- dbo.dameNumeroActualdeAjuste (Success)
+
+- dbo.sp_rgen_correosADM_select (Success)
+
+- dbo.sp_rgen_correosADM_insert (Success)
+
+- dbo.actualizaNumeroAjusteInicial (Success)
+
+- dbo.sp_rgen_requisitos_ajuste_insert (Success)
+
+- dbo.sp_rgen_RequisitosInsertToSolicitud (Success)
+
+- dbo.sp_rgen_RequerimientoUpdate (Success)
+
+- dbo.sp_rgen_RequisitosDeDocumentoLista (Success)
+
+- dbo.numeroDeDocumentosSolicitados (Success)
+
+- dbo.damedocumentos (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[damedocumentos]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.PrimeraPoliza (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[PrimeraPoliza]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgn_asignaPolizaPrincipal (Success)
+
+- dbo.sp_rgen_registroPoliza_Nuevo (Success)
+
+- dbo.sp_rgen_PolizaAsociadaInsert (Success)
+
+- dbo.dameRespAseguradora (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameRespAseguradora]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_dimePolizasDelAjuste (Success)
+
+- dbo.sp_rgen_damePrincipalPolizaAjuste (Success)
+
+- dbo.UltimoEstimadoReservaAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoEstimadoReservaAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.UltimoEstimadoPerdidaAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoEstimadoPerdidaAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.UltimaMonedaReservaAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimaMonedaReservaAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.UltimoEstimadoReservaAjusteMoneda (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoEstimadoReservaAjusteMoneda]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_InformeListaControl (Success)
+
+- dbo.sp_rgen_InformeListaAprobado (Success)
+
+- dbo.sp_rgen_InformeLista (Success)
+
+- dbo.sp_rgen_InformeControl (Success)
+
+- dbo.sp_rgn_TipoActividadLista (Success)
+
+- dbo.sp_rgn_TipoActividadSelectByTipoActividad (Success)
+
+- dbo.sp_rgn_TipoActividadInsert (Success)
+
+- dbo.sp_rgen_ActividadInsertNueva (Success)
+
+- dbo.sp_rgen_ActividadListaEdit (Success)
+
+- dbo.sp_rgen_ActividadSelect (Success)
+
+- dbo.sp_rgen_BienAfectadoSelectById (Success)
+
+- dbo.dameNombreMoneda (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameNombreMoneda]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.dameSimboloMoneda (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameSimboloMoneda]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_MonedaCombo (Success)
+
+- dbo.sp_rgen_GastoSelectById (Success)
+
+- dbo.dameUltimosGastos (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameUltimosGastos]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_GastoLista (Success)
+
+- dbo.sp_rgen_configuracionAseguradora (Success)
+
+- dbo.sp_rgen_configuracionUpdate (Success)
+
+- dbo.sp_rgen_configuracionSelect (Success)
+
+- dbo.sp_Rgen_GastoDelete (Success)
+
+- dbo.sp_rgen_GastoInsert (Success)
+
+- dbo.getRolNameFromUserId (Success)
+
+- dbo.sp_rgen_getRolNameFromUserId (Success)
+
+- dbo.sp_Rgn_RolComboByUser (Success)
+
+- dbo.sp_Rgn_RolComboByUserId (Success)
+
+- dbo.sp_rgn_UsuariosByName (Success)
+
+- dbo.sp_Rgn_UsuarioDelete (Success)
+
+- dbo.sp_rgn_riesgosdelRequisito (Success)
+
+- dbo.sp_rgen_ItemAseguradoInsert (Success)
+
+- dbo.dameTipoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameTipoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_TipoAjusteCombo (Success)
+
+- dbo.UltimaMonedaReclamoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimaMonedaReclamoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.UltimoReclamoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[UltimoReclamoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_ReclamoUpdate (Success)
+
+- dbo.sp_rgen_AjusteListaByAjustadorId (Success)
+
+- dbo.f_rgen_DameCodigoEstadoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[f_rgen_DameCodigoEstadoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_EstadoAjusteCombo (Success)
+
+- dbo.sp_rgn_TipoComunicacionLista (Success)
+
+- dbo.sp_rgen_TipoComunicacionCombo (Success)
+
+- dbo.sp_rgen_RamoCombo (Success)
+
+- dbo.sp_Rgen_BienAfectadoDelete (Success)
+
+- dbo.sp_rgen_BienAfectadoLista (Success)
+
+- dbo.ContactoAjuste (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[ContactoAjuste]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.ContactoAjusteBroker (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[ContactoAjusteBroker]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_dameTotalIndemnizacion (Success)
+
+- dbo.sp_rgen_InformeTipo (Success)
+
+- dbo.proc_trace (Success)
+
+- dbo.sp_rgen_ClausulasInsert (Success)
+
+- dbo.sp_rgenx_elCasoEstaEnControlCalidad (Success)
+
+- dbo.sp_rgen_InformeBasicoSelect (Success)
+
+- dbo.sp_rgen_InformeBasicoInsert (Success)
+
+- dbo.sp_rgen_DatosInformeSelect (Success)
+
+- dbo.sp_rgen_InformeEnvioUpdate (Success)
+
+- dbo.sp_rgen_TieneinformeBasico (Success)
+
+- dbo.sp_rgen_tieneInformePreliminar (Success)
+
+- dbo.sp_Rgen_ClausulasComunesDelete (Success)
+
+- dbo.sp_rgen_ClausulasComunes_RamoId (Success)
+
+- dbo.sp_rgen_ClausulasComunesInsert (Success)
+
+- dbo.sp_rgen_AsociaRequisitoaRiesgo (Success)
+
+- dbo.sp_rgen_DesasociaRequisitoaRiesgo (Success)
+
+- dbo.dameRespBroker (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameRespBroker]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.dameUltimasActividades (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameUltimasActividades]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.sp_rgen_ItemInsert (Success)
+
+- dbo.sp_rgen_ActividadDelete (Success)
+
+- dbo.sp_rgen_ActividadUpdate (Success)
+
+- dbo.sp_rgen_ActividadUpdateEdit (Success)
+
+- dbo.sp_rgenx_CoberturasByRamoId (Success)
+
+- dbo.sp_rgen_RiesgoCoberturaSelectAll (Success)
+
+- dbo.sp_rgen_RiesgoCoberturaInsert (Success)
+
+- dbo.sp_rgen_CoberturaCombo (Success)
+
+- dbo.sp_rgen_RiesgoCoberturaDelete (Success)
+
+- dbo.sp_rgen_RiesgoCoberturaUpdate (Success)
+
+- dbo.sp_Rgen_RiesgoCombo (Success)
+
+- dbo.sp_rgen_CoberturaInsert (Success)
+
+- dbo.sp_rgen_coberturaUpdate (Success)
+
+- dbo.sp_rgen_CoberturaSelectByPrimaryKey (Success)
+
+- dbo.sp_rgen_CoberturaToggleDelete (Success)
+
+- dbo.sp_rgen_polizaPrincipal (Success)
+
+- dbo.sp_rgen_ConvenioAjuste (Success)
+
+- dbo.sp_rgen_PolizasAsociadasSelect (Success)
+
+- dbo.sp_rgen_Encabezado_Select (Success)
+
+- dbo.sp_rgen_mensajes (Success)
+
+- dbo.sp_rgen_informebasico_cabecera (Success)
+
+- dbo.proc_InformeBasicoPacificoDatosAjuste (Success)
+
+- dbo.sp_rgen_UsuariosListaFilteredByCreator (Success)
+
+- dbo.UsuariosListaFilteredByCreator (Success)
+
+- dbo.sp_rgn_UsuariosListaByNameAndPassword (Success)
+
+- dbo.sp_rgen_BrokerByName (Success)
+
+- dbo.sp_rgen_AseguradoraSelectAll (Success)
+
+- dbo.sp_rgenx_EjectivoSelectById (Success)
+
+- dbo.sp_rgen_AseguradoSelectById (Success)
+
+- dbo.sp_rgen_AseguradoSelectAll (Success)
+
+- dbo.sp_rgen_BrokerSelectAll (Success)
+
+- dbo.sp_rgen_BrokerSelectById (Success)
+
+- dbo.sp_rgen_solicitud_docs (Success)
+
+- dbo.sp_rgen_AseguradoraSelectById (Success)
+
+- dbo.sp_rgen_datosgenerales_select (Success)
+
+- dbo.sp_rgen_SolicitudDocumentosInsert (Success)
+
+- dbo.sp_rgen_ReclamoSelect (Success)
+
+- dbo.sp_rgen_FinalizarCaso (Success)
+
+- dbo.proc_informebasicoReclamoRimac (Success)
+
+- dbo.sp_rgen_InformacionComplementariaSelect (Success)
+
+- dbo.sp_rgen_Ajustador_AjusteUpdate (Success)
+
+- dbo.sp_rgen_Ajuste_Total_Insert (Success)
+
+- dbo.sp_rgen_informebasico_delreclamo (Success)
+
+- dbo.sp_rgen_Ajuste_Parcial_Insert (Success)
+
+- dbo.proc_ajuste_Insert_rapido (Success)
+
+- dbo.sp_rgen_ConvenioAjusteSelect (Success)
+
+- dbo.sp_rgen_EstadoAjusteActual_Select (Success)
+
+- dbo.sp_rgn_AjustesListaFiltrosReporte (Success)
+
+- dbo.dt_setpropertybyid_u (Success)
+
+- dbo.dt_removefromsourcecontrol (Success)
+
+- dbo.dt_getpropertiesbyid_vcs_u (Success)
+
+- dbo.dt_addtosourcecontrol_u (Success)
+
+- dbo.dt_checkinobject_u (Success)
+
+- dbo.dt_checkoutobject_u (Success)
+
+- dbo.dt_isundersourcecontrol_u (Success)
+
+- dbo.dt_validateloginparams_u (Success)
+
+- dbo.dt_whocheckedout_u (Success)
+
+- dbo.sp_rgn_TipoActividadUpdate (Success)
+
+- dbo.sp_rgn_AjustesListaFiltros (Success)
+
+- dbo.sp_rgen_informebasico_delaocurrencia_detalle (Success)
+
+- dbo.sp_rgen_ConvenioAjusteUpdate (Success)
+
+- dbo.sp_rgen_ConvenioAjusteInsert (Success)
+
+- dbo.dameRiesgoIdPolizaPrincipal (Error)
+	Messages
+	* Property TextHeader is not available for UserDefinedFunction '[dbo].[dameRiesgoIdPolizaPrincipal]'. This property may not exist for this object, or may not be retrievable due to insufficient access rights.  The text is encrypted. (Microsoft.SqlServer.Smo)
+	
+	For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=9.00.3042.00&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.PropertyCannotBeRetrievedExceptionText&EvtID=TextHeader&LinkId=20476
+	
+
+- dbo.getRamoWhereAjusteIdIs (Success)
+
+- dbo.sp_rgen_AjaxDatosCabeceraAjuste (Success)
+
+- dbo.sp_rgen_getRiesgoIdAjuste (Success)
+
+
+
