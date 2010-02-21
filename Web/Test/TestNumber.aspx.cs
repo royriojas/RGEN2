@@ -17,7 +17,7 @@ public partial class Test_TestNumber : System.Web.UI.Page
   }
   protected void btnToNumber_Click(object sender, EventArgs e)
   {
-    this.Label1.Text = R3M.Common.Util.getNumberAsLetters(Convert.ToDouble(this.TextBox1.Text));
+    this.Label1.Text = R3M.Common.Util.GetNumberAsLetters(Convert.ToDouble(this.TextBox1.Text));
 
   }
   protected void Button1_Click(object sender, EventArgs e)

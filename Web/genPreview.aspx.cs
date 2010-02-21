@@ -16,7 +16,7 @@ public partial class genPreview : System.Web.UI.Page
     String TipoInforme = Request.QueryString["TI"];
     String AjusteId = Request.QueryString["AjusteId"];
 
-    this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "RedirectKey", String.Format("window.location.href='genPreviewPdf.aspx?AjusteId={0}&TI={1}'", AjusteId, TipoInforme), true);
+    Page.ClientScript.RegisterClientScriptBlock(GetType(), "RedirectKey", String.Format("window.location.href='genPreviewPdf.aspx?AjusteId={0}&TI={1}&nc={2}'", AjusteId, TipoInforme, DateTime.Now.Ticks), true);
     
   }
 }

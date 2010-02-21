@@ -57,7 +57,7 @@ public partial class InformesPlantillas_InformePacificoPreliminar : System.Web.U
   {
     if (numero != null && numero != DBNull.Value)
     {
-      return R3M.Common.Util.getNumberAsLetters(Convert.ToDouble(numero));
+      return R3M.Common.Util.GetNumberAsLetters(Convert.ToDouble(numero));
     }
     return "0";
   }

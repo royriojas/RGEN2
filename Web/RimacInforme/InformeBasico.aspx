@@ -12,22 +12,29 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
   <script type="text/javascript">
+        
+        var ajusteId = '<%= Request.QueryString["AjusteId"] %>';
+  
         $(function() {
             $('.Group-Content').hide();
 
-            $('.Group .Legend').css({ cursor: 'pointer' }).toggle(function() {
+            $('.Group .Legend').css({ cursor: 'pointer' }).toggleWithoutPrevent(function(e) {
+               
+                if ($(e.target).is('a span') || $(e.target).is('a')) return true;
                 $(this).next().fadeIn(300);
-            }, function() {
+            }, function(e) {
+            
+                if ($(e.target).is('a span') || $(e.target).is('a')) return true;
                 $(this).next().fadeOut(300);
             });
 
             var actionbuttons = '<div class="ActionBar CommandButtons">' +
 				'<ul>' +
 					'<li><a class="LinkButton Save Little" href=""><span>Grabar</span></a></li>' +
-					'<li><a class="LinkButton Generate Little" href=""><span>Generar</span></a></li>' +
+					'<li><a class="LinkButton Generate Little" href="#"><span>Generar</span></a></li>' +
 					'<li><a class="LinkButton Observate Little" href=""><span>Observar</span></a></li>' +
-					'<li><a class="LinkButton Preview Little" href=""><span>Vista Previa HTML</span></a></li>' +
-					'<li><a class="LinkButton PreviewPDF Little" href=""><span>Vista Previa PDF</span></a></li>' +
+					'<li><a class="LinkButton Preview Little" target="_blank" href="<%= String.Format( ResolveClientUrl("~/vVistaPrevia.aspx?AjusteId={0}&TI={1}"), Request.QueryString["AjusteId"] , "IB") %>"><span>Vista Previa HTML</span></a></li>' +
+					'<li><a class="LinkButton PreviewPDF Little" target="_blank" href=""><span>Vista Previa PDF</span></a></li>' +
 				'</ul>' +
 			'</div>';
 
@@ -40,11 +47,26 @@
             });
 
             $('a.GoDocuments').click(function() {
-                showModalDialog('<%= ResolveClientUrl("~/vDocumentos.aspx?AjusteId=" + Request.QueryString["AjusteId"]) %>');
+                showModalDialog('<%= ResolveUrl(string.Format("~/vDocumentos.aspx?AjusteId={0}", Request.QueryString["AjusteId"])) %>');
                 return false;
             });
             
-            $('a.LinkButton.Preview').attr('target','_blank').attr('href','<% = String.Format( ResolveClientUrl("~/vVistaPrevia.aspx?AjusteId={0}&TI={1}"), Request.QueryString["AjusteId"] , "IB") %>');
+            $('a.LinkButton.Generate').click(function() {
+                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=0", Request.QueryString["AjusteId"])) %>', 229, 75, null);  
+                return false;
+            });
+            $('a.LinkButton.Observate').click(function() {
+                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=1", Request.QueryString["AjusteId"])) %>', 229, 75, null);  
+                return false;
+            });
+            
+            $('a.LinkButton.PreviewPDF').click(function() {
+              //window.top.ShowReport('genPreview.aspx?AjusteId='+ajusteId+'&TI=' + tipoInforme+'&NOW=NOW', 229, 75, null);   
+              window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreview.aspx?AjusteId={0}&TI=B&NOW=NOW&nc={1}", Request.QueryString["AjusteId"], DateTime.Now.Ticks)) %>', 229, 75, null);   
+              return false;
+            });
+            
+ 
 
         });
   </script>
@@ -64,6 +86,18 @@
       OnItemUpdating="FormViewInforme_ItemUpdating" OnDataBinding="FormViewInforme_DataBinding">
       <EditItemTemplate>
         <div class="FormCSS">
+          <div class="Group">
+            <div class="Field">
+              <label>
+                N&uacute;mero Informe B&aacute;sico</label>
+              <div class="FieldWrapper">
+                <asp:TextBox CssClass="FormText" ID="_txtNumInformeBasico" Text='<%# Bind("NumeroIfb")  %>'
+                  runat="server"></asp:TextBox>
+              </div>
+            </div>
+            <div class="doClear">
+            </div>
+          </div>
           <div class="Group AseguradoInfo">
             <div class="Legend">
               <h2>
@@ -396,14 +430,23 @@
                 <div class="FieldWrapper">
                   <asp:TextBox Text='<%# Bind("SituacionSiniestro") %>' ID="_txtSituacionSiniestro"
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
-                </div>
-                <asp:HyperLink CssClass="LinkButton Little GoDocuments" ID="_lnkGoDocuments" Style="width: 200px"
+					<div class="doClear"></div>
+                </div>                
+              </div>
+			  <div class="Field">
+				<label>Click en el botón para ver los documentos solicitados</label>
+				<div class="FieldWrapper">
+					<asp:HyperLink CssClass="LinkButton Little GoDocuments" ID="_lnkGoDocuments" Style="width: 200px"
                   runat="server">
                   <span>
                     <asp:Literal ID="DocumentsLinks" Text='Documentos Solicitados:' runat="server"></asp:Literal></span></asp:HyperLink>
-                <div class="doClear">
+					<div class="doClear">
+					</div>
+				</div>
+				
+			  </div>
+			   <div class="doClear">
                 </div>
-              </div>
             </div>
           </div>
           <div class="Group Montos">

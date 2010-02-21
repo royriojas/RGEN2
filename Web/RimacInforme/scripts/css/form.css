@@ -56,7 +56,7 @@ p.Validator { display:none; margin:2px;margin-left: 0px; font-weight:normal; fon
 
 a.LinkButton { background:url(assets/white-grad.png) repeat-x; display:block; width: 100px;  text-align:center; cursor:pointer; text-decoration:none; color: #005494; float:left;height:25px;line-height:25px;margin-right:5px; border:1px solid #ddd; padding:0px; }
 
-a.LinkButton.Little { height:20px; line-height: 20px; padding: 0px}
+a.LinkButton.Little { height:18px; line-height: 15px; padding: 0px}
 
 a.LinkButton:hover { border: 1px solid #bbb; }
 

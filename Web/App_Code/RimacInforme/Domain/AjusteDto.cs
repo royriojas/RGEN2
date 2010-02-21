@@ -16,12 +16,19 @@ namespace App_Code.RimacInforme.Domain
             set { _ajusteId = Util.XDefault(value, default(decimal)); }
         }
 
+        private string _numeroAjuste;
+        public string NumeroAjuste
+        {
+            get { return _numeroAjuste; }
+            set { _numeroAjuste = Util.XDefault(value, String.Empty); }
+        }
+
         public AjusteDto()
         {
-            this.Poliza = new Poliza();
-            this.InfoAsegurado = new InformacionAsegurado();
-            this.Recepcion = new RecepcionCaso();
-            this.InfoInspeccion = new InfoInspeccion();
+            Poliza = new Poliza();
+            InfoAsegurado = new InformacionAsegurado();
+            Recepcion = new RecepcionCaso();
+            InfoInspeccion = new InfoInspeccion();
         }
 
         private InformacionAsegurado _infoAsegurado;
@@ -42,7 +49,7 @@ namespace App_Code.RimacInforme.Domain
         public String GiroNegocio
         {
             get { return _giroNegocio; }
-            set { _giroNegocio = Util.XDefault(value, String.Empty);  }
+            set { _giroNegocio = Util.XDefault(value, String.Empty); }
         }
 
         private RecepcionCaso _recepcion;
@@ -67,7 +74,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _fechaYHoraSiniestro = value;
+                _fechaYHoraSiniestro = Util.XDefault<DateTime?>(value, null);
             }
         }
 
@@ -166,7 +173,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _monedaReservaSimbolo = Util.XDefault(value, String.Empty);;
+                _monedaReservaSimbolo = Util.XDefault(value, String.Empty); ;
             }
         }
 
@@ -193,7 +200,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _enviarCopiaPoliza = Util.XDefault(value, default(bool)); 
+                _enviarCopiaPoliza = Util.XDefault(value, default(bool));
             }
         }
         private bool? _enviaNumeroSiniestro;
@@ -205,7 +212,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _enviaNumeroSiniestro = Util.XDefault(value, default(bool)); 
+                _enviaNumeroSiniestro = Util.XDefault(value, default(bool));
             }
         }
 
@@ -216,12 +223,12 @@ namespace App_Code.RimacInforme.Domain
             set { _notas = Util.XDefault(value, String.Empty); }
         }
 
-
-
-
-
-
-
+        private int _numeroIfb;
+        public int NumeroIfb
+        {
+            get { return _numeroIfb; }
+            set { _numeroIfb = Util.XDefault(value, default(int)); }
+        }
     }
 
     public class InfoInspeccion
@@ -237,7 +244,7 @@ namespace App_Code.RimacInforme.Domain
         public DateTime? FechaInspeccion
         {
             get { return _fechaInspeccion; }
-            set { _fechaInspeccion = value; }
+            set { _fechaInspeccion = Util.XDefault<DateTime?>(value, null); }
         }
 
         private string _lugarInspeccion;
@@ -269,7 +276,7 @@ namespace App_Code.RimacInforme.Domain
         public DateTime? Recepcion
         {
             get { return _recepcion; }
-            set { _recepcion = value; }
+            set { _recepcion = Util.XDefault<DateTime?>(value, null); }
         }
         private string _confirmadoCon;
         public String ConfirmadoCon

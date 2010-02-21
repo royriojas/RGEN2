@@ -1,0 +1,31 @@
+﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:18px; }
+h1, h2, h3, p { margin:5px 0; }
+td p { margin:0px }
+
+p.DateSalute { text-align:right; }
+h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoration:underline }
+
+.Bold { font-weight:bold;  }
+.Underline { text-decoration: underline; }
+
+.TableSection h3, 
+.TableSection h2 { font-weight:bold; text-decoration: underline; font-style:italic;   }
+
+.TableSection h3, 
+.TableSection h2, 
+.TableSection,
+.TableSection p { font-size: 14px; }
+
+.TableSection { border:4px double #000; }
+.TableSection td { padding:3px;}
+
+p.label { font-weight:bold; }
+table.TableSection { width: 100%; } 
+
+
+div.ImageContainer {width:455px; height:450px; float:left; margin-right:20px; margin-bottom:16px; overflow:hidden;}
+div.ImageContainer img{ width:455px;height:335px; }
+
+div.ImgHolder img { width:455px; height:335px; }
+div.txtInfo {font-size:14px !important; padding:6px; }
+div.ImageTitle { font-size:14px !important; padding:6px;}

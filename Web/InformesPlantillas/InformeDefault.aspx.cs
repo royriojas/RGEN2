@@ -93,7 +93,7 @@ public partial class InformesPlantillas_InformeDefault : System.Web.UI.Page
 
     if (numero != null && numero != DBNull.Value)
     {
-      return String.Format("{0} {1}", R3M.Common.Util.getNumberAsLetters(Convert.ToDouble(numero)), Moneda);
+      return String.Format("{0} {1}", R3M.Common.Util.GetNumberAsLetters(Convert.ToDouble(numero)), Moneda);
     }
     return "0";
   }

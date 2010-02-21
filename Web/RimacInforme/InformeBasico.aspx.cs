@@ -19,7 +19,7 @@ public partial class RimacInforme_InformeBasico : System.Web.UI.Page
 
     private void DoSave()
     {
-        this.FormViewInforme.UpdateItem(false);
+        FormViewInforme.UpdateItem(false);
     }
 
     protected void GotoPoliza(object sender, EventArgs e)
@@ -60,7 +60,7 @@ public partial class RimacInforme_InformeBasico : System.Web.UI.Page
 
     private void BindTipoDeMoneda()
     {
-        AjusteDto ajusteDto = this.FormViewInforme.DataItem as AjusteDto;
+        AjusteDto ajusteDto = FormViewInforme.DataItem as AjusteDto;
         if (ajusteDto == null) return;
         DropDownList dropDownListTipoMonedaReclamo = FormViewInforme.FindControl("_dropDownListTipoMonedaReclamo") as DropDownList;
         if (dropDownListTipoMonedaReclamo != null)
@@ -86,16 +86,16 @@ public partial class RimacInforme_InformeBasico : System.Web.UI.Page
     protected void FormViewInforme_ItemUpdating(object sender, FormViewUpdateEventArgs e)
     {
 
-        DropDownList _dropDownListTipoMonedaReclamo = this.FormViewInforme.FindControl("_dropDownListTipoMonedaReclamo") as DropDownList;
-        if (_dropDownListTipoMonedaReclamo != null && _dropDownListTipoMonedaReclamo.SelectedValue != "-1")
+        DropDownList dropDownListTipoMonedaReclamo = FormViewInforme.FindControl("_dropDownListTipoMonedaReclamo") as DropDownList;
+        if (dropDownListTipoMonedaReclamo != null && dropDownListTipoMonedaReclamo.SelectedValue != "-1")
         {
-            e.NewValues["ReclamoMonedaId"] = _dropDownListTipoMonedaReclamo.SelectedValue;
+            e.NewValues["ReclamoMonedaId"] = dropDownListTipoMonedaReclamo.SelectedValue;
         }
 
-        DropDownList _dropDownListTipoMonedaReserva = this.FormViewInforme.FindControl("_dropDownListTipoMonedaReserva") as DropDownList;
-        if (_dropDownListTipoMonedaReserva != null && _dropDownListTipoMonedaReserva.SelectedValue != "-1")
+        DropDownList dropDownListTipoMonedaReserva = FormViewInforme.FindControl("_dropDownListTipoMonedaReserva") as DropDownList;
+        if (dropDownListTipoMonedaReserva != null && dropDownListTipoMonedaReserva.SelectedValue != "-1")
         {
-            e.NewValues["ReservaMonedaId"] = _dropDownListTipoMonedaReserva.SelectedValue;
+            e.NewValues["ReservaMonedaId"] = dropDownListTipoMonedaReserva.SelectedValue;
         }
     }
 

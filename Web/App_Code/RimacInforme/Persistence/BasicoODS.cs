@@ -25,7 +25,9 @@ namespace App_Code.RimacInforme.Persistence
                 DataSet1.sp_rgen_datosgenerales_selectRow row = dt.Rows[0] as DataSet1.sp_rgen_datosgenerales_selectRow;
                 ajusteDto.AjusteId = ajusteId;
                 if (row != null)
-                { 
+                {
+                    ajusteDto.NumeroIfb = row.numeroIFB;
+                    ajusteDto.NumeroAjuste = row.numajuste; //RGen.GestorAjuste.dameNumeroAjuste(ajusteId);
                     ajusteDto.InfoAsegurado.Asegurado = row.asegurado;
                     ajusteDto.InfoAsegurado.Broker = row.broker;
                     ajusteDto.InfoAsegurado.Contratante = row.contratante;
@@ -40,11 +42,15 @@ namespace App_Code.RimacInforme.Persistence
             if (dtP.Rows.Count > 0)
             {
                 DataSet1.sp_rgen_polizaPrincipalRimacRow polizaRow = dtP.Rows[0] as DataSet1.sp_rgen_polizaPrincipalRimacRow;
-                ajusteDto.Poliza.IdPoliza = polizaRow.polizaId;
-                ajusteDto.Poliza.PolizaNumber = polizaRow.numeroPoliza;
-                ajusteDto.Poliza.Ramo = polizaRow.ramo;
-                ajusteDto.Poliza.Tipo = polizaRow.producto;
-                ajusteDto.Poliza.Vigencia = string.Format("{0:dd/MM/yyyy} - {1:dd/MM/yyyy}", polizaRow.finicio, polizaRow.ffin);
+                if (polizaRow != null)
+                {
+                    ajusteDto.Poliza.IdPoliza = polizaRow.polizaId;
+                    ajusteDto.Poliza.PolizaNumber = polizaRow.numeroPoliza;
+                    ajusteDto.Poliza.Ramo = polizaRow.ramo;
+                    ajusteDto.Poliza.Tipo = polizaRow.producto;
+                    ajusteDto.Poliza.Vigencia = string.Format("{0:dd/MM/yyyy} - {1:dd/MM/yyyy}",
+                                                              polizaRow.IsfinicioNull() ? default(DateTime?) : polizaRow.finicio, polizaRow.IsffinNull() ? default(DateTime?) : polizaRow.ffin);
+                }
                 //ajusteDto.Poliza.
             }
 
@@ -124,8 +130,12 @@ namespace App_Code.RimacInforme.Persistence
             if (dt.Rows.Count > 0)
             {
                 DataSet1.sp_rgen_datosgenerales_selectRow row = dt.Rows[0] as DataSet1.sp_rgen_datosgenerales_selectRow;
-                row.gruponegocio = ajusteDto.GiroNegocio;
-                ta.Update(row);
+                if (row != null)
+                {
+                    row.numeroIFB = ajusteDto.NumeroIfb;
+                    row.gruponegocio = ajusteDto.GiroNegocio;
+                    ta.Update(row);
+                }
             }
 
             sp_rgen_Ocurrencia_selectTableAdapter oTa = new sp_rgen_Ocurrencia_selectTableAdapter();

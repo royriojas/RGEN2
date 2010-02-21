@@ -37,13 +37,13 @@ namespace R3M.Common
         {
             try
             {
-                return aValue == null || Convert.IsDBNull(aValue) ? aDefaultValue : (T)aValue;    
+                return aValue == null || Convert.IsDBNull(aValue) ? aDefaultValue : (T)aValue;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return aDefaultValue;
             }
-            
+
         }
 
         /// <summary>
@@ -223,14 +223,18 @@ namespace R3M.Common
             return DateTime.TryParse(date, out d);
         }
 
-        public static String getNumberAsLetters(double num)
+        public static String GetNumberAsLetters(double num)
         {
             CantidadLetra cletra = new CantidadLetra();
             return cletra.ConvertirCadena(num);
         }
 
+        public static byte[] GetPdf(String UrlBody)
+        {
+            return GetPdf(UrlBody, null);
+        }
 
-        public static byte[] getPdf(String UrlBody, String UrlCabecera)
+        public static byte[] GetPdf(String UrlBody, String UrlCabecera)
         {
             //      UrlBody;//@"E:\Proyectos\InformeRGen\informePacifico_Final.html";      
 
@@ -247,12 +251,16 @@ namespace R3M.Common
             pdfConverter.PdfDocumentOptions.BottomMargin = 10;
             pdfConverter.PdfDocumentOptions.GenerateSelectablePdf = true;
             //pdfConverter.AvoidImageBreak = true;
+            pdfConverter.AvoidImageBreak = true;
+            pdfConverter.AvoidTextBreak = true;
+            pdfConverter.ConversioDelay = 2;
+            
 
-            pdfConverter.PdfDocumentOptions.ShowHeader = true;
 
+            pdfConverter.PdfDocumentOptions.ShowHeader = false;
             if (!String.IsNullOrEmpty(UrlCabecera))
             {
-
+                pdfConverter.PdfDocumentOptions.ShowHeader = true;
                 pdfConverter.PdfHeaderOptions.HtmlToPdfArea = new HtmlToPdfArea(UrlCabecera);
                 pdfConverter.PdfHeaderOptions.HeaderHeight = 180;
 
@@ -264,6 +272,8 @@ namespace R3M.Common
             pdfConverter.PdfFooterOptions.FooterText = "";
             pdfConverter.PdfFooterOptions.PageNumberText = "Página";
             pdfConverter.PdfFooterOptions.ShowPageNumber = true;
+
+
 
             //pdfConverter.LicenseKey = "put your license key here";
             byte[] downloadBytes = pdfConverter.GetPdfFromUrlBytes(UrlBody);
@@ -317,7 +327,7 @@ namespace R3M.Common
             return dt != null ? dt.Rows.Count : 0;
         }
 
-        
+
 
 
     }
