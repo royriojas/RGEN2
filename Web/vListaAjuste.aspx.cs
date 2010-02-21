@@ -111,7 +111,7 @@ public partial class vListaAjuste : System.Web.UI.Page
   {
     if (e.Exception == null)
     {
-      this.Label1.Text = "Lista de Ajustes (" + R3M.Common.Util.getRowCount(e.ReturnValue) + ")";
+      this.Label1.Text = "Lista de Ajustes (" + R3M.Common.Util.GetRowCount(e.ReturnValue) + ")";
     }
     else
     {

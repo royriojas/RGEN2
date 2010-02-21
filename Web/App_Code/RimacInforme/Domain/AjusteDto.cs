@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using R3M.Common;
 
 namespace App_Code.RimacInforme.Domain
 {
@@ -12,7 +13,7 @@ namespace App_Code.RimacInforme.Domain
         public decimal AjusteId
         {
             get { return _ajusteId; }
-            set { _ajusteId = value; }
+            set { _ajusteId = Util.XDefault(value, default(decimal)); }
         }
 
         public AjusteDto()
@@ -41,7 +42,7 @@ namespace App_Code.RimacInforme.Domain
         public String GiroNegocio
         {
             get { return _giroNegocio; }
-            set { _giroNegocio = value; }
+            set { _giroNegocio = Util.XDefault(value, String.Empty);  }
         }
 
         private RecepcionCaso _recepcion;
@@ -79,7 +80,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _lugarDeSiniestro = value;
+                _lugarDeSiniestro = Util.XDefault(value, String.Empty); ;
             }
         }
         private string _descripcionSiniestro;
@@ -91,7 +92,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _descripcionSiniestro = value;
+                _descripcionSiniestro = Util.XDefault(value, String.Empty); ;
             }
         }
 
@@ -104,7 +105,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _ocurrencia = value;
+                _ocurrencia = Util.XDefault(value, String.Empty); ;
             }
         }
 
@@ -124,7 +125,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _situacionSiniestro = value;
+                _situacionSiniestro = Util.XDefault(value, String.Empty); ;
             }
         }
 
@@ -137,7 +138,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _monedaReclamoSimbolo = value;
+                _monedaReclamoSimbolo = Util.XDefault(value, String.Empty); ;
             }
         }
 
@@ -146,14 +147,14 @@ namespace App_Code.RimacInforme.Domain
         public decimal ReservaMonedaId
         {
             get { return _reservaMonedaId; }
-            set { _reservaMonedaId = value; }
+            set { _reservaMonedaId = Util.XDefault(value, default(decimal)); ; }
         }
         private decimal _reclamoMonedaId;
 
         public decimal ReclamoMonedaId
         {
             get { return _reclamoMonedaId; }
-            set { _reclamoMonedaId = value; }
+            set { _reclamoMonedaId = Util.XDefault(value, default(decimal)); ; }
         }
 
         private String _monedaReservaSimbolo;
@@ -165,7 +166,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _monedaReservaSimbolo = value;
+                _monedaReservaSimbolo = Util.XDefault(value, String.Empty);;
             }
         }
 
@@ -173,14 +174,14 @@ namespace App_Code.RimacInforme.Domain
         public decimal Reclamo
         {
             get { return _reclamo; }
-            set { _reclamo = value; }
+            set { _reclamo = Util.XDefault(value, default(decimal)); ; }
         }
 
         private decimal _reserva;
         public decimal Reserva
         {
             get { return _reserva; }
-            set { _reserva = value; }
+            set { _reserva = Util.XDefault(value, default(decimal)); }
         }
 
         private bool? _enviarCopiaPoliza;
@@ -192,7 +193,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _enviarCopiaPoliza = value;
+                _enviarCopiaPoliza = Util.XDefault(value, default(bool)); 
             }
         }
         private bool? _enviaNumeroSiniestro;
@@ -204,7 +205,7 @@ namespace App_Code.RimacInforme.Domain
             }
             set
             {
-                _enviaNumeroSiniestro = value;
+                _enviaNumeroSiniestro = Util.XDefault(value, default(bool)); 
             }
         }
 
@@ -212,7 +213,7 @@ namespace App_Code.RimacInforme.Domain
         public string Notas
         {
             get { return _notas; }
-            set { _notas = value; }
+            set { _notas = Util.XDefault(value, String.Empty); }
         }
 
 
@@ -229,7 +230,7 @@ namespace App_Code.RimacInforme.Domain
         public String PersonaContacto
         {
             get { return _personaContacto; }
-            set { _personaContacto = value; }
+            set { _personaContacto = Util.XDefault(value, String.Empty); ; }
         }
 
         private DateTime? _fechaInspeccion;
@@ -243,14 +244,14 @@ namespace App_Code.RimacInforme.Domain
         public String LugarInspeccion
         {
             get { return _lugarInspeccion; }
-            set { _lugarInspeccion = value; }
+            set { _lugarInspeccion = Util.XDefault(value, String.Empty); ; }
         }
 
         private string _personaEntrevistada;
         public String PersonaEntrevistada
         {
             get { return _personaEntrevistada; }
-            set { _personaEntrevistada = value; }
+            set { _personaEntrevistada = Util.XDefault(value, String.Empty); ; }
         }
 
     }
@@ -262,7 +263,7 @@ namespace App_Code.RimacInforme.Domain
         public String NumeroAseguradora
         {
             get { return _numeroAseguradora; }
-            set { _numeroAseguradora = value; }
+            set { _numeroAseguradora = Util.XDefault(value, String.Empty); ; }
         }
         private DateTime? _recepcion;
         public DateTime? Recepcion
@@ -274,14 +275,14 @@ namespace App_Code.RimacInforme.Domain
         public String ConfirmadoCon
         {
             get { return _confirmadoCon; }
-            set { _confirmadoCon = value; }
+            set { _confirmadoCon = Util.XDefault(value, String.Empty); ; }
         }
 
         private string _ajustador;
         public String Ajustador
         {
             get { return _ajustador; }
-            set { _ajustador = value; }
+            set { _ajustador = Util.XDefault(value, String.Empty); ; }
         }
     }
 
@@ -292,34 +293,34 @@ namespace App_Code.RimacInforme.Domain
         public decimal IdPoliza
         {
             get { return _idPoliza; }
-            set { _idPoliza = value; }
+            set { _idPoliza = Util.XDefault(value, default(decimal)); }
         }
 
         private string _polizaNumber;
         public String PolizaNumber
         {
             get { return _polizaNumber; }
-            set { _polizaNumber = value; }
+            set { _polizaNumber = Util.XDefault(value, String.Empty); ; }
         }
         private string _vigencia;
         public String Vigencia
         {
             get { return _vigencia; }
-            set { _vigencia = value; }
+            set { _vigencia = Util.XDefault(value, String.Empty); ; }
         }
 
         private string _tipo;
         public String Tipo
         {
             get { return _tipo; }
-            set { _tipo = value; }
+            set { _tipo = Util.XDefault(value, String.Empty); ; }
         }
 
         private string _ramo;
         public String Ramo
         {
             get { return _ramo; }
-            set { _ramo = value; }
+            set { _ramo = Util.XDefault(value, String.Empty); ; }
         }
     }
 }

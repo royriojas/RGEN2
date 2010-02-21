@@ -31,7 +31,7 @@ public partial class vListaAjustesPendientes : System.Web.UI.Page
   {
     if (e.Exception == null)
     {
-      this.Label1.Text += String.Format(" ({0})", R3M.Common.Util.getRowCount(e.ReturnValue));
+      this.Label1.Text += String.Format(" ({0})", R3M.Common.Util.GetRowCount(e.ReturnValue));
     }
     else
     {
