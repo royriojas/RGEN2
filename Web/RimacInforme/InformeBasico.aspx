@@ -86,7 +86,7 @@
       OnItemUpdating="FormViewInforme_ItemUpdating" OnDataBinding="FormViewInforme_DataBinding">
       <EditItemTemplate>
         <div class="FormCSS">
-          <div class="Group">
+          <!--div class="Group">
             <div class="Field">
               <label>
                 N&uacute;mero Informe B&aacute;sico</label>
@@ -97,7 +97,7 @@
             </div>
             <div class="doClear">
             </div>
-          </div>
+          </div -->
           <div class="Group AseguradoInfo">
             <div class="Legend">
               <h2>
