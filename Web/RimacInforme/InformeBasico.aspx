@@ -44,6 +44,7 @@
 
             $('a.LinkButton.Save').click(function() {
                 __doPostBack('ctl00$ContentPlaceHolder1$LnkSave', '');
+				return false;
             });
 
             $('a.GoDocuments').click(function() {
