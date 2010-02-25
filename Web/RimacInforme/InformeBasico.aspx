@@ -14,16 +14,16 @@
   <script type="text/javascript">
         
         var ajusteId = '<%= Request.QueryString["AjusteId"] %>';
-  
+
         $(function() {
             $('.Group-Content').hide();
 
             $('.Group .Legend').css({ cursor: 'pointer' }).toggleWithoutPrevent(function(e) {
-               
+
                 if ($(e.target).is('a span') || $(e.target).is('a')) return true;
                 $(this).next().fadeIn(300);
             }, function(e) {
-            
+
                 if ($(e.target).is('a span') || $(e.target).is('a')) return true;
                 $(this).next().fadeOut(300);
             });
@@ -44,30 +44,30 @@
 
             $('a.LinkButton.Save').click(function() {
                 __doPostBack('ctl00$ContentPlaceHolder1$LnkSave', '');
-				return false;
+                return false;
             });
 
             $('a.GoDocuments').click(function() {
                 showModalDialog('<%= ResolveUrl(string.Format("~/vDocumentos.aspx?AjusteId={0}", Request.QueryString["AjusteId"])) %>');
                 return false;
             });
-            
+
             $('a.LinkButton.Generate').click(function() {
-                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=0", Request.QueryString["AjusteId"])) %>', 229, 75, null);  
+                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=0", Request.QueryString["AjusteId"])) %>', 229, 75, null);
                 return false;
             });
             $('a.LinkButton.Observate').click(function() {
-                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=1", Request.QueryString["AjusteId"])) %>', 229, 75, null);  
+                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=1", Request.QueryString["AjusteId"])) %>', 229, 75, null);
                 return false;
             });
-            
+
             $('a.LinkButton.PreviewPDF').click(function() {
-              //window.top.ShowReport('genPreview.aspx?AjusteId='+ajusteId+'&TI=' + tipoInforme+'&NOW=NOW', 229, 75, null);   
-              window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreview.aspx?AjusteId={0}&TI=B&NOW=NOW&nc={1}", Request.QueryString["AjusteId"], DateTime.Now.Ticks)) %>', 229, 75, null);   
-              return false;
+                //window.top.ShowReport('genPreview.aspx?AjusteId='+ajusteId+'&TI=' + tipoInforme+'&NOW=NOW', 229, 75, null);   
+                window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreview.aspx?AjusteId={0}&TI=B&NOW=NOW&nc={1}", Request.QueryString["AjusteId"], DateTime.Now.Ticks)) %>', 229, 75, null);
+                return false;
             });
-            
- 
+
+
 
         });
   </script>
@@ -87,7 +87,7 @@
       OnItemUpdating="FormViewInforme_ItemUpdating" OnDataBinding="FormViewInforme_DataBinding">
       <EditItemTemplate>
         <div class="FormCSS">
-          <!--div class="Group">
+          <div class="Group">
             <div class="Field">
               <label>
                 N&uacute;mero Informe B&aacute;sico</label>
@@ -98,7 +98,7 @@
             </div>
             <div class="doClear">
             </div>
-          </div -->
+          </div >
           <div class="Group AseguradoInfo">
             <div class="Legend">
               <h2>
