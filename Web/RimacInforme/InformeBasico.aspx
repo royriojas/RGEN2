@@ -545,6 +545,210 @@
               </div>
             </div>
           </div>
+          <div class="Group DetalleInforme">
+            <div class="Legend">
+              <h2>
+                <span>Detalle de las Secciones del Informe</span></h2>
+            </div>
+            <div class="Group-Content">
+              <div class="Field TextEdit">
+                <label>
+                  Información General:
+                </label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtDescripcionRiesgo" Text='<%# Bind("DescripcionRiesgo") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+                <div class="doClear">
+                </div>
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Descripcion del Lugar del Siniestro</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtDescripcionLugarSiniestro" Text='<%# Bind("DescripcionLugarSiniestro") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Descripcion Bienes/Personas Afectadas</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtDescripcionBienesAfectados" Text='<%# Bind("DescripcionBienesAfectados") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Antecedentes</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtAntecedentes" Text='<%# Bind("Antecedentes") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Investigaciones</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtInvestigaciones" Text='<%# Bind("Investigaciones") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Descripcion de los Daños</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionBienesAfectados") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Causas del Siniestro</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtCausasSiniestros" Text='<%# Bind("CausasSiniestro") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Detalle Materia Asegurada de la Póliza</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtMateriaAsegurada" Text='<%# Bind("Poliza.MateriaAsegurada") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Detalle Local Asegurado / Ubicación del Riesgo de la Póliza</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtLocalAsegurado" Text='<%# Bind("Poliza.LocalAsegurado") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Sección de la Póliza</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtSeccion" Text='<%# Bind("Poliza.Seccion") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Descripción del Reclamo</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtReclamo" Text='<%# Bind("DescripcionReclamo") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Cobertura / Opinion Ajustador</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtOpinionAjustador" Text='<%# Bind("OpinionAjustador") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Cumplimiento de Garantías / Prescripciones de Seguridad</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtVerificacionGarantias" Text='<%# Bind("VerificacionGarantias") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Descripción de la reserva</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtDescripcionReserva" Text='<%# Bind("DescripcionReserva") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Salvamento y Recupero</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtSalvamentoyrecupero" Text='<%# Bind("Salvamentoyrecupero") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Medidas Correctivas / Recomendaciones</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtRecomendaciones" Text='<%# Bind("Recomendaciones") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              
+              
+              
+            </div>
+          </div>
+          <div class="Group DetalleInformeComplementario">
+            <div class="Legend">
+              <h2>
+                <span>Detalle de las Secciones del Informe Complementario</span></h2>
+            </div>
+            <div class="Group-Content">
+              <div class="Field TextEdit">
+                <label>
+                  Preambulo:
+                </label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtPreambulo" Text='<%# Bind("Antecedentes") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+                <div class="doClear">
+                </div>
+              </div>
+              <div class="Field TextEdit">
+                <label>
+                  Observaciones</label>
+                <div class="FieldWrapper">
+                  <asp:TextBox ID="_txtObservaciones" Text='<%# Bind("Observaciones") %>' CssClass="FormText tinymce-simple"
+                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
+              
+            </div>
+          </div>
+          
+          
       </EditItemTemplate>
     </asp:FormView>
   </div>
