@@ -146,12 +146,9 @@ namespace App_Code.RimacInforme.Persistence
 
             }
 
-
-
             return ajusteDto;
         }
-
-
+        
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update)]
         public void Update(Domain.AjusteDto ajusteDto)
@@ -209,11 +206,30 @@ namespace App_Code.RimacInforme.Persistence
 
             if (informacionAjusteDT.Rows.Count > 0)
             {
-                DataSet1.proc_informacionAjusteRimacDataTable informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
+                DataSet1.proc_informacionAjusteRimacRow informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
 
                 if (informacionAjusteRow != null) 
                 {
-                    //informacionAjusteRow.antecedentesColumn = ajusteDto.Antecedentes;
+                    informacionAjusteRow.antecedentes = ajusteDto.Antecedentes;
+                    informacionAjusteRow.causasiniestro = ajusteDto.CausasSiniestro; 
+                    informacionAjusteRow.descripcionBienesAfectados = ajusteDto.DescripcionBienesAfectados;
+                    informacionAjusteRow.descripcionLugarSiniestro = ajusteDto.DescripcionLugarSiniestro;
+                    informacionAjusteRow.descripcionReclamo = ajusteDto.DescripcionReclamo;
+                    informacionAjusteRow.descripcionReserva = ajusteDto.DescripcionReserva;
+                    informacionAjusteRow.descripcionRiesgo = ajusteDto.DescripcionRiesgo;
+                    informacionAjusteRow.investigaciones = ajusteDto.Investigaciones;
+                    informacionAjusteRow.observaciones = ajusteDto.Observaciones;
+                    informacionAjusteRow.opinionAjustador = ajusteDto.OpinionAjustador;
+                    informacionAjusteRow.recomendaciones = ajusteDto.Recomendaciones;
+                    informacionAjusteRow.salvamentoyrecupero = ajusteDto.Salvamentoyrecupero;
+                    informacionAjusteRow.siniestrosanteriores = ajusteDto.SiniestrosAnteriores;
+                    informacionAjusteRow.situacionajuste = ajusteDto.SituacionSiniestro;
+                    informacionAjusteRow.verificaciongarantias = ajusteDto.VerificacionGarantias;
+                    informacionAjusteRow.localAsegurado = ajusteDto.Poliza.LocalAsegurado;
+                    informacionAjusteRow.materiaAsegurada = ajusteDto.Poliza.MateriaAsegurada;
+                    informacionAjusteRow.seccion = ajusteDto.Poliza.Seccion;
+                    informacionAjusteTA.Update(informacionAjusteRow);
+
                     
                 }
             }
