@@ -146,12 +146,9 @@ namespace App_Code.RimacInforme.Persistence
 
             }
 
-
-
             return ajusteDto;
         }
-
-
+        
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update)]
         public void Update(Domain.AjusteDto ajusteDto)
@@ -209,11 +206,49 @@ namespace App_Code.RimacInforme.Persistence
 
             if (informacionAjusteDT.Rows.Count > 0)
             {
-                DataSet1.proc_informacionAjusteRimacDataTable informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
+                DataSet1.proc_informacionAjusteRimacRow informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
 
                 if (informacionAjusteRow != null) 
                 {
-                    //informacionAjusteRow.antecedentesColumn = ajusteDto.Antecedentes;
+                    if (ajusteDto.Antecedentes != null)
+                        informacionAjusteRow.antecedentes = ajusteDto.Antecedentes;
+                    if (ajusteDto.CausasSiniestro != null)
+                        informacionAjusteRow.causasiniestro = ajusteDto.CausasSiniestro;
+                    if (ajusteDto.DescripcionBienesAfectados != null)
+                        informacionAjusteRow.descripcionBienesAfectados = ajusteDto.DescripcionBienesAfectados;
+                    if (ajusteDto.DescripcionLugarSiniestro != null)
+                        informacionAjusteRow.descripcionLugarSiniestro = ajusteDto.DescripcionLugarSiniestro;
+                    if (ajusteDto.DescripcionReclamo != null)
+                        informacionAjusteRow.descripcionReclamo = ajusteDto.DescripcionReclamo;
+                    if (ajusteDto.DescripcionReserva != null)
+                        informacionAjusteRow.descripcionReserva = ajusteDto.DescripcionReserva;
+                    if (ajusteDto.DescripcionRiesgo != null)
+                        informacionAjusteRow.descripcionRiesgo = ajusteDto.DescripcionRiesgo;
+                    if (ajusteDto.Investigaciones != null)
+                        informacionAjusteRow.investigaciones = ajusteDto.Investigaciones;
+                    if (ajusteDto.Observaciones != null)
+                        informacionAjusteRow.observaciones = ajusteDto.Observaciones;
+                    if (ajusteDto.OpinionAjustador != null)
+                        informacionAjusteRow.opinionAjustador = ajusteDto.OpinionAjustador;
+                    if (ajusteDto.Recomendaciones != null)
+                        informacionAjusteRow.recomendaciones = ajusteDto.Recomendaciones;
+                    if (ajusteDto.Salvamentoyrecupero != null)
+                        informacionAjusteRow.salvamentoyrecupero = ajusteDto.Salvamentoyrecupero;
+                    if (ajusteDto.SiniestrosAnteriores != null)
+                        informacionAjusteRow.siniestrosanteriores = ajusteDto.SiniestrosAnteriores;
+                    if (ajusteDto.SituacionSiniestro != null)
+                        informacionAjusteRow.situacionajuste = ajusteDto.SituacionSiniestro;
+                    if (ajusteDto.VerificacionGarantias != null)
+                        informacionAjusteRow.verificaciongarantias = ajusteDto.VerificacionGarantias;
+                    if (ajusteDto.Poliza.LocalAsegurado != null)
+                        informacionAjusteRow.localAsegurado = ajusteDto.Poliza.LocalAsegurado;
+                    if (ajusteDto.Poliza.MateriaAsegurada != null)
+                        informacionAjusteRow.materiaAsegurada = ajusteDto.Poliza.MateriaAsegurada;
+                    if (ajusteDto.Poliza.Seccion != null)
+                        informacionAjusteRow.seccion = ajusteDto.Poliza.Seccion;
+
+                    informacionAjusteTA.Update(informacionAjusteRow);
+
                     
                 }
             }
