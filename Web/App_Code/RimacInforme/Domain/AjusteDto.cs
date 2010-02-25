@@ -229,6 +229,105 @@ namespace App_Code.RimacInforme.Domain
             get { return _numeroIfb; }
             set { _numeroIfb = Util.XDefault(value, default(int)); }
         }
+
+        private string _descripcionRiesgo;
+        public string DescripcionRiesgo
+        {
+            get { return _descripcionRiesgo; }
+            set { _descripcionRiesgo = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _observaciones;
+        public string Observaciones
+        {
+            get { return _observaciones; }
+            set { _observaciones = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _causasSiniestro;
+        public string CausasSiniestro
+        {
+            get { return _causasSiniestro; }
+            set { _causasSiniestro = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _verificacionGarantias;
+        public string VerificacionGarantias
+        {
+            get { return _verificacionGarantias; }
+            set { _verificacionGarantias = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _siniestrosAnteriores;
+        public string SiniestrosAnteriores
+        {
+            get { return _siniestrosAnteriores; }
+            set { _siniestrosAnteriores = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _salvamentoyrecupero;
+        public string Salvamentoyrecupero
+        {
+            get { return _salvamentoyrecupero; }
+            set { _salvamentoyrecupero = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _recomendaciones;
+        public string Recomendaciones
+        {
+            get { return _recomendaciones; }
+            set { _recomendaciones = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _investigaciones;
+        public string Investigaciones
+        {
+            get { return _investigaciones; }
+            set { _investigaciones = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _opinionAjustador;
+        public string OpinionAjustador
+        {
+            get { return _opinionAjustador; }
+            set { _opinionAjustador = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _descripcionLugarSiniestro;
+        public string DescripcionLugarSiniestro
+        {
+            get { return _descripcionLugarSiniestro; }
+            set { _descripcionLugarSiniestro = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _descripcionBienesAfectados;
+        public string DescripcionBienesAfectados
+        {
+            get { return _descripcionBienesAfectados; }
+            set { _descripcionBienesAfectados = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _antecedentes;
+        public string Antecedentes
+        {
+            get { return _antecedentes; }
+            set { _antecedentes = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _descripcionReclamo;
+        public string DescripcionReclamo
+        {
+            get { return _descripcionReclamo; }
+            set { _descripcionReclamo = Util.XDefault(value, String.Empty); }
+        }
+
+        private string _descripcionReserva;
+        public string DescripcionReserva
+        {
+            get { return _descripcionReserva; }
+            set { _descripcionReserva = Util.XDefault(value, String.Empty); }
+        }
+                
     }
 
     public class InfoInspeccion
@@ -329,5 +428,27 @@ namespace App_Code.RimacInforme.Domain
             get { return _ramo; }
             set { _ramo = Util.XDefault(value, String.Empty); ; }
         }
+
+        private string _materiaAsegurada;
+        public String MateriaAsegurada
+        {
+            get { return _materiaAsegurada; }
+            set { _materiaAsegurada = Util.XDefault(value, String.Empty); ; }
+        }
+
+        private string _localAsegurado;
+        public String LocalAsegurado
+        {
+            get { return _localAsegurado; }
+            set { _localAsegurado = Util.XDefault(value, String.Empty); ; }
+        }
+
+        private string _seccion;
+        public String Seccion
+        {
+            get { return _seccion; }
+            set { _seccion = Util.XDefault(value, String.Empty); ; }
+        }
+
     }
 }

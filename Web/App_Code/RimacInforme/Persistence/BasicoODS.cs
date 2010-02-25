@@ -114,6 +114,38 @@ namespace App_Code.RimacInforme.Persistence
                 }
             }
 
+            proc_informacionAjusteRimacTableAdapter informacionAjusteTA = new proc_informacionAjusteRimacTableAdapter();
+            DataSet1.proc_informacionAjusteRimacDataTable informacionAjusteDT = informacionAjusteTA.GetData(Convert.ToInt32(ajusteId));
+
+            if (informacionAjusteDT.Rows.Count > 0) 
+            {
+                DataSet1.proc_informacionAjusteRimacRow informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
+                if (informacionAjusteRow != null) 
+                {
+
+                    ajusteDto.Antecedentes = informacionAjusteRow.IsantecedentesNull() ? "" : informacionAjusteRow.antecedentes;
+                    ajusteDto.CausasSiniestro = informacionAjusteRow.IscausasiniestroNull() ? "" : informacionAjusteRow.causasiniestro;
+                    ajusteDto.DescripcionBienesAfectados = informacionAjusteRow.IsdescripcionBienesAfectadosNull() ? "" : informacionAjusteRow.descripcionBienesAfectados;
+                    ajusteDto.DescripcionLugarSiniestro = informacionAjusteRow.IsdescripcionLugarSiniestroNull() ? "" : informacionAjusteRow.descripcionLugarSiniestro;
+                    ajusteDto.DescripcionReclamo = informacionAjusteRow.IsdescripcionReclamoNull() ? "" : informacionAjusteRow.descripcionReclamo;
+                    ajusteDto.DescripcionReserva = informacionAjusteRow.IsdescripcionReservaNull() ? "" : informacionAjusteRow.descripcionReserva;
+                    ajusteDto.DescripcionRiesgo = informacionAjusteRow.IsdescripcionRiesgoNull() ? "" : informacionAjusteRow.descripcionRiesgo;
+                    ajusteDto.Investigaciones = informacionAjusteRow.IsinvestigacionesNull() ? "" : informacionAjusteRow.investigaciones;
+                    ajusteDto.Observaciones = informacionAjusteRow.IsobservacionesNull() ? "" : informacionAjusteRow.observaciones;
+                    ajusteDto.OpinionAjustador = informacionAjusteRow.IsopinionAjustadorNull() ? "" : informacionAjusteRow.opinionAjustador;
+                    ajusteDto.Recomendaciones = informacionAjusteRow.IsrecomendacionesNull() ? "" : informacionAjusteRow.recomendaciones;
+                    ajusteDto.Salvamentoyrecupero = informacionAjusteRow.IssalvamentoyrecuperoNull() ? "" : informacionAjusteRow.salvamentoyrecupero;
+                    ajusteDto.SiniestrosAnteriores = informacionAjusteRow.IssiniestrosanterioresNull() ? "" : informacionAjusteRow.siniestrosanteriores;
+                    ajusteDto.SituacionSiniestro = informacionAjusteRow.IssituacionajusteNull() ? "" : informacionAjusteRow.situacionajuste;
+                    ajusteDto.VerificacionGarantias = informacionAjusteRow.IsverificaciongarantiasNull() ? "" : informacionAjusteRow.verificaciongarantias;
+
+                    ajusteDto.Poliza.LocalAsegurado = informacionAjusteRow.IslocalAseguradoNull() ? "" : informacionAjusteRow.localAsegurado;
+                    ajusteDto.Poliza.MateriaAsegurada = informacionAjusteRow.IsmateriaAseguradaNull() ? "" : informacionAjusteRow.materiaAsegurada;
+                    ajusteDto.Poliza.Seccion = informacionAjusteRow.IsseccionNull() ? "" : informacionAjusteRow.seccion;
+                }
+
+            }
+
 
 
             return ajusteDto;
@@ -170,6 +202,21 @@ namespace App_Code.RimacInforme.Persistence
                 }
             }
 
+
+            proc_informacionAjusteRimacTableAdapter informacionAjusteTA = new proc_informacionAjusteRimacTableAdapter();
+
+            DataSet1.proc_informacionAjusteRimacDataTable informacionAjusteDT = informacionAjusteTA.GetData(Convert.ToInt32(ajusteDto.AjusteId));
+
+            if (informacionAjusteDT.Rows.Count > 0)
+            {
+                DataSet1.proc_informacionAjusteRimacDataTable informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
+
+                if (informacionAjusteRow != null) 
+                {
+                    //informacionAjusteRow.antecedentesColumn = ajusteDto.Antecedentes;
+                    
+                }
+            }
 
         }
     }
