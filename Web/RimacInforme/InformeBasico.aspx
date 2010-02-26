@@ -13,9 +13,14 @@
 
   <script type="text/javascript">
         
+        var selector = "<%= GetTipoInformeClass() %>"
+        
         var ajusteId = '<%= Request.QueryString["AjusteId"] %>';
 
         $(function() {
+        
+            $(selector).show();
+            
             $('.Group-Content').hide();
 
             $('.Group .Legend').css({ cursor: 'pointer' }).toggleWithoutPrevent(function(e) {

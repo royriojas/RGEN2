@@ -105,4 +105,24 @@ public partial class RimacInforme_InformeBasico : System.Web.UI.Page
         }
     }
 
+    public string GetTipoInformeClass()
+    {
+        string selector = ".IFB";
+        string tipoInforme = R3M.Common.Util.XDefault(Request.QueryString["TipoInforme"], "IB");
+        switch (tipoInforme)
+        {
+            case "IB": selector = ".IFB";
+                break;
+            case "IF":
+                selector = ".IFF";
+                break;
+            case "IP":
+                selector = ".IFP";
+                break;
+            case "IC":
+                selector = ".IFC";
+                break;
+        }
+        return selector;
+    }
 }
