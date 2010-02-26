@@ -34,6 +34,12 @@ public partial class RimacInforme_InformeBasico : System.Web.UI.Page
         Response.Redirect("~/vRegistroBienesAfectados.aspx?AjusteId=" + Request.QueryString["AjusteId"] + "&urlAnterior=" + Server.UrlEncode(Request.Url.ToString()));
     }
 
+    protected void GotoSection(object sender, EventArgs e)
+    {
+        DoSave();
+        Response.Redirect("~/vSeccionesAdicionales.aspx?AjusteId=" + Request.QueryString["AjusteId"] + "&urlAnterior=" + Server.UrlEncode(Request.Url.ToString()));
+    }
+
 
     protected void GotoDocuments(object sender, EventArgs e)
     {

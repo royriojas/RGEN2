@@ -22,6 +22,14 @@ public partial class vRegistroFinal : System.Web.UI.Page
     qStringTipoInforme = Request.QueryString["tInforme"];
     qStringAjusteId = Request.QueryString["AjusteId"];
 
+    Decimal ajusteId = Convert.ToDecimal(qStringAjusteId);
+
+    if (RGen.GestorAjuste.GetCodigoAseguradora(ajusteId) == "RIMAC")
+    {
+        Response.Redirect(String.Format("~/RimacInforme/InformeBasico.aspx?AjusteId={0}&TipoInforme{1}", qStringAjusteId, qStringTipoInforme));
+        return;
+    }
+
     generarHyperLink.NavigateUrl = "javascript:GenerarInforme('" + qStringAjusteId + "',0);";
     observarHyperLink.NavigateUrl = "javascript:GenerarInforme('" + qStringAjusteId + "',1);";
     hlnlVistaPrevia.NavigateUrl = String.Format("vVistaPrevia.aspx?AjusteId={0}&TI={1}", qStringAjusteId, "IF");
