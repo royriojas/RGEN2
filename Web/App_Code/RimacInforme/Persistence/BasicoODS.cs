@@ -139,9 +139,9 @@ namespace App_Code.RimacInforme.Persistence
                     ajusteDto.SituacionSiniestro = informacionAjusteRow.IssituacionajusteNull() ? "" : informacionAjusteRow.situacionajuste;
                     ajusteDto.VerificacionGarantias = informacionAjusteRow.IsverificaciongarantiasNull() ? "" : informacionAjusteRow.verificaciongarantias;
 
-                    ajusteDto.Poliza.LocalAsegurado = informacionAjusteRow.IslocalAseguradoNull() ? "" : informacionAjusteRow.localAsegurado;
-                    ajusteDto.Poliza.MateriaAsegurada = informacionAjusteRow.IsmateriaAseguradaNull() ? "" : informacionAjusteRow.materiaAsegurada;
-                    ajusteDto.Poliza.Seccion = informacionAjusteRow.IsseccionNull() ? "" : informacionAjusteRow.seccion;
+                    ajusteDto.LocalAsegurado = informacionAjusteRow.IslocalAseguradoNull() ? "" : informacionAjusteRow.localAsegurado;
+                    ajusteDto.MateriaAsegurada = informacionAjusteRow.IsmateriaAseguradaNull() ? "" : informacionAjusteRow.materiaAsegurada;
+                    ajusteDto.Seccion = informacionAjusteRow.IsseccionNull() ? "" : informacionAjusteRow.seccion;
                 }
 
             }
@@ -240,12 +240,12 @@ namespace App_Code.RimacInforme.Persistence
                         informacionAjusteRow.situacionajuste = ajusteDto.SituacionSiniestro;
                     if (ajusteDto.VerificacionGarantias != null)
                         informacionAjusteRow.verificaciongarantias = ajusteDto.VerificacionGarantias;
-                    if (ajusteDto.Poliza.LocalAsegurado != null)
-                        informacionAjusteRow.localAsegurado = ajusteDto.Poliza.LocalAsegurado;
-                    if (ajusteDto.Poliza.MateriaAsegurada != null)
-                        informacionAjusteRow.materiaAsegurada = ajusteDto.Poliza.MateriaAsegurada;
-                    if (ajusteDto.Poliza.Seccion != null)
-                        informacionAjusteRow.seccion = ajusteDto.Poliza.Seccion;
+                    if (ajusteDto.LocalAsegurado != null)
+                        informacionAjusteRow.localAsegurado = ajusteDto.LocalAsegurado;
+                    if (ajusteDto.MateriaAsegurada != null)
+                        informacionAjusteRow.materiaAsegurada = ajusteDto.MateriaAsegurada;
+                    if (ajusteDto.Seccion != null)
+                        informacionAjusteRow.seccion = ajusteDto.Seccion;
 
                     informacionAjusteTA.Update(informacionAjusteRow);
 

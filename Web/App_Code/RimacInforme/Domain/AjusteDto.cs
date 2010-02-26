@@ -327,6 +327,28 @@ namespace App_Code.RimacInforme.Domain
             get { return _descripcionReserva; }
             set { _descripcionReserva = Util.XDefault(value, String.Empty); }
         }
+
+        private string _materiaAsegurada;
+        public String MateriaAsegurada
+        {
+            get { return _materiaAsegurada; }
+            set { _materiaAsegurada = Util.XDefault(value, String.Empty); ; }
+        }
+
+        private string _localAsegurado;
+        public String LocalAsegurado
+        {
+            get { return _localAsegurado; }
+            set { _localAsegurado = Util.XDefault(value, String.Empty); ; }
+        }
+
+        private string _seccion;
+        public String Seccion
+        {
+            get { return _seccion; }
+            set { _seccion = Util.XDefault(value, String.Empty); ; }
+        }
+
                 
     }
 
@@ -429,26 +451,6 @@ namespace App_Code.RimacInforme.Domain
             set { _ramo = Util.XDefault(value, String.Empty); ; }
         }
 
-        private string _materiaAsegurada;
-        public String MateriaAsegurada
-        {
-            get { return _materiaAsegurada; }
-            set { _materiaAsegurada = Util.XDefault(value, String.Empty); ; }
-        }
-
-        private string _localAsegurado;
-        public String LocalAsegurado
-        {
-            get { return _localAsegurado; }
-            set { _localAsegurado = Util.XDefault(value, String.Empty); ; }
-        }
-
-        private string _seccion;
-        public String Seccion
-        {
-            get { return _seccion; }
-            set { _seccion = Util.XDefault(value, String.Empty); ; }
-        }
-
+        
     }
 }

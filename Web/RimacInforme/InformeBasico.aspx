@@ -626,7 +626,7 @@
                 <label>
                   Detalle Materia Asegurada de la Póliza</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtMateriaAsegurada" Text='<%# Bind("Poliza.MateriaAsegurada") %>' CssClass="FormText tinymce-simple"
+                  <asp:TextBox ID="_txtMateriaAsegurada" Text='<%# Bind("MateriaAsegurada") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
@@ -636,7 +636,7 @@
                 <label>
                   Detalle Local Asegurado / Ubicación del Riesgo de la Póliza</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtLocalAsegurado" Text='<%# Bind("Poliza.LocalAsegurado") %>' CssClass="FormText tinymce-simple"
+                  <asp:TextBox ID="_txtLocalAsegurado" Text='<%# Bind("LocalAsegurado") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
@@ -646,7 +646,7 @@
                 <label>
                   Sección de la Póliza</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtSeccion" Text='<%# Bind("Poliza.Seccion") %>' CssClass="FormText tinymce-simple"
+                  <asp:TextBox ID="_txtSeccion" Text='<%# Bind("Seccion") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
