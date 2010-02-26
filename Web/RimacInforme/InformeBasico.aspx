@@ -99,7 +99,7 @@
             <div class="doClear">
             </div>
           </div >
-          <div class="Group AseguradoInfo">
+          <div class="Group AseguradoInfo IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Información del Asegurado</span></h2>
@@ -160,7 +160,7 @@
               </div>
             </div>
           </div>
-          <div class="Group InformacionPoliza">
+          <div class="Group InformacionPoliza IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Información de la Póliza</span></h2>
@@ -243,7 +243,7 @@
               </div>
             </div>
           </div>
-          <div class="Group RecepcionCaso">
+          <div class="Group RecepcionCaso IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Recepción del Caso</span></h2>
@@ -297,7 +297,7 @@
               </div>
             </div>
           </div>
-          <div class="Group InformacionOcurrencia">
+          <div class="Group InformacionOcurrencia IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Información de la ocurrencia / descubrimiento</span></h2>
@@ -364,7 +364,7 @@
               </div>
             </div>
           </div>
-          <div class="Group InformacionInspeccion">
+          <div class="Group InformacionInspeccion IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Información de la inspección</span></h2>
@@ -418,7 +418,7 @@
               </div>
             </div>
           </div>
-          <div class="Group SituacionActual">
+          <div class="Group SituacionActual IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Situación Actual</span></h2>
@@ -450,7 +450,7 @@
                 </div>
             </div>
           </div>
-          <div class="Group Montos">
+          <div class="Group Montos IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
                 <span>Montos</span></h2>
@@ -497,7 +497,7 @@
               </div>
             </div>
           </div>
-          <div class="Group NotasFinales">
+          <div class="Group NotasFinales IFB">
             <div class="Legend">
               <h2>
                 <span>Notas Finales</span></h2>
@@ -545,7 +545,7 @@
               </div>
             </div>
           </div>
-          <div class="Group DetalleInforme">
+          <div class="Group DetalleInforme IFP IFF">
             <div class="Legend">
               <h2>
                 <span>Detalle de las Secciones del Informe</span></h2>
@@ -721,7 +721,7 @@
               </div>
             </div>
           </div>
-          <div class="Group DetalleInformeComplementario">
+          <div class="Group DetalleInformeComplementario IFC">
             <div class="Legend">
               <h2>
                 <span>Detalle de las Secciones del Informe Complementario</span></h2>
