@@ -1,3 +1,68 @@
+
+ALTER PROCEDURE [dbo].[proc_informacionAjusteRimacUpdate]
+(
+	@ajusteId numeric(8, 0),-- ajuste
+	@descripcionRiesgo text = null, 
+	@observaciones text = null, 
+	@numAjustePASA varchar(30), 
+	@causasiniestro text = null, 
+    @detalleocurrencia text = null, 
+	@situacionajuste text = null, 
+	@verificaciongarantias text = null, 
+    @siniestrosanteriores text = null,
+	@salvamentoyrecupero text = null,
+	@recomendaciones text = null,
+    @investigaciones text = null,
+	@TotalIndenmizacion numeric (14,2)= null,
+	@opinionAjustador text = null,
+    @descripcionLugarSiniestro text = null,
+	@descripcionBienesAfectados text = null,
+	@antecedentes text = null,
+    @descripcionReclamo text = null,
+	@descripcionReserva text = null,
+	@materiaAsegurada text = null,
+    @localAsegurado text = null,
+	@seccion text = null
+
+
+
+)
+AS
+BEGIN
+	
+	SET NOCOUNT OFF;
+	UPDATE [RGN_AJUSTE] 
+	SET 	
+      descripcionRiesgo = @descripcionRiesgo, 
+	  observaciones = @observaciones, 
+	  numAjustePASA = @numAjustePASA, 
+	  causasiniestro = @causasiniestro, 
+      detalleocurrencia = @detalleocurrencia, 
+	  situacionajuste =@situacionajuste, 
+	  verificaciongarantias = @verificaciongarantias, 
+      siniestrosanteriores = @siniestrosanteriores, 
+	  salvamentoyrecupero = @salvamentoyrecupero, 
+	  recomendaciones =@recomendaciones, 
+      investigaciones = @investigaciones, 
+	  TotalIndenmizacion = @TotalIndenmizacion, 
+	  opinionAjustador = @opinionAjustador, 
+      descripcionLugarSiniestro = @descripcionLugarSiniestro, 
+	  descripcionBienesAfectados = @descripcionBienesAfectados, 
+	  antecedentes = @antecedentes, 
+      descripcionReclamo = @descripcionReclamo, 
+	  descripcionReserva = @descripcionReserva,
+	  materiaAsegurada = @materiaAsegurada, 
+      localAsegurado = @localAsegurado, 
+	  seccion = @seccion
+	WHERE (RGN_AJUSTE.ajusteId=@ajusteId)
+
+END
+
+
+
+------------------------------------------------------------------------
+
+
 ALTER PROCEDURE [dbo].[proc_informacionAjusteRimac]
 (
 	@ajusteId decimal(8,0)
@@ -26,17 +91,25 @@ SELECT
 	  dbo.RGN_AJUSTE.antecedentes, 
       dbo.RGN_AJUSTE.descripcionReclamo, 
 	  dbo.RGN_AJUSTE.descripcionReserva, 
-	  dbo.RGN_POLIZA.polizaId,
-	  dbo.RGN_POLIZA.materiaAsegurada, 
-      dbo.RGN_POLIZA.localAsegurado, 
-	  dbo.RGN_POLIZA.seccion
-FROM         dbo.RGN_AJUSTE INNER JOIN
-      dbo.RGN_POLIZA_AJUSTE ON dbo.RGN_AJUSTE.ajusteId = dbo.RGN_POLIZA_AJUSTE.ajusteId AND 
-      dbo.RGN_AJUSTE.ajusteId = dbo.RGN_POLIZA_AJUSTE.ajusteId INNER JOIN
-      dbo.RGN_POLIZA ON dbo.RGN_POLIZA_AJUSTE.polizaId = dbo.RGN_POLIZA.polizaId AND 
-      dbo.RGN_POLIZA_AJUSTE.polizaId = dbo.RGN_POLIZA.polizaId
+	  dbo.RGN_AJUSTE.materiaAsegurada, 
+      dbo.RGN_AJUSTE.localAsegurado, 
+	  dbo.RGN_AJUSTE.seccion
+FROM         dbo.RGN_AJUSTE 
 
 WHERE RGN_AJUSTE.ajusteId = @ajusteId
 
 END
+
+---------------------------------------------------------------------
+
+
+alter table rgn_ajuste
+  add materiaAsegurada text null 
+
+
+alter table rgn_ajuste
+  add seccion text null
+
+alter table rgn_ajuste
+  add localAsegurado text null
 
