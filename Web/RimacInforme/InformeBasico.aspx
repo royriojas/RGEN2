@@ -360,7 +360,7 @@
                   <span>
                     <asp:Literal ID="DamageLinks" Text='Daños:' runat="server"></asp:Literal></span></asp:LinkButton>
                 <div class="doClear">
-                </div>
+                </div> 
               </div>
             </div>
           </div>
@@ -551,6 +551,13 @@
                 <span>Detalle de las Secciones del Informe</span></h2>
             </div>
             <div class="Group-Content">
+              <label>Click en el botón para editar las Secciones Adicionales del Informe</label>
+              <asp:LinkButton OnClick="GotoSection" CssClass="LinkButton Little GoSection" ID="_lnkGoSection" Style="width: 200px"
+                  runat="server">
+                  <span>
+                    <asp:Literal ID="SectionLinks" Text='Secciones Adicionales:' runat="server"></asp:Literal></span></asp:LinkButton>
+              <div class="doClear">
+              </div>              
               <div class="Field TextEdit">
                 <label>
                   Información General:
@@ -712,9 +719,6 @@
               </div>
               <div class="doClear">
               </div>
-              
-              
-              
             </div>
           </div>
           <div class="Group DetalleInformeComplementario">
