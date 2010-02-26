@@ -104,12 +104,12 @@
             <div class="doClear">
             </div>
           </div >
-          <div class="Group AseguradoInfo IFB IFP IFC IFF">
+          <div class="Group AseguradoInfo">
             <div class="Legend">
               <h2>
                 <span>Información del Asegurado</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First">
                 <label>
                   Contratante:
@@ -165,12 +165,12 @@
               </div>
             </div>
           </div>
-          <div class="Group InformacionPoliza IFB IFP IFC IFF">
+          <div class="Group InformacionPoliza">
             <div class="Legend">
               <h2>
                 <span>Información de la Póliza</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First">
                 <label>
                   Poliza:
@@ -248,12 +248,12 @@
               </div>
             </div>
           </div>
-          <div class="Group RecepcionCaso IFB IFP IFC IFF">
+          <div class="Group RecepcionCaso">
             <div class="Legend">
               <h2>
                 <span>Recepción del Caso</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First">
                 <label>
                   # Ref. Asegurador
@@ -302,12 +302,12 @@
               </div>
             </div>
           </div>
-          <div class="Group InformacionOcurrencia IFB IFP IFC IFF">
+          <div class="Group InformacionOcurrencia">
             <div class="Legend">
               <h2>
                 <span>Información de la ocurrencia / descubrimiento</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First">
                 <label>
                   Fecha y Hora del Siniestro:
@@ -369,12 +369,12 @@
               </div>
             </div>
           </div>
-          <div class="Group InformacionInspeccion IFB IFP IFC IFF">
+          <div class="Group InformacionInspeccion">
             <div class="Legend">
               <h2>
                 <span>Información de la inspección</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First">
                 <label>
                   Coordinación:
@@ -423,12 +423,12 @@
               </div>
             </div>
           </div>
-          <div class="Group SituacionActual IFB IFP IFC IFF">
+          <div class="Group SituacionActual">
             <div class="Legend">
               <h2>
                 <span>Situación Actual</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First TextEdit">
                 <label>
                   Situación del Siniestro:
@@ -455,7 +455,7 @@
                 </div>
             </div>
           </div>
-          <div class="Group Montos IFB IFP IFC IFF">
+          <div class="Group Montos">
             <div class="Legend">
               <h2>
                 <span>Montos</span></h2>
@@ -463,7 +463,7 @@
             <asp:ObjectDataSource ID="odsComboMoneda" runat="server" OldValuesParameterFormatString="{0}"
               SelectMethod="GetData" TypeName="dsComboTableAdapters.MonedaComboTableAdapter">
             </asp:ObjectDataSource>
-            <div class="Group-Content">
+            <div class="Group-Content IFB IFP IFC IFF">
               <div class="Field First">
                 <label>
                   Monto de Aviso / Reclamo
@@ -502,12 +502,12 @@
               </div>
             </div>
           </div>
-          <div class="Group NotasFinales IFB">
+          <div class="Group NotasFinales">
             <div class="Legend">
               <h2>
                 <span>Notas Finales</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFB">
               <div class="Field First">
                 <label>
                   Favor enviar copia de la póliza:
@@ -550,12 +550,12 @@
               </div>
             </div>
           </div>
-          <div class="Group DetalleInforme IFP IFF">
+          <div class="Group DetalleInforme">
             <div class="Legend">
               <h2>
                 <span>Detalle de las Secciones del Informe</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFP IFF">
               <label>Click en el botón para editar las Secciones Adicionales del Informe</label>
               <asp:LinkButton OnClick="GotoSection" CssClass="LinkButton Little GoSection" ID="_lnkGoSection" Style="width: 200px"
                   runat="server">
@@ -726,12 +726,12 @@
               </div>
             </div>
           </div>
-          <div class="Group DetalleInformeComplementario IFC">
+          <div class="Group DetalleInformeComplementario">
             <div class="Legend">
               <h2>
                 <span>Detalle de las Secciones del Informe Complementario</span></h2>
             </div>
-            <div class="Group-Content">
+            <div class="Group-Content IFC">
               <div class="Field TextEdit">
                 <label>
                   Preambulo:
