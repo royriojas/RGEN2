@@ -28,7 +28,7 @@ public partial class vEditorRegistroBasico : System.Web.UI.Page
 
         if (RGen.GestorAjuste.GetCodigoAseguradora(ajusteId) == "RIMAC")
         {
-            Response.Redirect(String.Format("~/RimacInforme/InformeBasico.aspx?AjusteId={0}&TipoInforme{1}", qStringAjusteId, "IB"));
+            Response.Redirect(String.Format("~/RimacInforme/InformeBasico.aspx?AjusteId={0}&TipoInforme{1}", QStringAjusteId, "IB"));
             return;
         }
 
