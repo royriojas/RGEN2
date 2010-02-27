@@ -38,7 +38,7 @@
 					'<li><a class="LinkButton Save Little" href=""><span>Grabar</span></a></li>' +
 					'<li><a class="LinkButton Generate Little" href="#"><span>Generar</span></a></li>' +
 					'<li><a class="LinkButton Observate Little" href=""><span>Observar</span></a></li>' +
-					'<li><a class="LinkButton Preview Little" target="_blank" href="<%= String.Format( ResolveClientUrl("~/vVistaPrevia.aspx?AjusteId={0}&TI={1}"), Request.QueryString["AjusteId"] , "IB") %>"><span>Vista Previa HTML</span></a></li>' +
+					'<li><a class="LinkButton Preview Little" target="_blank" href="<%= String.Format( ResolveClientUrl("~/vVistaPrevia.aspx?AjusteId={0}&TI={1}"), Request.QueryString["AjusteId"] , GetTipoInforme()) %>"><span>Vista Previa HTML</span></a></li>' +
 					'<li><a class="LinkButton PreviewPDF Little" target="_blank" href=""><span>Vista Previa PDF</span></a></li>' +
 				'</ul>' +
 			'</div>';
@@ -58,17 +58,17 @@
             });
 
             $('a.LinkButton.Generate').click(function() {
-                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=0", Request.QueryString["AjusteId"])) %>', 229, 75, null);
+                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme={1}&observado=0", Request.QueryString["AjusteId"], GetTipoInforme())) %>', 229, 75, null);
                 return false;
             });
             $('a.LinkButton.Observate').click(function() {
-                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme=B&observado=1", Request.QueryString["AjusteId"])) %>', 229, 75, null);
+                window.top.showPopWin('<%= ResolveUrl(string.Format("~/generarStatus.aspx?ajusteId={0}&tipoInforme={1}&observado=1", Request.QueryString["AjusteId"], GetTipoInforme())) %>', 229, 75, null);
                 return false;
             });
 
             $('a.LinkButton.PreviewPDF').click(function() {
                 //window.top.ShowReport('genPreview.aspx?AjusteId='+ajusteId+'&TI=' + tipoInforme+'&NOW=NOW', 229, 75, null);   
-                window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreview.aspx?AjusteId={0}&TI=B&NOW=NOW&nc={1}", Request.QueryString["AjusteId"], DateTime.Now.Ticks)) %>', 229, 75, null);
+                window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreview.aspx?AjusteId={0}&TI={1}&NOW=NOW&nc={2}", Request.QueryString["AjusteId"], GetTipoInforme() , DateTime.Now.Ticks)) %>', 229, 75, null);
                 return false;
             });
 

@@ -125,4 +125,9 @@ public partial class RimacInforme_InformeBasico : System.Web.UI.Page
         }
         return selector;
     }
+
+    public string GetTipoInforme()
+    {
+        return R3M.Common.Util.XDefault(Request.QueryString["TipoInforme"], "IB");
+    }
 }

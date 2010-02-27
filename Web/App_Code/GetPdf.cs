@@ -33,7 +33,10 @@ namespace RGen.docs
         {
             //ReportDocument informeBasico = getInforme(ajusteId, tipoInforme, ApplicationPath);
 
-            Byte[] InformeEnBytes = GetInformeInBytes(ajusteId, tipoInforme);
+            Byte[] informeEnBytes = GetInformeInBytes(ajusteId, tipoInforme);
+
+
+            tipoInforme = GetTipoInforme(tipoInforme);
 
             //MODIFICAR CON LA AGREGACION DE LA EXTENCION DEL PDF
             decimal estadoACambiar = -1;
@@ -69,7 +72,7 @@ namespace RGen.docs
 
 
             //saveToFileSytem(informeBasico, nombreInforme, ApplicationPath);
-            SaveInformeToFileSystem(InformeEnBytes, nombreInforme, ApplicationPath);
+            SaveInformeToFileSystem(informeEnBytes, nombreInforme, ApplicationPath);
             dsReporteTableAdapters.InformeBasicoSelectTableAdapter tainforme = new dsReporteTableAdapters.InformeBasicoSelectTableAdapter();
             tainforme.Insert(ajusteId, nombreInforme, ApplicationPath + "\\informes\\" + nombreInforme, tipoInforme, estadoValidacion, observado, usuario);
 
@@ -83,6 +86,36 @@ namespace RGen.docs
             if (estadoValidacion) enviaNotificacionInformes(tipoInforme, ajusteId, ApplicationPath + "\\informes\\");
 
             if (estadoValidacion) enviaNotificacionDias(tipoInforme, ajusteId);
+        }
+
+        private static string GetTipoInforme(string tipoInforme)
+        {
+            switch (tipoInforme)
+            {
+
+                case "IB":
+                    {
+                        tipoInforme = "B";
+                        break;
+                    }
+                case "IP":
+                    {
+                        tipoInforme = "P";
+                        break;
+                    }
+                case "IC":
+                    {
+                        tipoInforme = "C";
+
+                        break;
+                    }
+                case "IF":
+                    {
+                        tipoInforme = "F";
+                        break;
+                    }
+            }
+            return tipoInforme;
         }
 
         private static void SaveInformeToFileSystem(byte[] informeEnBytes, string nombreInforme, String applicationPath)
@@ -119,6 +152,10 @@ namespace RGen.docs
             {
                 HeaderInformeURL = null;
             }
+
+            tipoInforme = GetTipoInforme(tipoInforme);
+
+
             switch (tipoInforme)
             {
 
@@ -191,7 +228,7 @@ namespace RGen.docs
             String codigo = "";
             String codigoGenerado = "";
             String codigoACancelar = "";
-
+            tipoInforme = GetTipoInforme(tipoInforme);
             switch (tipoInforme)
             {
                 case "B":
@@ -231,7 +268,7 @@ namespace RGen.docs
                         asunto = "Notificación de culminación del INFORME FINAL";
                         mensaje = "Se notifica que ha concluido el INFORME FINAL";
 
-                        if (RGen.GestorAjuste.dameTipoAjuste(AjusteId) == 2)
+                        if (GestorAjuste.dameTipoAjuste(AjusteId) == 2)
                             codigoACancelar = "dias_informe_final_rapido_" + AjusteId.ToString();
 
                         break;
@@ -255,7 +292,7 @@ namespace RGen.docs
             decimal diasAPartir = 0;
 
             RGen.ControlDiasAseguradora control = RGen.GestorAjuste.dameControlAseguradora(RGen.GestorAjuste.dameAjuste(AjusteId).aseguradoraId);
-
+            tipoInforme = GetTipoInforme(tipoInforme);
             if (control != null)
             {
                 switch (tipoInforme)
@@ -358,7 +395,7 @@ namespace RGen.docs
             string tituloInforme = "INFORME BÁSICO";
             string tipoMonto = "RESERVA NETA";
             decimal montoIndemnizacion = 0;
-
+            tipoInforme = GetTipoInforme(tipoInforme);
             switch (tipoInforme)
             {
 

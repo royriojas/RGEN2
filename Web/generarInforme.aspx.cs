@@ -23,6 +23,6 @@ public partial class generarInforme : System.Web.UI.Page
     if (datosUsuario.verificaAtributo("CREAINFORMEAPROBADO")) estadoValidacion = true;
     RGen.docs.GetPdf.GenerarInforme(decimal.Parse(ajusteId), tipoInforme, estadoValidacion, observado, datosUsuario.UserName, Server.MapPath(""));
 
-    Page.ClientScript.RegisterStartupScript(this.GetType(), "ScriptGeneracionInforme", "window.top.hidePopWin(true);", true);
+    Page.ClientScript.RegisterStartupScript(GetType(), "ScriptGeneracionInforme", "window.top.hidePopWin(true);", true);
   }
 }
