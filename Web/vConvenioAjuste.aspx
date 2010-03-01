@@ -1,6 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="vConvenioAjuste.aspx.cs"
   UICulture="en-US" Culture="en-US" Inherits="vConvenioAjuste" %>
-
+  
+<%@ Register Assembly="WebCalendarControl" Namespace="WebCalendarControl" TagPrefix="cc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1">
@@ -60,12 +61,7 @@
        OnLoad();
        OnLoadFunctionCaseOperations(); /* this is the call to the function that enables the xCaseOperations */
    }
-    
-	$(function() {
-		$("#datepicker").datepicker();
-	});
-
- 
+     
   </script>
   
 </head>
@@ -190,7 +186,8 @@
                         &nbsp;
                     </td>
                     <td style="height: 20px">
-                        <input ID="datepicker" runat="server" CssClass="FormText" Width="182px" type = "text">
+                        <cc1:WebCalendar TabIndex="60" ID="txtFechaRecepcionConvenioFirmado" runat="server" BtnCalendarImage="img/cal.gif"
+                      Text='<%# Bind("fRecepcionConvenioFirmado") %>' CssClass="FormText" GenerateBtn="false" WcResourcesDir="./scripts/wcc_includes"></cc1:WebCalendar>
                     </td>
                     <td style="height: 20px">
                     </td>
@@ -285,7 +282,7 @@
     </div>
     <asp:ObjectDataSource ID="odsConvenioAjuste" runat="server" SelectMethod="GetData"
       TypeName="dsAjusteTableAdapters.ConvenioAjusteTableAdapter" InsertMethod="Insert"
-      UpdateMethod="Update">
+      UpdateMethod="Update" OldValuesParameterFormatString="">
       <InsertParameters>
         <asp:QueryStringParameter Name="ajusteId" QueryStringField="AjusteId" Type="Decimal" />
         <asp:ControlParameter ControlID="txtDeducible" Name="totalDeducible" PropertyName="Text"
@@ -300,6 +297,8 @@
           Type="String" />
         <asp:Parameter Name="usuario" Type="String" />
         <asp:Parameter Name="monedaId" Type="Decimal" />
+          <asp:ControlParameter ControlID="txtFechaRecepcionConvenioFirmado" 
+              Name="fRecepcionConvenioFirmado" PropertyName="SelectedValue" Type="DateTime" />
       </InsertParameters>
       <UpdateParameters>
         <asp:Parameter Name="ajusteId" Type="Decimal" />
@@ -310,6 +309,7 @@
         <asp:Parameter Name="representante" Type="String" />
         <asp:SessionParameter Name="usuario" SessionField="NombreUsuario" Type="String" />
         <asp:Parameter Name="monedaId" Type="Decimal" />
+        <asp:Parameter Name="frecepcionConvenioFirmado" Type="DateTime" />
       </UpdateParameters>
       <SelectParameters>
         <asp:QueryStringParameter Name="ajusteId" QueryStringField="AjusteId" Type="Decimal" />
