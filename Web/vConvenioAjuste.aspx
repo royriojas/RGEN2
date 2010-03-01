@@ -59,7 +59,12 @@
     {
        OnLoad();
        OnLoadFunctionCaseOperations(); /* this is the call to the function that enables the xCaseOperations */
-    }
+   }
+    
+	$(function() {
+		$("#datepicker").datepicker();
+	});
+
  
   </script>
   
@@ -163,23 +168,50 @@
               </tr>
               <tr>
                 <td style="height: 20px">
-                  &nbsp;
-                </td>
+                  &nbsp;</td>
                 <td style="width: 149px; height: 20px;">
-                  &nbsp;
-                </td>
+                  &nbsp;</td>
                 <td style="height: 20px; width: 51px;">
-                  &nbsp;
-                </td>
+                  &nbsp;</td>
                 <td style="height: 20px">
-                  &nbsp;
-                </td>
+                  &nbsp;</td>
                 <td style="height: 20px">
-                </td>
+                    &nbsp;</td>
                 <td style="height: 20px">
-                  &nbsp;
-                </td>
+                  &nbsp;</td>
               </tr>
+                <tr>
+                    <td style="height: 20px">
+                        &nbsp;
+                    </td>
+                    <td style="width: 149px; height: 20px;">
+                        Fecha Recepcion Convenio Firmado</td>
+                    <td style="height: 20px; width: 51px;">
+                        &nbsp;
+                    </td>
+                    <td style="height: 20px">
+                        <input ID="datepicker" runat="server" CssClass="FormText" Width="182px" type = "text">
+                    </td>
+                    <td style="height: 20px">
+                    </td>
+                    <td style="height: 20px">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 20px">
+                        &nbsp;</td>
+                    <td style="width: 149px; height: 20px;">
+                        &nbsp;</td>
+                    <td style="height: 20px; width: 51px;">
+                        &nbsp;</td>
+                    <td style="height: 20px">
+                        &nbsp;</td>
+                    <td style="height: 20px">
+                        &nbsp;</td>
+                    <td style="height: 20px">
+                        &nbsp;</td>
+                </tr>
               <tr>
                 <td style="height: 20px">
                   &nbsp;
@@ -241,7 +273,7 @@
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True"
           ShowSummary="False" />
         <asp:Panel ID="pnlConfirmacion" runat="server" BackColor="#FF8000" BorderColor="Red"
-          Height="36px" Style="z-index: 450; left: 238px; position: absolute; top: 176px;
+          Height="36px" Style="z-index: 450; left: 226px; position: absolute; top: 128px;
           text-align: center" Visible="False" Width="296px">
           <div style="padding-top: 5px">
             <asp:Label ID="lblError" runat="server" Font-Bold="True" Font-Size="10px" ForeColor="White"
