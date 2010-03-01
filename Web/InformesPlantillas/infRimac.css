@@ -29,3 +29,13 @@ div.ImageContainer img{ width:455px;height:335px; }
 div.ImgHolder img { width:455px; height:335px; }
 div.txtInfo {font-size:14px !important; padding:6px; }
 div.ImageTitle { font-size:14px !important; padding:6px;}
+.pagebreak { page-break-before: always; clear: both; }
+
+.ruler-divider { height:1px; background:#000;padding : 0px;margin: 2px auto; }
+.ruler-divider.doble { height:4px; }
+
+
+.infPreliminarTitle { font-weight:bold; text-decoration:underline; text-align:center; font-size: 20px; }
+
+.infoSeccion h3 { font-weight:bold; text-decoration:underline;font-size:18px; }
+.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:16px; }
