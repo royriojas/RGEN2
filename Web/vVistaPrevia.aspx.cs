@@ -102,6 +102,12 @@ public partial class vVistaPrevia : System.Web.UI.Page
                     {
                         InformeURL = "InformesPlantillas/InformePacificoFinal.aspx?AjusteId={0}&TI={1}&nc=" + DateTime.Now.Ticks.ToString();
                     }
+                    if (aseguradoraIsRimac)
+                    {
+                        InformeURL = "InformesPlantillas/InformeFinalRimac.aspx?AjusteId={0}&TI={1}&nc=" +
+                                     DateTime.Now.Ticks;
+
+                    }
                 }
                 break;
         }

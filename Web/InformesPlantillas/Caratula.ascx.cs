@@ -20,6 +20,13 @@ public partial class InformesPlantillas_Caratula : System.Web.UI.UserControl
         get { return Request.QueryString["TI"] == "IC"; }
 
     }
+
+    protected bool IsFinal
+    {
+        get { return Request.QueryString["TI"] == "IF"; }
+        
+    }
+
     protected void DoDataBound(object sender, EventArgs e)
     {
         RimacInforme_detalleSublimitesAfectados ctrl = FormViewInforme.FindControl("_detalleSublimitesAfectados1") as RimacInforme_detalleSublimitesAfectados;

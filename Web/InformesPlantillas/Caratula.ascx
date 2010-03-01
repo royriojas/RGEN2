@@ -26,7 +26,7 @@
             <span class="bold">:</span>
           </td>
           <td>
-            INFORME PRELIMINAR <span>
+            INFORME <%# IsFinal ? "FINAL" : "PRELIMINAR"  %> <span>
               <%# (((AjusteDto)Container.DataItem).NumeroIfb > 1 && IsComplementary) ? string.Format("N° {0}", ((AjusteDto)Container.DataItem).NumeroIfb) : String.Empty %>
             </span>
           </td>

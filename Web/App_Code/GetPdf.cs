@@ -208,6 +208,10 @@ namespace RGen.docs
                         {
                             InformeURL = "InformesPlantillas/InformePacificoFinal.aspx?AjusteId={0}&TI={1}&nc={2}";
                         }
+                        if (rimac)
+                        {
+                            InformeURL = "InformesPlantillas/InformeFinalRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
                         tInforme = "IF";
 
                     }

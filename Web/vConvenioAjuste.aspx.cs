@@ -117,6 +117,8 @@ public partial class vConvenioAjuste : System.Web.UI.Page
 
     protected void AjaxPanel1_AjaxCallEnd(object sender, EventArgs e)
     {
+        //new dsAjusteTableAdapters.ConvenioAjusteTableAdapter().
+
         if (this.convenioAjusteFormView.Visible) MagicAjax.AjaxCallHelper.Write("ReApplyJavascripts();");
     }
 
