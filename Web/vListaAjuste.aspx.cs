@@ -197,7 +197,7 @@ public partial class vListaAjuste : System.Web.UI.Page
           if (li != null)
           {
               li.Selected = true;
-              cbxEjecutivoSiniestros.Enabled = false;
+              //cbxEjecutivoSiniestros.Enabled = false;
           }
           this.GridView1.Columns[8].Visible = false;
       }

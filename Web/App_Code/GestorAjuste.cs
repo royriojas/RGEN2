@@ -148,6 +148,9 @@ namespace RGen
             }
         }
 
+        
+
+
         public static String dameNumeroAjuste(decimal ajusteId)
         {
             String NumeroAjuste;

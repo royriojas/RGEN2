@@ -61,6 +61,7 @@ public partial class vEditorRegistroBasico : System.Web.UI.Page
             {
                 this.observarHyperLink.Visible = false;
                 this.generarHyperLink.Visible = false;
+                
             }
 
         }
