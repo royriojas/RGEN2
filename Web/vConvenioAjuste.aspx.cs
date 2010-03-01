@@ -119,4 +119,9 @@ public partial class vConvenioAjuste : System.Web.UI.Page
     {
         if (this.convenioAjusteFormView.Visible) MagicAjax.AjaxCallHelper.Write("ReApplyJavascripts();");
     }
+
+    protected void CustomValidator2_ServerValidate(object source, ServerValidateEventArgs args)
+    {
+        args.IsValid = R3M.Common.Util.IsValidDateTime(args.Value);
+    }
 }

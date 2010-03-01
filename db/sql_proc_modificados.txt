@@ -1000,3 +1000,82 @@ END
 ---------------------------------------------------------------------------------------
 
 
+ALTER PROCEDURE [dbo].[sp_rgen_ConvenioAjusteUpdate]
+(
+	@ajusteId numeric(8,0),
+	@totalDeducible numeric(18,2),
+	@totalIndemnizacion numeric(18,2),
+	@totalPerdida numeric(18,2),
+	@montoIndemnizacion varchar (100),
+	@representante varchar (100),
+	@usuario varchar(20),
+	@frecepcionConvenioFirmado datetime
+)
+AS
+BEGIN
+
+	SET NOCOUNT OFF
+	DECLARE @Err int, @conAjuste int
+
+	SELECT 	@conAjuste = COUNT(*) FROM RGN_CONVENIOAJUSTE
+	WHERE		ajusteId = @ajusteId
+
+	IF @conAjuste > 0
+		UPDATE	RGN_CONVENIOAJUSTE
+		SET
+			totalDeducible = @totalDeducible,
+			totalIndemnizacion = @totalIndemnizacion,
+			totalPerdida = @totalPerdida,
+			montoIndemnizacion = @montoIndemnizacion,
+			representante = @representante,
+			frecepcionConvenioFirmado = @frecepcionConvenioFirmado,
+			fupdate	= GETDATE(),
+			uupdate	= @usuario
+		WHERE	ajusteId = @ajusteId
+	ELSE
+		INSERT INTO RGN_CONVENIOAJUSTE 
+		(	
+			ajusteId,
+			totalDeducible,
+			totalIndemnizacion,
+			totalPerdida,
+			montoIndemnizacion,
+			representante,
+			fconvenio,
+			frecepcionConvenioFirmado,
+			fcrea,
+			fupdate,
+			ucrea,
+			uupdate
+		)
+		VALUES
+		(
+			@ajusteId,
+			@totalDeducible,
+			@totalIndemnizacion,
+			@totalPerdida,
+			@montoIndemnizacion,
+			@representante,
+			getdate(),
+			@frecepcionConvenioFirmado,
+			getdate(),
+			getdate(),
+			@usuario,
+			@usuario
+		)
+
+	declare @fecha datetime
+	set @fecha=getdate()
+	
+	exec dbo.sp_rgen_cambiaEstadoAjuste @fecha,@ajusteId,19,@usuario
+	
+
+
+	SET @Err = @@Error
+	
+	RETURN @Err
+END
+
+
+-----------------------------------------------------------------------------------------
+

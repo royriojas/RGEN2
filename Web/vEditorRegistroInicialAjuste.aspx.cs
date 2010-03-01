@@ -331,6 +331,7 @@ public partial class vEditorRegistroInicialAjuste : System.Web.UI.Page
 
         sincronizaTipoSiniestro();
         desactivaComboAjustador();
+   
     }
 
     private void sincronizaTipoSiniestro()

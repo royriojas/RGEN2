@@ -994,7 +994,7 @@ Calendar._TT["TIME"] = "Hora:";
                       <span style="height: 20px">
                           <asp:DropDownList ID="cbxEjecutivoSiniestro" runat="server" AppendDataBoundItems="True"
                               CssClass="FormText" DataSourceID="odsEjecutivoSiniestros" DataTextField="persona"
-                              DataValueField="personaid" Width="200px">
+                              DataValueField="personaid" Width="200px" SelectedValue='<%# Bind("ajustadorid") %>'>
                               <asp:ListItem Value="-1">[-Elija-]</asp:ListItem>
                           </asp:DropDownList><asp:ObjectDataSource ID="odsEjecutivoSiniestros" runat="server"
                               OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="dsComboTableAdapters.EjecutivoSiniestrosComboTableAdapter">

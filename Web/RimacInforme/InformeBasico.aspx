@@ -94,10 +94,10 @@
       OnItemUpdating="FormViewInforme_ItemUpdating" OnDataBinding="FormViewInforme_DataBinding">
       <EditItemTemplate>
         <div class="FormCSS">
-          <div class="Group">
+          <div class="Group IFC">
             <div class="Field">
               <label>
-                N&uacute;mero Informe B&aacute;sico</label>
+                N&uacute;mero Informe Complementario</label>
               <div class="FieldWrapper">
                 <asp:TextBox CssClass="FormText" ID="_txtNumInformeBasico" Text='<%# Bind("NumeroIfb")  %>'
                   runat="server"></asp:TextBox>

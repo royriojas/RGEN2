@@ -61,6 +61,13 @@
        OnLoad();
        OnLoadFunctionCaseOperations(); /* this is the call to the function that enables the xCaseOperations */
    }
+
+
+   function tryDateFirst(sender, args) {
+
+       args.IsValid = args.Value != '';
+   }
+  
      
   </script>
   
@@ -177,6 +184,7 @@
                   &nbsp;</td>
               </tr>
                 <tr>
+                    </td>
                     <td style="height: 20px">
                         &nbsp;
                     </td>
@@ -186,10 +194,17 @@
                         &nbsp;
                     </td>
                     <td style="height: 20px">
-                        <cc1:WebCalendar TabIndex="60" ID="txtFechaRecepcionConvenioFirmado" runat="server" BtnCalendarImage="img/cal.gif"
-                      Text='<%# Bind("fRecepcionConvenioFirmado") %>' CssClass="FormText" GenerateBtn="false" WcResourcesDir="./scripts/wcc_includes"></cc1:WebCalendar>
+                        <cc1:WebCalendar ID="txtFechaRecepcionConvenioFirmado" runat="server" 
+                            BtnCalendarImage="img/cal.gif" CssClass="FormText" GenerateBtn="false" 
+                            TabIndex="60" Text='<%# Bind("fRecepcionConvenioFirmado") %>' 
+                            WcResourcesDir="./scripts/wcc_includes"></cc1:WebCalendar>
                     </td>
                     <td style="height: 20px">
+                        <asp:CustomValidator ID="CustomValidator2" runat="server" 
+                            ClientValidationFunction="tryDateFirst" 
+                            ControlToValidate="txtFechaRecepcionConvenioFirmado" 
+                            ErrorMessage="Debe  Ingresar la fecha" 
+                            OnServerValidate="CustomValidator2_ServerValidate" ValidateEmptyText="True">(*)</asp:CustomValidator>
                     </td>
                     <td style="height: 20px">
                         &nbsp;
@@ -296,7 +311,6 @@
         <asp:ControlParameter ControlID="txtRepresentante" Name="representante" PropertyName="Text"
           Type="String" />
         <asp:Parameter Name="usuario" Type="String" />
-        <asp:Parameter Name="monedaId" Type="Decimal" />
           <asp:ControlParameter ControlID="txtFechaRecepcionConvenioFirmado" 
               Name="fRecepcionConvenioFirmado" PropertyName="SelectedValue" Type="DateTime" />
       </InsertParameters>
@@ -308,7 +322,6 @@
         <asp:Parameter Name="montoIndemnizacion" Type="String" Size="18" />
         <asp:Parameter Name="representante" Type="String" />
         <asp:SessionParameter Name="usuario" SessionField="NombreUsuario" Type="String" />
-        <asp:Parameter Name="monedaId" Type="Decimal" />
         <asp:Parameter Name="frecepcionConvenioFirmado" Type="DateTime" />
       </UpdateParameters>
       <SelectParameters>
