@@ -29,6 +29,7 @@ namespace App_Code.RimacInforme.Domain
             InfoAsegurado = new InformacionAsegurado();
             Recepcion = new RecepcionCaso();
             InfoInspeccion = new InfoInspeccion();
+            InfoConvenioAjuste = new InfoConvenioAjuste();
         }
 
         private InformacionAsegurado _infoAsegurado;
@@ -121,6 +122,13 @@ namespace App_Code.RimacInforme.Domain
         {
             get { return _infoInspeccion; }
             set { _infoInspeccion = value; }
+        }
+
+        private InfoConvenioAjuste _infoConvenioAjuste;
+        public InfoConvenioAjuste InfoConvenioAjuste
+        {
+            get { return _infoConvenioAjuste; }
+            set { _infoConvenioAjuste = value; }
         }
 
         private String _situacionSiniestro;
@@ -349,6 +357,60 @@ namespace App_Code.RimacInforme.Domain
             set { _seccion = Util.XDefault(value, String.Empty); ; }
         }
 
+
+        private DateTime? _fechaEnvioIB;
+        public DateTime? FechaEnvioIB
+        {
+            get { return _fechaEnvioIB; }
+            set { _fechaEnvioIB = Util.XDefault<DateTime?>(value, null); }
+        }
+
+        private DateTime? _fechaEnvioIP;
+        public DateTime? FechaEnvioIP
+        {
+            get { return _fechaEnvioIP; }
+            set { _fechaEnvioIP = Util.XDefault<DateTime?>(value, null); }
+        }
+
+        private DateTime? _fechaEnvioIF;
+        public DateTime? FechaEnvioIF
+        {
+            get { return _fechaEnvioIF; }
+            set { _fechaEnvioIF = Util.XDefault<DateTime?>(value, null); }
+        }
+
+        private DateTime? _fechaRecepcionDocumentacion;
+        public DateTime? FechaRecepcionDocumentacion
+        {
+            get { return _fechaRecepcionDocumentacion; }
+            set { _fechaRecepcionDocumentacion = Util.XDefault<DateTime?>(value, null); }
+        }
+
+
+        private String _monedaSumaAsegurada;
+        public String MonedaSumaAsegurada
+        {
+            get
+            {
+                return _monedaSumaAsegurada;
+            }
+            set
+            {
+                _monedaSumaAsegurada = Util.XDefault(value, String.Empty); ;
+            }
+        }
+
+        private decimal _sumaAsegurada;
+        public decimal SumaAsegurada
+        {
+            get { return _sumaAsegurada; }
+            set { _sumaAsegurada = Util.XDefault(value, default(decimal)); ; }
+        }
+        
+
+
+        
+
                 
     }
 
@@ -384,6 +446,47 @@ namespace App_Code.RimacInforme.Domain
 
     }
 
+    public class InfoConvenioAjuste
+    {
+        private decimal _totalPerdida;
+        public decimal TotalPerdida
+        {
+            get { return _totalPerdida; }
+            set { _totalPerdida = Util.XDefault(value, default(decimal)); ; }
+        }
+
+        private decimal _totalDeducible;
+        public decimal TotalDeducible
+        {
+            get { return _totalDeducible; }
+            set { _totalDeducible = Util.XDefault(value, default(decimal)); ; }
+        }
+
+        private decimal _totalIndemnizacion;
+        public decimal TotalIndemnizacion
+        {
+            get { return _totalIndemnizacion; }
+            set { _totalIndemnizacion = Util.XDefault(value, default(decimal)); ; }
+        }
+
+        private DateTime? _fechaConvenio;
+        public DateTime? FechaConvenio
+        {
+            get { return _fechaConvenio; }
+            set { _fechaConvenio = Util.XDefault<DateTime?>(value, null); }
+        }
+
+        private DateTime? _fechaRecepcionConvenioFirmado;
+        public DateTime? FechaRecepcionConvenioFirmado
+        {
+            get { return _fechaRecepcionConvenioFirmado; }
+            set { _fechaRecepcionConvenioFirmado = Util.XDefault<DateTime?>(value, null); }
+        }
+
+
+
+        
+    }
 
     public class RecepcionCaso
     {
@@ -450,6 +553,14 @@ namespace App_Code.RimacInforme.Domain
             get { return _ramo; }
             set { _ramo = Util.XDefault(value, String.Empty); ; }
         }
+
+        private string _cobertura;
+        public String Cobertura
+        {
+            get { return _cobertura; }
+            set { _cobertura = Util.XDefault(value, String.Empty); ; }
+        }
+
 
         
     }

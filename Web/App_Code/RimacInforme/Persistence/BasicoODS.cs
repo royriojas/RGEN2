@@ -49,7 +49,10 @@ namespace App_Code.RimacInforme.Persistence
                     ajusteDto.Poliza.Ramo = polizaRow.ramo;
                     ajusteDto.Poliza.Tipo = polizaRow.producto;
                     ajusteDto.Poliza.Vigencia = string.Format("{0:dd/MM/yyyy} - {1:dd/MM/yyyy}",
-                                                              polizaRow.IsfinicioNull() ? default(DateTime?) : polizaRow.finicio, polizaRow.IsffinNull() ? default(DateTime?) : polizaRow.ffin);
+                                                                                      polizaRow.IsfinicioNull() ? default(DateTime?) : polizaRow.finicio, polizaRow.IsffinNull() ? default(DateTime?) : polizaRow.ffin);
+
+                    ajusteDto.Poliza.Cobertura = polizaRow.cobertura;
+                    
                 }
                 //ajusteDto.Poliza.
             }
@@ -145,6 +148,101 @@ namespace App_Code.RimacInforme.Persistence
                 }
 
             }
+
+            sp_rgen_EmisionInformesRimacTableAdapter informacionReportesTA = new sp_rgen_EmisionInformesRimacTableAdapter();
+            DataSet1.sp_rgen_EmisionInformesRimacDataTable informacionReportesDT = informacionReportesTA.GetData(Convert.ToInt32(ajusteId));
+
+            if (informacionReportesDT.Rows.Count > 0) 
+            {
+
+                DataSet1.sp_rgen_EmisionInformesRimacRow informacionReportesRow;
+
+                for (int i = 0; i < informacionReportesDT.Rows.Count; i++) 
+                {
+ 
+                    informacionReportesRow = informacionReportesDT.Rows[i] as DataSet1.sp_rgen_EmisionInformesRimacRow;
+
+                    if (informacionReportesRow != null) 
+                    {
+
+                        decimal tipoInforme = informacionReportesRow.tinformeId;
+
+                        switch (Convert.ToInt32(tipoInforme)) 
+                        {
+                            case 15:  ajusteDto.FechaEnvioIB = informacionReportesRow.fecha;
+                                break;
+
+                            case 17: ajusteDto.FechaEnvioIP = informacionReportesRow.fecha;
+                                break;
+
+                            case 21: ajusteDto.FechaEnvioIF = informacionReportesRow.fecha;
+                                break;
+                            
+                        }
+                       
+                    }
+
+                }
+            }
+
+            sp_rgen_ConvenioAjusteRimacTableAdapter convenioAjusteTA = new sp_rgen_ConvenioAjusteRimacTableAdapter();
+            DataSet1.sp_rgen_ConvenioAjusteRimacDataTable convenioAjusteDT = convenioAjusteTA.GetData(Convert.ToInt32(ajusteId));
+
+            if (convenioAjusteDT.Rows.Count > 0) 
+            {
+
+                DataSet1.sp_rgen_ConvenioAjusteRimacRow convenioAjusteRow = convenioAjusteDT.Rows[0] as DataSet1.sp_rgen_ConvenioAjusteRimacRow;
+
+                if (convenioAjusteRow != null) 
+                {
+                    ajusteDto.InfoConvenioAjuste.FechaConvenio = convenioAjusteRow.fconvenio;
+                    ajusteDto.InfoConvenioAjuste.FechaRecepcionConvenioFirmado = convenioAjusteRow.fRecepcionConvenioFirmado;
+                    ajusteDto.InfoConvenioAjuste.TotalDeducible = convenioAjusteRow.totalDeducible;
+                    ajusteDto.InfoConvenioAjuste.TotalIndemnizacion = convenioAjusteRow.totalIndemnizacion;
+                    ajusteDto.InfoConvenioAjuste.TotalPerdida = convenioAjusteRow.totalPerdida;
+                }
+            }
+
+
+            sp_rgen_SublimitesAfectadosTableAdapter sumaAseguradaTA = new sp_rgen_SublimitesAfectadosTableAdapter();
+            DataSet1.sp_rgen_SublimitesAfectadosDataTable sumaAseguradaDT = sumaAseguradaTA.GetData(Convert.ToInt32(ajusteId));
+
+            if (sumaAseguradaDT.Rows.Count > 0)
+            {
+
+                DataSet1.sp_rgen_SublimitesAfectadosRow sumaAseguradaRow;
+                decimal sumaAsegurada = 0;
+
+                for (int i = 0; i < sumaAseguradaDT.Rows.Count; i++) 
+                {
+                    sumaAseguradaRow = sumaAseguradaDT.Rows[i] as DataSet1.sp_rgen_SublimitesAfectadosRow;
+                                        
+                    if (sumaAseguradaRow != null) 
+                    {
+                        if (sumaAseguradaRow.concepto == "SumaAsegurada") 
+                        {
+
+                            sumaAsegurada +=  sumaAseguradaRow.monto;
+                            ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
+
+                        }else if (sumaAseguradaRow.concepto2 == "SumaAsegurada") 
+                        {
+
+                            sumaAsegurada +=  sumaAseguradaRow.montoAsegurado2;
+                            ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
+
+                        }
+
+
+
+                    }
+
+                }
+
+                ajusteDto.SumaAsegurada = sumaAsegurada;
+            }
+
+
 
             return ajusteDto;
         }

@@ -113,3 +113,114 @@ alter table rgn_ajuste
 alter table rgn_ajuste
   add localAsegurado text null
 
+
+
+28-02-2010
+------------------------------------------------------------------------
+
+
+alter table rgn_convenioajuste
+  add fRecepcionConvenioFirmado datetime null
+
+
+------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[sp_rgen_ConvenioAjusteRimac]
+	@ajusteId numeric
+AS
+BEGIN
+
+	SET NOCOUNT OFF
+	DECLARE @Err int
+
+-- sacamos primero la moneda con la cual se esta trabajando los montos
+
+	DECLARE @reserva numeric
+	DECLARE @monedaId numeric
+	DECLARE @simboloMonedaReserva varchar(3)
+	
+	SET @reserva = dbo.UltimoEstimadoReservaAjuste(@ajusteid)
+	SET @monedaId =dbo.UltimaMonedaReservaAjuste(@ajusteId)
+	SET @simboloMonedaReserva = dbo.dameSimboloMoneda(@monedaId)
+		
+	SELECT	
+		RGN_AJUSTE.ajusteId,
+		RGN_CONVENIOAJUSTE.totalDeducible,
+		RGN_CONVENIOAJUSTE.totalIndemnizacion,
+		RGN_CONVENIOAJUSTE.totalPerdida,
+		RGN_CONVENIOAJUSTE.montoIndemnizacion,
+		RGN_CONVENIOAJUSTE.representante,
+		RGN_CONVENIOAJUSTE.fconvenio,
+		RGN_CONVENIOAJUSTE.fRecepcionConvenioFirmado,
+		RGN_CONVENIOAJUSTE.fcrea,
+		RGN_CONVENIOAJUSTE.fupdate,
+		RGN_CONVENIOAJUSTE.ucrea,
+		RGN_CONVENIOAJUSTE.uupdate,
+		@monedaId as monedaId,
+		@simboloMonedaReserva as simbolo
+		
+	FROM 	RGN_AJUSTE LEFT OUTER JOIN 
+		RGN_CONVENIOAJUSTE ON RGN_CONVENIOAJUSTE.ajusteId = RGN_AJUSTE.ajusteId
+	WHERE	RGN_AJUSTE.ajusteId = @ajusteId
+
+	SET @Err = @@Error
+
+	RETURN @Err
+END
+
+
+
+CREATE PROCEDURE [dbo].[sp_rgen_EmisionInformesRimac]
+	@ajusteId numeric
+AS
+BEGIN
+
+	SET NOCOUNT OFF
+	DECLARE @Err int
+
+
+
+	SELECT	*
+		
+	FROM 	RGN_AJUSTE LEFT OUTER JOIN 
+		RGN_INFORME ON RGN_INFORME.ajusteId = RGN_AJUSTE.ajusteId
+	WHERE	RGN_AJUSTE.ajusteId = @ajusteId and RGN_INFORME.estado = 'A'
+
+	SET @Err = @@Error
+
+	RETURN @Err
+END
+
+
+---------------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[sp_rgen_SublimitesAfectados] (@ajusteid int)
+AS
+
+BEGIN
+	SELECT     
+		--RGN_ITEMASEGURADO.itemAseguradosId AS item, 
+		RGN_ITEMASEGURADO.nombreItem AS detalle, 
+		ADM_MONEDA.simbolo AS simbolo, 
+		CASE 
+		   WHEN RGN_ITEMASEGURADO.concepto = 'Ninguno' THEN ''
+		   ELSE RGN_ITEMASEGURADO.concepto
+		END as concepto,
+		RGN_ITEMASEGURADO.montoAsegurado AS monto,
+		CASE 
+		   WHEN RGN_ITEMASEGURADO.concepto2 = 'Ninguno' THEN ''
+		   ELSE RGN_ITEMASEGURADO.concepto2	
+		END as concepto2,
+		RGN_ITEMASEGURADO.montoAsegurado2,
+		RGN_ITEMASEGURADO.localItem
+	FROM		RGN_ITEMASEGURADO_AJUSTE INNER JOIN
+          RGN_ITEMASEGURADO ON 
+          RGN_ITEMASEGURADO_AJUSTE.itemAseguradosId = RGN_ITEMASEGURADO.itemAseguradosId AND 
+          RGN_ITEMASEGURADO_AJUSTE.polizaId = RGN_ITEMASEGURADO.polizaId AND 
+          RGN_ITEMASEGURADO_AJUSTE.aseguradoraId = RGN_ITEMASEGURADO.aseguradoraId INNER JOIN
+          ADM_MONEDA ON RGN_ITEMASEGURADO.monedaId = ADM_MONEDA.monedaId
+	where 	RGN_ITEMASEGURADO_AJUSTE.ajusteid = @ajusteid 
+	
+END
+
+
