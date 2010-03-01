@@ -1079,3 +1079,66 @@ END
 
 -----------------------------------------------------------------------------------------
 
+ALTER PROCEDURE [dbo].[proc_informacionAjusteRimacUpdate]
+(
+	@ajusteId numeric(8, 0),-- ajuste
+	@descripcionRiesgo text = null, 
+	@observaciones text = null, 
+	@numAjustePASA varchar(30), 
+	@causasiniestro text = null, 
+    @detalleocurrencia text = null, 
+	@situacionajuste text = null, 
+	@verificaciongarantias text = null, 
+    @siniestrosanteriores text = null,
+	@salvamentoyrecupero text = null,
+	@recomendaciones text = null,
+    @investigaciones text = null,
+	@TotalIndenmizacion numeric (14,2)= null,
+	@opinionAjustador text = null,
+    @descripcionLugarSiniestro text = null,
+	@descripcionBienesAfectados text = null,
+	@antecedentes text = null,
+    @descripcionReclamo text = null,
+	@descripcionReserva text = null,
+	@materiaAsegurada text = null,
+    @localAsegurado text = null,
+	@seccion text = null,
+	@descripcionDamage text =  null
+
+
+
+)
+AS
+BEGIN
+	
+	SET NOCOUNT OFF;
+	UPDATE [RGN_AJUSTE] 
+	SET 	
+      descripcionRiesgo = @descripcionRiesgo, 
+	  observaciones = @observaciones, 
+	  numAjustePASA = @numAjustePASA, 
+	  causasiniestro = @causasiniestro, 
+      detalleocurrencia = @detalleocurrencia, 
+	  situacionajuste =@situacionajuste, 
+	  verificaciongarantias = @verificaciongarantias, 
+      siniestrosanteriores = @siniestrosanteriores, 
+	  salvamentoyrecupero = @salvamentoyrecupero, 
+	  recomendaciones =@recomendaciones, 
+      investigaciones = @investigaciones, 
+	  TotalIndenmizacion = @TotalIndenmizacion, 
+	  opinionAjustador = @opinionAjustador, 
+      descripcionLugarSiniestro = @descripcionLugarSiniestro, 
+	  descripcionBienesAfectados = @descripcionBienesAfectados, 
+	  antecedentes = @antecedentes, 
+      descripcionReclamo = @descripcionReclamo, 
+	  descripcionReserva = @descripcionReserva,
+	  materiaAsegurada = @materiaAsegurada, 
+      localAsegurado = @localAsegurado, 
+	  seccion = @seccion,
+	  descripcionDamage = @descripcionDamage
+	  
+	WHERE (RGN_AJUSTE.ajusteId=@ajusteId)
+
+END
+
+
