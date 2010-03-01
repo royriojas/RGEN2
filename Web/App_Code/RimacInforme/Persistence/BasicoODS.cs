@@ -222,13 +222,13 @@ namespace App_Code.RimacInforme.Persistence
 
                     if (sumaAseguradaRow != null)
                     {
-                        if (sumaAseguradaRow.concepto == "SumaAsegurada")
+                        if (sumaAseguradaRow.concepto == "Suma Asegurada")
                         {
                             sumaAsegurada += sumaAseguradaRow.monto;
                             ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
 
                         }
-                        else if (sumaAseguradaRow.concepto2 == "SumaAsegurada")
+                        else if (sumaAseguradaRow.concepto2 == "Suma Asegurada")
                         {
                             sumaAsegurada +=  sumaAseguradaRow.montoAsegurado2;
                             ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
