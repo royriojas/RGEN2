@@ -221,22 +221,15 @@ namespace App_Code.RimacInforme.Persistence
                     {
                         if (sumaAseguradaRow.concepto == "SumaAsegurada") 
                         {
-
                             sumaAsegurada +=  sumaAseguradaRow.monto;
                             ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
 
                         }else if (sumaAseguradaRow.concepto2 == "SumaAsegurada") 
                         {
-
                             sumaAsegurada +=  sumaAseguradaRow.montoAsegurado2;
                             ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
-
                         }
-
-
-
                     }
-
                 }
 
                 ajusteDto.SumaAsegurada = sumaAsegurada;

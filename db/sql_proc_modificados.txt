@@ -223,4 +223,344 @@ BEGIN
 	
 END
 
+-----------------------------------------------------------------------------------
+
+
+ALTER PROCEDURE [dbo].[sp_rgen_Ajuste_Total_Insert]
+(
+	
+	@numeroAjuste varchar(30) = NULL output,	
+	@ajusteId numeric (8,0)=NULL output,
+
+	@quienNotifico varchar(250),
+	@NombreDelNotificante varchar(250),
+	@faviso datetime,
+	@medioDeNotificacionId numeric(8,0), 
+
+	@NombreQuienConfirma varchar(250), 
+	@FechayHoraConfirmacion datetime, 
+	@medioConfirmacionId numeric(8,0),
+	@cargoconfirmante varchar(250), 
+
+	@aseguradoraid numeric(8,0),
+	@nombreresponsable varchar(250),
+	@telefonoresponsable varchar(20),
+	@emailresponsable varchar(250),
+
+	@brokerId numeric(8,0),
+	@nombreresponsableBroker varchar(250),
+	@telefonoresponsableBroker varchar(20),
+	@emailresponsableBroker varchar(250),
+	@numeroSiniestroCia varchar(100),
+	@numeroSiniestroBroker varchar(100),
+
+	@fsiniestro datetime,
+	@lugarsiniestro varchar(250),
+	@ubigeoid varchar(6),	
+	@tiposiniestro_id numeric(8,0),
+	@nombreresponsableSiniestro varchar(250),
+	@telefonoresponsableSiniestro varchar(20),
+	@emailresponsableSiniestro varchar(250),
+	@descripcion varchar(250),
+
+	@usuario varchar(100),
+	@polizaid numeric(8,0),
+
+	@ajustadorid numeric(8,0),
+    @ejecutivosiniestrosid numeric(8,0)= null,
+	@FechaHoraCoordinacion datetime, 
+	@FechaHoraCoordinacionInspeccion datetime,
+	@FechaHoraReunion datetime, 
+	@ubigeoidInspeccion varchar(6),
+	@personacontacto varchar(250),
+	@tajusteid numeric(8,0),
+	@lugarDeReunion varchar(250), 
+	@referencia varchar(250),
+	@telefonoPersonaContacto varchar(20) 
+)
+AS
+--declare @ajusteId numeric (8,0)
+declare @numajustepasa varchar(30)
+declare @anno varchar(4)
+declare @estadoajusteid numeric(8,0)
+
+
+
+ if (@medioDeNotificacionId = -1)
+	begin
+		set @medioDeNotificacionId = 3
+	end
+
+ if (@medioConfirmacionId = -1)
+	begin
+		set @medioConfirmacionId = 3
+	end
+	
+	
+if (@ejecutivosiniestrosid = -1)
+
+begin
+ 
+	insert into RGN_AJUSTE(quienNotifico, 
+			 nombredelNotificante, 
+			 faviso, 
+			 mediodeNotificacionid, 
+ 			 NombrequienConfirma, 
+			 FechayHoraConfirmacion, 
+			 medioConfirmacion,
+	 		 cargoconfirmante, 
+			 brokerid, 
+			 NumeroSiniestroCia,
+			 NumeroSiniestroBroker,
+			 tajusteid,
+			 ajustadorid, 
+			 fcrea,
+			 fupdate,
+			 estado,
+			 ucrea,
+			 uupdate,
+			fechaHoraProgramacion)
+	 values ( @quienNotifico,
+			 @NombreDelNotificante,
+			 @faviso,
+			 @medioDeNotificacionId, 
+			 @NombreQuienConfirma, 
+			 @FechayHoraConfirmacion, 
+			 @medioConfirmacionId,
+			 @cargoconfirmante, 
+			 @brokerId,
+			 @NumeroSiniestroCia,
+			 @NumeroSiniestroBroker,
+			 @tajusteid,
+ 			 @ajustadorid,
+			 getdate(),
+			 getdate(),
+			 'A',
+			 @usuario,
+			 @usuario,
+			 @FechaHoraCoordinacionInspeccion
+		 )	 
+END
+ELSE 
+BEGIN
+	insert into RGN_AJUSTE(quienNotifico, 
+			 nombredelNotificante, 
+			 faviso, 
+			 mediodeNotificacionid, 
+ 			 NombrequienConfirma, 
+			 FechayHoraConfirmacion, 
+			 medioConfirmacion,
+	 		 cargoconfirmante, 
+			 brokerid, 
+			 NumeroSiniestroCia,
+			 NumeroSiniestroBroker,
+			 tajusteid,
+			 ajustadorid, 
+			 ejecutivosiniestrosid,
+			 fcrea,
+			 fupdate,
+			 estado,
+			 ucrea,
+			 uupdate,
+			fechaHoraProgramacion)
+	 values ( @quienNotifico,
+			 @NombreDelNotificante,
+			 @faviso,
+			 @medioDeNotificacionId, 
+			 @NombreQuienConfirma, 
+			 @FechayHoraConfirmacion, 
+			 @medioConfirmacionId,
+			 @cargoconfirmante, 
+			 @brokerId,
+			 @NumeroSiniestroCia,
+			 @NumeroSiniestroBroker,
+			 @tajusteid,
+ 			 @ajustadorid,
+			 @ejecutivosiniestrosid,
+			 getdate(),
+			 getdate(),
+			 'A',
+			 @usuario,
+			 @usuario,
+			 @FechaHoraCoordinacionInspeccion
+		 )	 
+END
+	
+	
+
+
+set @ajusteId = SCOPE_IDENTITY()
+
+select @ajusteId
+
+
+/*
+insertando el numero de poliza que se debe generar...
+*/
+set @anno = year(getdate())
+
+select @anno
+
+
+--set @numajustepasa = dbo.generaNumeroAjustepasa(@ajusteid,@anno)
+
+	--declare @numajustepasa varchar(20)
+ declare @aux2 varchar(250)
+	
+	set @aux2 = '';
+	select top 1 @aux2=valorParametro from ADM_PARAMETRO where nombreparametro = 'NUMEROAJUSTEACTUAL'
+	
+ --convert(varchar(10),@ajusteid)
+
+ set @numajustepasa='PA-'+@aux2+'-'+@anno
+
+	if (@aux2 != '') 
+	begin 
+		declare @numAux numeric(8,0) 
+		set @numAux = convert(numeric(8,0),@aux2)
+		set @numAux= @numAux + 1
+		update ADM_PARAMETRO set valorParametro = convert(varchar(10),@numAux)
+		where (NombreParametro = 'NUMEROAJUSTEACTUAL')
+	end	
+
+
+set @numeroAjuste = @numAjustePasa
+
+update RGN_AJUSTE set numajustepasa=@numajustepasa where ajusteid=@ajusteid
+
+
+
+--Insertando contacto de la ASEGURADORA
+insert into RGN_CONTACTOS_AJUSTE (TipoContactoid,ajusteid,nombreContacto, telefonocontacto,emailcontacto,fcrea,fupdate,estado,ucrea,uupdate)
+	values (1,
+					@ajusteid,
+					@nombreresponsable, 
+					@telefonoresponsable, 
+					@emailresponsable,
+					getdate(),
+					getdate(),
+			 'A',
+			 @usuario,
+			 @usuario 
+  
+)
+
+--Insertando contacto del BROKER
+insert into RGN_CONTACTOS_AJUSTE (TipoContactoid,ajusteid,nombreContacto, telefonocontacto,emailcontacto,fcrea,fupdate,estado,ucrea,uupdate)
+	values (2,
+		@ajusteid,
+		@nombreresponsableBroker, 
+		@telefonoresponsableBroker, 
+		@emailresponsableBroker,
+		getdate(),
+		getdate(),
+		 'A',
+		 @usuario,
+		 @usuario 
+	)
+
+
+
+
+--Insertando contactos del SINIESTRO
+
+insert into RGN_CONTACTOS_AJUSTE (TipoContactoid,ajusteid,nombreContacto, telefonocontacto,emailcontacto,fcrea,fupdate,estado,ucrea,uupdate)
+	values (5,
+		@ajusteid,
+		@nombreresponsableSiniestro, 
+		@telefonoresponsableSiniestro, 
+		@emailresponsableSiniestro,
+		getdate(),
+		getdate(),
+		'A',
+		@usuario,
+		@usuario 
+	)
+
+--Insertando datos del SINIESTRO
+
+insert into RGN_SINIESTRO (descripcion, fsiniestro, tiposiniestroid, lugarsiniestro, ubigeoid,fcrea,fupdate,estado,ucrea,uupdate) 
+ values(@descripcion, 
+	 @fsiniestro, 
+	 @tiposiniestro_id, 
+	 @lugarsiniestro,
+	 @ubigeoid, 
+	 getdate(),
+	 getdate(),
+	 'A',
+	 @usuario,
+	 @usuario 
+	)
+declare @siniestroNumero numeric (8,0) 
+set @siniestroNumero = scope_identity()
+
+update RGN_AJUSTE set siniestroid=@siniestroNumero where ajusteid=@ajusteid
+
+IF NOT @polizaid IS NULL
+	insert into RGN_POLIZA_AJUSTE (polizaid, aseguradoraid, ajusteid, numsiniestro, fcrea,fupdate,estado,ucrea,uupdate) 
+	 values (@polizaid,
+		 @aseguradoraid, 
+		 @ajusteid,
+		 @numeroSiniestroCia,
+	 	 getdate(),
+		 getdate(),
+	 'A',
+	 @usuario,
+	 @usuario 
+	 )
+--insertando datos de la inspeccion
+insert into RGN_ACTIVIDAD (ajusteid, FechaHoraCoordinacion, lugardeReunion, referencia, personacontacto, 
+	 FechaHoraReunion, ubigeoID, telefonoPersonaContacto, tipoactividadId, fcrea,fupdate,estado,ucrea,uupdate) 	 
+ values(
+				@ajusteid,
+				@FechaHoraCoordinacion, 
+				@lugarDeReunion,
+				@referencia,
+				@personacontacto,
+				@FechaHoraReunion, 
+				@ubigeoidInspeccion,
+				@telefonoPersonaContacto, 
+				5,
+				getdate(),
+				getdate(),
+				'A',
+				@usuario,
+				@usuario 
+		)
+
+--insertando estados
+
+set @estadoajusteId = 13
+
+IF (@FechaHoraCoordinacion is not NULL) 
+begin
+	set @estadoajusteid = 14
+end
+
+
+if (@FechaHoraReunion is not NULL) 
+begin
+	set @estadoajusteid=15
+end
+
+declare @estadoIndice numeric(8,0)
+
+set @estadoIndice = 12
+
+declare @fechaAux datetime
+
+WHILE (@estadoIndice <= @estadoAjusteId) 
+BEGIN
+	if (@estadoIndice = 12) set @fechaAux = @faviso;
+	if (@estadoIndice = 13) set @fechaAux = isNull(@FechayHoraConfirmacion,getDate())
+	if (@estadoIndice = 14) set @fechaAux = isNull(@FechaHoraCoordinacion,getDate())	
+	if (@estadoIndice = 15) set @fechaAux = isNull(@FechaHoraReunion,getDate())
+	exec sp_rgen_cambiaEstadoAjuste @fechaAux, @ajusteid, @estadoIndice ,@usuario
+	set @estadoIndice = @estadoIndice + 1;
+END
+
+
+
+
+
 
