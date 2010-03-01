@@ -82,7 +82,7 @@
             <div class="infoSeccion">
               <h3>
                 LUGAR DEL SINIESTRO</h3>
-              <%#((AjusteDto) Container.DataItem).LugarDeSiniestro%>
+              <%#((AjusteDto) Container.DataItem).DescripcionLugarSiniestro%>
             </div>
             <div class="infoSeccion">
               <h3>
@@ -111,7 +111,7 @@
               <h3>
                 DAÑOS</h3>
               <!-- //TODO Check this -->
-              <%#((AjusteDto) Container.DataItem).DescripcionRiesgo 
+              <%#((AjusteDto) Container.DataItem).DescripcionDamage 
               %>
             </div>
             <div class="infoSeccion">
@@ -138,7 +138,7 @@
               <div class="subSeccion">
                 <h4>
                   Local Asegurado / Ubicación del Riesgo</h4>
-                <%# ((AjusteDto) Container.DataItem).LugarDeSiniestro %>
+                <%# ((AjusteDto) Container.DataItem).LocalAsegurado %>
                 <!-- TODO -->
               </div>
               <div class="subSeccion">
@@ -188,7 +188,8 @@
               <p>
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
-                <%# ((AjusteDto) Container.DataItem).Reclamo %></p>
+                <%# ((AjusteDto) Container.DataItem).Reclamo %>.</p>
+                <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">
               <h3>
@@ -206,7 +207,8 @@
               <p>
                 Recomendamos establecer una Reserva Neta de <span class="bold">
                   <%# ((AjusteDto) Container.DataItem).MonedaReservaSimbolo %>
-                  <%# ((AjusteDto) Container.DataItem).Reserva %></span></p>
+                  <%# ((AjusteDto) Container.DataItem).Reserva %></span>.</p>
+                  <%# ((AjusteDto) Container.DataItem).DescripcionReserva %>
             </div>
             <div class="infoSeccion">
               <h3>

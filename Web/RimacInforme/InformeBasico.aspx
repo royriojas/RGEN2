@@ -625,7 +625,7 @@
                 <label>
                   Descripcion de los Daños</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionBienesAfectados") %>'
+                  <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionDamage") %>'
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
@@ -739,6 +739,14 @@
                 <span>Detalle de las Secciones del Informe Complementario</span></h2>
             </div>
             <div class="Group-Content">
+            <label>
+                Click en el botón para editar las Secciones Adicionales del Informe</label>
+              <asp:LinkButton OnClick="GotoSection" CssClass="LinkButton Little GoSection" ID="LinkButton1"
+                Style="width: 200px" runat="server">
+                <span>
+                  <asp:Literal ID="Literal1" Text='Secciones Adicionales:' runat="server"></asp:Literal></span></asp:LinkButton>
+              <div class="doClear">
+              </div>
               <div class="Field TextEdit">
                 <label>
                   Preambulo:
