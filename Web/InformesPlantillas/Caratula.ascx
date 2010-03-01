@@ -26,7 +26,9 @@
             <span class="bold">:</span>
           </td>
           <td>
-            Informe Preliminar
+            INFORME PRELIMINAR <span>
+              <%# (((AjusteDto)Container.DataItem).NumeroIfb > 1 && IsComplementary) ? string.Format("N° {0}", ((AjusteDto)Container.DataItem).NumeroIfb) : String.Empty %>
+            </span>
           </td>
         </tr>
         <tr>
@@ -200,7 +202,8 @@
             <span class="bold">:</span>
           </td>
           <td>
-            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Reclamo) %>
+             <%# String.Format("{0}", ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo) %>
+              <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
           </td>
         </tr>
         <tr>
@@ -211,7 +214,9 @@
             <span class="bold">:</span>
           </td>
           <td>
-            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Reserva) %>
+            <span class="bold">
+                <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
+                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reserva)%></span>
           </td>
         </tr>
       </table>

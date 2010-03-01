@@ -11,6 +11,7 @@
 <%@ Register Src="../RimacInforme/DocumentacionSolicitada.ascx" TagName="DocumentacionSolicitada"
   TagPrefix="uc1" %>
 <%@ Register Src="../RimacInforme/Fotos.ascx" TagName="Fotos" TagPrefix="uc6" %>
+<%@ Register Src="TitulosAdicionales.ascx" TagName="TitulosAdicionales" TagPrefix="uc7" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -18,7 +19,9 @@
   <title>INFORME PRELIMINAR</title>
   <link href='<%= ResolveUrl("~/InformesPlantillas/infRimac.css?nc=" + DateTime.Now.Ticks) %>'
     rel="Stylesheet" type="text/css" />
+
   <script type="text/javascript" src='<%= ResolveUrl("~/RimacInforme/scripts/jquery.js")  %>'></script>
+
   <script type="text/javascript">
     $(function() {
       $('.infoSeccion>h3, .subSeccion>h4').each(function() {
@@ -27,6 +30,7 @@
       });
     });
   </script>
+
 </head>
 <body>
   <form id="_form1" runat="server">
@@ -40,7 +44,7 @@
       </SelectParameters>
     </asp:ObjectDataSource>
     <asp:FormView ID="FormViewInforme" DataKeyNames="AjusteId" Width="100%" runat="server"
-      DefaultMode="ReadOnly" DataSourceID="odsInforme">
+      DefaultMode="ReadOnly" DataSourceID="odsInforme" OnDataBound="DoDataBound">
       <ItemTemplate>
         <p class="DateSalute">
           Lima,
@@ -61,154 +65,166 @@
         <uc5:Caratula ID="Caratula1" runat="server" />
         <div class="main">
           <h2 class="infPreliminarTitle">
-            INFORME N° 1 PRELIMINAR</h2>
+            INFORME PRELIMINAR <span>
+              <%# (((AjusteDto)Container.DataItem).NumeroIfb > 1 && IsComplementary) ? string.Format("N° {0}", ((AjusteDto)Container.DataItem).NumeroIfb) : String.Empty %>
+            </span>
+          </h2>
           <div class="ruler-divider doble">
           </div>
           <div class="ruler-divider">
           </div>
-          <div class="infoSeccion">
-            <h3>
-              INFORMACIÓN GENERAL</h3>
-            <%#((AjusteDto) Container.DataItem).DescripcionRiesgo %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              LUGAR DEL SINIESTRO</h3>
-            <%#((AjusteDto) Container.DataItem).LugarDeSiniestro%>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              BIEN(ES) SINIESTRADO(S)</h3>
-            <%#((AjusteDto) Container.DataItem).DescripcionBienesAfectados %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              ANTECEDENTES</h3>
-            <%#((AjusteDto) Container.DataItem).Antecedentes
-            %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              OCURRENCIA</h3>
-            <%#((AjusteDto) Container.DataItem).Ocurrencia
-            %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              INVESTIGACIONES</h3>
-            <%#((AjusteDto) Container.DataItem).Investigaciones
-            %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              DAÑOS</h3>
-            <!-- //TODO Check this -->
-            <%#((AjusteDto) Container.DataItem).DescripcionRiesgo 
-            %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              CAUSA</h3>
-            <%#((AjusteDto) Container.DataItem).CausasSiniestro
-            %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              DETALLE DE LA PÓLIZA</h3>
-            <p>
-              A continuación resumimos la Póliza N°<%# ((AjusteDto) Container.DataItem).Poliza.PolizaNumber %>
-              contratada por el Asegurado,
-              <%# ((AjusteDto) Container.DataItem).InfoAsegurado.Asegurado%>
-              , cuya vigencia es
-              <%# ((AjusteDto) Container.DataItem).Poliza.Vigencia %>
-              :</p>
-            <div class="subSeccion">
-              <h4>
-                Materia Asegurada</h4>
-              <%# ((AjusteDto) Container.DataItem).MateriaAsegurada %>
+          <div class="InfoGroup" id="_groupIPreliminar" runat="server">
+            <div class="infoSeccion">
+              <h3>
+                INFORMACIÓN GENERAL</h3>
+              <%#((AjusteDto) Container.DataItem).DescripcionRiesgo %>
             </div>
-            <div class="subSeccion">
-              <h4>
-                Local Asegurado / Ubicación del Riesgo</h4>
-              <%# ((AjusteDto) Container.DataItem).LugarDeSiniestro %>
-              <!-- TODO -->
+            <div class="infoSeccion">
+              <h3>
+                LUGAR DEL SINIESTRO</h3>
+              <%#((AjusteDto) Container.DataItem).LugarDeSiniestro%>
             </div>
-            <div class="subSeccion">
-              <table>
-                <tr>
-                  <td>
-                    <h4>
-                      Cobertura Aplicable (RAMO)</h4>
-                  </td>
-                  <td>
-                    <h4>
-                      Suma Asegurada</h4>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%# ((AjusteDto) Container.DataItem).Poliza.Cobertura %>
-                  </td>
-                  <td>
-                    <!-- //TODO Check this -->
-                    <%# ((AjusteDto) Container.DataItem).SumaAsegurada 
+            <div class="infoSeccion">
+              <h3>
+                BIEN(ES) SINIESTRADO(S)</h3>
+              <%#((AjusteDto) Container.DataItem).DescripcionBienesAfectados %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                ANTECEDENTES</h3>
+              <%#((AjusteDto) Container.DataItem).Antecedentes
+              %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                OCURRENCIA</h3>
+              <%#((AjusteDto) Container.DataItem).Ocurrencia
+              %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                INVESTIGACIONES</h3>
+              <%#((AjusteDto) Container.DataItem).Investigaciones
+              %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                DAÑOS</h3>
+              <!-- //TODO Check this -->
+              <%#((AjusteDto) Container.DataItem).DescripcionRiesgo 
+              %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                CAUSA</h3>
+              <%#((AjusteDto) Container.DataItem).CausasSiniestro
+              %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                DETALLE DE LA PÓLIZA</h3>
+              <p>
+                A continuación resumimos la Póliza N°<%# ((AjusteDto) Container.DataItem).Poliza.PolizaNumber %>
+                contratada por el Asegurado,
+                <%# ((AjusteDto) Container.DataItem).InfoAsegurado.Asegurado%>
+                , cuya vigencia es
+                <%# ((AjusteDto) Container.DataItem).Poliza.Vigencia %>
+                :</p>
+              <div class="subSeccion">
+                <h4>
+                  Materia Asegurada</h4>
+                <%# ((AjusteDto) Container.DataItem).MateriaAsegurada %>
+              </div>
+              <div class="subSeccion">
+                <h4>
+                  Local Asegurado / Ubicación del Riesgo</h4>
+                <%# ((AjusteDto) Container.DataItem).LugarDeSiniestro %>
+                <!-- TODO -->
+              </div>
+              <div class="subSeccion">
+                <table>
+                  <tr>
+                    <td>
+                      <h4>
+                        Cobertura Aplicable (RAMO)</h4>
+                    </td>
+                    <td>
+                      <h4>
+                        Suma Asegurada</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <%# ((AjusteDto) Container.DataItem).Poliza.Cobertura %>
+                    </td>
+                    <td>
+                      <!-- //TODO Check this -->
+                      <%# ((AjusteDto) Container.DataItem).SumaAsegurada 
                       
-                    %>
-                  </td>
-                </tr>
-              </table>
+                      %>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="subSeccion">
+                <h4>
+                  Sección</h4>
+                <%# ((AjusteDto) Container.DataItem).Seccion %>
+              </div>
+              <div class="subSeccion">
+                <h4>
+                  Deducible Aplicable</h4>
+                <uc2:Deducibles ID="Deducibles1" runat="server" />
+              </div>
+              <div class="subSeccion">
+                <h4>
+                  Cláusulas Aplicables</h4>
+                <uc3:Clausulas ID="Clausulas1" runat="server" />
+              </div>
             </div>
-            <div class="subSeccion">
-              <h4>
-                Sección</h4>
-              <%# ((AjusteDto) Container.DataItem).Seccion %>
+            <div class="infoSeccion">
+              <h3>
+                RECLAMO</h3>
+              <p>
+                El Asegurado ha estimado su reclamo en un monto de
+                <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
+                <%# ((AjusteDto) Container.DataItem).Reclamo %></p>
             </div>
-            <div class="subSeccion">
-              <h4>
-                Deducible Aplicable</h4>
-              <uc2:Deducibles ID="Deducibles1" runat="server" />
+            <div class="infoSeccion">
+              <h3>
+                COBERTURA</h3>
+              <%# ((AjusteDto) Container.DataItem).OpinionAjustador %>
+              <div class="subSeccion">
+                <h4>
+                  Cumplimiento de Garantías / Prescripciones de Seguridad</h4>
+                <%# ((AjusteDto) Container.DataItem).VerificacionGarantias %>
+              </div>
             </div>
-            <div class="subSeccion">
-              <h4>
-                Cláusulas Aplicables</h4>
-              <uc3:Clausulas ID="Clausulas1" runat="server" />
+            <div class="infoSeccion">
+              <h3>
+                RESERVA</h3>
+              <p>
+                Recomendamos establecer una Reserva Neta de <span class="bold">
+                  <%# ((AjusteDto) Container.DataItem).MonedaReservaSimbolo %>
+                  <%# ((AjusteDto) Container.DataItem).Reserva %></span></p>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                SALVAMENTO / RECUPERO</h3>
+              <%# ((AjusteDto) Container.DataItem).Salvamentoyrecupero %>
+            </div>
+            <div class="infoSeccion">
+              <h3>
+                MEDIDAS CORRECTIVAS</h3>
+              <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
           </div>
-          <div class="infoSeccion">
-            <h3>
-              RECLAMO</h3>
-            <p>
-              El Asegurado ha estimado su reclamo en un monto de
-              <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
-              <%# ((AjusteDto) Container.DataItem).Reclamo %></p>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              COBERTURA</h3>
-            <%# ((AjusteDto) Container.DataItem).OpinionAjustador %>
-            <div class="subSeccion">
-              <h4>
-                Cumplimiento de Garantías / Prescripciones de Seguridad</h4>
-              <%# ((AjusteDto) Container.DataItem).VerificacionGarantias %>
+          <div id="_groupIComplementario2" class="groupSection" runat="server">
+            <div class="infoSeccion">
+              <h3>
+                PREAMBULO</h3>
+              <%# ((AjusteDto) Container.DataItem).Antecedentes %>
             </div>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              RESERVA</h3>
-            <p>
-              Recomendamos establecer una Reserva Neta de <span class="bold">
-                <%# ((AjusteDto) Container.DataItem).MonedaReservaSimbolo %>
-                <%# ((AjusteDto) Container.DataItem).Reserva %></span></p>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              SALVAMENTO / RECUPERO</h3>
-            <%# ((AjusteDto) Container.DataItem).Salvamentoyrecupero %>
-          </div>
-          <div class="infoSeccion">
-            <h3>
-              MEDIDAS CORRECTIVAS</h3>
-            <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
           </div>
           <div class="infoSeccion">
             <h3>
@@ -220,7 +236,15 @@
               <uc1:DocumentacionSolicitada ID="DocumentacionSolicitada1" runat="server" />
             </div>
           </div>
-          <div class="infoSeccion">
+          <div id="_groupIComplementario" runat="server">
+            <div class="infoSeccion">
+              <h3>
+                Observaciones</h3>
+              <%# ((AjusteDto) Container.DataItem).Observaciones %>
+            </div>
+            <uc7:TitulosAdicionales ID="TitulosAdicionales1" runat="server" />
+          </div>
+          <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
             <h3>
               FOTOS</h3>
             <uc6:Fotos ID="Fotos1" runat="server" />

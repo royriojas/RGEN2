@@ -366,8 +366,9 @@
             </td>
             <td>
               <p>
-                <%# ((AjusteDto) (Container.DataItem)).MonedaReclamoSimbolo %>
-                <%# ((AjusteDto) (Container.DataItem)).Reclamo %>
+             
+				<%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReclamoSimbolo)%>
+                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
               </p>
             </td>
           </tr>
@@ -378,8 +379,8 @@
             </td>
             <td>
               <p>
-                <%# ((AjusteDto) (Container.DataItem)).MonedaReservaSimbolo %>
-                <%# ((AjusteDto) (Container.DataItem)).Reserva %></p>
+                <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
+                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reserva)%></p>
             </td>
           </tr>
         </tbody>

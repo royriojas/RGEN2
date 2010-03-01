@@ -22,4 +22,42 @@ public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.P
         get { return Convert.ToDecimal(Util.XDefault(Request.QueryString["AjusteId"], "-1")); }
 
     }
+
+    protected bool IsComplementary
+    {
+        get { return Request.QueryString["TI"] == "IC"; }
+        
+    }
+
+   
+
+    protected void DoDataBound(object sender, EventArgs e)
+    {
+        HtmlGenericControl groupIPreliminar = FormViewInforme.FindControl("_groupIPreliminar") as HtmlGenericControl;
+        if (groupIPreliminar != null)
+        {
+            groupIPreliminar.Visible = !IsComplementary;
+        }
+        HtmlGenericControl groupIPreliminar2 = FormViewInforme.FindControl("_groupIPreliminar2") as HtmlGenericControl;
+        if (groupIPreliminar2 != null)
+        {
+            groupIPreliminar2.Visible = !IsComplementary;
+        }
+        HtmlGenericControl groupIComplementario = FormViewInforme.FindControl("_groupIComplementario") as HtmlGenericControl;
+        if (groupIComplementario != null)
+        {
+            groupIComplementario.Visible = IsComplementary;
+        } HtmlGenericControl groupIComplementario2 = FormViewInforme.FindControl("_groupIComplementario2") as HtmlGenericControl;
+        if (groupIComplementario2 != null)
+        {
+            groupIComplementario2.Visible = IsComplementary;
+        }
+
+
+
+
+    }
+
+
+   
 }

@@ -15,7 +15,11 @@ public partial class InformesPlantillas_Caratula : System.Web.UI.UserControl
     {
 
     }
+    protected bool IsComplementary
+    {
+        get { return Request.QueryString["TI"] == "IC"; }
 
+    }
     protected void DoDataBound(object sender, EventArgs e)
     {
         RimacInforme_detalleSublimitesAfectados ctrl = FormViewInforme.FindControl("_detalleSublimitesAfectados1") as RimacInforme_detalleSublimitesAfectados;

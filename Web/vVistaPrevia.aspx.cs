@@ -88,6 +88,12 @@ public partial class vVistaPrevia : System.Web.UI.Page
                     {
                         InformeURL = "InformesPlantillas/InformePacificoPreliminar.aspx?AjusteId={0}&TI={1}&nc=" + DateTime.Now.Ticks.ToString();
                     }
+                    if (aseguradoraIsRimac)
+                    {
+                        InformeURL = "InformesPlantillas/InformePreliminarRimac.aspx?AjusteId={0}&TI={1}&nc=" +
+                                     DateTime.Now.Ticks;
+
+                    }
                     break;
                 }
             case "IF":
@@ -116,7 +122,7 @@ public partial class vVistaPrevia : System.Web.UI.Page
         //}
         UcLoadCss1.PathToFileToLoad = "InformesPlantillas/inf.css?nc=" + DateTime.Now;
         //if (aseguradoraIsPacifico)
-           
+
         if (aseguradoraIsRimac)
             UcLoadCss1.PathToFileToLoad = "InformesPlantillas/infRimac.css?nc=" + DateTime.Now;
 
