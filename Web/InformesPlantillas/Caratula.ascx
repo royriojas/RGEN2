@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Caratula.ascx.cs" Inherits="InformesPlantillas_Caratula" %>
-<%@ Import Namespace="App_Code.RimacInforme.Domain"%>
+<%@ Import Namespace="App_Code.RimacInforme.Domain" %>
 <%@ Register Src="~/RimacInforme/detalleSublimitesAfectados.ascx" TagName="detalleSublimitesAfectados"
   TagPrefix="uc1" %>
 <%@ Register Src="~/RimacInforme/Deducibles.ascx" TagName="Deducibles" TagPrefix="uc2" %>
@@ -13,115 +13,123 @@
       Type="Decimal" />
   </SelectParameters>
 </asp:ObjectDataSource>
-<asp:FormView ID="FormViewInforme" DataKeyNames="AjusteId" Width="100%" runat="server"
-  DefaultMode="ReadOnly" DataSourceID="odsInforme">
+<asp:FormView OnDataBound="DoDataBound" ID="FormViewInforme" DataKeyNames="AjusteId"
+  Width="100%" runat="server" DefaultMode="ReadOnly" DataSourceID="odsInforme">
   <ItemTemplate>
     <div class="Caratula">
-      <table>
+      <table >
         <tr>
-          <td class="label" style="width: 300px">
+          <td class="label" valign="top"  style="width: 300px">
             INFORME
           </td>
           <td style="width: 10px">
             <span class="bold">:</span>
           </td>
           <td>
-         Informe Preliminar
+            Informe Preliminar
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             FECHA DE INFORME BÁSICO
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
-            <%# ((AjusteDto) (Container.DataItem)) %>
+            <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             SU REF
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Recepcion.NumeroAseguradora) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             NUESTRA REF
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).NumeroAjuste) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             CONTRATANTE
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Contratante) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             ASEGURADO
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Asegurado) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             BROKER
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Broker) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             PÓLIZA
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Poliza.PolizaNumber) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             VIGENCIA
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Poliza.Vigencia ) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             TIPO DE PÓLIZA y RAMO
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0} / {1}", ((AjusteDto)(Container.DataItem)).Poliza.Tipo, ((AjusteDto)(Container.DataItem)).Poliza.Ramo)%>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             LÍMITES
           </td>
           <td>
@@ -131,73 +139,79 @@
           </td>
         </tr>
         <tr>
-          <td class="label">
-            CAUSA, resumida.
+          <td colspan="3">
+            <uc1:detalleSublimitesAfectados ID="_detalleSublimitesAfectados1" runat="server" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label" valign="top" >
+            CAUSA
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).CausasSiniestro) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             LUGAR
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).LugarDeSiniestro) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             FECHA DE OCURRENCIA
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0:D}", ((AjusteDto) (Container.DataItem)).FechaYHoraSiniestro) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
-            BIEN / PERSONA AFECTADO (A)
+          <td class="label" valign="top" >
+            BIEN / PERSONA AFECTADO (A) / DAÑOS / LESIONES / PERDIDAS
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+           
           </td>
         </tr>
         <tr>
-          <td class="label">
-            DAÑOS / LESIONES / PERDIDAS
-          </td>
-          <td>
-            <span class="bold">:</span>
-          </td>
-          <td>
+          <td colspan="3">
+            <uc4:Damage ID="Damage2" runat="server" />
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             RECLAMO
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Reclamo) %>
           </td>
         </tr>
         <tr>
-          <td class="label">
+          <td class="label" valign="top" >
             RESERVA NETA
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Reserva) %>
           </td>
         </tr>
       </table>

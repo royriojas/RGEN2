@@ -3,7 +3,7 @@
 <div id="divDanos" runat="server">   
     <cc1:Repeater ID="Repeater1" runat="server" DataSourceID="odsOcurrenciaDetalle" OnItemDataBound="Repeater1_ItemDataBound">
         <HeaderTemplate>
-            <table class="Grid" width="100%"  cellspacing="0" cellpadding="0">
+            <table  border="0" cellpadding="0" cellspacing="0" class="GridView Grid" >
                 <tr class="header">
                     <th width="4%">
                         Nº

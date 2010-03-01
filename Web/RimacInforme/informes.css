@@ -45,3 +45,6 @@ table.Grid tr.header td, table.Grid tr.header th { background:#EEE;font-weight:b
 .IFP,
 .IFC, 
 .IFF { display:none; }
+
+ul.List li { list-style:disc; }
+ul.List { margin-left:14px; }

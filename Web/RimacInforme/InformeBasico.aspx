@@ -7,6 +7,8 @@
 <%@ Register Src="Deducibles.ascx" TagName="Deducibles" TagPrefix="uc2" %>
 <%@ Register Src="Clausulas.ascx" TagName="Clausulas" TagPrefix="uc3" %>
 <%@ Register Src="Damage.ascx" TagName="Damage" TagPrefix="uc4" %>
+<%@ Register Src="DocumentacionSolicitada.ascx" TagName="DocumentacionSolicitada"
+  TagPrefix="uc5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -103,7 +105,7 @@
             </div>
             <div class="doClear">
             </div>
-          </div >
+          </div>
           <div class="Group AseguradoInfo  IFB IFP IFC IFF">
             <div class="Legend">
               <h2>
@@ -365,7 +367,7 @@
                   <span>
                     <asp:Literal ID="DamageLinks" Text='Daños:' runat="server"></asp:Literal></span></asp:LinkButton>
                 <div class="doClear">
-                </div> 
+                </div>
               </div>
             </div>
           </div>
@@ -436,23 +438,27 @@
                 <div class="FieldWrapper">
                   <asp:TextBox Text='<%# Bind("SituacionSiniestro") %>' ID="_txtSituacionSiniestro"
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
-					<div class="doClear"></div>
-                </div>                
-              </div>
-			  <div class="Field">
-				<label>Click en el botón para ver los documentos solicitados</label>
-				<div class="FieldWrapper">
-					<asp:HyperLink CssClass="LinkButton Little GoDocuments" ID="_lnkGoDocuments" Style="width: 200px"
-                  runat="server">
-                  <span>
-                    <asp:Literal ID="DocumentsLinks" Text='Documentos Solicitados:' runat="server"></asp:Literal></span></asp:HyperLink>
-					<div class="doClear">
-					</div>
-				</div>
-				
-			  </div>
-			   <div class="doClear">
+                  <div class="doClear">
+                  </div>
                 </div>
+              </div>
+              <div class="Field TextEdit">
+                <uc5:DocumentacionSolicitada ID="DocumentacionSolicitada1" runat="server" />
+              </div>
+              <div class="Field">
+                <label>
+                  Click en el botón para ver los documentos solicitados</label>
+                <div class="FieldWrapper">
+                  <asp:HyperLink CssClass="LinkButton Little GoDocuments" ID="_lnkGoDocuments" Style="width: 200px"
+                    runat="server">
+                    <span>
+                      <asp:Literal ID="DocumentsLinks" Text='Documentos Solicitados:' runat="server"></asp:Literal></span></asp:HyperLink>
+                  <div class="doClear">
+                  </div>
+                </div>
+              </div>
+              <div class="doClear">
+              </div>
             </div>
           </div>
           <div class="Group Montos  IFB IFP IFC IFF">
@@ -556,13 +562,14 @@
                 <span>Detalle de las Secciones del Informe</span></h2>
             </div>
             <div class="Group-Content">
-              <label>Click en el botón para editar las Secciones Adicionales del Informe</label>
-              <asp:LinkButton OnClick="GotoSection" CssClass="LinkButton Little GoSection" ID="_lnkGoSection" Style="width: 200px"
-                  runat="server">
-                  <span>
-                    <asp:Literal ID="SectionLinks" Text='Secciones Adicionales:' runat="server"></asp:Literal></span></asp:LinkButton>
+              <label>
+                Click en el botón para editar las Secciones Adicionales del Informe</label>
+              <asp:LinkButton OnClick="GotoSection" CssClass="LinkButton Little GoSection" ID="_lnkGoSection"
+                Style="width: 200px" runat="server">
+                <span>
+                  <asp:Literal ID="SectionLinks" Text='Secciones Adicionales:' runat="server"></asp:Literal></span></asp:LinkButton>
               <div class="doClear">
-              </div>              
+              </div>
               <div class="Field TextEdit">
                 <label>
                   Información General:
@@ -578,8 +585,8 @@
                 <label>
                   Descripcion del Lugar del Siniestro</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtDescripcionLugarSiniestro" Text='<%# Bind("DescripcionLugarSiniestro") %>' CssClass="FormText tinymce-simple"
-                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="_txtDescripcionLugarSiniestro" Text='<%# Bind("DescripcionLugarSiniestro") %>'
+                    CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="doClear">
@@ -588,8 +595,8 @@
                 <label>
                   Descripcion Bienes/Personas Afectadas</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtDescripcionBienesAfectados" Text='<%# Bind("DescripcionBienesAfectados") %>' CssClass="FormText tinymce-simple"
-                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="_txtDescripcionBienesAfectados" Text='<%# Bind("DescripcionBienesAfectados") %>'
+                    CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="doClear">
@@ -618,8 +625,8 @@
                 <label>
                   Descripcion de los Daños</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionBienesAfectados") %>' CssClass="FormText tinymce-simple"
-                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionBienesAfectados") %>'
+                    CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="doClear">
@@ -688,8 +695,8 @@
                 <label>
                   Cumplimiento de Garantías / Prescripciones de Seguridad</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtVerificacionGarantias" Text='<%# Bind("VerificacionGarantias") %>' CssClass="FormText tinymce-simple"
-                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="_txtVerificacionGarantias" Text='<%# Bind("VerificacionGarantias") %>'
+                    CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="doClear">
@@ -698,8 +705,8 @@
                 <label>
                   Descripción de la reserva</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtDescripcionReserva" Text='<%# Bind("DescripcionReserva") %>' CssClass="FormText tinymce-simple"
-                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="_txtDescripcionReserva" Text='<%# Bind("DescripcionReserva") %>'
+                    CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="doClear">
@@ -708,8 +715,8 @@
                 <label>
                   Salvamento y Recupero</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtSalvamentoyrecupero" Text='<%# Bind("Salvamentoyrecupero") %>' CssClass="FormText tinymce-simple"
-                    TextMode="MultiLine" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="_txtSalvamentoyrecupero" Text='<%# Bind("Salvamentoyrecupero") %>'
+                    CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="doClear">
@@ -753,11 +760,8 @@
               </div>
               <div class="doClear">
               </div>
-              
             </div>
           </div>
-          
-          
       </EditItemTemplate>
     </asp:FormView>
   </div>

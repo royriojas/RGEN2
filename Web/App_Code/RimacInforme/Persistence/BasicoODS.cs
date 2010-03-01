@@ -52,7 +52,7 @@ namespace App_Code.RimacInforme.Persistence
                                                                                       polizaRow.IsfinicioNull() ? default(DateTime?) : polizaRow.finicio, polizaRow.IsffinNull() ? default(DateTime?) : polizaRow.ffin);
 
                     ajusteDto.Poliza.Cobertura = polizaRow.cobertura;
-                    
+
                 }
                 //ajusteDto.Poliza.
             }
@@ -120,10 +120,10 @@ namespace App_Code.RimacInforme.Persistence
             proc_informacionAjusteRimacTableAdapter informacionAjusteTA = new proc_informacionAjusteRimacTableAdapter();
             DataSet1.proc_informacionAjusteRimacDataTable informacionAjusteDT = informacionAjusteTA.GetData(Convert.ToInt32(ajusteId));
 
-            if (informacionAjusteDT.Rows.Count > 0) 
+            if (informacionAjusteDT.Rows.Count > 0)
             {
                 DataSet1.proc_informacionAjusteRimacRow informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
-                if (informacionAjusteRow != null) 
+                if (informacionAjusteRow != null)
                 {
 
                     ajusteDto.Antecedentes = informacionAjusteRow.IsantecedentesNull() ? "" : informacionAjusteRow.antecedentes;
@@ -152,24 +152,24 @@ namespace App_Code.RimacInforme.Persistence
             sp_rgen_EmisionInformesRimacTableAdapter informacionReportesTA = new sp_rgen_EmisionInformesRimacTableAdapter();
             DataSet1.sp_rgen_EmisionInformesRimacDataTable informacionReportesDT = informacionReportesTA.GetData(Convert.ToInt32(ajusteId));
 
-            if (informacionReportesDT.Rows.Count > 0) 
+            if (informacionReportesDT.Rows.Count > 0)
             {
 
                 DataSet1.sp_rgen_EmisionInformesRimacRow informacionReportesRow;
 
-                for (int i = 0; i < informacionReportesDT.Rows.Count; i++) 
+                for (int i = 0; i < informacionReportesDT.Rows.Count; i++)
                 {
- 
+
                     informacionReportesRow = informacionReportesDT.Rows[i] as DataSet1.sp_rgen_EmisionInformesRimacRow;
 
-                    if (informacionReportesRow != null) 
+                    if (informacionReportesRow != null)
                     {
 
                         decimal tipoInforme = informacionReportesRow.tinformeId;
 
-                        switch (Convert.ToInt32(tipoInforme)) 
+                        switch (Convert.ToInt32(tipoInforme))
                         {
-                            case 15:  ajusteDto.FechaEnvioIB = informacionReportesRow.fecha;
+                            case 15: ajusteDto.FechaEnvioIB = informacionReportesRow.fecha;
                                 break;
 
                             case 17: ajusteDto.FechaEnvioIP = informacionReportesRow.fecha;
@@ -177,9 +177,9 @@ namespace App_Code.RimacInforme.Persistence
 
                             case 21: ajusteDto.FechaEnvioIF = informacionReportesRow.fecha;
                                 break;
-                            
+
                         }
-                       
+
                     }
 
                 }
@@ -188,18 +188,18 @@ namespace App_Code.RimacInforme.Persistence
             sp_rgen_ConvenioAjusteRimacTableAdapter convenioAjusteTA = new sp_rgen_ConvenioAjusteRimacTableAdapter();
             DataSet1.sp_rgen_ConvenioAjusteRimacDataTable convenioAjusteDT = convenioAjusteTA.GetData(Convert.ToInt32(ajusteId));
 
-            if (convenioAjusteDT.Rows.Count > 0) 
+            if (convenioAjusteDT.Rows.Count > 0)
             {
 
                 DataSet1.sp_rgen_ConvenioAjusteRimacRow convenioAjusteRow = convenioAjusteDT.Rows[0] as DataSet1.sp_rgen_ConvenioAjusteRimacRow;
 
-                if (convenioAjusteRow != null) 
+                if (convenioAjusteRow != null)
                 {
-                    ajusteDto.InfoConvenioAjuste.FechaConvenio = convenioAjusteRow.fconvenio;
-                    ajusteDto.InfoConvenioAjuste.FechaRecepcionConvenioFirmado = convenioAjusteRow.fRecepcionConvenioFirmado;
-                    ajusteDto.InfoConvenioAjuste.TotalDeducible = convenioAjusteRow.totalDeducible;
-                    ajusteDto.InfoConvenioAjuste.TotalIndemnizacion = convenioAjusteRow.totalIndemnizacion;
-                    ajusteDto.InfoConvenioAjuste.TotalPerdida = convenioAjusteRow.totalPerdida;
+                    ajusteDto.InfoConvenioAjuste.FechaConvenio = convenioAjusteRow.IsfconvenioNull() ? default(DateTime?) : convenioAjusteRow.fconvenio;
+                    ajusteDto.InfoConvenioAjuste.FechaRecepcionConvenioFirmado = convenioAjusteRow.IsfRecepcionConvenioFirmadoNull() ? default(DateTime?) : convenioAjusteRow.fRecepcionConvenioFirmado;
+                    ajusteDto.InfoConvenioAjuste.TotalDeducible = convenioAjusteRow.IstotalDeducibleNull() ? default(decimal) : convenioAjusteRow.totalDeducible;
+                    ajusteDto.InfoConvenioAjuste.TotalIndemnizacion = convenioAjusteRow.IstotalIndemnizacionNull() ? default(decimal) : convenioAjusteRow.totalIndemnizacion;
+                    ajusteDto.InfoConvenioAjuste.TotalPerdida = convenioAjusteRow.IstotalPerdidaNull() ? default(decimal) : convenioAjusteRow.totalPerdida;
                 }
             }
 
@@ -213,22 +213,23 @@ namespace App_Code.RimacInforme.Persistence
                 DataSet1.sp_rgen_SublimitesAfectadosRow sumaAseguradaRow;
                 decimal sumaAsegurada = 0;
 
-                for (int i = 0; i < sumaAseguradaDT.Rows.Count; i++) 
+                for (int i = 0; i < sumaAseguradaDT.Rows.Count; i++)
                 {
                     sumaAseguradaRow = sumaAseguradaDT.Rows[i] as DataSet1.sp_rgen_SublimitesAfectadosRow;
-                                        
-                    if (sumaAseguradaRow != null) 
+
+                    if (sumaAseguradaRow != null)
                     {
-                        if (sumaAseguradaRow.concepto == "SumaAsegurada") 
+                        if (sumaAseguradaRow.concepto == "SumaAsegurada")
                         {
 
-                            sumaAsegurada +=  sumaAseguradaRow.monto;
+                            sumaAsegurada += sumaAseguradaRow.monto;
                             ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
 
-                        }else if (sumaAseguradaRow.concepto2 == "SumaAsegurada") 
+                        }
+                        else if (sumaAseguradaRow.concepto2 == "SumaAsegurada")
                         {
 
-                            sumaAsegurada +=  sumaAseguradaRow.montoAsegurado2;
+                            sumaAsegurada += sumaAseguradaRow.montoAsegurado2;
                             ajusteDto.MonedaSumaAsegurada = sumaAseguradaRow.simbolo;
 
                         }
@@ -246,7 +247,7 @@ namespace App_Code.RimacInforme.Persistence
 
             return ajusteDto;
         }
-        
+
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update)]
         public void Update(Domain.AjusteDto ajusteDto)
@@ -306,7 +307,7 @@ namespace App_Code.RimacInforme.Persistence
             {
                 DataSet1.proc_informacionAjusteRimacRow informacionAjusteRow = informacionAjusteDT.Rows[0] as DataSet1.proc_informacionAjusteRimacRow;
 
-                if (informacionAjusteRow != null) 
+                if (informacionAjusteRow != null)
                 {
                     if (ajusteDto.Antecedentes != null)
                         informacionAjusteRow.antecedentes = ajusteDto.Antecedentes;
@@ -347,7 +348,7 @@ namespace App_Code.RimacInforme.Persistence
 
                     informacionAjusteTA.Update(informacionAjusteRow);
 
-                    
+
                 }
             }
 

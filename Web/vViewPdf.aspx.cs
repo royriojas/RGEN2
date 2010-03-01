@@ -36,10 +36,7 @@ public partial class vViewPdf : System.Web.UI.Page
         switch (tipoInforme)
         {
             case "NOW":
-                if (Request.QueryString["SolDocId"] != null)  //Solicitud de documentos
-                    AuxStream = new MemoryStream(GetPdf.GetSolicitudDocumentosNow(ajusteId, solicitudDocumentosId, "Destino Temporal", "Cargo Temporal", DateTime.Today, "NroTemporal", 1,"Descripción Temporal" ,Server.MapPath("")));
-                else
-                    AuxStream = new MemoryStream(GetPdf.GetInformeNow(Convert.ToInt32(ajusteId), Server.MapPath("")));
+                AuxStream = Request.QueryString["SolDocId"] != null ? new MemoryStream(GetPdf.GetSolicitudDocumentosNow(ajusteId, solicitudDocumentosId, "Destino Temporal", "Cargo Temporal", DateTime.Today, "NroTemporal", 1,"Descripción Temporal" ,Server.MapPath(""))) : new MemoryStream(GetPdf.GetInformeNow(Convert.ToInt32(ajusteId), Server.MapPath("")));
                 GetNOW(AuxStream);
                 break;
             case "CA":

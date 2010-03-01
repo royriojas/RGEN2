@@ -8,18 +8,15 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using R3M.Common;
 
-public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.Page
+public partial class RimacInforme_DocumentacionSolicitada : System.Web.UI.UserControl
 {
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
-
-    protected decimal AjusteId
+    protected void odsDocumentosSolicitados_Selected(object sender, ObjectDataSourceStatusEventArgs e)
     {
-        get { return Convert.ToDecimal(Util.XDefault(Request.QueryString["AjusteId"], "-1")); }
-
+        this.divDocumentacionSolicitada.Visible = (((System.Data.DataTable)e.ReturnValue).Rows.Count > 0);
     }
 }

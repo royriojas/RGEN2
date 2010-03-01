@@ -180,6 +180,10 @@ namespace RGen.docs
                         {
                             InformeURL = "InformesPlantillas/InformePacificoPreliminar.aspx?AjusteId={0}&TI={1}&nc={2}";
                         }
+                        if (rimac)
+                        {
+                            InformeURL = "InformesPlantillas/InformePreliminarRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
                         //informe = Util.GetPdf(Util.ResolveURL(String.Format(InformeURL, ajusteId, "IP")), Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, "IP")));
                         tInforme = "IP";
                         break;

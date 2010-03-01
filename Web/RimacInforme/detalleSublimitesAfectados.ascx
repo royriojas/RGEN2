@@ -7,7 +7,7 @@
         <EmptyDataTemplate>
         </EmptyDataTemplate>
         <HeaderTemplate>
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="Grid">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="GridView Grid">
                 <tr class="header">
                     <th width="4%">
                         Nº

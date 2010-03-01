@@ -9,6 +9,7 @@
 <%@ Register Src="~/RimacInforme/Clausulas.ascx" TagName="Clausulas" TagPrefix="uc3" %>
 <%@ Register Src="~/RimacInforme/Damage.ascx" TagName="Damage" TagPrefix="uc4" %>
 <%@ Register Assembly="CustomControls" Namespace="CustomControls" TagPrefix="cc1" %>
+<%@ Register Src="../RimacInforme/Fotos.ascx" TagName="Fotos" TagPrefix="uc5" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -462,49 +463,9 @@
   </asp:FormView>
   <div class="Group">
     <h2>
-      FOTOS</h2>
-    <div id="divImagenes" runat="server">
-      <h2 style="page-break-before: always">
-        IMAGENES DEL SINIESTRO</h2>
-      <cc1:Repeater ID="Repeater2" runat="server" DataSourceID="odsImagenes" OnDataBinding="Repeater2_DataBinding"
-        OnItemDataBound="Repeater2_ItemDataBound">
-        <HeaderTemplate>
-          <table>
-            <tr>
-        </HeaderTemplate>
-        <ItemTemplate>
-          <td valign="top" style="width: 460px; text-align: right;">
-            <div class="ImgHolder">
-              <img alt="" src='<%# R3M.Common.Util.ResolveURL("vGetImageGrande.aspx?AjusteId="+ Request.QueryString["ajusteId"] + "&ArchivoId=" + Eval("archivoId").ToString() + "&imagen=grande")  %>' />
-            </div>
-            <div class="txtInfo">
-              <%# Eval("descripcion") %>
-            </div>
-          </td>
-          <asp:Literal ID="separator" runat="server" Visible="false">
-            </tr><tr>
-          </asp:Literal>
-          <asp:Literal ID="TableEnd" runat="server" Visible="false">
-          </tr>
-          </table>
-            <div style="page-break-before: always; clear: both">
-            </div>
-            <table>
-            <tr>
-          </asp:Literal>
-        </ItemTemplate>
-        <FooterTemplate>
-          </tr></table>
-        </FooterTemplate>
-      </cc1:Repeater>
-      <asp:ObjectDataSource ID="odsImagenes" runat="server" OldValuesParameterFormatString="original_{0}"
-        SelectMethod="GetData" OnSelected="odsImagenes_Selected" TypeName="dsReporteTableAdapters.InformeBasicoImagenesTableAdapter">
-        <SelectParameters>
-          <asp:QueryStringParameter DefaultValue="240" Name="ajusteid" QueryStringField="AjusteId"
-            Type="Int32" />
-        </SelectParameters>
-      </asp:ObjectDataSource>
-    </div>
+      FOTOS
+    </h2>
+    <uc5:Fotos ID="Fotos1" runat="server" />
   </div>
   </form>
 </body>

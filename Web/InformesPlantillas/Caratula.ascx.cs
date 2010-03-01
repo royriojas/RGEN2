@@ -15,4 +15,15 @@ public partial class InformesPlantillas_Caratula : System.Web.UI.UserControl
     {
 
     }
+
+    protected void DoDataBound(object sender, EventArgs e)
+    {
+        RimacInforme_detalleSublimitesAfectados ctrl = FormViewInforme.FindControl("_detalleSublimitesAfectados1") as RimacInforme_detalleSublimitesAfectados;
+        if (ctrl != null)
+        {
+            ctrl.AjusteId = Convert.ToDecimal(Request.QueryString["AjusteId"]);
+            ctrl.BindData();
+        }
+
+    }
 }
