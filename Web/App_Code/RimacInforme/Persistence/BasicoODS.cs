@@ -107,6 +107,8 @@ namespace App_Code.RimacInforme.Persistence
                 if (situacionActualRow != null)
                 {
                     ajusteDto.SituacionSiniestro = situacionActualRow.IssituacionajusteNull() ? "" : situacionActualRow.situacionajuste;
+                    ajusteDto.MonedaReclamoSimbolo = situacionActualRow.monedaReclamo;
+                    ajusteDto.MonedaReservaSimbolo = situacionActualRow.monedaReserva;
                     ajusteDto.ReclamoMonedaId = situacionActualRow.reclamoMonedaId;
                     ajusteDto.ReservaMonedaId = situacionActualRow.reservaMonedaId;
                     ajusteDto.Reclamo = situacionActualRow.IsreclamoaseguradoNull() ? 0 : situacionActualRow.reclamoasegurado;
@@ -141,7 +143,8 @@ namespace App_Code.RimacInforme.Persistence
                     ajusteDto.SiniestrosAnteriores = informacionAjusteRow.IssiniestrosanterioresNull() ? "" : informacionAjusteRow.siniestrosanteriores;
                     ajusteDto.SituacionSiniestro = informacionAjusteRow.IssituacionajusteNull() ? "" : informacionAjusteRow.situacionajuste;
                     ajusteDto.VerificacionGarantias = informacionAjusteRow.IsverificaciongarantiasNull() ? "" : informacionAjusteRow.verificaciongarantias;
-
+                    ajusteDto.DescripcionDamage = informacionAjusteRow.IsdescripcionDamageNull() ? "" : informacionAjusteRow.descripcionDamage;
+                    
                     ajusteDto.LocalAsegurado = informacionAjusteRow.IslocalAseguradoNull() ? "" : informacionAjusteRow.localAsegurado;
                     ajusteDto.MateriaAsegurada = informacionAjusteRow.IsmateriaAseguradaNull() ? "" : informacionAjusteRow.materiaAsegurada;
                     ajusteDto.Seccion = informacionAjusteRow.IsseccionNull() ? "" : informacionAjusteRow.seccion;
@@ -307,6 +310,10 @@ namespace App_Code.RimacInforme.Persistence
                         informacionAjusteRow.causasiniestro = ajusteDto.CausasSiniestro;
                     if (ajusteDto.DescripcionBienesAfectados != null)
                         informacionAjusteRow.descripcionBienesAfectados = ajusteDto.DescripcionBienesAfectados;
+
+                    if (ajusteDto.DescripcionDamage != null)
+                        informacionAjusteRow.descripcionDamage = ajusteDto.DescripcionDamage;
+
                     if (ajusteDto.DescripcionLugarSiniestro != null)
                         informacionAjusteRow.descripcionLugarSiniestro = ajusteDto.DescripcionLugarSiniestro;
                     if (ajusteDto.DescripcionReclamo != null)

@@ -315,6 +315,13 @@ namespace App_Code.RimacInforme.Domain
             set { _descripcionBienesAfectados = Util.XDefault(value, String.Empty); }
         }
 
+        private string _descripcionDamage;
+        public string DescripcionDamage
+        {
+            get { return _descripcionDamage; }
+            set { _descripcionDamage = Util.XDefault(value, String.Empty); }
+        }
+
         private string _antecedentes;
         public string Antecedentes
         {

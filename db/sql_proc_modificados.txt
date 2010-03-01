@@ -561,6 +561,442 @@ END
 
 
 
+----------------------------------------------------------------------------------------
 
+ALTER PROCEDURE sp_rgen_ConvenioAjusteInsert
+(
+	@ajusteId numeric(8,0),
+	@totalDeducible numeric(18,2),
+	@totalIndemnizacion numeric(18,2),
+	@totalPerdida numeric(18,2),
+	@montoIndemnizacion varchar (100),
+	@representante varchar (100),
+	@usuario varchar(20),
+	@monedaId numeric (5,0),
+	@fRecepcionConvenioFirmado datetime
+)
+AS
+BEGIN
+
+	SET NOCOUNT OFF
+	DECLARE @Err int
+		
+	INSERT INTO RGN_CONVENIOAJUSTE 
+	(	
+		ajusteId,
+		totalDeducible,
+		totalIndemnizacion,
+		totalPerdida,
+		montoIndemnizacion,
+		representante,
+		fconvenio,
+		fRecepcionConvenioFirmado,
+		fcrea,
+		fupdate,
+		ucrea,
+		uupdate,
+		monedaId
+	)
+	VALUES
+	(
+		@ajusteId,
+		@totalDeducible,
+		@totalIndemnizacion,
+		@totalPerdida,
+		@montoIndemnizacion,
+		@representante,
+		getdate(),
+		@fRecepcionConvenioFirmado,
+		getdate(),
+		getdate(),
+		@usuario,
+		@usuario,
+		@monedaId
+		
+	)
+
+	declare @fecha datetime
+	set @fecha=getdate()
+	
+	exec dbo.sp_rgen_cambiaEstadoAjuste @fecha,@ajusteId,19,@usuario
+	
+
+	SET @Err = @@Error
+	
+	RETURN @Err
+END
+
+------------------------------------------------------------------------------------
+
+
+
+USE [rgen2]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_rgen_ConvenioAjusteSelect]    Script Date: 02/28/2010 21:55:07 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[sp_rgen_ConvenioAjusteSelect]
+	@ajusteId numeric
+AS
+BEGIN
+
+	SET NOCOUNT OFF
+	DECLARE @Err int
+
+-- sacamos primero la moneda con la cual se esta trabajando los montos
+
+	DECLARE @reserva numeric
+	DECLARE @monedaId numeric
+	DECLARE @simboloMonedaReserva varchar(3)
+	
+	SET @reserva = dbo.UltimoEstimadoReservaAjuste(@ajusteid)
+	SET @monedaId =dbo.UltimaMonedaReservaAjuste(@ajusteId)
+	SET @simboloMonedaReserva = dbo.dameSimboloMoneda(@monedaId)
+		
+	SELECT	
+		RGN_AJUSTE.ajusteId,
+		RGN_CONVENIOAJUSTE.totalDeducible,
+		RGN_CONVENIOAJUSTE.totalIndemnizacion,
+		RGN_CONVENIOAJUSTE.totalPerdida,
+		RGN_CONVENIOAJUSTE.montoIndemnizacion,
+		RGN_CONVENIOAJUSTE.representante,
+		RGN_CONVENIOAJUSTE.fconvenio,
+		RGN_CONVENIOAJUSTE.fcrea,
+		RGN_CONVENIOAJUSTE.fupdate,
+		RGN_CONVENIOAJUSTE.ucrea,
+		RGN_CONVENIOAJUSTE.uupdate,
+		RGN_CONVENIOAJUSTE.fRecepcionConvenioFirmado,		
+		@monedaId as monedaId,
+		@simboloMonedaReserva as simbolo
+		
+	FROM 	RGN_AJUSTE LEFT OUTER JOIN 
+		RGN_CONVENIOAJUSTE ON RGN_CONVENIOAJUSTE.ajusteId = RGN_AJUSTE.ajusteId
+	WHERE	RGN_AJUSTE.ajusteId = @ajusteId
+
+	SET @Err = @@Error
+
+	RETURN @Err
+END
+
+
+-----------------------------------------------------------------------------------
+
+
+USE [rgen2]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_rgen_ConvenioAjusteUpdate]    Script Date: 02/28/2010 21:55:24 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[sp_rgen_ConvenioAjusteUpdate]
+(
+	@ajusteId numeric(8,0),
+	@totalDeducible numeric(18,2),
+	@totalIndemnizacion numeric(18,2),
+	@totalPerdida numeric(18,2),
+	@montoIndemnizacion varchar (100),
+	@representante varchar (100),
+	@usuario varchar(20),
+	@monedaId numeric(5,0),
+	@frecepcionConvenioFirmado datetime
+)
+AS
+BEGIN
+
+	SET NOCOUNT OFF
+	DECLARE @Err int, @conAjuste int
+
+	SELECT 	@conAjuste = COUNT(*) FROM RGN_CONVENIOAJUSTE
+	WHERE		ajusteId = @ajusteId
+
+	IF @conAjuste > 0
+		UPDATE	RGN_CONVENIOAJUSTE
+		SET
+			totalDeducible = @totalDeducible,
+			totalIndemnizacion = @totalIndemnizacion,
+			totalPerdida = @totalPerdida,
+			montoIndemnizacion = @montoIndemnizacion,
+			representante = @representante,
+			frecepcionConvenioFirmado = @frecepcionConvenioFirmado,
+			fupdate	= GETDATE(),
+			uupdate	= @usuario,
+			monedaId = @monedaId
+		WHERE	ajusteId = @ajusteId
+	ELSE
+		INSERT INTO RGN_CONVENIOAJUSTE 
+		(	
+			ajusteId,
+			totalDeducible,
+			totalIndemnizacion,
+			totalPerdida,
+			montoIndemnizacion,
+			representante,
+			fconvenio,
+			frecepcionConvenioFirmado,
+			fcrea,
+			fupdate,
+			ucrea,
+			uupdate,
+			monedaId
+		)
+		VALUES
+		(
+			@ajusteId,
+			@totalDeducible,
+			@totalIndemnizacion,
+			@totalPerdida,
+			@montoIndemnizacion,
+			@representante,
+			getdate(),
+			@frecepcionConvenioFirmado,
+			getdate(),
+			getdate(),
+			@usuario,
+			@usuario,
+			@monedaId
+		)
+
+	declare @fecha datetime
+	set @fecha=getdate()
+	
+	exec dbo.sp_rgen_cambiaEstadoAjuste @fecha,@ajusteId,19,@usuario
+	
+
+
+	SET @Err = @@Error
+	
+	RETURN @Err
+END
+
+--------------------------------------------------------------------------------
+
+
+alter PROCEDURE dbo.sp_Rgn_RolComboByUser
+(
+	@tipoUsuario	varchar(100)
+)
+AS
+	SET NOCOUNT ON;
+
+	if (@tipoUsuario='Broker')
+		SELECT rolId, rol	FROM SYS_ROL WHERE rol='EjecutivoBroker';
+		
+	if (@tipoUsuario='Aseguradora')
+		SELECT rolId, rol	FROM SYS_ROL WHERE rol='EjecutivoCiaSeguros';
+
+	if (@tipoUsuario='Administrador')
+		--SELECT rolId, rol	FROM SYS_ROL WHERE rol='Ajustador' or rol='Aseguradora' or rol='Broker';
+		SELECT rolId, rol	FROM SYS_ROL WHERE rol='Ajustador' or rol='AdminCiaSeguros' or rol='AdminBroker' or rol='Asistente' or rol = 'EjecutivoSiniestros';			
+
+
+
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+ALTER PROCEDURE [dbo].[sp_Rgn_UsuarioLista]
+(
+	@persona 		varchar(1000),
+	@rolId 			numeric,
+	@estado 		varchar(1),
+	@tipoUsuario  varchar(100),
+	@companiaId numeric(5,0)
+)
+AS
+
+	DECLARE @sqlSentencia nvarchar(4000)
+	DECLARE @sqlCondicion nvarchar(4000)
+	
+	SET @sqlSentencia = '';
+	SET @sqlCondicion = '';
+
+
+	SET NOCOUNT ON;
+ 
+
+	SET @sqlSentencia = '
+	SELECT     ADM_PERSONA.personaId, ADM_PERSONA.tpersonaId, UPPER(ADM_PERSONA.persona) AS persona, SYS_USUARIO.usuarioId, SYS_USUARIO.usuario as usuario, 
+                      SYS_USUARIO.clave, (CASE SYS_USUARIO.estado WHEN ''A'' THEN ''ACTIVO'' WHEN ''I'' THEN ''INACTIVO'' END) AS estado, SYS_ROL.rol, SYS_USUARIO.fcrea
+	FROM         ADM_PERSONA INNER JOIN
+	                      SYS_USUARIO ON ADM_PERSONA.usuarioId = SYS_USUARIO.usuarioId left Outer JOIN
+	                      SYS_ROLUSUARIO ON SYS_USUARIO.usuarioId = SYS_ROLUSUARIO.usuarioId AND 
+	                      SYS_USUARIO.usuarioId = SYS_ROLUSUARIO.usuarioId left Outer JOIN
+	                      SYS_ROL ON SYS_ROLUSUARIO.rolId = SYS_ROL.rolId AND SYS_ROLUSUARIO.rolId = SYS_ROL.rolId
+	'
+
+	SET @sqlCondicion = ' WHERE (1 = 1) '
+
+	IF not(@persona is NULL)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+				' AND (ADM_PERSONA.persona LIKE ''%' + @persona + '%'' ) '
+	end
+	--
+	IF not(@estado is NULL)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+				' AND (SYS_USUARIO.estado = '''+@estado+''') '
+	end
+	--
+	IF not(@rolId is NULL)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+				' AND (SYS_ROLUSUARIO.rolId = '''+convert(varchar,@rolId)+''') '
+	end
+	--
+	IF not(@companiaId is NULL)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+				' AND (SYS_Usuario.companiaId = '''+convert(varchar,@companiaId)+''') '
+	end
+
+	--	
+	/**
+	
+	ojo que en este punto hay acople con la aplicación, no se puede cambiar los tipos de usuario sin hacer el cambio correspondiente aqui
+    	
+	**/
+
+	if (@tipoUsuario='Broker')
+		set @sqlCondicion = @sqlCondicion + ' and SYS_ROL.rol=''EjecutivoBroker'''
+
+	if (@tipoUsuario='Aseguradora')
+		set @sqlCondicion = @sqlCondicion + ' and SYS_ROL.rol=''EjecutivoCiaSeguros''';
+
+	if (@tipoUsuario='Administrador')
+		set @sqlCondicion = @sqlCondicion + ' and (SYS_ROL.rol=''Ajustador'' or SYS_ROL.rol=''Asistente'' or SYS_ROL.rol=''EjecutivoSiniestros'' or SYS_ROL.rol=''AdminCiaSeguros'' or SYS_ROL.rol=''AdminBroker'')';
+
+
+	SET @sqlSentencia = @sqlSentencia + ' ' + @sqlCondicion + ' ORDER BY SYS_USUARIO.fcrea'
+	--PRINT @sqlSentencia
+	EXEC sp_executesql  @sqlSentencia
+
+
+----------------------------------------------------------------------------------
+
+
+alter table rgn_ajuste
+  add descripcionDamage text null 
+
+---------------------------------------------------------------------------------
+
+
+
+ALTER PROCEDURE [dbo].[proc_informacionAjusteRimac]
+(
+	@ajusteId decimal(8,0)
+)
+AS
+	
+BEGIN
+
+SELECT     
+	  dbo.RGN_AJUSTE.ajusteId,
+	  dbo.RGN_AJUSTE.descripcionRiesgo, 
+	  dbo.RGN_AJUSTE.observaciones, 
+	  dbo.RGN_AJUSTE.numAjustePASA, 
+	  dbo.RGN_AJUSTE.causasiniestro, 
+      dbo.RGN_AJUSTE.detalleocurrencia, 
+	  dbo.RGN_AJUSTE.situacionajuste, 
+	  dbo.RGN_AJUSTE.verificaciongarantias, 
+      dbo.RGN_AJUSTE.siniestrosanteriores, 
+	  dbo.RGN_AJUSTE.salvamentoyrecupero, 
+	  dbo.RGN_AJUSTE.recomendaciones, 
+      dbo.RGN_AJUSTE.investigaciones, 
+	  dbo.RGN_AJUSTE.TotalIndenmizacion, 
+	  dbo.RGN_AJUSTE.opinionAjustador, 
+      dbo.RGN_AJUSTE.descripcionLugarSiniestro, 
+	  dbo.RGN_AJUSTE.descripcionBienesAfectados, 
+	  dbo.RGN_AJUSTE.antecedentes, 
+      dbo.RGN_AJUSTE.descripcionReclamo, 
+	  dbo.RGN_AJUSTE.descripcionReserva, 
+	  dbo.RGN_AJUSTE.materiaAsegurada, 
+      dbo.RGN_AJUSTE.localAsegurado, 
+	  dbo.RGN_AJUSTE.seccion,
+	  dbo.RGN_AJUSTE.descripcionDamage
+FROM         dbo.RGN_AJUSTE 
+
+WHERE RGN_AJUSTE.ajusteId = @ajusteId
+
+END
+
+
+
+-----------------------------------------------------------------------------------
+
+
+ALTER PROCEDURE [dbo].[proc_informacionAjusteRimacUpdate]
+(
+	@ajusteId numeric(8, 0),-- ajuste
+	@descripcionRiesgo text = null, 
+	@observaciones text = null, 
+	@numAjustePASA varchar(30), 
+	@causasiniestro text = null, 
+    @detalleocurrencia text = null, 
+	@situacionajuste text = null, 
+	@verificaciongarantias text = null, 
+    @siniestrosanteriores text = null,
+	@salvamentoyrecupero text = null,
+	@recomendaciones text = null,
+    @investigaciones text = null,
+	@TotalIndenmizacion numeric (14,2)= null,
+	@opinionAjustador text = null,
+    @descripcionLugarSiniestro text = null,
+	@descripcionBienesAfectados text = null,
+	@antecedentes text = null,
+    @descripcionReclamo text = null,
+	@descripcionReserva text = null,
+	@materiaAsegurada text = null,
+    @localAsegurado text = null,
+	@seccion text = null,
+	@descripcionDamage text =  null
+
+
+
+)
+AS
+BEGIN
+	
+	SET NOCOUNT OFF;
+	UPDATE [RGN_AJUSTE] 
+	SET 	
+      descripcionRiesgo = @descripcionRiesgo, 
+	  observaciones = @observaciones, 
+	  numAjustePASA = @numAjustePASA, 
+	  causasiniestro = @causasiniestro, 
+      detalleocurrencia = @detalleocurrencia, 
+	  situacionajuste =@situacionajuste, 
+	  verificaciongarantias = @verificaciongarantias, 
+      siniestrosanteriores = @siniestrosanteriores, 
+	  salvamentoyrecupero = @salvamentoyrecupero, 
+	  recomendaciones =@recomendaciones, 
+      investigaciones = @investigaciones, 
+	  TotalIndenmizacion = @TotalIndenmizacion, 
+	  opinionAjustador = @opinionAjustador, 
+      descripcionLugarSiniestro = @descripcionLugarSiniestro, 
+	  descripcionBienesAfectados = @descripcionBienesAfectados, 
+	  antecedentes = @antecedentes, 
+      descripcionReclamo = @descripcionReclamo, 
+	  descripcionReserva = @descripcionReserva,
+	  materiaAsegurada = @materiaAsegurada, 
+      localAsegurado = @localAsegurado, 
+	  seccion = @seccion,
+	  @descripcionDamage = @descripcionDamage
+	  
+	WHERE (RGN_AJUSTE.ajusteId=@ajusteId)
+
+END
+
+
+
+---------------------------------------------------------------------------------------
 
 
