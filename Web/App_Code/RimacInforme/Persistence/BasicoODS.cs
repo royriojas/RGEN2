@@ -114,8 +114,8 @@ namespace App_Code.RimacInforme.Persistence
                     ajusteDto.Reclamo = situacionActualRow.IsreclamoaseguradoNull() ? 0 : situacionActualRow.reclamoasegurado;
                     ajusteDto.Reserva = situacionActualRow.IsreservaestimadaNull() ? 0 : situacionActualRow.reservaestimada;
                     ajusteDto.Notas = situacionActualRow.IsnotasNull() ? "" : situacionActualRow.notas;
-                    ajusteDto.EnviarCopiaPoliza = situacionActualRow.IsenviarCopiaPolizaNull() ? false : Convert.ToBoolean(situacionActualRow.enviarCopiaPoliza);
-                    ajusteDto.EnviaNumeroSiniestro = situacionActualRow.IsenviarNumSiniestroNull() ? false : Convert.ToBoolean(situacionActualRow.enviarNumSiniestro);
+                    ajusteDto.EnviarCopiaPoliza = situacionActualRow.IsenviarCopiaPolizaNull() ? default(Boolean) : Convert.ToBoolean(situacionActualRow.enviarCopiaPoliza);
+                    ajusteDto.EnviaNumeroSiniestro = situacionActualRow.IsenviarNumSiniestroNull() ? default(Boolean) : Convert.ToBoolean(situacionActualRow.enviarNumSiniestro);
                 }
             }
 
