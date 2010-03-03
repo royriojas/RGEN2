@@ -26,13 +26,13 @@ namespace App_Code.RimacInforme.Persistence
                 ajusteDto.AjusteId = ajusteId;
                 if (row != null)
                 {
-                    ajusteDto.NumeroIfb = row.numeroIFB;
-                    ajusteDto.NumeroAjuste = row.numajuste; //RGen.GestorAjuste.dameNumeroAjuste(ajusteId);
-                    ajusteDto.InfoAsegurado.Asegurado = row.asegurado;
-                    ajusteDto.InfoAsegurado.Broker = row.broker;
-                    ajusteDto.InfoAsegurado.Contratante = row.contratante;
-                    ajusteDto.InfoAsegurado.EjecutivoBroker = row.respbroker;
-                    ajusteDto.GiroNegocio = row.gruponegocio;
+                    ajusteDto.NumeroIfb = row.IsnumeroIFBNull()? 0 : row.numeroIFB;
+                    ajusteDto.NumeroAjuste = row.IsnumajusteNull() ? "" : row.numajuste; //RGen.GestorAjuste.dameNumeroAjuste(ajusteId);
+                    ajusteDto.InfoAsegurado.Asegurado = row.IsaseguradoNull() ? "": row.asegurado;
+                    ajusteDto.InfoAsegurado.Broker = row.IsbrokerNull() ? "" : row.broker;
+                    ajusteDto.InfoAsegurado.Contratante = row.IscontratanteNull() ? "" : row.contratante;
+                    ajusteDto.InfoAsegurado.EjecutivoBroker = row.IsrespbrokerNull() ? "" : row.respbroker;
+                    ajusteDto.GiroNegocio = row.IsgruponegocioNull()? "" : row.gruponegocio;
                 }
             }
 
@@ -45,13 +45,13 @@ namespace App_Code.RimacInforme.Persistence
                 if (polizaRow != null)
                 {
                     ajusteDto.Poliza.IdPoliza = polizaRow.polizaId;
-                    ajusteDto.Poliza.PolizaNumber = polizaRow.numeroPoliza;
-                    ajusteDto.Poliza.Ramo = polizaRow.ramo;
-                    ajusteDto.Poliza.Tipo = polizaRow.producto;
+                    ajusteDto.Poliza.PolizaNumber = polizaRow.IsnumeroPolizaNull() ? "" : polizaRow.numeroPoliza;
+                    ajusteDto.Poliza.Ramo = polizaRow.IsramoNull() ? "" : polizaRow.ramo;
+                    ajusteDto.Poliza.Tipo = polizaRow.IsproductoNull() ? "" : polizaRow.producto;
                     ajusteDto.Poliza.Vigencia = string.Format("{0:dd/MM/yyyy} - {1:dd/MM/yyyy}",
                                                                                       polizaRow.IsfinicioNull() ? default(DateTime?) : polizaRow.finicio, polizaRow.IsffinNull() ? default(DateTime?) : polizaRow.ffin);
 
-                    ajusteDto.Poliza.Cobertura = polizaRow.cobertura;
+                    ajusteDto.Poliza.Cobertura = polizaRow.IscoberturaNull() ? "" : polizaRow.cobertura;
 
                 }
                 //ajusteDto.Poliza.
@@ -65,7 +65,7 @@ namespace App_Code.RimacInforme.Persistence
                 if (recepcionRow != null)
                 {
                     ajusteDto.Recepcion.NumeroAseguradora = recepcionRow.IsnumeroSiniestroCiaNull() ? "" : recepcionRow.numeroSiniestroCia;
-                    ajusteDto.Recepcion.Recepcion = recepcionRow.FechayHoraConfirmacion;
+                    ajusteDto.Recepcion.Recepcion = recepcionRow.IsFechayHoraConfirmacionNull() ?  default(DateTime?) : recepcionRow.FechayHoraConfirmacion;
                     ajusteDto.Recepcion.ConfirmadoCon = recepcionRow.IsNombreQuienConfirmaNull() ? "" : recepcionRow.NombreQuienConfirma;
                     ajusteDto.Recepcion.Ajustador = recepcionRow.IsajustadorNull() ? "" : recepcionRow.ajustador;
                 }
@@ -78,7 +78,7 @@ namespace App_Code.RimacInforme.Persistence
                 DataSet1.sp_rgen_Ocurrencia_selectRow oRow = dto.Rows[0] as DataSet1.sp_rgen_Ocurrencia_selectRow;
                 if (oRow != null)
                 {
-                    ajusteDto.FechaYHoraSiniestro = oRow.fsiniestro;
+                    ajusteDto.FechaYHoraSiniestro = oRow.IsfsiniestroNull() ?  default(DateTime?) : oRow.fsiniestro;
                     ajusteDto.LugarDeSiniestro = String.Format("{0}, {1}", oRow.lugarsiniestro, oRow.ubigeosiniestro); //+ ", " + ;
                     ajusteDto.DescripcionSiniestro = !oRow.IscausasNull() ? oRow.causas : "";
                     ajusteDto.Ocurrencia = !oRow.IsdetalleNull() ? oRow.detalle : "";
@@ -107,8 +107,8 @@ namespace App_Code.RimacInforme.Persistence
                 if (situacionActualRow != null)
                 {
                     ajusteDto.SituacionSiniestro = situacionActualRow.IssituacionajusteNull() ? "" : situacionActualRow.situacionajuste;
-                    ajusteDto.MonedaReclamoSimbolo = situacionActualRow.monedaReclamo;
-                    ajusteDto.MonedaReservaSimbolo = situacionActualRow.monedaReserva;
+                    ajusteDto.MonedaReclamoSimbolo = situacionActualRow.IsmonedaReclamoNull() ? "" : situacionActualRow.monedaReclamo;
+                    ajusteDto.MonedaReservaSimbolo = situacionActualRow.IsmonedaReservaNull() ? "" : situacionActualRow.monedaReserva;
                     ajusteDto.ReclamoMonedaId = situacionActualRow.reclamoMonedaId;
                     ajusteDto.ReservaMonedaId = situacionActualRow.reservaMonedaId;
                     ajusteDto.Reclamo = situacionActualRow.IsreclamoaseguradoNull() ? 0 : situacionActualRow.reclamoasegurado;
@@ -198,11 +198,13 @@ namespace App_Code.RimacInforme.Persistence
 
                 if (convenioAjusteRow != null)
                 {
+                
                     ajusteDto.InfoConvenioAjuste.FechaConvenio = convenioAjusteRow.IsfconvenioNull() ? default(DateTime?) : convenioAjusteRow.fconvenio;
                     ajusteDto.InfoConvenioAjuste.FechaRecepcionConvenioFirmado = convenioAjusteRow.IsfRecepcionConvenioFirmadoNull() ? default(DateTime?) : convenioAjusteRow.fRecepcionConvenioFirmado;
                     ajusteDto.InfoConvenioAjuste.TotalDeducible = convenioAjusteRow.IstotalDeducibleNull() ? default(decimal) : convenioAjusteRow.totalDeducible;
                     ajusteDto.InfoConvenioAjuste.TotalIndemnizacion = convenioAjusteRow.IstotalIndemnizacionNull() ? default(decimal) : convenioAjusteRow.totalIndemnizacion;
                     ajusteDto.InfoConvenioAjuste.TotalPerdida = convenioAjusteRow.IstotalPerdidaNull() ? default(decimal) : convenioAjusteRow.totalPerdida;
+
                 }
             }
 
@@ -291,6 +293,7 @@ namespace App_Code.RimacInforme.Persistence
                     situacionActualRow.reclamoasegurado = ajusteDto.Reclamo;
                     situacionActualRow.reservaestimada = ajusteDto.Reserva;
                     situacionActualTA.Update(situacionActualRow);
+                
                 }
             }
 

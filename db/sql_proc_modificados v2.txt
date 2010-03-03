@@ -1,0 +1,26 @@
+ALTER PROCEDURE proc_informebasicoReclamoRimac(@ajusteid int)
+as
+
+SELECT  
+		RGN_AJUSTE.ajusteId,
+		RGN_RECLAMO.monto AS reclamoasegurado, 
+		RGN_RECLAMO.monedaId as reclamoMonedaId,
+		dbo.dameSimboloMoneda(RGN_RECLAMO.monedaId)AS monedaReclamo,
+		RGN_RESERVA.monto AS reservaestimada, 
+		RGN_RESERVA.monedaId AS reservaMonedaId, 
+		dbo.dameSimboloMoneda(RGN_RESERVA.monedaId)AS monedaReserva,
+		RGN_AJUSTE.situacionajuste, 
+		RGN_AJUSTE.notas,
+		isnull(RGN_AJUSTE.enviarNumSiniestro, 0) as enviarNumSiniestro,
+		isnull(RGN_AJUSTE.enviarCopiaPoliza, 0) as enviarCopiaPoliza
+FROM    RGN_RECLAMO INNER JOIN
+              RGN_AJUSTE ON RGN_RECLAMO.ajusteId = RGN_AJUSTE.ajusteId INNER JOIN
+              RGN_RESERVA ON RGN_AJUSTE.ajusteId = RGN_RESERVA.ajusteId
+
+where RGN_AJUSTE.ajusteid = @ajusteid AND
+      RGN_RECLAMO.reclamoId= (select max(reclamoId) from RGN_RECLAMO where RGN_RECLAMO.ajusteId=@ajusteId) and
+      RGN_RESERVA.reservaId= (select max(reservaId) from RGN_RESERVA where RGN_RESERVA.ajusteId=@ajusteId)	
+
+
+
+

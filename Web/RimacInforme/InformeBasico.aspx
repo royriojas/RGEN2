@@ -521,8 +521,8 @@
                 <div class="FieldWrapper">
                   <asp:RadioButtonList ID="_radioListEnviarCopiaPoliza" SelectedValue='<%# Bind("EnviarCopiaPoliza") %>'
                     CssClass="RadioList" RepeatLayout="Flow" RepeatDirection="Horizontal" runat="server">
-                    <asp:ListItem Text="Sí" Value="True"></asp:ListItem>
-                    <asp:ListItem Text="No" Value="False"></asp:ListItem>
+                    <asp:ListItem Text="Sí" Value="true"></asp:ListItem>
+                    <asp:ListItem Text="No" Value="false"></asp:ListItem>
                   </asp:RadioButtonList>
                 </div>
                 <div class="doClear">
@@ -535,8 +535,8 @@
                 <div class="FieldWrapper">
                   <asp:RadioButtonList ID="_radioListEnviarFechaSiniestro" SelectedValue='<%# Bind("EnviaNumeroSiniestro") %>'
                     CssClass="RadioList" RepeatLayout="Flow" runat="server" RepeatDirection="Horizontal">
-                    <asp:ListItem Text="Sí" Value="True"></asp:ListItem>
-                    <asp:ListItem Text="No" Value="False"></asp:ListItem>
+                    <asp:ListItem Text="Sí" Value="true"></asp:ListItem>
+                    <asp:ListItem Text="No" Value="false"></asp:ListItem>
                   </asp:RadioButtonList>
                 </div>
                 <div class="doClear">
