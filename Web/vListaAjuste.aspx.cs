@@ -91,7 +91,7 @@ public partial class vListaAjuste : System.Web.UI.Page
 
       Boolean doMouseOver = true;
       //au = (RGen.Utiles.AtribucionesUsuario)Session["datosUsuario"];
-      if ((au != null) && (ajusteId_d != -1) && ((au.TipoUsuario == "Ajustador") || (au.TipoUsuario == "Asistente")))
+      if ((au != null) && (ajusteId_d != -1) && ((au.TipoUsuario == "Ajustador") || (au.TipoUsuario == "Asistente") || (au.TipoUsuario == "EjecutivoSiniestros")))
       {
         doMouseOver = !GestorAjuste.elCasoEstaEnControlCalidad(ajusteId_d);
       }
@@ -199,7 +199,7 @@ public partial class vListaAjuste : System.Web.UI.Page
               li.Selected = true;
               //cbxEjecutivoSiniestros.Enabled = false;
           }
-          this.GridView1.Columns[8].Visible = false;
+          //this.GridView1.Columns[8].Visible = false;
       }
       ListItem item = new ListItem("TODOS", "");
       this.cbxEjecutivoSiniestros.Items.Insert(0, item);
