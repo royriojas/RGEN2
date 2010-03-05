@@ -79,7 +79,7 @@ namespace App_Code.RimacInforme.Persistence
                 if (oRow != null)
                 {
                     ajusteDto.FechaYHoraSiniestro = oRow.IsfsiniestroNull() ?  default(DateTime?) : oRow.fsiniestro;
-                    ajusteDto.LugarDeSiniestro = String.Format("{0}, {1}", oRow.lugarsiniestro, oRow.ubigeosiniestro); //+ ", " + ;
+                    ajusteDto.LugarDeSiniestro = oRow.IslugarsiniestroNull() ? "" : String.Format("{0}, {1}", oRow.lugarsiniestro, oRow.IsubigeoidNull() ? "" : oRow.ubigeosiniestro); //+ ", " + ;
                     ajusteDto.DescripcionSiniestro = !oRow.IscausasNull() ? oRow.causas : "";
                     ajusteDto.Ocurrencia = !oRow.IsdetalleNull() ? oRow.detalle : "";
                 }
