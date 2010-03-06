@@ -148,6 +148,8 @@ namespace App_Code.RimacInforme.Persistence
                     ajusteDto.LocalAsegurado = informacionAjusteRow.IslocalAseguradoNull() ? "" : informacionAjusteRow.localAsegurado;
                     ajusteDto.MateriaAsegurada = informacionAjusteRow.IsmateriaAseguradaNull() ? "" : informacionAjusteRow.materiaAsegurada;
                     ajusteDto.Seccion = informacionAjusteRow.IsseccionNull() ? "" : informacionAjusteRow.seccion;
+                    ajusteDto.PerdidaYajuste = informacionAjusteRow.IsperdidayajusteNull() ? "" : informacionAjusteRow.perdidayajuste;
+                    ajusteDto.ValoresDeclarados = informacionAjusteRow.IsvaloresdeclaradosNull() ? "" : informacionAjusteRow.valoresdeclarados;
                 }
 
             }
@@ -348,6 +350,12 @@ namespace App_Code.RimacInforme.Persistence
                         informacionAjusteRow.materiaAsegurada = ajusteDto.MateriaAsegurada;
                     if (ajusteDto.Seccion != null)
                         informacionAjusteRow.seccion = ajusteDto.Seccion;
+
+                    if (ajusteDto.PerdidaYajuste != null)
+                        informacionAjusteRow.perdidayajuste = ajusteDto.PerdidaYajuste;
+                    if (ajusteDto.ValoresDeclarados != null)
+                        informacionAjusteRow.valoresdeclarados = ajusteDto.ValoresDeclarados;
+
 
                     informacionAjusteTA.Update(informacionAjusteRow);
 

@@ -413,6 +413,22 @@ namespace App_Code.RimacInforme.Domain
             get { return _sumaAsegurada; }
             set { _sumaAsegurada = Util.XDefault(value, default(decimal)); ; }
         }
+
+
+        private string _perdidaYajuste;
+        public String PerdidaYajuste
+        {
+            get { return _perdidaYajuste; }
+            set { _perdidaYajuste = Util.XDefault(value, String.Empty); ; }
+        }
+
+        private string _valoresDeclarados;
+        public String ValoresDeclarados
+        {
+            get { return _valoresDeclarados; }
+            set { _valoresDeclarados = Util.XDefault(value, String.Empty); ; }
+        }
+
         
 
 

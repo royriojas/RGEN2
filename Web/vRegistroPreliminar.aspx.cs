@@ -26,8 +26,17 @@ public partial class vRegistroPreliminar : System.Web.UI.Page
 
     if (RGen.GestorAjuste.GetCodigoAseguradora(ajusteId) == "RIMAC")
     {
-        Response.Redirect(String.Format("~/RimacInforme/InformeBasico.aspx?AjusteId={0}&TipoInforme={1}", qStringAjusteId,"I" + qStringTipoInforme));
-        return;
+        if (qStringTipoInforme == "P")
+        {
+            Response.Redirect(String.Format("~/RimacInforme/InformePreliminar.aspx?AjusteId={0}&TipoInforme={1}", qStringAjusteId, "I" + qStringTipoInforme));
+            return;
+        }
+        else 
+        {
+            Response.Redirect(String.Format("~/RimacInforme/InformeComplementario.aspx?AjusteId={0}&TipoInforme={1}", qStringAjusteId, "I" + qStringTipoInforme));
+            return;
+        }
+        
     }
 
     generarHyperLink.NavigateUrl = "javascript:GenerarInforme('" + qStringAjusteId + "',0);";
