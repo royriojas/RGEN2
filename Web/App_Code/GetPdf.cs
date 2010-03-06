@@ -221,7 +221,7 @@ namespace RGen.docs
             informe = !string.IsNullOrEmpty(HeaderInformeURL)
                           ? Util.GetPdf(
                                 Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks)),
-                                Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, tInforme)))
+                                Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, tInforme, DateTime.Now.Ticks)))
                           : Util.GetPdf(
                                 Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks)));
             return informe;
