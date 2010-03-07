@@ -13,7 +13,12 @@ public partial class InformesPlantillas_InformeBasicoRimac : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        this.Fotos1.EmptyFotos += new EventHandler(Fotos1_EmptyFotos);
+    }
 
+    void Fotos1_EmptyFotos(object sender, EventArgs e)
+    {
+        fotosTitle.Visible = false;
     }
 
     protected void DoDataBound(object sender, EventArgs e)
@@ -27,6 +32,6 @@ public partial class InformesPlantillas_InformeBasicoRimac : System.Web.UI.Page
 
     }
 
-   
+
 
 }

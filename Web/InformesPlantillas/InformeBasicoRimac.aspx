@@ -464,7 +464,7 @@
     </ItemTemplate>
   </asp:FormView>
   <div class="Group">
-    <h2>
+    <h2 runat="server" id="fotosTitle" >
       FOTOS
     </h2>
     <uc5:Fotos ID="Fotos1" runat="server" />

@@ -11,6 +11,15 @@ using System.Web.UI.WebControls.WebParts;
 
 public partial class RimacInforme_Fotos : System.Web.UI.UserControl
 {
+
+    public event EventHandler EmptyFotos;
+
+    private void InvokeEmptyFotos(EventArgs e)
+    {
+        EventHandler fotos = EmptyFotos;
+        if (fotos != null) fotos(this, e);
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -56,5 +65,9 @@ public partial class RimacInforme_Fotos : System.Web.UI.UserControl
     protected void odsImagenes_Selected(object sender, ObjectDataSourceStatusEventArgs e)
     {
         this.divImagenes.Visible = (((System.Data.DataTable)e.ReturnValue).Rows.Count > 0);
+        if (!this.divImagenes.Visible)
+        {
+            InvokeEmptyFotos(new EventArgs());
+        }
     }
 }
