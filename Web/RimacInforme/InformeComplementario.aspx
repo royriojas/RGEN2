@@ -283,7 +283,8 @@
                   Límites (US$):
                 </label>
                 <div class="FieldWrapper">
-                  <uc1:detalleSublimitesAfectados ID="detalleSublimitesAfectados1" runat="server" />
+                  <asp:TextBox ID="_txtSumaAsegurada" CssClass="FormText Readonly" Text='<%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada %>'
+                    runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
                 </div>

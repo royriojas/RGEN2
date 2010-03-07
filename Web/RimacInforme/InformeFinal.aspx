@@ -1,4 +1,4 @@
-Ôªø<%@ Page Title="" Language="C#" MasterPageFile="~/RimacInforme/RimacFormsMaster.master"
+<%@ Page Title="" Language="C#" MasterPageFile="~/RimacInforme/RimacFormsMaster.master"
   ValidateRequest="false" AutoEventWireup="true" CodeFile="InformeFinal.aspx.cs"
   Inherits="RimacInforme_InformeFinal" %>
 
@@ -109,7 +109,7 @@
           <div class="Group AseguradoInfo  IFF">
             <div class="Legend">
               <h2>
-                <span>Informaci√≥n del Asegurado</span></h2>
+                <span>InformaciÛn del Asegurado</span></h2>
             </div>
             <div class="Group-Content">
               <div class="Field First">
@@ -138,7 +138,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Giro del negocio / ocupaci√≥n:
+                  Giro del negocio / ocupaciÛn:
                 </label>
                 <div class="FieldWrapper">
                   <asp:TextBox CssClass="FormText Readonly tinymce-simple" TextMode="MultiLine" Rows="3"
@@ -170,7 +170,7 @@
           <div class="Group RecepcionCaso  IFF">
             <div class="Legend">
               <h2>
-                <span>Informaci√≥n del Caso</span></h2>
+                <span>InformaciÛn del Caso</span></h2>
             </div>
             <div class="Group-Content">
               <div class="Field First">
@@ -186,7 +186,7 @@
               </div>
               <div class="Field First">
                 <label>
-                  Recepci√≥n:
+                  RecepciÛn:
                 </label>
                 <div class="FieldWrapper">
                   <asp:TextBox CssClass="FormText Readonly" Text='<%# Eval("Recepcion.Recepcion") %>'
@@ -224,7 +224,7 @@
           <div class="Group InformacionPoliza IFF">
             <div class="Legend">
               <h2>
-                <span>Informaci√≥n de la P√≥liza</span></h2>
+                <span>InformaciÛn de la PÛliza</span></h2>
             </div>
             <div class="Group-Content">
               <div class="Field First">
@@ -276,10 +276,11 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  L√≠mites (US$):
+                  LÌmites (US$):
                 </label>
                 <div class="FieldWrapper">
-                  <uc1:detalleSublimitesAfectados ID="detalleSublimitesAfectados1" runat="server" />
+                  <asp:TextBox ID="_txtSumaAsegurada" CssClass="FormText Readonly" Text='<%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada %>'
+                    runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
                 </div>
@@ -296,7 +297,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Cl√°usulas aplicables
+                  Cl·usulas aplicables
                 </label>
                 <div class="FieldWrapper List">
                   <uc3:Clausulas ID="Clausulas1" runat="server" />
@@ -308,7 +309,7 @@
           <div class="Group InformacionOcurrencia IFF">
             <div class="Legend">
               <h2>
-                <span>Informaci√≥n de la ocurrencia / descubrimiento</span></h2>
+                <span>InformaciÛn de la ocurrencia / descubrimiento</span></h2>
             </div>
             <div class="Group-Content">
               
@@ -349,7 +350,7 @@
               
               <div class="Field TextEdit">
                 <label>
-                  Da√±os</label>
+                  DaÒos</label>
                 <div class="FieldWrapper">
                   <uc4:Damage ID="Damage1" runat="server" />
                 </div>
@@ -358,7 +359,7 @@
                 <asp:LinkButton OnClick="GotoDamage" CssClass="LinkButton Little GoDamage" ID="_lnkGoDamage"
                   runat="server">
                   <span>
-                    <asp:Literal ID="DamageLinks" Text='Da√±os:' runat="server"></asp:Literal></span></asp:LinkButton>
+                    <asp:Literal ID="DamageLinks" Text='DaÒos:' runat="server"></asp:Literal></span></asp:LinkButton>
                 <div class="doClear">
                 </div>
               </div>
@@ -393,7 +394,7 @@
               </div>
               <div class="Field First">
                 <label>
-                  Indemnizaci√≥n
+                  IndemnizaciÛn
                 </label>
                 <div class="FieldWrapper">
                   <div class="InlineElements">
@@ -421,7 +422,7 @@
             </div>
             <div class="Group-Content">
               <label>
-                Click en el bot√≥n para editar las Secciones Adicionales del Informe</label>
+                Click en el botÛn para editar las Secciones Adicionales del Informe</label>
               <asp:LinkButton OnClick="GotoSection" CssClass="LinkButton Little GoSection" ID="_lnkGoSection"
                 Style="width: 200px" runat="server">
                 <span>
@@ -430,7 +431,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Informaci√≥n General:
+                  InformaciÛn General:
                 </label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtDescripcionRiesgo" Text='<%# Bind("DescripcionRiesgo") %>' CssClass="FormText tinymce-simple"
@@ -496,7 +497,7 @@
               
               <div class="Field TextEdit">
                 <label>
-                  Descripcion de los Da√±os</label>
+                  Descripcion de los DaÒos</label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionDamage") %>'
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -521,12 +522,12 @@
           <div class="Group DetallePoliza IFF">
             <div class="Legend">
               <h2>
-                <span>Detalle de la P√≥liza</span></h2>
+                <span>Detalle de la PÛliza</span></h2>
             </div>
             <div class="Group-Content">    
               <div class="Field TextEdit">
                 <label>
-                  Detalle Materia Asegurada de la P√≥liza</label>
+                  Detalle Materia Asegurada de la PÛliza</label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtMateriaAsegurada" Text='<%# Bind("MateriaAsegurada") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -536,7 +537,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Detalle Local Asegurado / Ubicaci√≥n del Riesgo de la P√≥liza</label>
+                  Detalle Local Asegurado / UbicaciÛn del Riesgo de la PÛliza</label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtLocalAsegurado" Text='<%# Bind("LocalAsegurado") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -546,7 +547,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Secci√≥n de la P√≥liza</label>
+                  SecciÛn de la PÛliza</label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtSeccion" Text='<%# Bind("Seccion") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -556,7 +557,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Descripci√≥n del Reclamo</label>
+                  DescripciÛn del Reclamo</label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtReclamo" Text='<%# Bind("DescripcionReclamo") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -576,7 +577,7 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Cumplimiento de Garant√≠as / Prescripciones de Seguridad</label>
+                  Cumplimiento de GarantÌas / Prescripciones de Seguridad</label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtVerificacionGarantias" Text='<%# Bind("VerificacionGarantias") %>'
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -589,13 +590,13 @@
           <div class="Group PerdidaAjuste IFF">
             <div class="Legend">
               <h2>
-                <span>Detalle de la P√©rdida y Ajuste</span></h2>
+                <span>Detalle de la PÈrdida y Ajuste</span></h2>
             </div>
             <div class="Group-Content">  
               
               <div class="Field TextEdit">
                 <label>
-                  Detalle de P√©rdida y Ajuste </label>
+                  Detalle de PÈrdida y Ajuste </label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_txtPerdidayAjuste" Text='<%# Bind("PerdidaYajuste") %>'
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
@@ -606,7 +607,7 @@
 
                <div class="Field TextEdit">
                 <label>
-                  Descripci√≥n de Valores Declarados </label>
+                  DescripciÛn de Valores Declarados </label>
                 <div class="FieldWrapper">
                   <asp:TextBox ID="_valoresDeclarados" Text='<%# Bind("ValoresDeclarados") %>'
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
