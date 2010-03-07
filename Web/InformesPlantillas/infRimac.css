@@ -1,6 +1,6 @@
-﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:22px; text-align:justify; }
+﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:22px;  }
 h1, h2, h3, p { margin:5px 2px; }
-td p { margin:5px 2px; }
+td p { margin:5px 2px; text-align:justify; }
 
 p.DateSalute { text-align:right; }
 h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoration:underline }
