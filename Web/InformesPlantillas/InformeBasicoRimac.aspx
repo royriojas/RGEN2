@@ -57,15 +57,15 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="115">
+            <td valign="top" style="width:105px">
               <p class="label">
                 CONTRATANTE:</p>
             </td>
-            <td valign="top" width="220">
+            <td valign="top" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.Contratante%></p>
             </td>
-            <td valign="top" width="104">
+            <td valign="top" style="width:135px;" >
               <p class="label">
                 ASEGURADO:</p>
             </td>
@@ -75,32 +75,32 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" colspan="2" width="274">
+            <td valign="top" colspan="2">
               <p class="label">
-                GIRO DEL NEGOCIO / OCUPACIÓN
+                GIRO DEL NEGOCIO / OCUPACIÓN:
               </p>
             </td>
-            <td valign="top" colspan="2" width="335">
+            <td valign="top" colspan="2" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).GiroNegocio%></p>
             </td>
           </tr>
           <tr>
-            <td valign="top" width="115">
+            <td valign="top" >
               <p class="label">
-                BROKER
+                BROKER:
               </p>
             </td>
-            <td valign="top" width="220">
+            <td valign="top" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.Broker%></p>
             </td>
-            <td valign="top" width="104">
+            <td valign="top" >
               <p class="label">
-                EJECUTIVO
+                EJECUTIVO:
               </p>
             </td>
-            <td>
+            <td valign="top">
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.EjecutivoBroker%></p>
             </td>
@@ -118,15 +118,15 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="115">
+            <td valign="top" style="width:180px;" >
               <p class="label">
                 PÓLIZA:</p>
             </td>
-            <td valign="top" colspan="2" width="168">
+            <td valign="top" colspan="2" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).Poliza.PolizaNumber%></p>
             </td>
-            <td valign="top" width="124">
+            <td valign="top" style="width:100px" >
               <p class="label">
                 VIGENCIA:</p>
             </td>
@@ -136,15 +136,15 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="115">
+            <td valign="top" >
               <p class="label">
                 TIPO (PRODUCTO):</p>
             </td>
-            <td valign="top" colspan="2" width="168">
+            <td valign="top" colspan="2" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).Poliza.Tipo%></p>
             </td>
-            <td valign="top" width="124">
+            <td valign="top" >
               <p class="label">
                 RAMO:</p>
             </td>
@@ -155,8 +155,8 @@
           </tr>
           <tr>
             <td valign="top">
-              <h2>
-                LÍMITES:</h2>
+              <p class="label">
+                LÍMITES:</p>
             </td>
             <td colspan="4">
               <p>
@@ -192,15 +192,15 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="151">
+            <td valign="top" style="width: 205px;" >
               <p class="label">
                 # REF ASEGURADOR:</p>
             </td>
-            <td valign="top" width="151">
+            <td valign="top" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).Recepcion.NumeroAseguradora%></p>
             </td>
-            <td valign="top" width="97">
+            <td valign="top" style="width: 125px;" >
               <p class="label">
                 RECEPCIÓN:</p>
             </td>
@@ -210,15 +210,15 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="151">
+            <td valign="top" >
               <p class="label">
                 CONFIRMADO CON:</p>
             </td>
-            <td valign="top" width="151">
+            <td valign="top" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).Recepcion.ConfirmadoCon%></p>
             </td>
-            <td valign="top" width="97">
+            <td valign="top" >
               <p class="label">
                 AJUSTADOR:</p>
             </td>
@@ -240,29 +240,29 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="217">
+            <td valign="top" style="width: 285px;>
               <p class="label">
                 FECHA Y HORA DE SINIESTRO:</p>
             </td>
-            <td>
+            <td valign="top">
               <p>
                 <%#((AjusteDto) (Container.DataItem)).FechaYHoraSiniestro%></p>
               </p>
             </td>
           </tr>
           <tr>
-            <td valign="top" width="217">
+            <td valign="top" >
               <p class="label">
                 LUGAR DEL SINIESTRO:</p>
             </td>
-            <td>
+            <td valign="top">
               <p>
                 <%#((AjusteDto) (Container.DataItem)).LugarDeSiniestro%></p>
               </p>
             </td>
           </tr>
           <tr>
-            <td valign="top" width="217">
+            <td valign="top" >
               <p class="label">
                 DESCRIPCIÓN DE SINIESTRO:
               </p>
@@ -278,7 +278,9 @@
               <p class="label">
                 OCURRENCIA:
               </p>
-              <%#((AjusteDto) (Container.DataItem)).Ocurrencia%>
+			  <div class="text-content">
+				<%#((AjusteDto) (Container.DataItem)).Ocurrencia%>
+			  </div>
             </td>
           </tr>
           <tr>
@@ -348,11 +350,12 @@
         <tbody>
           <tr>
             <td>
-              <p class="label">
+              <h2 >
                 SITUACIÓN ACTUAL
-              </p>
-              <p>
-                <%# ((AjusteDto) (Container.DataItem)).SituacionSiniestro %></p>
+              </h2>
+              <div class="text-content">
+                <%# ((AjusteDto) (Container.DataItem)).SituacionSiniestro %>
+			  </div>
             </td>
           </tr>
         </tbody>
@@ -362,9 +365,9 @@
       <table class="TableSection" border="0" cellpadding="0" cellspacing="0">
         <tbody>
           <tr>
-            <td valign="top" width="227">
-              <p class="label">
-                MONTO DE AVISO / RECLAMO:</p>
+            <td valign="top" style="width:300px;">
+              <h2>
+                MONTO DE AVISO / RECLAMO:</h2>
             </td>
             <td>
               <p>
@@ -374,9 +377,9 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="227">
-              <p class="label">
-                RESERVA PRELIMINAR:</p>
+            <td valign="top" style="width:300px;" >
+              <h2 >
+                RESERVA PRELIMINAR:</h2>
             </td>
             <td>
               <p>
@@ -450,11 +453,11 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" colspan="6">
+            <td style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Notas) %>'  valign="top" colspan="6">
               <p class="label">
                 NOTAS:</p>
-              <p>
-                <%# ((AjusteDto) (Container.DataItem)).Notas %></p>
+              <div class="text-content">
+                <%# ((AjusteDto) (Container.DataItem)).Notas %></div>
             </td>
           </tr>
         </tbody>

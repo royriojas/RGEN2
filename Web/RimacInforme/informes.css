@@ -39,7 +39,7 @@ table.Grid td,table.Grid th { padding:3px; }
 table.Grid tr.header td, table.Grid tr.header th { background:#EEE;font-weight:bold;  }
 .List ul li { list-style:disc outside none; margin-left:15px; }
 
-.FormText.Readonly, .FormText.Readonly:focus { border:1px solid #ccc; }
+.FormText.Readonly, .FormText.Readonly:focus { border:none; background:none; }
 
 .IFB,
 .IFP,
@@ -48,3 +48,5 @@ table.Grid tr.header td, table.Grid tr.header th { background:#EEE;font-weight:b
 
 ul.List li { list-style:disc; }
 ul.List { margin-left:14px; }
+
+.Validator { color: Red; font-size:12px; }

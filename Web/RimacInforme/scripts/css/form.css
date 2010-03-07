@@ -4,14 +4,14 @@
 
 
 
-select, input, button, textarea { font-family: inherit; font-size:13px; }
+select, input, button, textarea { font-family: inherit; font-size:14px; }
 
 
 div.FormCSS div.Legend { background: url(assets/gray-grad.png) repeat-x; padding:5px;  }
 div.FormCSS div.Group div.Legend { background: #0C69B3; color:white; margin-bottom: 5px; padding-left:5px; font-weight: bold;   }
 div.FormCSS div.Legend h2 { color: #0060AE; font-size:18px; font-weight:bold; /*font-size:107%;*/ }
 
-div.FormCSS div.Group div.Legend h2 { color:#FFF; font-size: 14px;  }
+div.FormCSS div.Group div.Legend h2 { color:#FFF; font-size: 16px;  }
 
 div.FormCSS  h2 {  /*font-size:107%;*/ }
 
@@ -35,7 +35,7 @@ div.FormCSS span.NotificationMessage.Error { color: red; }
 
 input.FormText, 
 select.FormText,
-textarea.FormText { border: 1px solid #D2E1E3; color:#333; font-size:12px; width:100%; padding-top: 2px; }
+textarea.FormText { border: 1px solid #D2E1E3; color:#333; font-size:14px; width:100%; padding-top: 2px; }
 
 input.FormText,
 textarea.FormText { background: url(assets/field_bg.png) repeat-x; }

@@ -1,6 +1,6 @@
 ﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:22px;  }
 h1, h2, h3, p { margin:5px 2px; }
-td p { margin:5px 2px; text-align:justify; }
+td p { margin:5px 2px; }
 
 p.DateSalute { text-align:right; }
 h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoration:underline }
@@ -9,7 +9,7 @@ h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoratio
 .Underline { text-decoration: underline; }
 
 .TableSection h3, 
-.TableSection h2 { font-weight:bold; text-decoration: underline; font-style:italic;   }
+.TableSection h2 { font-weight:bold; text-decoration: underline; font-style:italic;color:blue;   }
 
 .TableSection h3, 
 .TableSection h2, 
@@ -66,3 +66,5 @@ td.label { font-weight:bold;}
 
 ul.List li { list-style:disc; }
 ul.List { margin-left:14px; }
+
+.text-content { padding: 5px; text-align:justify;}
