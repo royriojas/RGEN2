@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Damage.ascx.cs" Inherits="RimacInforme_Damage" %>
 <%@ Register Assembly="CustomControls" Namespace="CustomControls" TagPrefix="cc1" %>
-<div id="divDanos" runat="server">   
-    <cc1:Repeater ID="Repeater1" runat="server" DataSourceID="odsOcurrenciaDetalle" OnItemDataBound="Repeater1_ItemDataBound">
+<div id="divDanos" runat="server">
+  <%--<cc1:Repeater ID="Repeater1" runat="server" DataSourceID="odsOcurrenciaDetalle" OnItemDataBound="Repeater1_ItemDataBound">
         <HeaderTemplate>
             <table  border="0" cellpadding="0" cellspacing="0" class="GridView Grid" >
                 <tr class="header">
@@ -60,12 +60,25 @@
             </tr>
             </table>
         </FooterTemplate>
-    </cc1:Repeater>
-    <asp:ObjectDataSource ID="odsOcurrenciaDetalle" runat="server" OldValuesParameterFormatString="original_{0}"
-        SelectMethod="GetData" TypeName="dsReporteTableAdapters.InformeBasicoOcurrenciaDetalleTableAdapter"
-        OnSelecting="odsOcurrenciaDetalle_Selecting" OnSelected="odsOcurrenciaDetalle_Selected">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="ajusteid" QueryStringField="AjusteId" Type="Int32" />
-        </SelectParameters>
-    </asp:ObjectDataSource>
+    </cc1:Repeater>--%>
+  <cc1:Repeater ID="Repeater1" runat="server" DataSourceID="odsOcurrenciaDetalle" OnItemDataBound="Repeater1_ItemDataBound">
+    <HeaderTemplate>
+      <ul>
+    </HeaderTemplate>
+    <ItemTemplate>
+      <li>
+        <%#R3M.Common.Util.ReplaceASBR(Eval("Bienes"))%>
+      </li>
+    </ItemTemplate>
+    <FooterTemplate>
+      </ul>
+    </FooterTemplate>
+  </cc1:Repeater>
+  <asp:ObjectDataSource ID="odsOcurrenciaDetalle" runat="server" OldValuesParameterFormatString="original_{0}"
+    SelectMethod="GetData" TypeName="dsReporteTableAdapters.InformeBasicoOcurrenciaDetalleTableAdapter"
+    OnSelecting="odsOcurrenciaDetalle_Selecting" OnSelected="odsOcurrenciaDetalle_Selected">
+    <SelectParameters>
+      <asp:QueryStringParameter Name="ajusteid" QueryStringField="AjusteId" Type="Int32" />
+    </SelectParameters>
+  </asp:ObjectDataSource>
 </div>

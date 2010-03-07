@@ -35,7 +35,7 @@
         Lima,
         <%= DateTime.Now.ToLongDateString() %></p>
       <h1 class="InfTitle">
-        INFORME BÁSICO #<%#((AjusteDto) (Container.DataItem)).NumeroIfb%>&nbsp; AJUSTE No.
+        INFORME BÁSICO AJUSTE No.
         <%#((AjusteDto) (Container.DataItem)).NumeroAjuste%>
       </h1>
       <p class="Bold Underline">
@@ -44,6 +44,7 @@
         SRS. RÍMAC</p>
       <p class="Bold">
         SR.
+        <%#((AjusteDto) (Container.DataItem)).Recepcion.ConfirmadoCon %>
       </p>
       <p>
         &nbsp;</p>
@@ -60,7 +61,7 @@
               <p class="label">
                 CONTRATANTE:</p>
             </td>
-            <td valign="top" width="159">
+            <td valign="top" width="220">
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.Contratante%></p>
             </td>
@@ -68,7 +69,7 @@
               <p class="label">
                 ASEGURADO:</p>
             </td>
-            <td>
+            <td valign="top">
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.Asegurado%></p>
             </td>
@@ -90,7 +91,7 @@
                 BROKER
               </p>
             </td>
-            <td valign="top" width="159">
+            <td valign="top" width="220">
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.Broker%></p>
             </td>
@@ -153,10 +154,15 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" colspan="5">
+            <td valign="top">
               <h2>
                 LÍMITES:</h2>
-              <uc1:detalleSublimitesAfectados ID="detalleSublimitesAfectados1" runat="server" />
+            </td>
+            <td colspan="4">
+              <p>
+                <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada %>
+                <%#  String.Format("{0:#,###.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
+              </p>
             </td>
           </tr>
           <tr>
@@ -268,15 +274,11 @@
             </td>
           </tr>
           <tr>
-            <td valign="top">
+            <td valign="top" colspan="2">
               <p class="label">
                 OCURRENCIA:
               </p>
-            </td>
-            <td valign="top">
-              <p>
-                <%#((AjusteDto) (Container.DataItem)).Ocurrencia%></p>
-              </p>
+              <%#((AjusteDto) (Container.DataItem)).Ocurrencia%>
             </td>
           </tr>
           <tr>
@@ -366,8 +368,7 @@
             </td>
             <td>
               <p>
-             
-				<%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReclamoSimbolo)%>
+                <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReclamoSimbolo)%>
                 <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
               </p>
             </td>

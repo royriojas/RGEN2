@@ -1,6 +1,6 @@
-﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:18px; }
-h1, h2, h3, p { margin:5px 0; }
-td p { margin:0px }
+﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:22px; text-align:justify; }
+h1, h2, h3, p { margin:5px 2px; }
+td p { margin:5px 2px; }
 
 p.DateSalute { text-align:right; }
 h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoration:underline }
@@ -14,7 +14,7 @@ h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoratio
 .TableSection h3, 
 .TableSection h2, 
 .TableSection,
-.TableSection p { font-size: 14px; }
+.TableSection p { font-size: 18px; }
 
 .TableSection { border:4px double #000; }
 .TableSection td { padding:3px;}
@@ -27,23 +27,23 @@ div.ImageContainer {width:455px; height:450px; float:left; margin-right:20px; ma
 div.ImageContainer img{ width:455px;height:335px; }
 
 div.ImgHolder img { width:455px; height:335px; }
-div.txtInfo {font-size:14px !important; padding:6px; }
-div.ImageTitle { font-size:14px !important; padding:6px;}
+div.txtInfo {font-size:18px !important; padding:6px; }
+div.ImageTitle { font-size:18px !important; padding:6px;}
 .pagebreak { page-break-before: always; clear: both; }
 
 .ruler-divider { height:1px; background:#000;padding : 0px;margin: 2px auto; }
 .ruler-divider.doble { height:4px; }
 
 
-.infPreliminarTitle { font-weight:bold; text-decoration:underline; text-align:center; font-size: 20px; }
+.infPreliminarTitle { font-weight:bold; text-decoration:underline; text-align:center; font-size: 24px; }
 
-.infoSeccion h3 { font-weight:bold; text-decoration:underline;font-size:16px; margin-top:18px; margin-bottom:12px; }
-.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:14px; }
-.infoSeccion, .infoSeccion p { font-size:14px; }
-.subSeccion, .subSeccion p { font-size:14px; }
+.infoSeccion h3 { font-weight:bold; text-decoration:underline;font-size:20px; margin-top:18px; margin-bottom:12px; }
+.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:18px; }
+.infoSeccion, .infoSeccion p { font-size:18px; }
+.subSeccion, .subSeccion p { font-size:18px; }
 
 table.ReportCell td { padding: 5px 0px 5px 0px; }
-table.ReportCellHeader td { padding: 2px 0px 2px 0px; font-size:17px; }
+table.ReportCellHeader td { padding: 2px 0px 2px 0px; font-size:21px; }
 
 table.ReportCellNotJustify td { padding: 5px 0px 5px 0px; text-align:left;}
 .GridViewNotJustify { border-collapse:collapse; }
@@ -59,7 +59,7 @@ div.line { line-height:0px; font-size:0px; background:black; height: 2px; }
 .GridView td { border: 1px solid #000000; padding: 2px; }
 .GridView tr.header { background:#EBEBEB; }
 
-.Caratula { font-size: 14px; }
+.Caratula { font-size: 18px; }
 
 td.label { font-weight:bold;}
 
