@@ -491,7 +491,7 @@
 				  
                 </div>
 				<p class="Validator Required InformeSave" field=".montoAviso">Requerido</p>
-		          <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+$">Solo números</p>
+		          <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+(\.\d{1,2})?$">Solo números</p>
 		          <p class="Validator RangeValidator InformeSave" field=".montoAviso" min_value="1" max_value="2000000">Rango inválido!</p>
                 <div class="doClear">
                 </div>
@@ -512,7 +512,7 @@
                   </div>				  
                 </div>
 				<p class="Validator Required InformeSave" field=".montoReserva">Requerido</p>
-		          <p class="Validator RegularExpression InformeSave" field=".montoReserva" regex="^\d+$">Solo números</p>
+		          <p class="Validator RegularExpression InformeSave" field=".montoReserva" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
 		          <p class="Validator RangeValidator InformeSave" field=".montoReserva" min_value="1" max_value="2000000">Rango inválido!</p>
                 <div class="doClear">
                 </div>
