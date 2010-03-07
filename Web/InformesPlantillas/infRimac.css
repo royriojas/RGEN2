@@ -1,6 +1,6 @@
-﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:22px; text-align:justify; }
+﻿body { margin:5px; padding:0px; font-family:Arial, Helvetica; font-size:22px;  }
 h1, h2, h3, p { margin:5px 2px; }
-td p { margin:5px 2px; }
+td p { margin:5px 2px; text-align:justify; }
 
 p.DateSalute { text-align:right; }
 h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoration:underline }
@@ -19,7 +19,7 @@ h1.InfTitle { text-align:center; margin:20px 0px; font-size:22px; text-decoratio
 .TableSection { border:4px double #000; }
 .TableSection td { padding:3px;}
 
-p.label { font-weight:bold; }
+p.label { font-weight:bold; text-align:left; }
 table.TableSection { width: 100%; } 
 
 
