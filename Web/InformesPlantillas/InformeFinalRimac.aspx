@@ -77,47 +77,47 @@
           <div class="ruler-divider">
           </div>
           <div class="InfoGroup" id="_groupIPreliminar" runat="server">
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionRiesgo) %>'>
               <h3>
                 INFORMACIÓN GENERAL</h3>
               <%#((AjusteDto) Container.DataItem).DescripcionRiesgo %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionLugarSiniestro) %>'>
               <h3>
                 LUGAR DEL SINIESTRO</h3>
               <%#((AjusteDto) Container.DataItem).DescripcionLugarSiniestro%>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionBienesAfectados) %>'>
               <h3>
                 BIEN(ES) SINIESTRADO(S)</h3>
               <%#((AjusteDto) Container.DataItem).DescripcionBienesAfectados %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Antecedentes) %>'>
               <h3>
                 ANTECEDENTES</h3>
               <%#((AjusteDto) Container.DataItem).Antecedentes
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Ocurrencia) %>'>
               <h3>
                 OCURRENCIA</h3>
               <%#((AjusteDto) Container.DataItem).Ocurrencia
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Investigaciones) %>'>
               <h3>
                 INVESTIGACIONES</h3>
               <%#((AjusteDto) Container.DataItem).Investigaciones
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionDamage) %>'>
               <h3>
                 DAÑOS</h3>
               <!-- //TODO Check this -->
               <%#((AjusteDto) Container.DataItem).DescripcionDamage 
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).CausasSiniestro) %>'>
               <h3>
                 CAUSA</h3>
               <%#((AjusteDto) Container.DataItem).CausasSiniestro
@@ -133,12 +133,12 @@
                 , cuya vigencia es
                 <%# ((AjusteDto) Container.DataItem).Poliza.Vigencia %>
                 :</p>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).MateriaAsegurada) %>'>
                 <h4>
                   Materia Asegurada</h4>
                 <%# ((AjusteDto) Container.DataItem).MateriaAsegurada %>
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).LocalAsegurado) %>'>
                 <h4>
                   Local Asegurado / Ubicación del Riesgo</h4>
                 <%# ((AjusteDto) Container.DataItem).LocalAsegurado %>
@@ -169,42 +169,42 @@
                   </tr>
                 </table>
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Seccion) %>'>
                 <h4>
                   Sección</h4>
                 <%# ((AjusteDto) Container.DataItem).Seccion %>
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" id="_deduciblesDiv" runat="server">
                 <h4>
                   Deducible Aplicable</h4>
-                <uc2:Deducibles ID="Deducibles1" runat="server" />
+                <uc2:Deducibles ID="Deducibles1" OnEmpty="EmptyDeducibles" runat="server" />
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" id="_clausulasDiv" runat="server">
                 <h4>
                   Cláusulas Aplicables</h4>
-                <uc3:Clausulas ID="Clausulas1" runat="server" />
+                <uc3:Clausulas ID="Clausulas1" OnEmpty="EmptyClausulas" runat="server" />
               </div>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Reclamo) %>'>
               <h3>
                 RECLAMO</h3>
               <p>
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
-                <%# ((AjusteDto) Container.DataItem).Reclamo %></p>
+                <%# ((AjusteDto) Container.DataItem).Reclamo %>.</p>
               <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">
-              <h3>
+              <h3 style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).OpinionAjustador) %>'>
                 COBERTURA</h3>
               <%# ((AjusteDto) Container.DataItem).OpinionAjustador %>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).VerificacionGarantias) %>'>
                 <h4>
                   Cumplimiento de Garantías / Prescripciones de Seguridad</h4>
                 <%# ((AjusteDto) Container.DataItem).VerificacionGarantias %>
               </div>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).PerdidaYajuste) %>'>
               <h3>
                 DETALLE DE LA PÉRDIDA Y AJUSTE</h3>
               <p>
@@ -212,27 +212,27 @@
                 la siguiente liquidación:
               </p>
               <%# ((AjusteDto) Container.DataItem).PerdidaYajuste %>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).ValoresDeclarados) %>'>
                 <h4>
                   Comentarios Sobre Valores Declarados</h4>
                 <%# ((AjusteDto) Container.DataItem).ValoresDeclarados %>
               </div>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Salvamentoyrecupero) %>'>
               <h3>
                 SALVAMENTO / RECUPERO</h3>
               <%# ((AjusteDto) Container.DataItem).Salvamentoyrecupero %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Recomendaciones) %>'>
               <h3>
                 MEDIDAS CORRECTIVAS</h3>
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
           </div>
-          <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
+           <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
             <h3>
               FOTOS</h3>
-            <uc6:Fotos ID="Fotos1" runat="server" />
+            <uc6:Fotos ID="Fotos1" OnEmptyFotos="DoEmpty" runat="server" />
           </div>
           <div class="infoSeccion">
             <h3 style="text-align: center; text-decoration: underline;">
@@ -240,19 +240,19 @@
             <table class="GridView Grid" cellspacing="0" cellpadding="0" border="0">
               <tbody>
                 <tr>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha de asignación</p>
                   </td>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha de Inspección</p>
                   </td>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha de envío de Informe Básico</p>
                   </td>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha de Envío de Informe Preliminar</p>
                   </td>
@@ -276,19 +276,19 @@
                   </td>
                 </tr>
                 <tr>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha de recepción de último documento</p>
                   </td>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha en que envían Convenio de Ajuste</p>
                   </td>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha en que reciben Convenio Firmado</p>
                   </td>
-                  <td valign="top">
+                  <td valign="top" class="Bold">
                     <p style="text-align: center;">
                       Fecha del Informe Final</p>
                   </td>
@@ -317,6 +317,21 @@
         </div>
       </ItemTemplate>
     </asp:FormView>
+  </div>
+  <div class="Firma">
+  <p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>Atentamente,</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>Ing. Rafael Romero Herbozo</p>
+<p>Registro S.B.S. AN-044</p>
+<p>Gerente General</p>
+
   </div>
   </form>
 </body>

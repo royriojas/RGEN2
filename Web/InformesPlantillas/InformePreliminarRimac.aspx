@@ -261,6 +261,21 @@
       </ItemTemplate>
     </asp:FormView>
   </div>
+  <div class="Firma">
+  <p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>Atentamente,</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>Ing. Rafael Romero Herbozo</p>
+<p>Registro S.B.S. AN-044</p>
+<p>Gerente General</p>
+
+  </div>
   </form>
 </body>
 </html>
