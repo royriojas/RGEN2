@@ -189,7 +189,7 @@ namespace App_Code.RimacInforme.Domain
         public decimal Reclamo
         {
             get { return _reclamo; }
-            set { _reclamo = Util.XDefault(value, default(decimal)); ; }
+            set { _reclamo = Util.XDefault(value, default(decimal)); }
         }
 
         private decimal _reserva;

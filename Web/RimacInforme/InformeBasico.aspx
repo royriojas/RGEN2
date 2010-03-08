@@ -223,18 +223,20 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Límites (US$):
+                  Límites:
                 </label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtSumaAsegurada" CssClass="FormText Readonly" Text='<%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada %>'
-                    runat="server"></asp:TextBox>
+                  <p>
+                      <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
+                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
+                  </p>
                 </div>
                 <div class="doClear">
                 </div>
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Deducibles (US$):
+                  Deducibles:
                 </label>
                 <div class="FieldWrapper List">
                   <uc2:Deducibles ID="Deducibles1" runat="server" />
@@ -359,7 +361,7 @@
               <div class="Field TextEdit">
                 <label>
                   Daños</label>
-                <div class="FieldWrapper">
+                <div class="FieldWrapper List">
                   <uc4:Damage ID="Damage1" runat="server" />
                 </div>
                 <div class="doClear">
@@ -491,8 +493,8 @@
 				  
                 </div>
 				<p class="Validator Required InformeSave" field=".montoAviso">Requerido</p>
-		          <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+(\.\d{1,2})?$">Solo números</p>
-		          <p class="Validator RangeValidator InformeSave" field=".montoAviso" min_value="1" max_value="2000000">Rango inválido!</p>
+		          <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
+		          
                 <div class="doClear">
                 </div>
               </div>
@@ -513,7 +515,7 @@
                 </div>
 				<p class="Validator Required InformeSave" field=".montoReserva">Requerido</p>
 		          <p class="Validator RegularExpression InformeSave" field=".montoReserva" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
-		          <p class="Validator RangeValidator InformeSave" field=".montoReserva" min_value="1" max_value="2000000">Rango inválido!</p>
+		          
                 <div class="doClear">
                 </div>
               </div>

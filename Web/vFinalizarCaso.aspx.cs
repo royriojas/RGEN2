@@ -57,28 +57,46 @@ public partial class vFinalizarCaso : System.Web.UI.Page
         else
         {
 
-
-            if (BinLength > 0 && (constanciaFileUpload.PostedFile.ContentType == "image/jpeg") || (constanciaFileUpload.PostedFile.ContentType == "image/pjpeg") && Request.QueryString["AjusteId"] != null)
+            if (constanciaFileUpload != null)
             {
-                byte[] BinBuffer = new byte[BinLength];
-                constanciaFileUpload.PostedFile.InputStream.Read(BinBuffer, 0, BinLength);
-                byte[] imagenThumb = ImgHdl.ImgResize.ResizeImageFile(BinBuffer, 80, ImgHdl.Horientation.Portrait);
-
-                int res = 0;
-                dsAjusteTableAdapters.AjusteTotalInsertTableAdapter ajusteAdapter = new dsAjusteTableAdapters.AjusteTotalInsertTableAdapter();
-                res = ajusteAdapter.FinalizarCaso(decimal.Parse(Request.QueryString["AjusteId"].ToString()), DateTime.Now, constanciaFileUpload.FileName, comentarioTextBox.Text, constanciaFileUpload.FileBytes, imagenThumb, au.UserName);
-                //Response.Redirect("vListaAjuste.aspx");            
-
-                if (res > 0)
+                if (BinLength > 0 && (constanciaFileUpload.PostedFile.ContentType == "image/jpeg") || (constanciaFileUpload.PostedFile.ContentType == "image/pjpeg") && Request.QueryString["AjusteId"] != null)
                 {
-                    this.lblMensaje.Text = "El Ajuste se ha Finalizado Correctamente... por favor cierre la ventana";
-                   /* this.pnlConfirmacion.Style.Remove(HtmlTextWriterStyle.BackgroundColor);
-                    this.pnlConfirmacion.Style.Add(HtmlTextWriterStyle.BackgroundColor, "RED");*/
-                    this.pnlConfirmacion.Visible = true;
-                    this.ClientScript.RegisterStartupScript(this.GetType(), "scriptInicial", "window.onload = function() { cierraLaVentana();}", true);
-                }
+                    byte[] BinBuffer = new byte[BinLength];
+                    constanciaFileUpload.PostedFile.InputStream.Read(BinBuffer, 0, BinLength);
+                    byte[] imagenThumb = ImgHdl.ImgResize.ResizeImageFile(BinBuffer, 80, ImgHdl.Horientation.Portrait);
 
+                    int res = 0;
+                    dsAjusteTableAdapters.AjusteTotalInsertTableAdapter ajusteAdapter = new dsAjusteTableAdapters.AjusteTotalInsertTableAdapter();
+                    res = ajusteAdapter.FinalizarCaso(decimal.Parse(Request.QueryString["AjusteId"].ToString()), DateTime.Now, constanciaFileUpload.FileName, comentarioTextBox.Text, constanciaFileUpload.FileBytes, imagenThumb, au.UserName);
+                    //Response.Redirect("vListaAjuste.aspx");            
+
+                    if (res > 0)
+                    {
+                        this.lblMensaje.Text = "El Ajuste se ha Finalizado Correctamente... por favor cierre la ventana";
+                        /* this.pnlConfirmacion.Style.Remove(HtmlTextWriterStyle.BackgroundColor);
+                         this.pnlConfirmacion.Style.Add(HtmlTextWriterStyle.BackgroundColor, "RED");*/
+                        this.pnlConfirmacion.Visible = true;
+                        this.ClientScript.RegisterStartupScript(this.GetType(), "scriptInicial", "window.onload = function() { cierraLaVentana();}", true);
+                    }
+
+                }
+                else {
+                    int res = 0;
+                    dsAjusteTableAdapters.AjusteTotalInsertTableAdapter ajusteAdapter = new dsAjusteTableAdapters.AjusteTotalInsertTableAdapter();
+                    res = ajusteAdapter.FinalizarCaso(decimal.Parse(Request.QueryString["AjusteId"].ToString()), DateTime.Now, "", comentarioTextBox.Text, null, null, au.UserName);
+                    //Response.Redirect("vListaAjuste.aspx");            
+
+                    if (res > 0)
+                    {
+                        this.lblMensaje.Text = "El Ajuste se ha Finalizado Correctamente... por favor cierre la ventana";
+                        /* this.pnlConfirmacion.Style.Remove(HtmlTextWriterStyle.BackgroundColor);
+                         this.pnlConfirmacion.Style.Add(HtmlTextWriterStyle.BackgroundColor, "RED");*/
+                        this.pnlConfirmacion.Visible = true;
+                        this.ClientScript.RegisterStartupScript(this.GetType(), "scriptInicial", "window.onload = function() { cierraLaVentana();}", true);
+                    }
+                }
             }
+            
             else
             {
                 this.lblMensaje.Text = "Error: El Archivo que intenta subir no es una imagen jpg";

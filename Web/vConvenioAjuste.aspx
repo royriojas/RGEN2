@@ -107,8 +107,7 @@
               <td style="height: 20px; width: 149px;">
                 Representante<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                   ControlToValidate="txtRepresentante" ErrorMessage="Ingrese el nombre del Representante"
-                  ValidationGroup="actualizar">(*)</asp:RequiredFieldValidator>
-              </td>
+                  ValidationGroup="actualizar">(*)</asp:RequiredFieldValidator></td>
               <td colspan="3" style="height: 20px">
                 <asp:TextBox ID="txtRepresentante" runat="server" CssClass="FormText CAMELCASE" Width="462px"
                   Text='<%# Bind("representante") %>'></asp:TextBox>
@@ -210,7 +209,7 @@
                 &nbsp;
               </td>
               <td style="height: 20px">
-                <cc1:WebCalendar ID="txtFechaRecepcionConvenioFirmado" runat="server" BtnCalendarImage="img/cal.gif"
+                <cc1:WebCalendar ID="txtFechaRecepcionConvenioFirmado" runat="server" BtnCalendarImage="img/cal.gif" Width="182px"
                   CssClass="FormText" GenerateBtn="false" TabIndex="60" Text='<%# Bind("fRecepcionConvenioFirmado") %>'
                   WcResourcesDir="./scripts/wcc_includes"></cc1:WebCalendar>
               </td>
@@ -307,7 +306,7 @@
       <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True"
         ShowSummary="False" />
       <asp:Panel ID="pnlConfirmacion" runat="server" BackColor="#FF8000" BorderColor="Red"
-        Height="36px" Style="z-index: 450; left: 226px; position: absolute; top: 128px;
+        Height="36px" Style="z-index: 450; left: 226px; position: absolute; top: 141px;
         text-align: center" Visible="False" Width="296px">
         <div style="padding-top: 5px">
           <asp:Label ID="lblError" runat="server" Font-Bold="True" Font-Size="10px" ForeColor="White"

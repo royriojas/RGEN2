@@ -200,5 +200,108 @@ END
 
 
 
+ALTER PROCEDURE [dbo].[proc_informebasicoReclamoRimacUpdate]
+(
+	@ajusteId numeric(8, 0),
+	@reservaMonedaId numeric(8, 0),
+	@reserva varchar(9),
+	@monedareserva varchar(10),
+	@situacionajuste text,
+	@notas text,
+    @reclamo varchar(9),
+	@reclamoMonedaId numeric(8,0),
+	@monedareclamo varchar(10),
+	@enviarNumSiniestro tinyint,
+	@enviarCopiaPoliza tinyint
+
+
+)
+AS
+BEGIN
+	declare @cambioreclamo numeric(9,0)
+	declare @cambioreserva numeric(9,0)
+	DECLARE @Err int
+
+	SET NOCOUNT OFF;
+	UPDATE [RGN_AJUSTE] 
+	SET 	
+		[situacionajuste]=@situacionajuste,
+		[notas]=@notas,
+		[enviarCopiaPoliza]=@enviarCopiaPoliza,
+		[enviarNumSiniestro]=@enviarNumSiniestro
+		
+
+	WHERE (RGN_AJUSTE.ajusteId=@ajusteId)
+	
+
+
+	select @cambioreclamo=factor
+	from 	adm_TipoCambio
+	where monedaId= @reclamoMonedaId and tipoCambioId=(select max(tipoCambioId)from adm_tipoCambio where monedaId=@reclamoMonedaId)
+	
+
+	select @cambioreserva=factor
+	from 	adm_TipoCambio
+	where monedaId= @reservaMonedaId and tipoCambioId=(select max(tipoCambioId)from adm_tipoCambio where monedaId=@reservaMonedaId)
+	
+	INSERT
+	INTO [RGN_RESERVA]
+	(
+		[ajusteId],
+		[monto],
+		[montosoles],
+		[tipoCambio],
+		[monedaId],
+		[fecha],
+		[fcrea],
+		[fupdate],
+		[estado],
+		[ucrea],
+		[uupdate]	
+		
+	)
+	VALUES
+	(
+		@ajusteId,
+		Convert(numeric(14,2),@reserva),
+		Convert(numeric(14,2),@reserva)*@cambioreserva,
+		@cambioreserva,
+		@reservaMonedaId,
+		getDate(),
+		getDate(),
+		getDate(),
+		'A',
+		'dbo',
+		'dbo'
+	)
+
+
+	INSERT
+	INTO [RGN_RECLAMO]
+	(
+	    [ajusteId],
+		[monto],
+		[montosoles],
+		[tipoCambio],
+		[monedaId]
+		
+	)
+	VALUES
+	(
+		@ajusteId,
+		Convert(numeric(14,2),@reclamo),
+		Convert(numeric(14,2),@reclamo)*@cambioreclamo,
+		@cambioreclamo,
+		@reclamoMonedaId		
+	)
+
+	SET @Err = @@Error
+
+	RETURN @Err
+END
+
+
+
+
 
 
