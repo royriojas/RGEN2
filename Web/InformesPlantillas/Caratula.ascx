@@ -17,9 +17,9 @@
   Width="100%" runat="server" DefaultMode="ReadOnly" DataSourceID="odsInforme">
   <ItemTemplate>
     <div class="Caratula">
-      <table cellpadding="8px">
+      <table >
         <tr>
-          <td class="label" valign="top" style="width: 300px">
+          <td class="label" valign="top" style="width: 380px">
             INFORME
           </td>
           <td style="width: 10px">

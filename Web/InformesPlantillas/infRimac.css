@@ -59,7 +59,7 @@ div.line { line-height:0px; font-size:0px; background:black; height: 2px; }
 .GridView td { border: 1px solid #000000; padding: 2px; }
 .GridView tr.header { background:#EBEBEB; }
 
-.Caratula { font-size: 18px; }
+.Caratula td { padding:8px; }
 
 td.label { font-weight:bold;}
 
