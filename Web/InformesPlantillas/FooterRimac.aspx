@@ -20,7 +20,7 @@
             Mariano de los Santos 166</p>
           <p>
             Central: (511) 615-3035 Fax: (511) 615-3036</p>
-          <p style=color:blue" >
+          <p style="color:blue" >
             www.preventores.com.pe</p>
           <p class="bold">
             REG. S.B.S. Nº APJ 012</p>
