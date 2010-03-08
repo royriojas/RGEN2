@@ -17,22 +17,24 @@
   Width="100%" runat="server" DefaultMode="ReadOnly" DataSourceID="odsInforme">
   <ItemTemplate>
     <div class="Caratula">
-      <table >
+      <table cellpadding="8px">
         <tr>
-          <td class="label" valign="top"  style="width: 300px">
+          <td class="label" valign="top" style="width: 300px">
             INFORME
           </td>
           <td style="width: 10px">
             <span class="bold">:</span>
           </td>
           <td>
-            INFORME <%# IsFinal ? "FINAL" : "PRELIMINAR"  %> <span>
+            INFORME
+            <%# IsFinal ? "FINAL" : "PRELIMINAR"  %>
+            <span>
               <%# (((AjusteDto)Container.DataItem).NumeroIfb > 1 && IsComplementary) ? string.Format("N° {0}", ((AjusteDto)Container.DataItem).NumeroIfb) : String.Empty %>
             </span>
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             FECHA DE INFORME BÁSICO
           </td>
           <td>
@@ -43,7 +45,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             SU REF
           </td>
           <td>
@@ -54,7 +56,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             NUESTRA REF
           </td>
           <td>
@@ -65,7 +67,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             CONTRATANTE
           </td>
           <td>
@@ -76,7 +78,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             ASEGURADO
           </td>
           <td>
@@ -87,7 +89,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             BROKER
           </td>
           <td>
@@ -98,7 +100,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             PÓLIZA
           </td>
           <td>
@@ -109,7 +111,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             VIGENCIA
           </td>
           <td>
@@ -120,7 +122,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             TIPO DE PÓLIZA y RAMO
           </td>
           <td>
@@ -131,25 +133,29 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             LÍMITES
           </td>
           <td>
             <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
+            <p>
+              <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada %>
+              <%#  String.Format("{0:#,###.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
+            </p>
           </td>
         </tr>
-        <tr>
+        <%--<tr>
           <td colspan="3">
             <uc1:detalleSublimitesAfectados ID="_detalleSublimitesAfectados1" runat="server" />
           </td>
-        </tr>
+        </tr>--%>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             CAUSA
           </td>
-          <td>
+          <td valign="top">
             <span class="bold">:</span>
           </td>
           <td>
@@ -157,7 +163,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             LUGAR
           </td>
           <td>
@@ -168,7 +174,7 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             FECHA DE OCURRENCIA
           </td>
           <td>
@@ -179,35 +185,30 @@
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             BIEN / PERSONA AFECTADO (A) / DAÑOS / LESIONES / PERDIDAS
           </td>
-          <td>
+          <td valign="top">
             <span class="bold">:</span>
           </td>
-          <td>
-           
-          </td>
-        </tr>
-        <tr>
-          <td colspan="3">
+          <td valign="top">
             <uc4:Damage ID="Damage2" runat="server" />
           </td>
         </tr>
         <tr>
-          <td class="label" valign="top" >
+          <td class="label" valign="top">
             RECLAMO
           </td>
           <td>
             <span class="bold">:</span>
           </td>
           <td>
-             <%# String.Format("{0}", ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo) %>
-              <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
+            <%# String.Format("{0}", ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo) %>
+            <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
           </td>
         </tr>
-        <tr>
-          <td class="label" valign="top" >
+        <tr style='<%#  IsFinal ? "display:none": ""  %>'>
+          <td class="label" valign="top">
             RESERVA NETA
           </td>
           <td>
@@ -215,8 +216,21 @@
           </td>
           <td>
             <span class="bold">
-                <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
-                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reserva)%></span>
+              <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
+              <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reserva)%></span>
+          </td>
+        </tr>
+        <tr style='<%#  !IsFinal ? "display:none": ""  %>'>
+          <td class="label" valign="top">
+            INDEMNIZACIÓN
+          </td>
+          <td valign="top">
+            <span class="bold">:</span>
+          </td>
+          <td valign="top">
+            <span class="bold">
+              <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
+              <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).InfoConvenioAjuste.TotalIndemnizacion)%></span>
           </td>
         </tr>
       </table>

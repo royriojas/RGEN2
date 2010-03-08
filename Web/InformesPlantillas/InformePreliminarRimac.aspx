@@ -59,7 +59,7 @@
         <p class="Bold">
           Lima 27 - PERÚ</p>
         <p class="Bold">
-          Att. : <span class="Underline">SR./</span></p>
+          Att. : SR(A). <span class="Underline"> <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %> </span></p>
         <p>
           &nbsp;</p>
         <uc5:Caratula ID="Caratula1" runat="server" />
