@@ -263,7 +263,7 @@ namespace R3M.Common
                 pdfConverter.PdfDocumentOptions.ShowHeader = true;
                 pdfConverter.PdfHeaderOptions.HtmlToPdfArea = new HtmlToPdfArea(UrlCabecera);
                 pdfConverter.PdfHeaderOptions.DrawHeaderLine = true;
-                pdfConverter.PdfHeaderOptions.HeaderHeight = UrlCabecera.Contains("Rimac") ? 80 : 180;
+                pdfConverter.PdfHeaderOptions.HeaderHeight = UrlCabecera.Contains("Rimac") ? 90 : 180;
             }
 
             if (!string.IsNullOrEmpty(UrlFooter))
@@ -271,7 +271,7 @@ namespace R3M.Common
                 pdfConverter.PdfDocumentOptions.ShowFooter = true;
                 pdfConverter.PdfFooterOptions.HtmlToPdfArea = new HtmlToPdfArea(UrlFooter);
 
-                pdfConverter.PdfFooterOptions.FooterHeight = 55;
+                pdfConverter.PdfFooterOptions.FooterHeight = 65;
             }
 
             pdfConverter.PdfFooterOptions.DrawFooterLine = false;
