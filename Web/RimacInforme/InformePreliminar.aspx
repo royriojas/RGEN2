@@ -37,7 +37,7 @@
 
             var actionbuttons = '<div class="ActionBar CommandButtons">' +
 				'<ul>' +
-					'<li><a class="LinkButton Save Little" href=""><span>Grabar</span></a></li>' +
+					'<li><a class="LinkButton Save Little ValidatorTrigger" href="" validation_group=".InformeSave"><span>Grabar</span></a></li>' +
 					'<li><a class="LinkButton Generate Little" href="#"><span>Generar</span></a></li>' +
 					'<li><a class="LinkButton Observate Little" href=""><span>Observar</span></a></li>' +
 					'<li><a class="LinkButton Preview Little" target="_blank" href="<%= String.Format( ResolveClientUrl("~/vVistaPrevia.aspx?AjusteId={0}&TI={1}"), Request.QueryString["AjusteId"] , GetTipoInforme()) %>"><span>Vista Previa HTML</span></a></li>' +
@@ -74,7 +74,8 @@
                 return false;
             });
 
-
+            //important to call after every validation
+            $(document).initValidation();
 
         });
   </script>
@@ -264,18 +265,20 @@
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Límites (US$):
+                  Límites:
                 </label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtSumaAsegurada" CssClass="FormText Readonly" Text='<%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada %>'
-                    runat="server"></asp:TextBox>
+                  <p>
+                      <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
+                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
+                  </p>
                 </div>
                 <div class="doClear">
                 </div>
               </div>
               <div class="Field TextEdit">
                 <label>
-                  Deducibles (US$):
+                  Deducibles:
                 </label>
                 <div class="FieldWrapper List">
                   <uc2:Deducibles ID="Deducibles1" runat="server" />
@@ -339,7 +342,7 @@
               <div class="Field TextEdit">
                 <label>
                   Daños</label>
-                <div class="FieldWrapper">
+                <div class="FieldWrapper List">
                   <uc4:Damage ID="Damage1" runat="server" />
                 </div>
                 <div class="doClear">
@@ -373,10 +376,13 @@
                       DataTextField="simbolo" DataValueField="monedaId" AppendDataBoundItems="true">
                       <asp:ListItem Text="Elija" Value="-1"></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:TextBox CssClass="FormText" Text='<%# Bind("Reclamo") %>' ID="_txtMontoAvisoReclamo"
+                    <asp:TextBox CssClass="FormText montoAviso" Text='<%# Bind("Reclamo") %>' ID="_txtMontoAvisoReclamo"
                       runat="server"></asp:TextBox>
                   </div>
                 </div>
+                <p class="Validator Required InformeSave" field=".montoAviso">Requerido</p>
+		          <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
+
                 <div class="doClear">
                 </div>
               </div>
@@ -390,10 +396,13 @@
                       DataTextField="simbolo" DataValueField="monedaId" AppendDataBoundItems="true">
                       <asp:ListItem Text="Elija" Value="-1"></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:TextBox CssClass="FormText" Text='<%# Bind("Reserva") %>' ID="_txtReservaPreliminar"
+                    <asp:TextBox CssClass="FormText montoReserva" Text='<%# Bind("Reserva") %>' ID="_txtReservaPreliminar"
                       runat="server"></asp:TextBox>
                   </div>
                 </div>
+                <p class="Validator Required InformeSave" field=".montoReserva">Requerido</p>
+		          <p class="Validator RegularExpression InformeSave" field=".montoReserva" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
+                
                 <div class="doClear">
                 </div>
               </div>
