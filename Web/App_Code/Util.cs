@@ -245,7 +245,7 @@ namespace R3M.Common
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;
             pdfConverter.PdfDocumentOptions.ShowHeader = true;
             pdfConverter.PdfDocumentOptions.ShowFooter = true;
-            pdfConverter.PdfDocumentOptions.LeftMargin = 50;
+            pdfConverter.PdfDocumentOptions.LeftMargin = 70;
             pdfConverter.PdfDocumentOptions.RightMargin = 40;
             pdfConverter.PdfDocumentOptions.TopMargin = 20;
             pdfConverter.PdfDocumentOptions.BottomMargin = 20;
