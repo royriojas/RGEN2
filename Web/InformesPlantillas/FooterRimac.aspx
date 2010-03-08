@@ -10,6 +10,7 @@
 <body>
   <form id="form1" runat="server">
   <div class="footer">
+    <p>&nbsp;</p>
     <table width="100%" style="width: 100%" border="0" cellpadding="0" cellspacing="0">
       <tr>
         <td style="width:50%">
@@ -19,7 +20,7 @@
             Mariano de los Santos 166</p>
           <p>
             Central: (511) 615-3035 Fax: (511) 615-3036</p>
-          <p>
+          <p style=color:blue" >
             www.preventores.com.pe</p>
           <p class="bold">
             REG. S.B.S. Nº APJ 012</p>

@@ -73,7 +73,8 @@ ul.List { margin-left:14px; }
 
 .Header { position: relative; width:100%; text-align:right; }
 .Header .logo-pasa { }
-.footer { width: 80%; margin: 0 auto; border-top:1px solid #000000;}
+.footer { width: 90%; margin: 0 auto; border-top:1px solid #000000;} 
+.footer p { margin:0;}
 .footer td p { font-size:12px; margin:0px;font-family:Arial, Helvetica;  }
 .footer td p.bold { font-weight:bold; }
 
