@@ -19,13 +19,13 @@
     <div class="Caratula">
       <table style="width:100%" >
         <tr>
-          <td class="label" valign="top" style="width: 480px">
+          <td class="label" valign="top" style="width: 45%">
             INFORME
           </td>
-          <td style="width: 10px">
+          <td style="width: 10%">
             <span class="bold">:</span>
           </td>
-          <td>
+          <td style="width: 45%">
             INFORME
             <%# IsFinal ? "FINAL" : "PRELIMINAR"  %>
             <span>

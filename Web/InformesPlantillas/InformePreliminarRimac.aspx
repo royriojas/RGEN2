@@ -59,7 +59,10 @@
         <p class="Bold">
           Lima 27 - PERÚ</p>
         <p class="Bold">
-          Att. : SR(A). <span class="Underline"> <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %> </span></p>
+          Att. : SR(A). <span class="Underline">
+            <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %>
+          </span>
+        </p>
         <p>
           &nbsp;</p>
         <uc5:Caratula ID="Caratula1" runat="server" />
@@ -74,47 +77,47 @@
           <div class="ruler-divider">
           </div>
           <div class="InfoGroup" id="_groupIPreliminar" runat="server">
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionRiesgo) %>'>
               <h3>
                 INFORMACIÓN GENERAL</h3>
               <%#((AjusteDto) Container.DataItem).DescripcionRiesgo %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionLugarSiniestro) %>'>
               <h3>
                 LUGAR DEL SINIESTRO</h3>
               <%#((AjusteDto) Container.DataItem).DescripcionLugarSiniestro%>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionBienesAfectados) %>'>
               <h3>
                 BIEN(ES) SINIESTRADO(S)</h3>
               <%#((AjusteDto) Container.DataItem).DescripcionBienesAfectados %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Antecedentes) %>'>
               <h3>
                 ANTECEDENTES</h3>
               <%#((AjusteDto) Container.DataItem).Antecedentes
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Ocurrencia) %>'>
               <h3>
                 OCURRENCIA</h3>
               <%#((AjusteDto) Container.DataItem).Ocurrencia
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Investigaciones) %>'>
               <h3>
                 INVESTIGACIONES</h3>
               <%#((AjusteDto) Container.DataItem).Investigaciones
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionDamage) %>'>
               <h3>
                 DAÑOS</h3>
               <!-- //TODO Check this -->
               <%#((AjusteDto) Container.DataItem).DescripcionDamage 
               %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).CausasSiniestro) %>'>
               <h3>
                 CAUSA</h3>
               <%#((AjusteDto) Container.DataItem).CausasSiniestro
@@ -130,12 +133,12 @@
                 , cuya vigencia es
                 <%# ((AjusteDto) Container.DataItem).Poliza.Vigencia %>
                 :</p>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).MateriaAsegurada) %>'>
                 <h4>
                   Materia Asegurada</h4>
                 <%# ((AjusteDto) Container.DataItem).MateriaAsegurada %>
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).LocalAsegurado) %>'>
                 <h4>
                   Local Asegurado / Ubicación del Riesgo</h4>
                 <%# ((AjusteDto) Container.DataItem).LocalAsegurado %>
@@ -144,7 +147,7 @@
               <div class="subSeccion">
                 <table>
                   <tr>
-                    <td>
+                    <td style="width: 400px;">
                       <h4>
                         Cobertura Aplicable (RAMO)</h4>
                     </td>
@@ -159,87 +162,89 @@
                     </td>
                     <td>
                       <!-- //TODO Check this -->
-                      <%# ((AjusteDto) Container.DataItem).SumaAsegurada 
-                      
+                      <%# ((AjusteDto)Container.DataItem).MonedaSumaAsegurada %>
+                      <%#  
+                        String.Format("{0:#,###.00}", ((AjusteDto) Container.DataItem).SumaAsegurada)
                       %>
                     </td>
                   </tr>
                 </table>
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Seccion) %>'>
                 <h4>
                   Sección</h4>
                 <%# ((AjusteDto) Container.DataItem).Seccion %>
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" id="_deduciblesDiv" runat="server">
                 <h4>
                   Deducible Aplicable</h4>
-                <uc2:Deducibles ID="Deducibles1" runat="server" />
+                <uc2:Deducibles ID="Deducibles1" OnEmpty="EmptyDeducibles" runat="server" />
               </div>
-              <div class="subSeccion">
+              <div class="subSeccion" id="_clausulasDiv" runat="server">
                 <h4>
                   Cláusulas Aplicables</h4>
-                <uc3:Clausulas ID="Clausulas1" runat="server" />
+                <uc3:Clausulas ID="Clausulas1" OnEmpty="EmptyClausulas" runat="server" />
               </div>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Reclamo) %>'>
               <h3>
                 RECLAMO</h3>
               <p>
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
                 <%# ((AjusteDto) Container.DataItem).Reclamo %>.</p>
-                <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
+              <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">
-              <h3>
+              <h3 style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).OpinionAjustador) %>'>
                 COBERTURA</h3>
               <%# ((AjusteDto) Container.DataItem).OpinionAjustador %>
-              <div class="subSeccion">
+              <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).VerificacionGarantias) %>'>
                 <h4>
                   Cumplimiento de Garantías / Prescripciones de Seguridad</h4>
                 <%# ((AjusteDto) Container.DataItem).VerificacionGarantias %>
               </div>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Reserva) %>'>
               <h3>
                 RESERVA</h3>
               <p>
                 Recomendamos establecer una Reserva Neta de <span class="bold">
                   <%# ((AjusteDto) Container.DataItem).MonedaReservaSimbolo %>
                   <%# ((AjusteDto) Container.DataItem).Reserva %></span>.</p>
-                  <%# ((AjusteDto) Container.DataItem).DescripcionReserva %>
+              <%# ((AjusteDto) Container.DataItem).DescripcionReserva %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Salvamentoyrecupero) %>'>
               <h3>
                 SALVAMENTO / RECUPERO</h3>
               <%# ((AjusteDto) Container.DataItem).Salvamentoyrecupero %>
             </div>
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Recomendaciones) %>'>
               <h3>
                 MEDIDAS CORRECTIVAS</h3>
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
           </div>
           <div id="_groupIComplementario2" class="groupSection" runat="server">
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Antecedentes) %>'>
               <h3>
                 PREAMBULO</h3>
               <%# ((AjusteDto) Container.DataItem).Antecedentes %>
             </div>
           </div>
           <div class="infoSeccion">
-            <h3>
+            <h3 style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).SituacionSiniestro) %>'>
               SITUACIÓN ACTUAL</h3>
             <%# ((AjusteDto) Container.DataItem).SituacionSiniestro %>
-            <div class="subSeccion">
+            <div id="_documentosSeccion" runat="server" class="subSeccion">
               <h4>
                 Documentos solicitados</h4>
-              <uc1:DocumentacionSolicitada ID="DocumentacionSolicitada1" runat="server" />
+              <uc1:DocumentacionSolicitada OnEmpty="OnEmptyDocuments" ID="DocumentacionSolicitada1"
+                runat="server" />
             </div>
           </div>
           <div id="_groupIComplementario" runat="server">
-            <div class="infoSeccion">
+            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Observaciones) %>'>
               <h3>
                 Observaciones</h3>
               <%# ((AjusteDto) Container.DataItem).Observaciones %>
@@ -249,7 +254,7 @@
           <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
             <h3>
               FOTOS</h3>
-            <uc6:Fotos ID="Fotos1" runat="server" />
+            <uc6:Fotos ID="Fotos1" OnEmptyFotos="DoEmpty" runat="server" />
           </div>
         </div>
       </ItemTemplate>

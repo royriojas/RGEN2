@@ -11,12 +11,24 @@ using System.Web.UI.WebControls.WebParts;
 
 public partial class RimacInforme_DocumentacionSolicitada : System.Web.UI.UserControl
 {
+    public event EventHandler Empty;
+
+    private void InvokeEmpty(EventArgs e)
+    {
+        EventHandler empty = Empty;
+        if (empty != null) empty(this, e);
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
 
     }
     protected void odsDocumentosSolicitados_Selected(object sender, ObjectDataSourceStatusEventArgs e)
     {
-        this.divDocumentacionSolicitada.Visible = (((System.Data.DataTable)e.ReturnValue).Rows.Count > 0);
+        divDocumentacionSolicitada.Visible = (((DataTable)e.ReturnValue).Rows.Count > 0);
+        if (!divDocumentacionSolicitada.Visible)
+        {
+            InvokeEmpty(new EventArgs());
+        }
     }
 }
