@@ -58,6 +58,8 @@
           Las Begonias N° 475 3er. Piso</p>
         <p class="Bold">
           Lima 27 - PERÚ</p>
+        <p>
+          &nbsp;</p>
         <p class="Bold">
           Att. : SR(A). <span class="Underline"> <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %> </span></p>
         <p>
@@ -144,7 +146,7 @@
               <div class="subSeccion">
                 <table>
                   <tr>
-                    <td>
+                    <td with="300px">
                       <h4>
                         Cobertura Aplicable (RAMO)</h4>
                     </td>
@@ -159,9 +161,8 @@
                     </td>
                     <td>
                       <!-- //TODO Check this -->
-                      <%# ((AjusteDto) Container.DataItem).SumaAsegurada 
-                      
-                      %>
+                      <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
+                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                     </td>
                   </tr>
                 </table>

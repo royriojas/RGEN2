@@ -58,8 +58,10 @@
           Las Begonias N° 475 3er. Piso</p>
         <p class="Bold">
           Lima 27 - PERÚ</p>
+        <p>
+          &nbsp;</p>
         <p class="Bold">
-          Att. : <span class="Underline">SR./</span></p>
+          Att. : SR(A). <span class="Underline"> <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %> </span></p>
         <p>
           &nbsp;</p>
         <uc5:Caratula ID="Caratula1" runat="server" />
@@ -157,9 +159,9 @@
                     </td>
                     <td>
                       <!-- //TODO Check this -->
-                      <%# ((AjusteDto) Container.DataItem).SumaAsegurada 
-                      
-                      %>
+                       <!-- //TODO Check this -->
+                      <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
+                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                     </td>
                   </tr>
                 </table>
@@ -200,15 +202,20 @@
                 <%# ((AjusteDto) Container.DataItem).VerificacionGarantias %>
               </div>
             </div>
-            <%-- <div class="infoSeccion">
+            <div class="infoSeccion">
               <h3>
                 DETALLE DE LA PÉRDIDA Y AJUSTE</h3>
               <p>
                 Luego de evaluar los documentos de sustento remitidos por el Asegurado, hemos establecido
-                la siguiente liquidación
+                la siguiente liquidación:
               </p>
-              <%# ((AjusteDto) Container.DataItem).de %>
-            </div>--%>
+              <%# ((AjusteDto) Container.DataItem).PerdidaYajuste %>
+              <div class="subSeccion">
+                <h4>
+                  Comentarios Sobre Valores Declarados</h4>
+                <%# ((AjusteDto) Container.DataItem).ValoresDeclarados %>
+              </div
+            </div>
             <div class="infoSeccion">
               <h3>
                 SALVAMENTO / RECUPERO</h3>
