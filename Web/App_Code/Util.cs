@@ -231,10 +231,10 @@ namespace R3M.Common
 
         public static byte[] GetPdf(String UrlBody)
         {
-            return GetPdf(UrlBody, null);
+            return GetPdf(UrlBody, null, null);
         }
 
-        public static byte[] GetPdf(String UrlBody, String UrlCabecera)
+        public static byte[] GetPdf(String UrlBody, String UrlCabecera, String UrlFooter)
         {
             //      UrlBody;//@"E:\Proyectos\InformeRGen\informePacifico_Final.html";      
 
@@ -245,16 +245,16 @@ namespace R3M.Common
             pdfConverter.PdfDocumentOptions.PdfCompressionLevel = PdfCompressionLevel.Normal;
             pdfConverter.PdfDocumentOptions.ShowHeader = true;
             pdfConverter.PdfDocumentOptions.ShowFooter = true;
-            pdfConverter.PdfDocumentOptions.LeftMargin = 30;
-            pdfConverter.PdfDocumentOptions.RightMargin = 20;
-            pdfConverter.PdfDocumentOptions.TopMargin = 10;
-            pdfConverter.PdfDocumentOptions.BottomMargin = 10;
+            pdfConverter.PdfDocumentOptions.LeftMargin = 40;
+            pdfConverter.PdfDocumentOptions.RightMargin = 40;
+            pdfConverter.PdfDocumentOptions.TopMargin = 20;
+            pdfConverter.PdfDocumentOptions.BottomMargin = 20;
             pdfConverter.PdfDocumentOptions.GenerateSelectablePdf = true;
             //pdfConverter.AvoidImageBreak = true;
             pdfConverter.AvoidImageBreak = true;
             pdfConverter.AvoidTextBreak = true;
-            pdfConverter.ConversioDelay = 2;
-            
+            pdfConverter.ConversioDelay = 1;
+
 
 
             pdfConverter.PdfDocumentOptions.ShowHeader = false;
@@ -262,9 +262,16 @@ namespace R3M.Common
             {
                 pdfConverter.PdfDocumentOptions.ShowHeader = true;
                 pdfConverter.PdfHeaderOptions.HtmlToPdfArea = new HtmlToPdfArea(UrlCabecera);
-                pdfConverter.PdfHeaderOptions.HeaderHeight = 180;
+                pdfConverter.PdfHeaderOptions.DrawHeaderLine = true;
+                pdfConverter.PdfHeaderOptions.HeaderHeight = UrlCabecera.Contains("Rimac") ? 80 : 180;
+            }
 
+            if (!string.IsNullOrEmpty(UrlFooter))
+            {
+                pdfConverter.PdfDocumentOptions.ShowFooter = true;
+                pdfConverter.PdfFooterOptions.HtmlToPdfArea = new HtmlToPdfArea(UrlFooter);
 
+                pdfConverter.PdfFooterOptions.FooterHeight = 55;
             }
 
             pdfConverter.PdfFooterOptions.DrawFooterLine = false;
@@ -330,6 +337,8 @@ namespace R3M.Common
 
 
 
+
+        
     }
 
     public enum ControlEditMode

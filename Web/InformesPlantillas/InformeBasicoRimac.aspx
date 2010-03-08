@@ -61,7 +61,7 @@
               <p class="label">
                 CONTRATANTE:</p>
             </td>
-            <td valign="top" >
+            <td valign="top" style="width:290px;" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).InfoAsegurado.Contratante%></p>
             </td>
@@ -122,7 +122,7 @@
               <p class="label">
                 PÓLIZA:</p>
             </td>
-            <td valign="top" colspan="2" >
+            <td valign="top" colspan="2" style="width:138px;" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).Poliza.PolizaNumber%></p>
             </td>
@@ -196,7 +196,7 @@
               <p class="label">
                 # REF ASEGURADOR:</p>
             </td>
-            <td valign="top" >
+            <td valign="top" style="width: 250px;" >
               <p>
                 <%#((AjusteDto) (Container.DataItem)).Recepcion.NumeroAseguradora%></p>
             </td>
@@ -240,7 +240,7 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" style="width: 285px;>
+            <td valign="top" style="width: 285px;">
               <p class="label">
                 FECHA Y HORA DE SINIESTRO:</p>
             </td>
@@ -304,47 +304,48 @@
             </td>
           </tr>
           <tr>
-            <td valign="top" width="123">
+            <td valign="top" style="width:260px;" >
               <p class="label">
                 COORDINACIÓN:</p>
             </td>
-            <td valign="top" colspan="2" width="170">
+            <td valign="top"  >
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).InfoInspeccion.PersonaContacto %></p>
             </td>
-            <td valign="top" width="97">
+            <td valign="top" >
               <p class="label">
                 INSPECCIÓN:</p>
             </td>
-            <td>
+            <td valign="top" colspan="2">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).InfoInspeccion.FechaInspeccion %></p>
             </td>
           </tr>
           <tr>
-            <td valign="top" colspan="2" width="217">
+            <td valign="top"  >
               <p class="label">
                 LUGAR DE INSPECCIÓN:</p>
             </td>
-            <td valign="top" colspan="3">
+            <td valign="top" colspan="4">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).InfoInspeccion.LugarInspeccion %></p>
             </td>
           </tr>
           <tr>
-            <td valign="top" colspan="2" width="217">
+            <td valign="top" >
               <p class="label">
                 PERSONA ENTREVISTADA:
               </p>
             </td>
-            <td valign="top" colspan="3">
+            <td valign="top" colspan="4">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).InfoInspeccion.PersonaEntrevistada %></p>
             </td>
           </tr>
         </tbody>
       </table>
-      <p>
+      <div style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).SituacionSiniestro) %>'>
+	  <p>
         &nbsp;</p>
       <table class="TableSection" border="0" cellpadding="0" cellspacing="0">
         <tbody>
@@ -360,6 +361,7 @@
           </tr>
         </tbody>
       </table>
+	  </div>
       <p>
         &nbsp;</p>
       <table class="TableSection" border="0" cellpadding="0" cellspacing="0">
@@ -394,66 +396,60 @@
       <table class="TableSection" border="0" cellpadding="0" cellspacing="0">
         <tbody>
           <tr>
-            <td valign="top" colspan="6">
+            <td valign="top" colspan="5">
               <h2>
                 NOTAS FINALES
               </h2>
             </td>
           </tr>
           <tr>
-            <td valign="top" width="255">
+            <td valign="top" style="width:360px;">
               <p class="label">
                 FAVOR ENVIAR COPIA DE PÓLIZA</p>
             </td>
-            <td valign="top" width="57">
+            <td valign="top" style="width:40px;">
               <p class="label">
                 SI</p>
             </td>
-            <td valign="top" valign="top" width="28">
+            <td valign="top" style="width:28px;">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).EnviarCopiaPoliza == true ? "X" : "" %></p>
             </td>
-            <td valign="top" width="38">
+            <td valign="top" style="width:40px;">
               <p class="label">
                 NO</p>
             </td>
-            <td valign="top" valign="top" width="28">
+            <td valign="top">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).EnviarCopiaPoliza == false ? "X" : "" %></p>
             </td>
-            <td>
-              <p>
-                &nbsp;</p>
-            </td>
+       
           </tr>
           <tr>
-            <td valign="top" width="255">
+            <td valign="top">
               <p class="label">
                 FAVOR ENVIAR No DE SINIESTRO</p>
             </td>
-            <td valign="top" width="57">
+            <td valign="top" >
               <p class="label">
                 SI&nbsp;</p>
             </td>
-            <td valign="top" valign="top" width="28">
+            <td valign="top" >
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).EnviaNumeroSiniestro == true ? "X" : "" %></p>
             </td>
-            <td valign="top" width="38">
+            <td valign="top" >
               <p class="label">
                 NO</p>
             </td>
-            <td valign="top" valign="top" width="28">
+            <td valign="top">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).EnviaNumeroSiniestro == false ? "X" : "" %></p>
             </td>
-            <td>
-              <p>
-                &nbsp;</p>
-            </td>
+           
           </tr>
           <tr>
-            <td style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Notas) %>'  valign="top" colspan="6">
+            <td style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Notas) %>'  valign="top" colspan="5">
               <p class="label">
                 NOTAS:</p>
               <div class="text-content">
@@ -471,6 +467,21 @@
       FOTOS
     </h2>
     <uc5:Fotos ID="Fotos1" runat="server" />
+  </div>
+  <div class="Firma">
+  <p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>Atentamente,</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>Ing. Rafael Romero Herbozo</p>
+<p>Registro S.B.S. AN-044</p>
+<p>Gerente General</p>
+
   </div>
   </form>
 </body>

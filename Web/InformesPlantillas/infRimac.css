@@ -68,3 +68,12 @@ ul.List li { list-style:disc; }
 ul.List { margin-left:14px; }
 
 .text-content { padding: 5px; text-align:justify;}
+
+.logo-pasa { width:163px; height:129px;  }
+
+.Header { position: relative; width:100%; text-align:right; }
+.Header .logo-pasa { }
+.footer { width: 80%; margin: 0 auto;}
+.footer td p { font-size:12px; margin:0px;font-family:Arial, Helvetica;  }
+.footer td p.bold { font-weight:bold; }
+

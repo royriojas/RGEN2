@@ -140,7 +140,7 @@ namespace RGen.docs
             Byte[] informe;
             string InformeURL = "InformesPlantillas/InformeDefault.aspx?AjusteId={0}&TI={1}&nc={2}";
             string HeaderInformeURL = "InformesPlantillas/HeaderInformeDefault.aspx?AjusteId={0}&TI={1}&nc={2}";
-
+            string FooterInformeUrl = String.Empty;
             string tInforme = string.Empty;
 
             String codigoAseguradora = GestorAjuste.GetCodigoAseguradora(ajusteId);
@@ -150,7 +150,8 @@ namespace RGen.docs
 
             if (rimac)
             {
-                HeaderInformeURL = null;
+                HeaderInformeURL = "InformesPlantillas/HeaderRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                FooterInformeUrl = "InformesPlantillas/FooterRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
             }
 
             tipoInforme = GetTipoInforme(tipoInforme);
@@ -218,12 +219,43 @@ namespace RGen.docs
                     break;
             }
 
-            informe = !string.IsNullOrEmpty(HeaderInformeURL)
+            /*informe = !string.IsNullOrEmpty(HeaderInformeURL)
                           ? Util.GetPdf(
                                 Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks)),
                                 Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, tInforme, DateTime.Now.Ticks)))
                           : Util.GetPdf(
-                                Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks)));
+                               Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks)));*/
+
+            try
+            {
+                if (!string.IsNullOrEmpty(InformeURL))
+                {
+                    InformeURL = Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks));
+                }
+
+                if (!string.IsNullOrEmpty(HeaderInformeURL))
+                {
+                    HeaderInformeURL =
+                        Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, tInforme, DateTime.Now.Ticks));
+                }
+
+                if (!string.IsNullOrEmpty(FooterInformeUrl))
+                {
+                    FooterInformeUrl =
+                        Util.ResolveURL(String.Format(FooterInformeUrl, ajusteId, tInforme, DateTime.Now.Ticks));
+                }
+
+                informe = Util.GetPdf(InformeURL,
+                                  HeaderInformeURL,
+                                  FooterInformeUrl);
+
+            }
+            catch(Exception ex)
+            {
+                informe = null;
+            }
+
+            
             return informe;
 
         }
