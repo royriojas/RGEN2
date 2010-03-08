@@ -17,9 +17,9 @@
   Width="100%" runat="server" DefaultMode="ReadOnly" DataSourceID="odsInforme">
   <ItemTemplate>
     <div class="Caratula">
-      <table >
+      <table style="width:100%" >
         <tr>
-          <td class="label" valign="top" style="width: 380px">
+          <td class="label" valign="top" style="width: 480px">
             INFORME
           </td>
           <td style="width: 10px">
@@ -41,7 +41,7 @@
             <span class="bold">:</span>
           </td>
           <td>
-            <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
+            <%# String.Format("{0:D}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
           </td>
         </tr>
         <tr>

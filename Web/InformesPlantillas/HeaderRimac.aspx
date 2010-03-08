@@ -13,7 +13,7 @@
     <div>
       <div class="Header">
 			  <div class="logo-pasa">
-          <asp:Image ID="Image1" ImageUrl="~/InformesPlantillas/assets/header.gif" Width="163px" Height="129px" runat="server" />
+          <asp:Image ID="Image1" ImageUrl="~/InformesPlantillas/assets/header.gif" Width="220px" Height="170px" runat="server" />
 			  </div>
       </div>
     </div>
