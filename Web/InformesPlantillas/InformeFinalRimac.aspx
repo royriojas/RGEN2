@@ -61,7 +61,10 @@
         <p>
           &nbsp;</p>
         <p class="Bold">
-          Att. : SR(A). <span class="Underline"> <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %> </span></p>
+          Att. : SR(A). <span class="Underline">
+            <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %>
+          </span>
+        </p>
         <p>
           &nbsp;</p>
         <uc5:Caratula ID="Caratula1" runat="server" />
@@ -142,14 +145,14 @@
                 <!-- TODO -->
               </div>
               <div class="subSeccion">
-                <table>
+                <table width="100%">
                   <tr>
-                    <td>
+                    <td style="width: 500px;">
                       <h4>
                         Cobertura Aplicable (RAMO)</h4>
                     </td>
                     <td>
-                      <h4>
+                      <h4 style="text-align: right;">
                         Suma Asegurada</h4>
                     </td>
                   </tr>
@@ -157,11 +160,11 @@
                     <td>
                       <%# ((AjusteDto) Container.DataItem).Poliza.Cobertura %>
                     </td>
-                    <td>
-                      <!-- //TODO Check this -->
-                       <!-- //TODO Check this -->
-                      <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
-                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
+                    <td valign="top" align="right">
+                      <span style="text-align: right;">
+                        <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada%>
+                        <%# String.Format("{0:#,###.00}",((AjusteDto) (Container.DataItem)).SumaAsegurada) %>
+                      </span>
                     </td>
                   </tr>
                 </table>
@@ -189,8 +192,7 @@
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
                 <%# ((AjusteDto) Container.DataItem).Reclamo %></p>
-                <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
-                
+              <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">
               <h3>
@@ -214,7 +216,7 @@
                 <h4>
                   Comentarios Sobre Valores Declarados</h4>
                 <%# ((AjusteDto) Container.DataItem).ValoresDeclarados %>
-              </div
+              </div>
             </div>
             <div class="infoSeccion">
               <h3>
@@ -241,27 +243,23 @@
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de asignación</p>
-                    
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de Inspección</p>
-                    
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de envío de Informe Básico</p>
-                   
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de Envío de Informe Preliminar</p>
-                    
                   </td>
                 </tr>
                 <tr>
                   <td valign="top">
-                   <p style="text-align: center;">
+                    <p style="text-align: center;">
                       <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).Recepcion.Recepcion)%></p>
                   </td>
                   <td valign="top">
@@ -269,7 +267,7 @@
                       <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).InfoInspeccion.FechaInspeccion)%></p>
                   </td>
                   <td valign="top">
-                     <p style="text-align: center;">
+                    <p style="text-align: center;">
                       <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).FechaEnvioIB)%></p>
                   </td>
                   <td valign="top">
@@ -281,12 +279,10 @@
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de recepción de último documento</p>
-                  
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha en que envían Convenio de Ajuste</p>
-                  
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
@@ -295,7 +291,6 @@
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha del Informe Final</p>
-                  
                   </td>
                 </tr>
                 <tr>

@@ -147,15 +147,14 @@
                 <!-- TODO -->
               </div>
               <div class="subSeccion">
-                <table>
+                <table width="100%">
                   <tr>
-                    <td style="width: 400px;">
-
+                    <td style="width: 500px;">
                       <h4>
                         Cobertura Aplicable (RAMO)</h4>
                     </td>
                     <td>
-                      <h4>
+                      <h4 style="text-align: right;">
                         Suma Asegurada</h4>
                     </td>
                   </tr>
@@ -163,14 +162,11 @@
                     <td>
                       <%# ((AjusteDto) Container.DataItem).Poliza.Cobertura %>
                     </td>
-                    <td>
-                      <!-- //TODO Check this -->
-
-                      <%# ((AjusteDto)Container.DataItem).MonedaSumaAsegurada %>
-                      <%#  
-                        String.Format("{0:#,###.00}", ((AjusteDto) Container.DataItem).SumaAsegurada)
-                      %>
-
+                    <td valign="top" align="right">
+                      <span style="text-align: right;">
+                        <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada%>
+                        <%# String.Format("{0:#,###.00}",((AjusteDto) (Container.DataItem)).SumaAsegurada) %>
+                      </span>
                     </td>
                   </tr>
                 </table>

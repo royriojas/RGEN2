@@ -37,8 +37,8 @@ div.ImageTitle { font-size:18px !important; padding:6px;}
 
 .infPreliminarTitle { font-weight:bold; text-decoration:underline; text-align:center; font-size: 28px; }
 
-.infoSeccion h3 { font-weight:bold; text-decoration:underline;font-size:24px; margin-top:18px; margin-bottom:12px; }
-.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:22px; }
+.infoSeccion h3 { font-weight:bold; text-decoration:underline;font-size:28px; margin-top:18px; margin-bottom:12px; }
+.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:24px; }
 .infoSeccion, .infoSeccion p { font-size:20px; text-align:justify;}
 .subSeccion, .subSeccion p { font-size:20px; text-align:justify; }
 
