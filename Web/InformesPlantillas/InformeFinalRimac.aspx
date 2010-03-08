@@ -191,7 +191,7 @@
               <p>
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
-                <%# ((AjusteDto) Container.DataItem).Reclamo %>.</p>
+                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>.</p>
               <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">

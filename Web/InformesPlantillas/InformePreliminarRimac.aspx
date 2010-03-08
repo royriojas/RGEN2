@@ -193,7 +193,7 @@
               <p>
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
-                <%# ((AjusteDto) Container.DataItem).Reclamo %>.</p>
+                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>.</p>
               <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">
@@ -212,7 +212,7 @@
               <p>
                 Recomendamos establecer una Reserva Neta de <span class="bold">
                   <%# ((AjusteDto) Container.DataItem).MonedaReservaSimbolo %>
-                  <%# ((AjusteDto) Container.DataItem).Reserva %></span>.</p>
+                   <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reserva)%></span>.</p>
               <%# ((AjusteDto) Container.DataItem).DescripcionReserva %>
             </div>
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Salvamentoyrecupero) %>'>
