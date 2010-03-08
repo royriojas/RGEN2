@@ -58,8 +58,10 @@
           Las Begonias N° 475 3er. Piso</p>
         <p class="Bold">
           Lima 27 - PERÚ</p>
+        <p>
+          &nbsp;</p>
         <p class="Bold">
-          Att. : <span class="Underline">SR./</span></p>
+          Att. : SR(A). <span class="Underline"> <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %> </span></p>
         <p>
           &nbsp;</p>
         <uc5:Caratula ID="Caratula1" runat="server" />
@@ -157,9 +159,9 @@
                     </td>
                     <td>
                       <!-- //TODO Check this -->
-                      <%# ((AjusteDto) Container.DataItem).SumaAsegurada 
-                      
-                      %>
+                       <!-- //TODO Check this -->
+                      <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
+                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                     </td>
                   </tr>
                 </table>
@@ -200,15 +202,20 @@
                 <%# ((AjusteDto) Container.DataItem).VerificacionGarantias %>
               </div>
             </div>
-            <%-- <div class="infoSeccion">
+            <div class="infoSeccion">
               <h3>
                 DETALLE DE LA PÉRDIDA Y AJUSTE</h3>
               <p>
                 Luego de evaluar los documentos de sustento remitidos por el Asegurado, hemos establecido
-                la siguiente liquidación
+                la siguiente liquidación:
               </p>
-              <%# ((AjusteDto) Container.DataItem).de %>
-            </div>--%>
+              <%# ((AjusteDto) Container.DataItem).PerdidaYajuste %>
+              <div class="subSeccion">
+                <h4>
+                  Comentarios Sobre Valores Declarados</h4>
+                <%# ((AjusteDto) Container.DataItem).ValoresDeclarados %>
+              </div
+            </div>
             <div class="infoSeccion">
               <h3>
                 SALVAMENTO / RECUPERO</h3>
@@ -234,68 +241,77 @@
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de asignación</p>
-                    <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).Recepcion.Recepcion)%></p>
+                    
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de Inspección</p>
-                    <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).InfoInspeccion.FechaInspeccion)%></p>
+                    
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de envío de Informe Básico</p>
-                    <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).FechaEnvioIB)%></p>
+                   
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
                       Fecha de Envío de Informe Preliminar</p>
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <td valign="top">
+                   <p style="text-align: center;">
+                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).Recepcion.Recepcion)%></p>
+                  </td>
+                  <td valign="top">
+                    <p style="text-align: center;">
+                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).InfoInspeccion.FechaInspeccion)%></p>
+                  </td>
+                  <td valign="top">
+                     <p style="text-align: center;">
+                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).FechaEnvioIB)%></p>
+                  </td>
+                  <td valign="top">
                     <p style="text-align: center;">
                       <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).FechaEnvioIP)%></p>
                   </td>
                 </tr>
                 <tr>
                   <td valign="top">
-                    <p>
-                      &nbsp;</p>
+                    <p style="text-align: center;">
+                      Fecha de recepción de último documento</p>
+                  
                   </td>
                   <td valign="top">
-                    <p>
-                      &nbsp;</p>
+                    <p style="text-align: center;">
+                      Fecha en que envían Convenio de Ajuste</p>
+                  
                   </td>
                   <td valign="top">
-                    <p>
-                      &nbsp;</p>
+                    <p style="text-align: center;">
+                      Fecha en que reciben Convenio Firmado</p>
                   </td>
                   <td valign="top">
-                    <p>
-                      &nbsp;</p>
+                    <p style="text-align: center;">
+                      Fecha del Informe Final</p>
+                  
                   </td>
                 </tr>
                 <tr>
                   <td valign="top">
                     <p style="text-align: center;">
-                      Fecha de recepción de último documento</p>
-                    <p style="text-align: center;">
                       <%# String.Format("{0:D}", ((AjusteDto) Container.DataItem ).FechaRecepcionDocumentacion) %></p>
                   </td>
                   <td valign="top">
-                    <p style="text-align: center;">
-                      Fecha en que envían Convenio de Ajuste</p>
                     <p style="text-align: center;">
                       <%# String.Format("{0:D}",((AjusteDto) Container.DataItem).InfoConvenioAjuste.FechaConvenio)  %></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      Fecha en que reciben Convenio Firmado</p>
-                    <p style="text-align: center;">
                       <%#  string.Format("{0:D}", ((AjusteDto) Container.DataItem).InfoConvenioAjuste.FechaRecepcionConvenioFirmado) %></p>
                   </td>
                   <td valign="top">
-                    <p style="text-align: center;">
-                      Fecha del Informe Final</p>
                     <p style="text-align: center;">
                       <%#  string.Format("{0:D}", ((AjusteDto) Container.DataItem).FechaEnvioIF)  %></p>
                   </td>

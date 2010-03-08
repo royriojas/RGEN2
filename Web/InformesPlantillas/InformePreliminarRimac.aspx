@@ -58,6 +58,8 @@
           Las Begonias N° 475 3er. Piso</p>
         <p class="Bold">
           Lima 27 - PERÚ</p>
+        <p>
+          &nbsp;</p>
         <p class="Bold">
           Att. : SR(A). <span class="Underline">
             <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %>
@@ -148,6 +150,7 @@
                 <table>
                   <tr>
                     <td style="width: 400px;">
+
                       <h4>
                         Cobertura Aplicable (RAMO)</h4>
                     </td>
@@ -162,10 +165,12 @@
                     </td>
                     <td>
                       <!-- //TODO Check this -->
+
                       <%# ((AjusteDto)Container.DataItem).MonedaSumaAsegurada %>
                       <%#  
                         String.Format("{0:#,###.00}", ((AjusteDto) Container.DataItem).SumaAsegurada)
                       %>
+
                     </td>
                   </tr>
                 </table>

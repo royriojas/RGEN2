@@ -515,7 +515,7 @@
             </div>
           </div>    
           
-          <div class="Group DetallePoliza IFF">
+          <div class="Group DetallePoliza IFP">
             <div class="Legend">
               <h2>
                 <span>Detalle de la Póliza</span></h2>

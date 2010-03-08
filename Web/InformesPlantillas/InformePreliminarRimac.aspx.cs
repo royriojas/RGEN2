@@ -41,7 +41,7 @@ public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.P
         HtmlGenericControl groupIPreliminar2 = FormViewInforme.FindControl("_groupIPreliminar2") as HtmlGenericControl;
         if (groupIPreliminar2 != null)
         {
-            groupIPreliminar2.Visible = !IsComplementary;
+            groupIPreliminar2.Visible = !IsComplementary && groupIPreliminar2.Visible;
         }
         HtmlGenericControl groupIComplementario = FormViewInforme.FindControl("_groupIComplementario") as HtmlGenericControl;
         if (groupIComplementario != null)
