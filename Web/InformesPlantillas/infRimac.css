@@ -38,8 +38,8 @@ div.ImageTitle { font-size:18px !important; padding:6px;}
 .infPreliminarTitle { font-weight:bold; text-decoration:underline; text-align:center; font-size: 28px; }
 
 .infoSeccion h3 { font-weight:bold; text-decoration:underline;font-size:30px; margin-top:18px; margin-bottom:12px; }
-.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:24px; }
-.infoSeccion, .infoSeccion p { font-size:22px; text-align:justify;}
+.subSeccion h4 { font-weight:bold; text-decoration:underline;font-size:26px; }
+.infoSeccion, .infoSeccion p { font-size:22px; text-align:justify; line-height: 32px;}
 .subSeccion, .subSeccion p { font-size:22px; text-align:justify; }
 
 table.ReportCell td { padding: 5px 0px 5px 0px; }

@@ -42,6 +42,7 @@
 					'<li><a class="LinkButton Observate Little" href=""><span>Observar</span></a></li>' +
 					'<li><a class="LinkButton Preview Little" target="_blank" href="<%= String.Format( ResolveClientUrl("~/vVistaPrevia.aspx?AjusteId={0}&TI={1}"), Request.QueryString["AjusteId"] , GetTipoInforme()) %>"><span>Vista Previa HTML</span></a></li>' +
 					'<li><a class="LinkButton PreviewPDF Little" target="_blank" href=""><span>Vista Previa PDF</span></a></li>' +
+					'<li><a class="LinkButton ImprimirPDF Little" target="_blank" href=""><span>Imprimir PDF</span></a></li>' +
 				'</ul>' +
 			'</div>';
 
@@ -71,6 +72,11 @@
             $('a.LinkButton.PreviewPDF').click(function() {
                 //window.top.ShowReport('genPreview.aspx?AjusteId='+ajusteId+'&TI=' + tipoInforme+'&NOW=NOW', 229, 75, null);   
                 window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreview.aspx?AjusteId={0}&TI={1}&NOW=NOW&nc={2}", Request.QueryString["AjusteId"], GetTipoInforme() , DateTime.Now.Ticks)) %>', 229, 75, null);
+                return false;
+            });
+
+            $('a.LinkButton.ImprimirPDF').click(function() {
+                window.top.ShowReport('<%= ResolveUrl(string.Format("~/genPreviewImprimir.aspx?AjusteId={0}&TI={1}&NOW=NOW&nc={2}", Request.QueryString["AjusteId"], GetTipoInforme() , DateTime.Now.Ticks)) %>', 229, 75, null);
                 return false;
             });
 			

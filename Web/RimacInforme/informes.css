@@ -26,8 +26,9 @@ a.LinkButton.Generate { background:url(scripts/css/assets/approve.jpg) no-repeat
 a.LinkButton.Observate { background:url(scripts/css/assets/reject.gif) no-repeat;}
 a.LinkButton.Preview { background:url(scripts/css/assets/previewInforme.jpg) no-repeat;}
 a.LinkButton.PreviewPDF { background:url(scripts/css/assets/previewpdf.jpg) no-repeat;}
+a.LinkButton.ImprimirPDF { background:url(scripts/css/assets/printPdf.gif) no-repeat;}
 .Group .Legend  { position:relative; }
-.ActionBar.CommandButtons { width: 110px; height: 17px; right:0px; position:absolute; top:5px; display:none; }
+.ActionBar.CommandButtons { width: 130px; height: 17px; right:0px; position:absolute; top:5px; display:none; }
 
 .Group .Legend.hover .ActionBar.CommandButtons {  display: block; }
 /*.InitialHide {display:none;}*/

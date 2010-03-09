@@ -47,8 +47,8 @@
       DefaultMode="ReadOnly" DataSourceID="odsInforme">
       <ItemTemplate>
         <p class="DateSalute">
-          Lima,
-          <%= DateTime.Now.ToLongDateString() %></p>
+         LIMA,
+          <%=String.Format("{0:dd MMMM, yyyy}", DateTime.Now).ToUpper()%></p>
         <h2 class="RimacLogo">
           RÍMAC
         </h2>
@@ -260,19 +260,19 @@
                 <tr>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).Recepcion.Recepcion)%></p>
+                      <%#  String.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).Recepcion.Recepcion)%></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).InfoInspeccion.FechaInspeccion)%></p>
+                      <%#  String.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).InfoInspeccion.FechaInspeccion)%></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).FechaEnvioIB)%></p>
+                      <%#  String.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).FechaEnvioIB)%></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%#  String.Format("{0:D}", ((AjusteDto)Container.DataItem).FechaEnvioIP)%></p>
+                      <%#  String.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).FechaEnvioIP)%></p>
                   </td>
                 </tr>
                 <tr>
@@ -296,19 +296,19 @@
                 <tr>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%# String.Format("{0:D}", ((AjusteDto) Container.DataItem ).FechaRecepcionDocumentacion) %></p>
+                      <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).FechaRecepcionDocumentacion)%></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%# String.Format("{0:D}",((AjusteDto) Container.DataItem).InfoConvenioAjuste.FechaConvenio)  %></p>
+                      <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).InfoConvenioAjuste.FechaConvenio)%></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%#  string.Format("{0:D}", ((AjusteDto) Container.DataItem).InfoConvenioAjuste.FechaRecepcionConvenioFirmado) %></p>
+                      <%#  string.Format("{0:dd/MM/yyyy}", ((AjusteDto)Container.DataItem).InfoConvenioAjuste.FechaRecepcionConvenioFirmado)%></p>
                   </td>
                   <td valign="top">
                     <p style="text-align: center;">
-                      <%#  string.Format("{0:D}", ((AjusteDto) Container.DataItem).FechaEnvioIF)  %></p>
+                      <%#  string.Format("{0:dd/MM/yyyy}", ((AjusteDto) Container.DataItem).FechaEnvioIF)  %></p>
                   </td>
                 </tr>
               </tbody>

@@ -32,8 +32,8 @@
     OnDataBound="DoDataBound" DefaultMode="ReadOnly" DataSourceID="odsInforme">
     <ItemTemplate>
       <p class="DateSalute">
-        Lima,
-        <%= DateTime.Now.ToLongDateString() %></p>
+       LIMA,
+          <%=String.Format("{0:dd MMMM, yyyy}", DateTime.Now).ToUpper()%></p>
       <h1 class="InfTitle">
         INFORME BÁSICO AJUSTE No.
         <%#((AjusteDto) (Container.DataItem)).NumeroAjuste%>

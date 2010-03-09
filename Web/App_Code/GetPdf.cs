@@ -261,6 +261,127 @@ namespace RGen.docs
         }
 
 
+        private static byte[] GetInformeImprimirInBytes(decimal ajusteId, string tipoInforme)
+        {
+            Byte[] informe;
+            string InformeURL = "InformesPlantillas/InformeDefault.aspx?AjusteId={0}&TI={1}&nc={2}";
+            string HeaderInformeURL = "InformesPlantillas/HeaderInformeDefault.aspx?AjusteId={0}&TI={1}&nc={2}";
+            string FooterInformeUrl = String.Empty;
+            string tInforme = string.Empty;
+
+            String codigoAseguradora = GestorAjuste.GetCodigoAseguradora(ajusteId);
+
+            bool pacifico = (codigoAseguradora == "PACIFICO");
+            bool rimac = (codigoAseguradora == "RIMAC");
+
+            if (rimac)
+            {
+                HeaderInformeURL = "InformesPlantillas/HeaderImprimirRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                FooterInformeUrl = "InformesPlantillas/FooterImprimirRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+            }
+
+            tipoInforme = GetTipoInforme(tipoInforme);
+
+
+            switch (tipoInforme)
+            {
+
+                case "B":
+                    {
+                        if (pacifico)
+                        {
+                            InformeURL = "InformesPlantillas/InformePacificoBasico.aspx?AjusteId={0}&TI={1}&nc={2}";
+
+                        }
+                        if (rimac)
+                        {
+                            InformeURL = "InformesPlantillas/InformeBasicoRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        tInforme = "IB";
+                        //informe = Util.GetPdf(Util.ResolveURL(String.Format(InformeURL, ajusteId, "IB")), Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, "IB")));
+                        break;
+                    }
+                case "P":
+                    {
+                        if (pacifico)
+                        {
+                            InformeURL = "InformesPlantillas/InformePacificoPreliminar.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        if (rimac)
+                        {
+                            InformeURL = "InformesPlantillas/InformePreliminarRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        //informe = Util.GetPdf(Util.ResolveURL(String.Format(InformeURL, ajusteId, "IP")), Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, "IP")));
+                        tInforme = "IP";
+                        break;
+                    }
+                case "C":
+                    {
+                        if (pacifico)
+                        {
+                            InformeURL = "InformesPlantillas/InformePacificoPreliminar.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        if (rimac)
+                        {
+                            InformeURL = "InformesPlantillas/InformePreliminarRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        //informe = Util.GetPdf(Util.ResolveURL(String.Format(InformeURL, ajusteId, "IC")), Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, "IC")));
+                        tInforme = "IC";
+                        break;
+                    }
+                case "F":
+                    {
+                        if (pacifico)
+                        {
+                            InformeURL = "InformesPlantillas/InformePacificoFinal.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        if (rimac)
+                        {
+                            InformeURL = "InformesPlantillas/InformeFinalRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                        }
+                        tInforme = "IF";
+
+                    }
+                    break;
+            }
+
+         
+            try
+            {
+                if (!string.IsNullOrEmpty(InformeURL))
+                {
+                    InformeURL = Util.ResolveURL(String.Format(InformeURL, ajusteId, tInforme, DateTime.Now.Ticks));
+                }
+
+                if (!string.IsNullOrEmpty(HeaderInformeURL))
+                {
+                    HeaderInformeURL =
+                        Util.ResolveURL(String.Format(HeaderInformeURL, ajusteId, tInforme, DateTime.Now.Ticks));
+                }
+
+                if (!string.IsNullOrEmpty(FooterInformeUrl))
+                {
+                    FooterInformeUrl =
+                        Util.ResolveURL(String.Format(FooterInformeUrl, ajusteId, tInforme, DateTime.Now.Ticks));
+                }
+
+                informe = Util.GetPdf(InformeURL,
+                                  HeaderInformeURL,
+                                  FooterInformeUrl);
+
+            }
+            catch (Exception ex)
+            {
+                informe = null;
+            }
+
+
+            return informe;
+
+        }
+
+
+
 
         private static void enviaNotificacionInformes(string tipoInforme, decimal AjusteId, String path)
         {
@@ -678,6 +799,11 @@ namespace RGen.docs
         public static Byte[] GetMyInformeNow(int AjusteId, string TipoInforme)
         {
             return GetInformeInBytes(Convert.ToDecimal(AjusteId), TipoInforme);
+        }
+
+        public static Byte[] GetMyInformeImprimirNow(int AjusteId, string TipoInforme)
+        {
+            return GetInformeImprimirInBytes(Convert.ToDecimal(AjusteId), TipoInforme);
         }
     }
 }

@@ -63,15 +63,15 @@
     </cc1:Repeater>--%>
   <cc1:Repeater ID="Repeater1" runat="server" DataSourceID="odsOcurrenciaDetalle" OnItemDataBound="Repeater1_ItemDataBound">
     <HeaderTemplate>
-      <ul>
+      
     </HeaderTemplate>
     <ItemTemplate>
-      <li>
+      
         <%#R3M.Common.Util.ReplaceASBR(Eval("Bienes"))%>
-      </li>
+      
     </ItemTemplate>
     <FooterTemplate>
-      </ul>
+      
     </FooterTemplate>
   </cc1:Repeater>
   <asp:ObjectDataSource ID="odsOcurrenciaDetalle" runat="server" OldValuesParameterFormatString="original_{0}"

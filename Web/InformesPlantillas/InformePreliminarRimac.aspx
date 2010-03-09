@@ -47,8 +47,8 @@
       DefaultMode="ReadOnly" DataSourceID="odsInforme" OnDataBound="DoDataBound">
       <ItemTemplate>
         <p class="DateSalute">
-          Lima,
-          <%= DateTime.Now.ToLongDateString() %></p>
+         LIMA,
+          <%=String.Format("{0:dd MMMM, yyyy}", DateTime.Now).ToUpper()%></p>
         <h2 class="RimacLogo">
           RÍMAC
         </h2>

@@ -41,7 +41,7 @@
             <span class="bold">:</span>
           </td>
           <td>
-            <%# String.Format("{0:D}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
+            <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
           </td>
         </tr>
         <tr>
@@ -181,7 +181,7 @@
             <span class="bold">:</span>
           </td>
           <td>
-            <%# String.Format("{0:D}", ((AjusteDto) (Container.DataItem)).FechaYHoraSiniestro) %>
+            <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto)(Container.DataItem)).FechaYHoraSiniestro)%>
           </td>
         </tr>
         <tr>
