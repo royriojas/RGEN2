@@ -247,7 +247,7 @@ namespace R3M.Common
             pdfConverter.PdfDocumentOptions.ShowFooter = true;
             pdfConverter.PdfDocumentOptions.LeftMargin = 70;
             pdfConverter.PdfDocumentOptions.RightMargin = 40;
-            pdfConverter.PdfDocumentOptions.TopMargin = 20;
+            pdfConverter.PdfDocumentOptions.TopMargin = 45;
             pdfConverter.PdfDocumentOptions.BottomMargin = 20;
             pdfConverter.PdfDocumentOptions.GenerateSelectablePdf = true;
             //pdfConverter.AvoidImageBreak = true;
