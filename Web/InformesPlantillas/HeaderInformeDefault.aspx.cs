@@ -57,7 +57,7 @@ public partial class InformesPlantillas_HeaderInformeDefault : System.Web.UI.Pag
         {
           decimal gAI = GestorAjuste.dameTotalIndemnizacion(ajusteId);
 
-          mi.Text = gAI.ToString("#,###.00");
+          mi.Text = gAI.ToString("#,##0.00");
         }
 
         return tituloInforme;

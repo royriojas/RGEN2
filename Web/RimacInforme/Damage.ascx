@@ -40,7 +40,7 @@
                 </td>
                 <td valign="top">
                     <div style="text-align: right;">
-                        <%#Eval("estimacion", "{0:#,###.00}")%>
+                        <%#Eval("estimacion", "{0:#,##0.00}")%>
                     </div>
                 </td>
             </tr>
@@ -54,7 +54,7 @@
                 </td>
                 <td valign="top">
                     <div style="text-align: right;">
-                        <%#  SumaDetalleOcurrencia.ToString("#,###.00")%>
+                        <%#  SumaDetalleOcurrencia.ToString("#,##0.00")%>
                     </div>
                 </td>
             </tr>

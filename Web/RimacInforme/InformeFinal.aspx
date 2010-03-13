@@ -291,7 +291,7 @@
                 <div class="FieldWrapper">
                   <p>
                       <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
-                      <%# String.Format("{0:#,###.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
+                      <%# String.Format("{0:#,##0.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                   </p>
                 </div>
                 <div class="doClear">

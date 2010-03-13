@@ -163,7 +163,7 @@
                     <td valign="top" align="right">
                       <span style="text-align: right;">
                         <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada%>
-                        <%# String.Format("{0:#,###.00}",((AjusteDto) (Container.DataItem)).SumaAsegurada) %>
+                        <%# String.Format("{0:#,##0.00}",((AjusteDto) (Container.DataItem)).SumaAsegurada) %>
                       </span>
                     </td>
                   </tr>
@@ -191,7 +191,7 @@
               <p>
                 El Asegurado ha estimado su reclamo en un monto de
                 <%# ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo %>
-                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>.</p>
+                <%# String.Format("{0:#,##0.00}", ((AjusteDto)Container.DataItem).Reclamo)%>.</p>
               <%# ((AjusteDto) Container.DataItem).DescripcionReclamo %>
             </div>
             <div class="infoSeccion">

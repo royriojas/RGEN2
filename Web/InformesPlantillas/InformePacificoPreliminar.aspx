@@ -180,7 +180,7 @@
               :</td>
             <td valign="top">
               <asp:Label ID="monedaReclamoLabel" runat="server" Text='<%# Bind("monedaReclamo") %>'></asp:Label>
-              <asp:Label ID="reclamoLabel" runat="server" Text='<%# Bind("reclamo","{0:#,###.00}") %>'></asp:Label></td>
+              <asp:Label ID="reclamoLabel" runat="server" Text='<%# Bind("reclamo","{0:#,##0.00}") %>'></asp:Label></td>
           </tr>
           <tr>
             <td style="width: 210px;" valign="top" class="Negrita">
@@ -190,7 +190,7 @@
               :</td>
             <td valign="top">
               <asp:Label ID="monedaReservaLabel" runat="server" Text='<%# Bind("monedaReserva") %>'></asp:Label>
-              <asp:Label ID="reservaLabel" runat="server" Text='<%# Bind("reserva", "{0:#,###.00}") %>'></asp:Label></td>
+              <asp:Label ID="reservaLabel" runat="server" Text='<%# Bind("reserva", "{0:#,##0.00}") %>'></asp:Label></td>
           </tr>
         </table>
         <asp:HiddenField ID="hdfSiniestroCia" runat="server" Value='<%# Bind("numeroSiniestroCia") %>' />
@@ -314,7 +314,7 @@
                   <asp:Label ID="localLabel" runat="server" Text='<%#(Eval("LocalDelBien"))%>'></asp:Label></td>
                 <td valign="top">
                   <div align="right" style="text-align:right;">
-                    <asp:Label ID="montoLabel" runat="server" Text='<%#Eval("estimacion", "{0:#,###.00}")%>'></asp:Label>
+                    <asp:Label ID="montoLabel" runat="server" Text='<%#Eval("estimacion", "{0:#,##0.00}")%>'></asp:Label>
                   </div>
                 </td>
               </tr>
@@ -328,7 +328,7 @@
                 </td>
                 <td valign="top">
                   <div align="right" style="text-align:right;">
-                    <%# this.SumaDetalleOcurrencia.ToString("#,###.00")%>
+                    <%# this.SumaDetalleOcurrencia.ToString("#,##0.00")%>
                   </div>
                 </td>
               </tr>
@@ -409,13 +409,13 @@
             <td valign="top">
               <div align="right" style="text-align:right;">
                 <asp:Label ID="simboloLabel" runat="server" Text='<%#Eval("simbolo")%>' Style='<%# CCSOL.Utiles.Utilidades.IsNull(Eval("monto")) %>'></asp:Label>
-                <asp:Label ID="montoLabel" runat="server" Text='<%#Eval("monto", "{0:#,###.00}")%>'></asp:Label>
+                <asp:Label ID="montoLabel" runat="server" Text='<%#Eval("monto", "{0:#,##0.00}")%>'></asp:Label>
               </div>
             </td>
             <td valign="top">
               <div align="right" style="text-align:right;">
                 <asp:Label ID="simbolo2Label" runat="server" Text='<%#Eval("simbolo")%>' Style='<%# CCSOL.Utiles.Utilidades.IsNull(Eval("montoAsegurado2")) %>'></asp:Label>
-                <asp:Label ID="montoAsegurado2" runat="server" Text='<%#Eval("montoAsegurado2", "{0:#,###.00}")%>'></asp:Label>
+                <asp:Label ID="montoAsegurado2" runat="server" Text='<%#Eval("montoAsegurado2", "{0:#,##0.00}")%>'></asp:Label>
               </div>
             </td>
           </tr>

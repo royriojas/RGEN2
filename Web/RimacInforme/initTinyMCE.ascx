@@ -63,7 +63,27 @@
                 username: "RGEN",
                 staffid: "991234"
             },
-            width: "825"
+            width: "825",
+			setup : function(ed) {
+				// Gets executed after DOM to HTML string serialization
+				ed.onPostProcess.add(function(ed, o) {
+					// State get is set when contents is extracted from editor
+					//if (o.get) {
+						// Replace all strong/b elements with em elements
+						//o.content = o.content.replace(/<(strong|b)([^>]*)>/g, '');						
+					o.content = o.content.replace(/width\s*=\s*["']\s*\d*\s*(px|%)*["']/g, '');
+					o.content = o.content.replace(/height\s*=\s*["']\s*\d*\s*(px|%)*["']/g, '');
+					
+					var $content = $('<div></div>');
+					$content.append(o.content);
+					$content.find('table').removeAttr('width').css('width','100%');
+					$content.find('td').removeAttr('width').attr('style','');
+					//$content.find('table tr td:first').css('width', '70%').css('width','30%');
+					
+					o.content = $content.html();
+					//}
+				});
+			}
             
         });
     });

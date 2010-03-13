@@ -692,7 +692,7 @@ window.onunload= function () {
                                                       <asp:Label ID="Label1" runat="server" Text='<%# muestraSimbolo((Eval("aseguradoraId")),(Eval("brokerId")),Eval("simbolo"),Eval("EstimadoReserva")) %>'></asp:Label>
                                                       <br />
                                                       <asp:Label
-                                                        ID="Label2" runat="server" Text='<%# muestraReserva((Eval("aseguradoraId")),(Eval("brokerId")),Eval("EstimadoReserva","{0:#,###.00}")) %>'></asp:Label>
+                                                        ID="Label2" runat="server" Text='<%# muestraReserva((Eval("aseguradoraId")),(Eval("brokerId")),Eval("EstimadoReserva","{0:#,##0.00}")) %>'></asp:Label>
                                                     </ItemTemplate>
                                                 </asp:TemplateField>
                                               <asp:BoundField DataField="aseguradoraId" HeaderText="aseguradoraId" SortExpression="aseguradoraId"

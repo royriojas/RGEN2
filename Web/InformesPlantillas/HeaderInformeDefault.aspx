@@ -115,7 +115,7 @@
                     :</td>
                   <td style="text-align: left">
                     <asp:Label ID="monedaLabel" runat="server" Text='<%# Bind("moneda") %>'></asp:Label>
-                    <asp:Label ID="reservaLabel" runat="server" Text='<%# Eval("reserva", "{0:#,###.00}") %>'></asp:Label></td>
+                    <asp:Label ID="reservaLabel" runat="server" Text='<%# Eval("reserva", "{0:#,##0.00}") %>'></asp:Label></td>
                 </tr>
               </table>
             </ItemTemplate>

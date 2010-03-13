@@ -42,13 +42,13 @@
                 <td valign="top">
                     <div style='<%# CCSOL.Utiles.Utilidades.IsNull(Eval("monto")) %>; text-align: right;'>
                         <asp:Label ID="simboloLabel" runat="server" Text='<%# Eval("simbolo")%>'></asp:Label>
-                        <asp:Label ID="montoLabel" runat="server" Text='<%# Eval("monto", "{0:#,###.00}")%>'></asp:Label>
+                        <asp:Label ID="montoLabel" runat="server" Text='<%# Eval("monto", "{0:#,##0.00}")%>'></asp:Label>
                     </div>
                 </td>
                 <td valign="top">
                     <div style='<%# CCSOL.Utiles.Utilidades.IsNull(Eval("montoAsegurado2")) %> text-align: right;'>
                         <asp:Label ID="simbolo2Label" runat="server" Text='<%# Eval("simbolo")%>'></asp:Label>
-                        <asp:Label ID="montoAsegurado2" runat="server" Text='<%# Eval("montoAsegurado2", "{0:#,###.00}")%>'></asp:Label>
+                        <asp:Label ID="montoAsegurado2" runat="server" Text='<%# Eval("montoAsegurado2", "{0:#,##0.00}")%>'></asp:Label>
                     </div>
                 </td>
             </tr>

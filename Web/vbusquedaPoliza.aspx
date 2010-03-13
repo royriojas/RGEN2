@@ -24,7 +24,7 @@
 	function nuevaPoliza() {
 		var ciaseguros = $('txtAseguradoraId');		
 		var nombreAseguradora = $('txtAseguradoraNombre');
-		document.location.href = 'vRegistroPolizaRapido.aspx?AseguradoraId='+ciaseguros.value+'&indicador=creacionrapida&AseguradoraNombre='+nombreAseguradora.value+'&AjusteId=<%=qStringAjusteId%>';
+		window.location.href = 'vRegistroPolizaRapido.aspx?AseguradoraId='+ciaseguros.value+'&indicador=creacionrapida&AseguradoraNombre='+nombreAseguradora.value+'&AjusteId=<%=qStringAjusteId%>';
 		
 	}
 	function sayHello() {
@@ -120,7 +120,7 @@
                                     <td height="20">
                                         &nbsp;</td>
                                     <td height="20">
-                                        <button class="FormButton" onclick="nuevaPoliza();">
+                                        <button class="FormButton" onclick="nuevaPoliza();return false;">
                                             Nueva P&oacute;liza</button></td>
                                     <td width="17" height="20">
                                         &nbsp;</td>

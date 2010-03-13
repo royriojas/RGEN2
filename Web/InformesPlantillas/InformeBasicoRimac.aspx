@@ -161,7 +161,7 @@
             <td colspan="4">
               <p>
                 <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada %>
-                <%#  String.Format("{0:#,###.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
+                <%#  String.Format("{0:#,##0.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
               </p>
             </td>
           </tr>
@@ -374,7 +374,7 @@
             <td>
               <p>
                 <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReclamoSimbolo)%>
-                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
+                <%# String.Format("{0:#,##0.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
               </p>
             </td>
           </tr>
@@ -386,7 +386,7 @@
             <td>
               <p>
                 <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
-                <%# String.Format("{0:#,###.00}", ((AjusteDto)Container.DataItem).Reserva)%></p>
+                <%# String.Format("{0:#,##0.00}", ((AjusteDto)Container.DataItem).Reserva)%></p>
             </td>
           </tr>
         </tbody>

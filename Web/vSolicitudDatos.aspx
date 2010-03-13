@@ -205,7 +205,7 @@
               runat="server" Text="Guardar" CssClass="FormButton" OnClick="btnGuardarSolicitud_Click"
               Width="110px" ValidationGroup="FrmInsertEdit" />
             <button style="width: 110px; position: absolute; right: 22px; top: 38px;" id="btnGenerarCarta"
-              runat="server" onclick="pideDestinatarios();" class="FormButton" visible="false">
+              runat="server" onclick="pideDestinatarios();return false" class="FormButton" visible="false">
               Generar Carta</button>
           </div>
           <asp:Panel ID="Panel1" runat="server" Visible="False">
