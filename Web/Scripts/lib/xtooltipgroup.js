@@ -72,9 +72,9 @@ xTooltipGroup.prototype.show = function(trigEle, mx, my)
   xMoveTo(this.t, x + this.x, y + this.y);
   try {
 	  this.t.style.filter="blendTrans(Duration=0.5)";
-	  this.t.filters[0].Apply();	
+	  //this.t.filters[0].Apply();	
 	  this.t.style.visibility = "visible";
-	  this.t.filters[0].Play();
+	  //this.t.filters[0].Play();
 	}
 	catch(e){
 	}

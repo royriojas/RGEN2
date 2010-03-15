@@ -239,7 +239,8 @@
             <h3>
               FOTOS</h3>
             <uc6:Fotos ID="Fotos1" OnEmptyFotos="DoEmpty" runat="server" />
-          </div>
+			<div style="clear:both"></div>
+		  </div>
           <div class="infoSeccion">
             <h3 style="text-align: center; text-decoration: underline;">
               Resumen del Caso</h3>
