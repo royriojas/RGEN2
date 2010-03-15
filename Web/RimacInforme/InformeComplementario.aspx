@@ -290,12 +290,20 @@
                 <label>
                   Límites:
                 </label>
-                <div class="FieldWrapper">
+                <!--div class="FieldWrapper">
                   <p>
                       <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
                       <%# String.Format("{0:#,##0.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                   </p>
+                </div-->
+                
+                <div class="FieldWrapper">
+                  <asp:TextBox CssClass="FormText tinymce-simple" Text='<%# Bind("Limites") %>'
+                    TextMode="MultiLine" ID="_txtLimites" runat="server"></asp:TextBox>
                 </div>
+                <div class="doClear">
+                </div>
+                
                 <div class="doClear">
                 </div>
               </div>
@@ -331,7 +339,7 @@
                 <label>
                   Causas del Siniestro</label>
                 <div class="FieldWrapper">
-                  <asp:TextBox ID="_txtCausasSiniestros" Text='<%# Bind("CausasSiniestro") %>' CssClass="FormText tinymce-simple"
+                  <asp:TextBox ID="_txtCausasCaratula" Text='<%# Bind("CausasCaratula") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
@@ -365,8 +373,13 @@
               <div class="Field TextEdit">
                 <label>
                   Daños</label>
-                <div class="FieldWrapper List">
+                <!--div class="FieldWrapper List">
                   <uc4:Damage ID="Damage1" runat="server" />
+                </div-->
+                
+                <div class="FieldWrapper">
+                  <asp:TextBox CssClass="FormText tinymce-simple" Text='<%# Bind("DanosCaratula") %>'
+                    TextMode="MultiLine" ID="_txtDanosCaratula" runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
                 </div>

@@ -48,7 +48,7 @@
       <ItemTemplate>
         <p class="DateSalute">
          LIMA,
-          <%=String.Format("{0:dd MMMM, yyyy}", DateTime.Now).ToUpper()%></p>
+          <%=DateTime.Now.Day.ToString() + " DE " + String.Format("{0:MMMM}", DateTime.Now).ToUpper() + " DEL " + DateTime.Now.Year.ToString()%></p>
         <h2 class="RimacLogo">
           RÍMAC
         </h2>
@@ -60,7 +60,7 @@
           Lima 27 - PERÚ</p>
         <p>
           &nbsp;</p>
-        <p class="Bold">
+        <p class="RimacAtencion">
           Att. : SR(A). <span class="Underline">
             <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %>
           </span>
@@ -118,7 +118,16 @@
               <!-- //TODO Check this -->
               <%#((AjusteDto) Container.DataItem).DescripcionDamage 
               %>
+              
             </div>
+            
+            <div class="infoSeccion" id="_damageDiv" >
+              
+             <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />
+              
+            </div>
+            
+            
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).CausasSiniestro) %>'>
               <h3>
                 CAUSA</h3>
@@ -129,10 +138,10 @@
               <h3>
                 DETALLE DE LA PÓLIZA</h3>
               <p>
-                A continuación resumimos la Póliza N°<%# ((AjusteDto) Container.DataItem).Poliza.PolizaNumber %>
-                contratada por el Asegurado,
+                A continuación resumimos la Póliza Número<%# ((AjusteDto) Container.DataItem).Poliza.PolizaNumber %>
+                contratada por los asegurados Sres.
                 <%# ((AjusteDto) Container.DataItem).InfoAsegurado.Asegurado%>
-                , cuya vigencia es
+                , con vigencia en el periodo
                 <%# ((AjusteDto) Container.DataItem).Poliza.Vigencia %>
                 :</p>
               <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).MateriaAsegurada) %>'>
@@ -225,6 +234,7 @@
                 MEDIDAS CORRECTIVAS</h3>
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
+            <uc7:TitulosAdicionales ID="TitulosAdicionales2" runat="server" />
           </div>
           <div id="_groupIComplementario2" class="groupSection" runat="server">
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Antecedentes) %>'>

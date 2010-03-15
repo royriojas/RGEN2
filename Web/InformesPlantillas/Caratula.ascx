@@ -38,7 +38,7 @@
             FECHA DE INFORME BÁSICO
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
@@ -49,7 +49,7 @@
             SU REF
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Recepcion.NumeroAseguradora) %>
@@ -60,7 +60,7 @@
             NUESTRA REF
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).NumeroAjuste) %>
@@ -71,7 +71,7 @@
             CONTRATANTE
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Contratante) %>
@@ -82,7 +82,7 @@
             ASEGURADO
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Asegurado) %>
@@ -93,7 +93,7 @@
             BROKER
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Broker) %>
@@ -104,7 +104,7 @@
             PÓLIZA
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Poliza.PolizaNumber) %>
@@ -115,7 +115,7 @@
             VIGENCIA
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Poliza.Vigencia ) %>
@@ -126,7 +126,7 @@
             TIPO DE PÓLIZA y RAMO
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0} / {1}", ((AjusteDto)(Container.DataItem)).Poliza.Tipo, ((AjusteDto)(Container.DataItem)).Poliza.Ramo)%>
@@ -137,13 +137,16 @@
             LÍMITES
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
-          <td valign="top">
+          <!--td valign="top">
             <p>
               <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada %>
               <%#  String.Format("{0:#,##0.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
             </p>
+          </td-->
+          <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Limites) %>
           </td>
         </tr>
         <%--<tr>
@@ -156,10 +159,10 @@
             CAUSA
           </td>
           <td valign="top">
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
-            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).CausasSiniestro) %>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).CausasCaratula) %>
           </td>
         </tr>
         <tr>
@@ -167,7 +170,7 @@
             LUGAR
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).LugarDeSiniestro) %>
@@ -178,7 +181,7 @@
             FECHA DE OCURRENCIA
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto)(Container.DataItem)).FechaYHoraSiniestro)%>
@@ -189,18 +192,22 @@
             BIEN / PERSONA AFECTADO (A) / DAÑOS / LESIONES / PERDIDAS
           </td>
           <td valign="top">
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
-          <td valign="top">
+          <!--td valign="top">
             <uc4:Damage ID="Damage2" runat="server" />
+          </td-->
+          <td>
+            <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).DanosCaratula) %>
           </td>
+          
         </tr>
         <tr>
           <td class="label" valign="top">
             RECLAMO
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <%# String.Format("{0}", ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo) %>
@@ -212,7 +219,7 @@
             RESERVA NETA
           </td>
           <td>
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td>
             <span class="bold">
@@ -225,7 +232,7 @@
             INDEMNIZACIÓN
           </td>
           <td valign="top">
-            <span class="bold">:</span>
+            <span class="bold" valign="top">:</span>
           </td>
           <td valign="top">
             <span class="bold">
@@ -236,6 +243,6 @@
       </table>
     </div>
     <div class="pagebreak">
-      &nbsp;</div>
+    </div>
   </ItemTemplate>
 </asp:FormView>

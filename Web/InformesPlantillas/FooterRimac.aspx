@@ -15,9 +15,9 @@
       <tr>
         <td style="width:50%">
           <p class="bold">
-            SAN ISIDRO:</p>
+            LIMA:</p>
           <p>
-            Mariano de los Santos 166</p>
+            Mariano de los Santos 166, San Isidro</p>
           <p>
             Central: (511) 615-3035 Fax: (511) 615-3036</p>
           <p style="color:blue" >
@@ -25,15 +25,13 @@
           <p class="bold">
             REG. S.B.S. Nº APJ 012</p>
         </td>
-        <td style="width:50%">
+        <td style="width:50%" valign = top>
           <p class="bold">
-            AREQUIPA</p>
+            AREQUIPA:</p>
           <p>
             Calle Palacio Viejo 216 Of. 603 Cercado-Arequipa</p>
           <p>
             Central: 281282 Fax: 201316</p>
-          <p>
-            Partida Electrónica Nº 70005787</p>
         </td>
       </tr>
     </table>

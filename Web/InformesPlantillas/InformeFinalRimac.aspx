@@ -48,7 +48,7 @@
       <ItemTemplate>
         <p class="DateSalute">
          LIMA,
-          <%=String.Format("{0:dd MMMM, yyyy}", DateTime.Now).ToUpper()%></p>
+          <%=DateTime.Now.Day.ToString() + " DE " + String.Format("{0:MMMM}", DateTime.Now).ToUpper() + " DEL " + DateTime.Now.Year.ToString()%></p>
         <h2 class="RimacLogo">
           RÍMAC
         </h2>
@@ -60,7 +60,7 @@
           Lima 27 - PERÚ</p>
         <p>
           &nbsp;</p>
-        <p class="Bold">
+        <p class="RimacAtencion">
           Att. : SR(A). <span class="Underline">
             <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %>
           </span>
@@ -116,6 +116,13 @@
               <!-- //TODO Check this -->
               <%#((AjusteDto) Container.DataItem).DescripcionDamage 
               %>
+              
+            </div>
+            
+            <div class="infoSeccion" id="_damageDiv" >
+              
+             <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />
+              
             </div>
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).CausasSiniestro) %>'>
               <h3>
@@ -127,10 +134,10 @@
               <h3>
                 DETALLE DE LA PÓLIZA</h3>
               <p>
-                A continuación resumimos la Póliza N°<%# ((AjusteDto) Container.DataItem).Poliza.PolizaNumber %>
-                contratada por el Asegurado,
+                A continuación resumimos la Póliza Número<%# ((AjusteDto) Container.DataItem).Poliza.PolizaNumber %>
+                contratada por los asegurados Sres.
                 <%# ((AjusteDto) Container.DataItem).InfoAsegurado.Asegurado%>
-                , cuya vigencia es
+                , con vigencia en el periodo
                 <%# ((AjusteDto) Container.DataItem).Poliza.Vigencia %>
                 :</p>
               <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).MateriaAsegurada) %>'>
@@ -207,10 +214,6 @@
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).PerdidaYajuste) %>'>
               <h3>
                 DETALLE DE LA PÉRDIDA Y AJUSTE</h3>
-              <p>
-                Luego de evaluar los documentos de sustento remitidos por el Asegurado, hemos establecido
-                la siguiente liquidación:
-              </p>
               <%# ((AjusteDto) Container.DataItem).PerdidaYajuste %>
               <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).ValoresDeclarados) %>'>
                 <h4>
@@ -227,6 +230,9 @@
               <h3>
                 MEDIDAS CORRECTIVAS</h3>
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
+            </div>
+            <div class="infoSeccion" runat="server">
+                <uc7:TitulosAdicionales ID="TitulosAdicionales1" runat="server" />
             </div>
           </div>
            <div class="infoSeccion" id="_groupIPreliminar2" runat="server">

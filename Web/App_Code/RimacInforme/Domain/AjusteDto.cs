@@ -429,6 +429,27 @@ namespace App_Code.RimacInforme.Domain
             set { _valoresDeclarados = Util.XDefault(value, String.Empty); ; }
         }
 
+        private string _limites;
+        public String Limites
+        {
+            get { return _limites; }
+            set { _limites = Util.XDefault(value, String.Empty); ; }
+        }
+        
+        private string _causasCaratula;
+        public String CausasCaratula
+        {
+            get { return _causasCaratula; }
+            set { _causasCaratula = Util.XDefault(value, String.Empty); ; }
+        }
+
+        private string _danosCaratula;
+        public String DanosCaratula
+        {
+            get { return _danosCaratula; }
+            set { _danosCaratula = Util.XDefault(value, String.Empty); ; }
+        }
+
         
 
 

@@ -150,6 +150,10 @@ namespace App_Code.RimacInforme.Persistence
                     ajusteDto.Seccion = informacionAjusteRow.IsseccionNull() ? "" : informacionAjusteRow.seccion;
                     ajusteDto.PerdidaYajuste = informacionAjusteRow.IsperdidayajusteNull() ? "" : informacionAjusteRow.perdidayajuste;
                     ajusteDto.ValoresDeclarados = informacionAjusteRow.IsvaloresdeclaradosNull() ? "" : informacionAjusteRow.valoresdeclarados;
+
+                    ajusteDto.Limites = informacionAjusteRow.IslimitesNull() ? "" : informacionAjusteRow.limites;
+                    ajusteDto.CausasCaratula = informacionAjusteRow.IscausasCaratulaNull() ? "" : informacionAjusteRow.causasCaratula;
+                    ajusteDto.DanosCaratula = informacionAjusteRow.IsdanosCaratulaNull() ? "" : informacionAjusteRow.danosCaratula;
                 }
 
             }
@@ -357,6 +361,14 @@ namespace App_Code.RimacInforme.Persistence
                         informacionAjusteRow.valoresdeclarados = ajusteDto.ValoresDeclarados;
 
 
+                    if (ajusteDto.Limites != null)
+                        informacionAjusteRow.limites = ajusteDto.Limites;
+                    if (ajusteDto.CausasCaratula != null)
+                        informacionAjusteRow.causasCaratula = ajusteDto.CausasCaratula;
+                    if (ajusteDto.DanosCaratula != null)
+                        informacionAjusteRow.danosCaratula = ajusteDto.DanosCaratula;
+
+                    
                     informacionAjusteTA.Update(informacionAjusteRow);
 
 

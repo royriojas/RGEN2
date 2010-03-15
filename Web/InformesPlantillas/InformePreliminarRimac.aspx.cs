@@ -96,4 +96,14 @@ public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.P
             deduciblesDiv.Visible = false;
         }
     }
+
+    protected void EmptyDamage(object sender, EventArgs e)
+    {
+        //_clausulasDiv
+        HtmlGenericControl damageDiv = FormViewInforme.FindControl("_damageDiv") as HtmlGenericControl;
+        if (damageDiv != null)
+        {
+            damageDiv.Visible = false;
+        }
+    }
 }

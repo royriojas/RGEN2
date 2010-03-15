@@ -33,7 +33,7 @@
     <ItemTemplate>
       <p class="DateSalute">
        LIMA,
-          <%=String.Format("{0:dd MMMM, yyyy}", DateTime.Now).ToUpper()%></p>
+          <%=DateTime.Now.Day.ToString() + " DE " + String.Format("{0:MMMM}", DateTime.Now).ToUpper() + " DEL " + DateTime.Now.Year.ToString()%></p>
       <h1 class="InfTitle">
         INFORME BÁSICO AJUSTE No.
         <%#((AjusteDto) (Container.DataItem)).NumeroAjuste%>
@@ -42,10 +42,11 @@
         ATENCIÓN</p>
       <p class="Bold">
         SRS. RÍMAC</p>
-      <p class="Bold">
-        SR.
-        <%#((AjusteDto) (Container.DataItem)).Recepcion.ConfirmadoCon %>
-      </p>
+      <p class="RimacAtencion">
+          Att. : SR(A). <span class="Underline">
+            <%#((AjusteDto) Container.DataItem).Recepcion.ConfirmadoCon %>
+          </span>
+        </p>
       <p>
         &nbsp;</p>
       <table class="TableSection" width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -159,10 +160,12 @@
                 LÍMITES:</p>
             </td>
             <td colspan="4">
-              <p>
+              <!--p>
                 <%# ((AjusteDto) (Container.DataItem)).MonedaSumaAsegurada %>
                 <%#  String.Format("{0:#,##0.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
-              </p>
+              </p-->
+              <p>
+                <%#((AjusteDto) (Container.DataItem)).Limites%></p>
             </td>
           </tr>
           <tr>
@@ -288,7 +291,9 @@
               <p class="label">
                 DAÑOS:
               </p>
-              <uc4:Damage ID="Damage1" runat="server" />
+              <div class="text-content">
+				<%#((AjusteDto) (Container.DataItem)).DanosCaratula%>
+			  </div>
             </td>
           </tr>
         </tbody>

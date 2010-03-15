@@ -231,11 +231,17 @@
                 <label>
                   Límites:
                 </label>
-                <div class="FieldWrapper">
+                <!--div class="FieldWrapper">
                   <p>
                       <%# ((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).MonedaSumaAsegurada%>
                       <%# String.Format("{0:#,##0.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                   </p>
+                  
+                  
+                </div-->
+                <div class="FieldWrapper">
+                  <asp:TextBox CssClass="FormText tinymce-simple" Text='<%# Bind("Limites") %>'
+                    TextMode="MultiLine" ID="_txtLimites" runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
                 </div>
@@ -367,17 +373,23 @@
               <div class="Field TextEdit">
                 <label>
                   Daños</label>
-                <div class="FieldWrapper List">
+                <!--div class="FieldWrapper List">
                   <uc4:Damage ID="Damage1" runat="server" />
+                </div-->
+                
+                <div class="FieldWrapper">
+                  <asp:TextBox CssClass="FormText tinymce-simple" Text='<%# Bind("DanosCaratula") %>'
+                    TextMode="MultiLine" ID="_txtDanosCaratula" runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
                 </div>
-                <asp:LinkButton OnClick="GotoDamage" CssClass="LinkButton Little GoDamage" ID="_lnkGoDamage"
+                
+                <%-- <asp:LinkButton OnClick="GotoDamage" CssClass="LinkButton Little GoDamage" ID="_lnkGoDamage"
                   runat="server">
                   <span>
                     <asp:Literal ID="DamageLinks" Text='Daños:' runat="server"></asp:Literal></span></asp:LinkButton>
                 <div class="doClear">
-                </div>
+                </div> --%>
               </div>
             </div>
           </div>
