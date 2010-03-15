@@ -9,6 +9,7 @@
           </h2>
           <asp:Literal ID="ContenidoSeccionLabel" runat="server" Text='<%# R3M.Common.Util.ReplaceASBR(Eval("contenidoPadre")) %>'></asp:Literal></td>
         </ItemTemplate>
+		
       </cc1:repeater>
   <asp:ObjectDataSource ID="odsTitulosAdicionales" runat="server" OldValuesParameterFormatString="original_{0}"
     SelectMethod="GetData" TypeName="dsReporteTableAdapters.SeccionesTotalTableAdapter"
