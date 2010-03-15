@@ -37,7 +37,7 @@ public partial class RimacInforme_InformePreliminar : System.Web.UI.Page
     protected void GotoSection(object sender, EventArgs e)
     {
         DoSave();
-        Response.Redirect("~/vSeccionesAdicionales.aspx?AjusteId=" + Request.QueryString["AjusteId"] + "&urlAnterior=" + Server.UrlEncode(Request.Url.ToString()));
+        Response.Redirect("~/vSeccionesInformeFinal.aspx?AjusteId=" + Request.QueryString["AjusteId"] + "&urlAnterior=" + Server.UrlEncode(Request.Url.ToString()));
     }
 
 

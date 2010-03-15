@@ -4,10 +4,10 @@
 <div id="divTitulosAdionales" runat="server">
   <cc1:repeater id="repeaterTitulos" runat="server" datasourceid="odsTitulosAdicionales">
         <ItemTemplate>
-          <h2>
+          <h3>
             <asp:Literal ID="SubtituloSeccionLabel" runat="server" Text='<%# Eval("tituloPadre") %>'></asp:Literal>
-          </h2>
-          <asp:Literal ID="ContenidoSeccionLabel" runat="server" Text='<%# R3M.Common.Util.ReplaceASBR(Eval("contenidoPadre")) %>'></asp:Literal></td>
+          </h3>
+          <asp:Literal ID="ContenidoSeccionLabel" runat="server" Text='<%# R3M.Common.Util.ReplaceASBR(Eval("contenidoPadre")) %>'></asp:Literal>
         </ItemTemplate>
 		
       </cc1:repeater>

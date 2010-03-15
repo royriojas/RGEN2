@@ -130,6 +130,222 @@ BEGIN
 END
 
 
+---------------------------------------------------------------------------------------
+
+
+
+
+
+
+ALTER PROCEDURE [dbo].[sp_rgn_AjustesListaFiltros]
+(
+	@asegurado nvarchar(50),
+	@fInicio datetime,
+	@fFin datetime,	
+	@Idcia	numeric,
+	@Idliquidacion numeric,
+	@siniestro nvarchar(100) ,
+	@Idajustador numeric,
+	@IdejecutivoSiniestros numeric,
+	@Idramo	numeric,
+	@Idestado numeric,
+	@Idbroker numeric,
+	@numsiniestroCia  nvarchar(20),
+	@numsiniestroBroker nvarchar(20),
+	@numAjuste nvarchar(20),
+	@numpoliza nvarchar(20),
+	@ejecutivo nvarchar(100),
+	@minreserva nvarchar(10),
+	@maxreserva nvarchar(10),
+	@mindia nvarchar(10),
+	@maxdia nvarchar(10),
+	@ejecutivoBroker nvarchar(100),
+	@mindiaCambioEstado nvarchar(10),
+	@maxdiaCambioEstado nvarchar(10)
+)
+AS
+DECLARE @sqlSentencia nvarchar(4000)
+DECLARE @sqlCondicion nvarchar(4000)
+Declare @strini varchar(22)
+declare @strfin varchar(22)
+	
+	SET @sqlSentencia = ''
+	SET @sqlCondicion = ''
+	
+	SET NOCOUNT ON;
+	/*select * into #lajuste from ListaAjuste*/
+
+	SET @sqlSentencia = ' 
+	SELECT  ADM_PERSONA_3.persona AS Asegurado,
+        dbo.fn_rgen_dameTipoSiniestro(dbo.RGN_SINIESTRO.tipoSiniestroId) AS siniestro,
+        dbo.RGN_SINIESTRO.fsiniestro,
+        dbo.TiempoTranscurrido(dbo.RGN_AJUSTE.faviso, GETDATE()) AS NroDias,
+        ADM_PERSONA_2.persona AS Aseguradora,
+        dbo.RGN_AJUSTE.numAjustePASA,
+        dbo.RGN_AJUSTE.numAjusteAseguradora AS NumeroAjuste,
+        dbo.RGN_POLIZA.numeroPoliza,
+        dbo.RGN_RAMO.nombre AS Ramo,
+        dbo.UltimoEstimadoReservaAjuste(dbo.RGN_AJUSTE.ajusteId) AS Reserva,
+        dbo.UltimoEstadoAjuste(dbo.RGN_AJUSTE.ajusteId) AS Status,
+        dbo.TiempoTranscurrido(dbo.FechaUltimoEstadoAjuste(dbo.RGN_AJUSTE.ajusteId),
+                               GETDATE()) AS Dias,
+        dbo.RGN_AJUSTE.situacionAjustelistados AS observaciones,
+        ADM_PERSONA_4.persona AS Ajustador,
+        ADM_PERSONA_1.persona AS Broker,
+        dbo.RGN_AJUSTE.ajusteId,
+        dbo.RGN_AJUSTE.siniestroid,
+        dbo.RGN_AJUSTE.ajustadorId,
+		dbo.RGN_AJUSTE.ejecutivoSiniestrosId,
+        dbo.RGN_AJUSTE.brokerId,
+        dbo.RGN_POLIZA.aseguradoId,
+        dbo.RGN_POLIZA.ramoId,
+        dbo.ContactoAjuste(dbo.RGN_AJUSTE.ajusteId) AS Contactoaseguradora,
+        dbo.RGN_AJUSTE.tajusteid,
+        ADM_PERSONA_4.persona,
+        dbo.RGN_POLIZA.aseguradoraId,
+        dbo.UltimoEstadoAjusteId(dbo.RGN_AJUSTE.ajusteId) AS StatusId,
+        dbo.RGN_AJUSTE.estado,
+        dbo.UltimoEstimadoReservaAjusteMoneda(dbo.RGN_AJUSTE.ajusteId) AS simbolo,
+        dbo.ContactoAjusteBroker(dbo.RGN_AJUSTE.ajusteId) AS ContactoBroker,
+        dbo.RGN_POLIZA_AJUSTE.polizaId,
+        dbo.RGN_AJUSTE.numeroSiniestroCia,
+        dbo.RGN_AJUSTE.numeroSiniestroBroker,
+        ADM_PERSONA_5.persona as EjecutivoSiniestros
+FROM    dbo.RGN_POLIZA
+        LEFT OUTER JOIN dbo.RGN_RAMO ON dbo.RGN_POLIZA.ramoId = dbo.RGN_RAMO.ramoId
+        LEFT OUTER JOIN dbo.ADM_PERSONA ADM_PERSONA_2 ON dbo.RGN_POLIZA.aseguradoraId = ADM_PERSONA_2.personaId
+        LEFT OUTER JOIN dbo.ADM_PERSONA ADM_PERSONA_3 ON dbo.RGN_POLIZA.aseguradoId = ADM_PERSONA_3.personaId
+        RIGHT OUTER JOIN dbo.RGN_SINIESTRO
+        RIGHT OUTER JOIN dbo.RGN_AJUSTE
+        LEFT OUTER JOIN dbo.RGN_POLIZA_AJUSTE ON dbo.PrimeraPoliza(dbo.RGN_AJUSTE.ajusteId) = dbo.RGN_POLIZA_AJUSTE.polizaId
+             AND dbo.RGN_AJUSTE.ajusteId = dbo.RGN_POLIZA_AJUSTE.ajusteId ON dbo.RGN_SINIESTRO.siniestroid = dbo.RGN_AJUSTE.siniestroid ON dbo.RGN_POLIZA.polizaId = dbo.RGN_POLIZA_AJUSTE.polizaId
+        LEFT OUTER JOIN dbo.ADM_PERSONA ADM_PERSONA_1 ON dbo.RGN_AJUSTE.brokerId = ADM_PERSONA_1.personaId
+        LEFT OUTER JOIN dbo.ADM_PERSONA ADM_PERSONA_4 ON dbo.RGN_AJUSTE.ajustadorId = ADM_PERSONA_4.personaId
+        LEFT OUTER JOIN dbo.ADM_PERSONA ADM_PERSONA_5 ON dbo.RGN_AJUSTE.ejecutivosiniestrosId = ADM_PERSONA_5.personaId
+WHERE   ( dbo.RGN_AJUSTE.estado = ''A'' )
+				'
+			        
+	IF (LEN(@fInicio) > 0 and LEN(@fFin) > 0)
+	begin
+		select @strini = dbo.FechaAnsiString(@fInicio)
+		select @strfin = dbo.FechaAnsiString(@fFin)
+		set @sqlCondicion = @sqlCondicion + 
+			' and (  fsiniestro <= ' + @strfin  + 
+			' ) and  ( fsiniestro >= ' + @strini +  ') '				
+	end	
+	IF (LEN(@asegurado) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (ADM_PERSONA_3.persona  like''%' + @asegurado + '%'' ) '				
+	end
+	
+	IF (@Idcia > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( dbo.RGN_POLIZA.aseguradoraId =' +   convert(varchar(15),@Idcia) + ' ) '				
+	end
+	
+	IF (@Idliquidacion > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (tajusteId =' +   convert(varchar(15),@Idliquidacion) + ' ) '				
+	end
+	
+	if (LEN(@siniestro) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( dbo.fn_rgen_dameTipoSiniestro(dbo.RGN_SINIESTRO.tipoSiniestroId)  like ''%' + @siniestro + '%'' ) '				
+	end
+	
+	IF (@Idajustador > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (ajustadorId  =' +   convert(varchar(15),@Idajustador) + ' ) '				
+	end
+
+	IF (@IdejecutivoSiniestros > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (ejecutivoSiniestrosId  =' +   convert(varchar(15),@IdejecutivoSiniestros) + ' ) '				
+	end
+
+	IF (@Idramo > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (  dbo.RGN_POLIZA.ramoId =' +   convert(varchar(15),@Idramo) + ' ) '				
+	end
+	
+	IF (@Idestado > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( dbo.UltimoEstadoAjusteId(dbo.RGN_AJUSTE.ajusteId) =' +   convert(varchar(15),@Idestado) + ' ) '				
+	end	
+	IF (@Idbroker > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( brokerId =' +   convert(varchar(15),@Idbroker) + ' ) '				
+	end	
+	IF (LEN(@numsiniestroCia) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( numeroSiniestroCia  like''%' + @numsiniestroCia + ''' ) '				
+	end
+	IF (LEN(@numAjuste) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( numAjustePASA  like''%' + @numAjuste + '%'' ) '				
+	end
+	IF (LEN(@numpoliza) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( numeroPoliza  like ''%' + @numpoliza + '%'' ) '				
+	end
+
+
+	IF (LEN(@ejecutivo) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( Contactoaseguradora  like ''%' + @ejecutivo + '%'' ) '				
+	end
+
+	IF (LEN(@ejecutivoBroker) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND ( ContactoBroker  like ''%' + @ejecutivoBroker + '%'' ) '				
+	end
+
+	IF (LEN(@minreserva) > 0 and LEN(@maxreserva) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (Reserva <= ' + convert(varchar(15),@maxreserva) + ' AND Reserva >= ' + convert(varchar(15),@minreserva) + ') '				
+	end
+	
+	IF (LEN(@mindia) > 0 and LEN(@maxdia) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (NroDias <= ' + convert(varchar(15),@maxdia) + ' AND NroDias >= ' + convert(varchar(15),@mindia) + ') '				
+	end
+
+
+	IF (LEN(@mindiaCambioEstado) > 0 and LEN(@mindiaCambioEstado) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (Dias <= ' + convert(varchar(15),@mindiaCambioEstado) + ' AND Dias >= ' + convert(varchar(15),@mindiaCambioEstado) + ') '				
+	end
+
+	IF (LEN(@numsiniestroBroker) > 0)
+	begin
+		set @sqlCondicion = @sqlCondicion + 
+			' AND (numeroSiniestroBroker  like''%' + @numsiniestroBroker + ''' ) '				
+	end
+
+	set @sqlSentencia = @sqlSentencia + ' ' + @sqlCondicion
+	exec (@sqlSentencia)
+
+
+
+
+
 
 
 

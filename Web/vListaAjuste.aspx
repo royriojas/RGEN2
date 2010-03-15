@@ -472,6 +472,9 @@
                       Visible="False" />
                     <asp:BoundField DataField="brokerId" HeaderText="brokerId" SortExpression="brokerId"
                       Visible="False" />
+                      <asp:BoundField DataField="EjecutivoSiniestros" 
+                          HeaderText="Ejecutivo Siniestros" ReadOnly="True" 
+                          SortExpression="EjecutivoSiniestros" />
                   </Columns>
                   <RowStyle CssClass="ItemStyle" HorizontalAlign="Center" />
                   <HeaderStyle CssClass="HeaderStyle" Height="30px" />

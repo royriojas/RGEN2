@@ -234,7 +234,9 @@
                 MEDIDAS CORRECTIVAS</h3>
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
-            <uc7:TitulosAdicionales ID="TitulosAdicionales2" runat="server" />
+            <div class="infoSeccion" runat="server">
+                <uc7:TitulosAdicionales ID="TitulosAdicionales2" runat="server" />
+            </div>
           </div>
           <div id="_groupIComplementario2" class="groupSection" runat="server">
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Antecedentes) %>'>
@@ -260,7 +262,9 @@
                 Observaciones</h3>
               <%# ((AjusteDto) Container.DataItem).Observaciones %>
             </div>
-            <uc7:TitulosAdicionales ID="TitulosAdicionales1" runat="server" />
+            <div class="infoSeccion" runat="server">
+                <uc7:TitulosAdicionales ID="TitulosAdicionales1" runat="server" />
+            </div>
           </div>
           <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
             <h3>
