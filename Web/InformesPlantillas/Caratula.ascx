@@ -22,10 +22,10 @@
           <td class="label" valign="top" style="width: 45%">
             INFORME
           </td>
-          <td style="width: 10%">
+          <td style="width: 10%" valign="top">
             <span class="bold">:</span>
           </td>
-          <td style="width: 45%">
+          <td style="width: 45%" valign="top">
             INFORME
             <%# IsFinal ? "FINAL" : "PRELIMINAR"  %>
             <span>
@@ -37,10 +37,10 @@
           <td class="label" valign="top">
             FECHA DE INFORME BÁSICO
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold" >:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto) (Container.DataItem)).FechaEnvioIB) %>
           </td>
         </tr>
@@ -48,10 +48,10 @@
           <td class="label" valign="top">
             SU REF
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold" >:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Recepcion.NumeroAseguradora) %>
           </td>
         </tr>
@@ -59,10 +59,10 @@
           <td class="label" valign="top">
             NUESTRA REF
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).NumeroAjuste) %>
           </td>
         </tr>
@@ -70,10 +70,10 @@
           <td class="label" valign="top">
             CONTRATANTE
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Contratante) %>
           </td>
         </tr>
@@ -81,10 +81,10 @@
           <td class="label" valign="top">
             ASEGURADO
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top" >
+            <span class="bold" >:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Asegurado) %>
           </td>
         </tr>
@@ -92,10 +92,10 @@
           <td class="label" valign="top">
             BROKER
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold" >:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).InfoAsegurado.Broker) %>
           </td>
         </tr>
@@ -103,10 +103,10 @@
           <td class="label" valign="top">
             PÓLIZA
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Poliza.PolizaNumber) %>
           </td>
         </tr>
@@ -114,10 +114,10 @@
           <td class="label" valign="top">
             VIGENCIA
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Poliza.Vigencia ) %>
           </td>
         </tr>
@@ -125,10 +125,10 @@
           <td class="label" valign="top">
             TIPO DE PÓLIZA y RAMO
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0} / {1}", ((AjusteDto)(Container.DataItem)).Poliza.Tipo, ((AjusteDto)(Container.DataItem)).Poliza.Ramo)%>
           </td>
         </tr>
@@ -136,8 +136,8 @@
           <td class="label" valign="top">
             LÍMITES
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
           <!--td valign="top">
             <p>
@@ -145,7 +145,7 @@
               <%#  String.Format("{0:#,##0.00}", ((AjusteDto)(Container.DataItem)).SumaAsegurada)%>
             </p>
           </td-->
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).Limites) %>
           </td>
         </tr>
@@ -159,9 +159,9 @@
             CAUSA
           </td>
           <td valign="top">
-            <span class="bold" valign="top">:</span>
+            <span class="bold" >:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).CausasCaratula) %>
           </td>
         </tr>
@@ -169,10 +169,10 @@
           <td class="label" valign="top">
             LUGAR
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold" >:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).LugarDeSiniestro) %>
           </td>
         </tr>
@@ -180,10 +180,10 @@
           <td class="label" valign="top">
             FECHA DE OCURRENCIA
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0:dd/MM/yyyy}", ((AjusteDto)(Container.DataItem)).FechaYHoraSiniestro)%>
           </td>
         </tr>
@@ -192,12 +192,12 @@
             BIEN / PERSONA AFECTADO (A) / DAÑOS / LESIONES / PERDIDAS
           </td>
           <td valign="top">
-            <span class="bold" valign="top">:</span>
+            <span class="bold">:</span>
           </td>
           <!--td valign="top">
             <uc4:Damage ID="Damage2" runat="server" />
           </td-->
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) (Container.DataItem)).DanosCaratula) %>
           </td>
           
@@ -206,10 +206,10 @@
           <td class="label" valign="top">
             RECLAMO
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <%# String.Format("{0}", ((AjusteDto) Container.DataItem).MonedaReclamoSimbolo) %>
             <%# String.Format("{0:#,##0.00}", ((AjusteDto)Container.DataItem).Reclamo)%>
           </td>
@@ -218,10 +218,10 @@
           <td class="label" valign="top">
             RESERVA NETA
           </td>
-          <td>
-            <span class="bold" valign="top">:</span>
+          <td valign="top">
+            <span class="bold">:</span>
           </td>
-          <td>
+          <td valign="top">
             <span class="bold">
               <%# String.Format("{0}", ((AjusteDto)Container.DataItem).MonedaReservaSimbolo)%>
               <%# String.Format("{0:#,##0.00}", ((AjusteDto)Container.DataItem).Reserva)%></span>
@@ -232,7 +232,7 @@
             INDEMNIZACIÓN
           </td>
           <td valign="top">
-            <span class="bold" valign="top">:</span>
+            <span class="bold">:</span>
           </td>
           <td valign="top">
             <span class="bold">
