@@ -51,4 +51,15 @@ public partial class InformesPlantillas_InformeFinal : System.Web.UI.Page
             deduciblesDiv.Visible = false;
         }
     }
+
+    protected void EmptyTitulosAdicionales(object sender, EventArgs e)
+    {
+
+        HtmlGenericControl titulosDiv = FormViewInforme.FindControl("_titulosDiv") as HtmlGenericControl;
+        if (titulosDiv != null)
+        {
+            titulosDiv.Visible = false;
+        }
+    }
+
 }

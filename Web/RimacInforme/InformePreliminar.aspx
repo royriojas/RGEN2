@@ -514,13 +514,13 @@
                 
                 <label>
                   Descripcion de los Daños</label>
-                <div class="FieldWrapper">
+                <%-- <div class="FieldWrapper">
                   <asp:TextBox ID="_txtDescripcionDanos" Text='<%# Bind("DescripcionDamage") %>'
                     CssClass="FormText tinymce-simple" TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
                           
                 <div class="doClear">
-                </div>
+                </div> --%>
                                               
                 <div class="FieldWrapper">
                   <uc4:Damage ID="Damage1" runat="server" />

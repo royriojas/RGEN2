@@ -106,4 +106,24 @@ public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.P
             damageDiv.Visible = false;
         }
     }
+
+    protected void EmptyTitulosAdicionalesComplementario(object sender, EventArgs e)
+    {
+
+        HtmlGenericControl titulosDiv = FormViewInforme.FindControl("_titulosDiv") as HtmlGenericControl;
+        if (titulosDiv != null)
+        {
+            titulosDiv.Visible = false;
+        }
+    }
+
+    protected void EmptyTitulosAdicionalesPreliminar(object sender, EventArgs e)
+    {
+
+        HtmlGenericControl titulosPreliminarDiv = FormViewInforme.FindControl("_titulosPreliminarDiv") as HtmlGenericControl;
+        if (titulosPreliminarDiv != null)
+        {
+            titulosPreliminarDiv.Visible = false;
+        }
+    }
 }

@@ -112,17 +112,20 @@
               <%#((AjusteDto) Container.DataItem).Investigaciones
               %>
             </div>
-            <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionDamage) %>'>
+            
+            <%-- <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionDamage) %>'>
               <h3>
                 DAÑOS</h3>
               <!-- //TODO Check this -->
               <%#((AjusteDto) Container.DataItem).DescripcionDamage 
               %>
               
-            </div>
+            </div> --%>
             
             <div class="infoSeccion" id="_damageDiv" >
-              
+             <h3>
+                DAÑOS</h3>
+                 
              <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />
               
             </div>
@@ -234,8 +237,8 @@
                 MEDIDAS CORRECTIVAS</h3>
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
-            <div class="infoSeccion" runat="server">
-                <uc7:TitulosAdicionales ID="TitulosAdicionales2" runat="server" />
+            <div class="infoSeccion" runat="server" id="_titulosPreliminarDiv">
+                <uc7:TitulosAdicionales ID="TitulosAdicionales2" OnEmpty="EmptyTitulosAdicionalesPreliminar" runat="server" />
             </div>
           </div>
           <div id="_groupIComplementario2" class="groupSection" runat="server">
@@ -262,8 +265,8 @@
                 Observaciones</h3>
               <%# ((AjusteDto) Container.DataItem).Observaciones %>
             </div>
-            <div class="infoSeccion" runat="server">
-                <uc7:TitulosAdicionales ID="TitulosAdicionales1" runat="server" />
+            <div class="infoSeccion" runat="server" id="_titulosDiv">
+                <uc7:TitulosAdicionales ID="TitulosAdicionales1" OnEmpty="EmptyTitulosAdicionalesComplementario" runat="server" />
             </div>
           </div>
           <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
