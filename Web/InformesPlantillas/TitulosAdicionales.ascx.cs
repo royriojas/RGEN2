@@ -19,11 +19,16 @@ public partial class InformesPlantillas_TitulosAdicionales : System.Web.UI.UserC
     }
     protected void odsTitulosAdicionales_Selected(object sender, ObjectDataSourceStatusEventArgs e)
     {
+
+        if (e.Exception != null)
+            throw e.Exception.InnerException;
+    
         divTitulosAdionales.Visible = (((DataTable)e.ReturnValue).Rows.Count > 0);
 
         if (!divTitulosAdionales.Visible)
         {
             InvokeEmpty(new EventArgs());
         }
+    
     }
 }
