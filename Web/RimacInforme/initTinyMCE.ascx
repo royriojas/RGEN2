@@ -76,6 +76,7 @@
 					
 					var $content = $('<div></div>');
 					$content.append(o.content);
+					$content.find('*').attr('style','');
 					$content.find('table').removeAttr('width').css('width','100%');
 					$content.find('td').removeAttr('width').attr('style','');
 					//$content.find('table tr td:first').css('width', '70%').css('width','30%');
