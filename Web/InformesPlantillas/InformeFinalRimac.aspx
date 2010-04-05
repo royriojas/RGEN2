@@ -47,7 +47,7 @@
       DefaultMode="ReadOnly" DataSourceID="odsInforme">
       <ItemTemplate>
         <p class="DateSalute">
-         LIMA,
+          LIMA,
           <%=DateTime.Now.Day.ToString() + " DE " + String.Format("{0:MMMM}", DateTime.Now).ToUpper() + " DEL " + DateTime.Now.Year.ToString()%></p>
         <h2 class="RimacLogo">
           RÍMAC
@@ -110,7 +110,6 @@
               <%#((AjusteDto) Container.DataItem).Investigaciones
               %>
             </div>
-            
             <%-- <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionDamage) %>'>
               <h3>
                 DAÑOS</h3>
@@ -119,15 +118,11 @@
               %>
               
             </div> --%>
-            
-            <div class="infoSeccion" id="_damageDiv" >
-             <h3>
+            <div class="infoSeccion" id="_damageDiv">
+              <h3>
                 DAÑOS</h3>
-                 
-             <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />
-              
+              <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />
             </div>
-            
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).CausasSiniestro) %>'>
               <h3>
                 CAUSA</h3>
@@ -156,7 +151,7 @@
                 <!-- TODO -->
               </div>
               <div class="subSeccion">
-                <table width="100%">
+                <%--<table width="100%">
                   <tr>
                     <td style="width: 500px;">
                       <h4>
@@ -178,7 +173,38 @@
                       </span>
                     </td>
                   </tr>
-                </table>
+                </table>--%>
+                <asp:ObjectDataSource ID="odsCoberturasAplicablesGridview" runat="server" OldValuesParameterFormatString="original_{0}"
+                  SelectMethod="GetData" TypeName="DataSet1TableAdapters.RGN_COBERTURASAPLICABLESTableAdapter">
+                  <SelectParameters>
+                    <asp:QueryStringParameter Name="IdAjuste" QueryStringField="AjusteId" Type="Decimal" />
+                  </SelectParameters>
+                </asp:ObjectDataSource>
+                <asp:GridView CssClass="GridView Grid" Width="100%" RowStyle-CssClass="row" ID="GridViewCoberturas"
+                  runat="server" AutoGenerateColumns="False" DataSourceID="odsCoberturasAplicablesGridview">
+                  <RowStyle CssClass="row"></RowStyle>
+                  <Columns>
+                    <asp:TemplateField ItemStyle-VerticalAlign="Top" HeaderText="Cobertura / Ramo" SortExpression="RamoCobertura">
+                      <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("RamoCobertura") %>'></asp:Label>
+                      </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField ItemStyle-VerticalAlign="Top" ItemStyle-Width="240px" SortExpression="SumaAsegurada">
+                      <HeaderTemplate>
+                        <div>
+                          <span>Suma Asegurada</span></div>
+                      </HeaderTemplate>
+                      <ItemTemplate>
+                        <div style="text-align: right;">
+                          <asp:Label ID="Label3" runat="server" Text='<%# Bind("MonedaSumaAsegurada") %>'></asp:Label>
+                          <asp:Label ID="Label2" runat="server" Text='<%# Bind("SumaAsegurada") %>'></asp:Label>
+                        </div>
+                      </ItemTemplate>
+                    </asp:TemplateField>
+                  </Columns>
+                  <HeaderStyle CssClass="header"></HeaderStyle>
+                  <AlternatingRowStyle CssClass="alternateRow"></AlternatingRowStyle>
+                </asp:GridView>
               </div>
               <div class="subSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).Seccion) %>'>
                 <h4>
@@ -236,15 +262,17 @@
               <%# ((AjusteDto) Container.DataItem).Recomendaciones  %>
             </div>
             <div class="infoSeccion" runat="server" id="_titulosDiv">
-                <uc7:TitulosAdicionales ID="TitulosAdicionales1" OnEmpty="EmptyTitulosAdicionales" runat="server" />
+              <uc7:TitulosAdicionales ID="TitulosAdicionales1" OnEmpty="EmptyTitulosAdicionales"
+                runat="server" />
             </div>
           </div>
-           <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
+          <div class="infoSeccion" id="_groupIPreliminar2" runat="server">
             <h3>
               FOTOS</h3>
             <uc6:Fotos ID="Fotos1" OnEmptyFotos="DoEmpty" runat="server" />
-			<div style="clear:both"></div>
-		  </div>
+            <div style="clear: both">
+            </div>
+          </div>
           <div class="infoSeccion">
             <h3 style="text-align: center; text-decoration: underline;">
               Resumen del Caso</h3>
@@ -330,19 +358,30 @@
     </asp:FormView>
   </div>
   <div class="Firma">
-  <p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>Atentamente,</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<p>Ing. Rafael Romero Herbozo</p>
-<p>Registro S.B.S. AN-044</p>
-<p>Gerente General</p>
-
+    <p>
+      &nbsp;</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      Atentamente,</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      &nbsp;</p>
+    <p>
+      Ing. Rafael Romero Herbozo</p>
+    <p>
+      Registro S.B.S. AN-044</p>
+    <p>
+      Gerente General</p>
   </div>
   </form>
 </body>

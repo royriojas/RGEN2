@@ -1,0 +1,95 @@
+USE [rgen2]
+GO
+/****** Object:  Table [dbo].[RGN_COBERTURASAPLICABLES]    Script Date: 03/28/2010 13:50:56 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+--drop table [dbo].[RGN_COBERTURASAPLICABLES]
+CREATE TABLE [dbo].[RGN_COBERTURASAPLICABLES](
+	[RamoCobertura] [varchar](3000) COLLATE Modern_Spanish_CI_AS NULL,
+	[IdRamo] [int] IDENTITY(1,1) NOT NULL,
+	[Estado] [bit] NULL,
+	[SumaAsegurada] [decimal](18, 2) NULL,
+	[MonedaSumaAsegurada] [varchar](50) COLLATE Modern_Spanish_CI_AS NULL,
+	[IdAjuste] [numeric](8, 0) NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+--drop PROCEDURE dbo.coberturasAplicablesSelect
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE PROCEDURE dbo.coberturasAplicablesSelect
+(
+	@IdAjuste numeric(8, 0)
+)
+AS
+	SET NOCOUNT ON;
+SELECT     RamoCobertura, IdRamo, Estado, SumaAsegurada, MonedaSumaAsegurada, IdAjuste
+FROM         RGN_COBERTURASAPLICABLES
+WHERE     (IdAjuste = @IdAjuste)
+
+go
+
+--drop procedure dbo.coberturasAplicablesSelectSingle
+CREATE PROCEDURE dbo.coberturasAplicablesSelectSingle
+(
+	@IdRamo numeric(8, 0)
+)
+AS
+	SET NOCOUNT ON;
+SELECT     RamoCobertura, IdRamo, Estado, SumaAsegurada, MonedaSumaAsegurada, IdAjuste
+FROM         RGN_COBERTURASAPLICABLES
+WHERE     (IdRamo = @IdRamo)
+
+go
+
+--drop procedure coberturasAplicablesInsert
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE PROCEDURE dbo.coberturasAplicablesInsert
+(
+	@RamoCobertura varchar(3000),
+	@Estado bit,
+	@SumaAsegurada decimal(18, 2),
+	@MonedaSumaAsegurada varchar(50),
+	@IdAjuste numeric(8, 0)
+)
+AS
+	SET NOCOUNT OFF;
+INSERT INTO [RGN_COBERTURASAPLICABLES] ([RamoCobertura], [Estado], [SumaAsegurada], [MonedaSumaAsegurada], [IdAjuste]) VALUES (@RamoCobertura, @Estado, @SumaAsegurada, @MonedaSumaAsegurada, @IdAjuste)
+
+go
+--drop procedure coberturasAplicablesDelete
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+create PROCEDURE coberturasAplicablesDelete
+(
+	@IdRamo numeric(8, 0)
+)
+AS
+	SET NOCOUNT OFF;
+	delete from RGN_COBERTURASAPLICABLES where IdRamo = @IdRamo
+go
+
+--drop procedure coberturasAplicablesUpdate
+create PROCEDURE coberturasAplicablesUpdate
+(
+	@RamoCobertura varchar(3000),
+	@Estado bit,
+	@SumaAsegurada decimal(18, 2),
+	@MonedaSumaAsegurada varchar(50),
+	@IdAjuste numeric(8, 0),
+	@IdRamo numeric(8, 0)
+)
+as
+UPDATE [RGN_COBERTURASAPLICABLES]
+   SET [RamoCobertura] = @RamoCobertura
+      ,[Estado] = @Estado
+      ,[SumaAsegurada] = @SumaAsegurada
+      ,[MonedaSumaAsegurada] = @MonedaSumaAsegurada
+      
+ WHERE IdRamo = @IdRamo and IdAjuste = @IdAjuste
+
+go

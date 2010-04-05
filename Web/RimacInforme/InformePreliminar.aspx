@@ -279,10 +279,9 @@
                       <%# String.Format("{0:#,##0.00}",((Container.DataItem) as App_Code.RimacInforme.Domain.AjusteDto).SumaAsegurada) %>
                   </p>
                 </div-->
-                
                 <div class="FieldWrapper">
-                  <asp:TextBox CssClass="FormText tinymce-simple" Text='<%# Bind("Limites") %>'
-                    TextMode="MultiLine" ID="_txtLimites" runat="server"></asp:TextBox>
+                  <asp:TextBox CssClass="FormText tinymce-simple" Text='<%# Bind("Limites") %>' TextMode="MultiLine"
+                    ID="_txtLimites" runat="server"></asp:TextBox>
                 </div>
                 <div class="doClear">
                 </div>
@@ -307,14 +306,12 @@
               </div>
             </div>
           </div>
-          
           <div class="Group InformacionOcurrencia IFP">
             <div class="Legend">
               <h2>
                 <span>Información de la ocurrencia / descubrimiento</span></h2>
             </div>
             <div class="Group-Content">
-              
               <div class="Field TextEdit">
                 <label>
                   Causas del Siniestro</label>
@@ -325,7 +322,6 @@
                 <div class="doClear">
                 </div>
               </div>
-              
               <div class="Field First">
                 <label>
                   Lugar del Siniestro:
@@ -348,8 +344,6 @@
                 <div class="doClear">
                 </div>
               </div>
-              
-              
               <div class="Field TextEdit">
                 <label>
                   Daños</label>
@@ -362,11 +356,9 @@
                 </div>
                 <div class="doClear">
                 </div>
-                
               </div>
             </div>
           </div>
-          
           <div class="Group Montos  IFP">
             <div class="Legend">
               <h2>
@@ -390,9 +382,10 @@
                       runat="server"></asp:TextBox>
                   </div>
                 </div>
-                <p class="Validator Required InformeSave" field=".montoAviso">Requerido</p>
-		          <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
-
+                <p class="Validator Required InformeSave" field=".montoAviso">
+                  Requerido</p>
+                <p class="Validator RegularExpression InformeSave" field=".montoAviso" regex="^\d+(\.\d{1,2})?$">
+                  Solo números de la forma #.00</p>
                 <div class="doClear">
                 </div>
               </div>
@@ -410,9 +403,10 @@
                       runat="server"></asp:TextBox>
                   </div>
                 </div>
-                <p class="Validator Required InformeSave" field=".montoReserva">Requerido</p>
-		          <p class="Validator RegularExpression InformeSave" field=".montoReserva" regex="^\d+(\.\d{1,2})?$">Solo números de la forma #.00</p>
-                
+                <p class="Validator Required InformeSave" field=".montoReserva">
+                  Requerido</p>
+                <p class="Validator RegularExpression InformeSave" field=".montoReserva" regex="^\d+(\.\d{1,2})?$">
+                  Solo números de la forma #.00</p>
                 <div class="doClear">
                 </div>
               </div>
@@ -420,7 +414,6 @@
               </div>
             </div>
           </div>
-          
           <div class="Group DetalleInforme IFP">
             <div class="Legend">
               <h2>
@@ -476,7 +469,6 @@
               </div>
               <div class="doClear">
               </div>
-              
               <div class="Field TextEdit">
                 <label>
                   Ocurrencia:
@@ -488,8 +480,6 @@
                 <div class="doClear">
                 </div>
               </div>
-              
-              
               <div class="Field TextEdit">
                 <label>
                   Investigaciones</label>
@@ -500,18 +490,14 @@
               </div>
               <div class="doClear">
               </div>
-              
               <div class="Field TextEdit">
-                
                 <asp:LinkButton OnClick="GotoDamage" CssClass="LinkButton Little GoDamage" ID="_lnkGoDamage"
                   runat="server">
                   <span>
                     <asp:Literal ID="DamageLinks" Text='Daños:' runat="server"></asp:Literal></span>
                 </asp:LinkButton>
-                
                 <div class="doClear">
                 </div>
-                
                 <label>
                   Descripcion de los Daños</label>
                 <%-- <div class="FieldWrapper">
@@ -521,17 +507,12 @@
                           
                 <div class="doClear">
                 </div> --%>
-                                              
                 <div class="FieldWrapper">
                   <uc4:Damage ID="Damage1" runat="server" />
                 </div>
-                
               </div>
-              
-              
               <div class="doClear">
               </div>
-              
               <div class="Field TextEdit">
                 <label>
                   Causas del Siniestro</label>
@@ -543,14 +524,13 @@
                 </div>
               </div>
             </div>
-          </div>    
-          
+          </div>
           <div class="Group DetallePoliza IFP">
             <div class="Legend">
               <h2>
                 <span>Detalle de la Póliza</span></h2>
             </div>
-            <div class="Group-Content">    
+            <div class="Group-Content">
               <div class="Field TextEdit">
                 <label>
                   Detalle Materia Asegurada de la Póliza</label>
@@ -568,6 +548,13 @@
                   <asp:TextBox ID="_txtLocalAsegurado" Text='<%# Bind("LocalAsegurado") %>' CssClass="FormText tinymce-simple"
                     TextMode="MultiLine" runat="server"></asp:TextBox>
                 </div>
+              </div>
+              <div class="Field">
+                <asp:LinkButton Width="200px" OnClick="GotoCoberturas" CssClass="LinkButton Little GotoCoberturas"
+                  ID="LinkButtonCoberturas" runat="server">
+                  <span>
+                    <asp:Literal ID="Literal1" Text='Coberturas aplicables:' runat="server"></asp:Literal></span>
+                </asp:LinkButton>
               </div>
               <div class="doClear">
               </div>
@@ -628,7 +615,7 @@
               <h2>
                 <span>Detalle de la Pérdida y Ajuste</span></h2>
             </div>
-            <div class="Group-Content">  
+            <div class="Group-Content">
               <div class="Field TextEdit">
                 <label>
                   Salvamento y Recupero</label>
@@ -690,7 +677,6 @@
               </div>
             </div>
           </div>
-          
       </EditItemTemplate>
     </asp:FormView>
   </div>

@@ -130,4 +130,10 @@ public partial class RimacInforme_InformePreliminar : System.Web.UI.Page
     {
         return R3M.Common.Util.XDefault(Request.QueryString["TipoInforme"], "IB");
     }
+
+    protected void GotoCoberturas(object sender, EventArgs e)
+    {
+        DoSave();
+        Response.Redirect(string.Format("~/RimacInforme/Coberturas.aspx?IdAjuste={0}&urlAnterior={1}", Request.QueryString["AjusteId"], Server.UrlEncode(Request.Url.ToString())));
+   }
 }
