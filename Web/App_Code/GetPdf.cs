@@ -277,7 +277,7 @@ namespace RGen.docs
             if (rimac)
             {
                 HeaderInformeURL = "InformesPlantillas/HeaderImprimirRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
-                FooterInformeUrl = "InformesPlantillas/FooterImprimirRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
+                //FooterInformeUrl = "InformesPlantillas/FooterImprimirRimac.aspx?AjusteId={0}&TI={1}&nc={2}";
             }
 
             tipoInforme = GetTipoInforme(tipoInforme);

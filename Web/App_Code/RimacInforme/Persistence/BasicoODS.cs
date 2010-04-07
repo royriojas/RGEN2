@@ -158,33 +158,33 @@ namespace App_Code.RimacInforme.Persistence
 
             }
 
-            sp_rgen_EmisionInformesRimacTableAdapter informacionReportesTA = new sp_rgen_EmisionInformesRimacTableAdapter();
-            DataSet1.sp_rgen_EmisionInformesRimacDataTable informacionReportesDT = informacionReportesTA.GetData(Convert.ToInt32(ajusteId));
+            EmisionInformesRimacTableAdapter informacionReportesTA = new EmisionInformesRimacTableAdapter();
+            DataSet1.EmisionInformesRimacDataTable informacionReportesDT = informacionReportesTA.GetData(Convert.ToInt32(ajusteId));
 
             if (informacionReportesDT.Rows.Count > 0)
             {
 
-                DataSet1.sp_rgen_EmisionInformesRimacRow informacionReportesRow;
+                DataSet1.EmisionInformesRimacRow informacionReportesRow;
 
                 for (int i = 0; i < informacionReportesDT.Rows.Count; i++)
                 {
 
-                    informacionReportesRow = informacionReportesDT.Rows[i] as DataSet1.sp_rgen_EmisionInformesRimacRow;
+                    informacionReportesRow = informacionReportesDT.Rows[i] as DataSet1.EmisionInformesRimacRow;
 
                     if (informacionReportesRow != null)
                     {
 
-                        decimal tipoInforme = informacionReportesRow.tinformeId;
+                        decimal tipoInforme = informacionReportesRow.estadoajusteid;
 
                         switch (Convert.ToInt32(tipoInforme))
                         {
-                            case 15: ajusteDto.FechaEnvioIB = informacionReportesRow.fecha;
+                            case 16: ajusteDto.FechaEnvioIB = informacionReportesRow.IsFechaDeCambioNull() ? default(DateTime?) : informacionReportesRow.FechaDeCambio;
                                 break;
 
-                            case 17: ajusteDto.FechaEnvioIP = informacionReportesRow.fecha;
+                            case 17: ajusteDto.FechaEnvioIP = informacionReportesRow.IsFechaDeCambioNull() ? default(DateTime?) : informacionReportesRow.FechaDeCambio;
                                 break;
 
-                            case 21: ajusteDto.FechaEnvioIF = informacionReportesRow.fecha;
+                            case 20: ajusteDto.FechaEnvioIF = informacionReportesRow.IsFechaDeCambioNull() ? default(DateTime?) : informacionReportesRow.FechaDeCambio;
                                 break;
 
                         }
@@ -213,6 +213,20 @@ namespace App_Code.RimacInforme.Persistence
 
                 }
             }
+
+            sp_rgen_fechaEntregaDocumentosTableAdapter documentosTA = new sp_rgen_fechaEntregaDocumentosTableAdapter();
+            DataSet1.sp_rgen_fechaEntregaDocumentosDataTable documentosDT = documentosTA.GetData(Convert.ToInt32(ajusteId));
+
+            if (documentosDT.Rows.Count >0)
+            {
+                DataSet1.sp_rgen_fechaEntregaDocumentosRow documentosRow = documentosDT.Rows[0] as DataSet1.sp_rgen_fechaEntregaDocumentosRow;
+                if (documentosRow != null)
+                {
+                    if (documentosRow.totalPendientes == 0)
+                        ajusteDto.FechaRecepcionDocumentacion = documentosRow.IsFechaEntregaNull()? default(DateTime?) : documentosRow.FechaEntrega;
+                }
+            }
+            
 
 
             sp_rgen_SublimitesAfectadosTableAdapter sumaAseguradaTA = new sp_rgen_SublimitesAfectadosTableAdapter();

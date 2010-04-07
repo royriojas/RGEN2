@@ -14,6 +14,7 @@ public partial class RimacInforme_Damage : System.Web.UI.UserControl
     protected void odsOcurrenciaDetalle_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
         SumaDetalleOcurrencia = 0;
+        Moneda = "";
         Num = 1;
     }
 
@@ -22,6 +23,13 @@ public partial class RimacInforme_Damage : System.Web.UI.UserControl
     {
         get { return _num; }
         set { _num = value; }
+    }
+
+    private String _moneda = "";
+    public String Moneda
+    {
+        get { return _moneda; }
+        set { _moneda = value; }
     }
 
     public decimal SumaDetalleOcurrencia
@@ -44,7 +52,11 @@ public partial class RimacInforme_Damage : System.Web.UI.UserControl
             DataRowView drow = e.Item.DataItem as DataRowView;
             if (drow == null) return;
             dsReporte.InformeBasicoOcurrenciaDetalleRow row = ((dsReporte.InformeBasicoOcurrenciaDetalleRow)drow.Row);
-            if (!row.IsestimacionNull()) SumaDetalleOcurrencia += row.estimacion;
+            if (!row.IsestimacionNull())
+            {
+                SumaDetalleOcurrencia += row.estimacion;
+                Moneda += row.moneda;
+            }
         }
 
     }

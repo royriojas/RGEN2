@@ -9,6 +9,8 @@
 <%@ Register Src="Damage.ascx" TagName="Damage" TagPrefix="uc4" %>
 <%@ Register Src="DocumentacionSolicitada.ascx" TagName="DocumentacionSolicitada"
   TagPrefix="uc5" %>
+<%@ Register Src="Coberturas.ascx" TagName="Coberturas" TagPrefix="uc6" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -555,7 +557,45 @@
                   <span>
                     <asp:Literal ID="Literal1" Text='Coberturas aplicables:' runat="server"></asp:Literal></span>
                 </asp:LinkButton>
+               </div>
+                          
+              <div class="doClear">
+              </div> 
+              <div class="Field">
+                <asp:ObjectDataSource ID="odsCoberturasAplicablesGridview" runat="server" OldValuesParameterFormatString="original_{0}"
+                  SelectMethod="GetData" TypeName="DataSet1TableAdapters.RGN_COBERTURASAPLICABLESTableAdapter">
+                  <SelectParameters>
+                    <asp:QueryStringParameter Name="IdAjuste" QueryStringField="AjusteId" Type="Decimal" />
+                  </SelectParameters>
+                </asp:ObjectDataSource>
+                <asp:GridView CssClass="GridView Grid" Width="100%" RowStyle-CssClass="row" ID="GridViewCoberturas"
+                  runat="server" AutoGenerateColumns="False" DataSourceID="odsCoberturasAplicablesGridview">
+                  <RowStyle CssClass="row"></RowStyle>
+                  <Columns>
+                    <asp:TemplateField ItemStyle-VerticalAlign="Top" HeaderText="Cobertura / Ramo" SortExpression="RamoCobertura">
+                      <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("RamoCobertura") %>'></asp:Label>
+                      </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField ItemStyle-VerticalAlign="Top" ItemStyle-Width="240px" SortExpression="SumaAsegurada">
+                      <HeaderTemplate>
+                        <div>
+                          <span>Suma Asegurada</span></div>
+                      </HeaderTemplate>
+                      <ItemTemplate>
+                        <div style="text-align: right;">
+                          <asp:Label ID="Label3" runat="server" Text='<%# Bind("MonedaSumaAsegurada") %>'></asp:Label>
+                          <asp:Label ID="Label2" runat="server" Text='<%# Bind("SumaAsegurada") %>'></asp:Label>
+                        </div>
+                      </ItemTemplate>
+                    </asp:TemplateField>
+                  </Columns>
+                  <HeaderStyle CssClass="header"></HeaderStyle>
+                  <AlternatingRowStyle CssClass="alternateRow"></AlternatingRowStyle>
+                </asp:GridView>
               </div>
+              
+              
               <div class="doClear">
               </div>
               <div class="Field TextEdit">

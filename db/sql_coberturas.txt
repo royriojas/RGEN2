@@ -93,3 +93,61 @@ UPDATE [RGN_COBERTURASAPLICABLES]
  WHERE IdRamo = @IdRamo and IdAjuste = @IdAjuste
 
 go
+
+
+
+
+CREATE PROCEDURE sp_rgen_fechaEntregaDocumentos
+    (
+        @AjusteId numeric(8, 0)
+    )
+as 
+    begin
+
+        select  
+				dbo.dameTotalDocumentosPendientes(@AjusteId) as totalPendientes, 
+				RGN_AJUSTE_RGN_REQUERIMIENTO.estado,
+                RGN_AJUSTE_RGN_REQUERIMIENTO.requisitoId,
+                RGN_REQUISITOS.nombre,
+                RGN_AJUSTE_RGN_REQUERIMIENTO.FechaEntrega,
+				RGN_AJUSTE_RGN_REQUERIMIENTO.Orden
+        from    RGN_AJUSTE_RGN_REQUERIMIENTO,
+                RGN_REQUISITOS, RGN_SOLICITUDDOCUMENTOS
+        where   RGN_SOLICITUDDOCUMENTOS.SolicitudDocumentosId = RGN_AJUSTE_RGN_REQUERIMIENTO.solicitudDocumentosId 
+				and RGN_AJUSTE_RGN_REQUERIMIENTO.ajusteId = @AjusteId
+                and RGN_REQUISITOS.requisitoId = RGN_AJUSTE_RGN_REQUERIMIENTO.requisitoId and
+                RGN_SOLICITUDDOCUMENTOS.estado = 'A'
+		ORDER BY [RGN_AJUSTE_RGN_REQUERIMIENTO].FechaEntrega desc
+    end
+
+GO
+
+CREATE FUNCTION dameTotalDocumentosPendientes
+(       @AjusteId numeric(8, 0)
+    
+)
+RETURNS int
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @totalDocumentos int
+
+
+		select  @totalDocumentos = COUNT(*)
+        from    RGN_AJUSTE_RGN_REQUERIMIENTO,
+                RGN_REQUISITOS, RGN_SOLICITUDDOCUMENTOS
+        where   RGN_SOLICITUDDOCUMENTOS.SolicitudDocumentosId = RGN_AJUSTE_RGN_REQUERIMIENTO.solicitudDocumentosId 
+				and RGN_AJUSTE_RGN_REQUERIMIENTO.ajusteId = 237
+                and RGN_REQUISITOS.requisitoId = RGN_AJUSTE_RGN_REQUERIMIENTO.requisitoId and
+                RGN_SOLICITUDDOCUMENTOS.estado = 'A' and
+                RGN_AJUSTE_RGN_REQUERIMIENTO.estado <> 'E'
+	
+	return @totalDocumentos
+	
+END
+GO
+
+
+
+
+

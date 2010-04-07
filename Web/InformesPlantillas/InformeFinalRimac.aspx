@@ -118,7 +118,7 @@
               %>
               
             </div> --%>
-            <div class="infoSeccion" id="_damageDiv">
+            <div class="infoSeccion" id="_damageDiv" runat="server">
               <h3>
                 DAÑOS</h3>
               <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />

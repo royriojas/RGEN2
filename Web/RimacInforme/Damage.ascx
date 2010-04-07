@@ -40,6 +40,7 @@
                 </td>
                 <td valign="top">
                     <div style="text-align: right;">
+                        <%#(Eval("moneda"))%>
                         <%#Eval("estimacion", "{0:#,##0.00}")%>
                     </div>
                 </td>
@@ -49,12 +50,13 @@
             <tr>
                 <td colspan="4" valign="top">
                     <div class="Negrita" align="right">
-                        TOTAL PÉRDIDAS ESTIMADAS US$
+                        TOTAL PÉRDIDAS ESTIMADAS  
                     </div>
                 </td>
                 <td valign="top">
                     <div style="text-align: right;">
-                        <%#  SumaDetalleOcurrencia.ToString("#,##0.00")%>
+                       <%# Moneda %>
+                       <%# SumaDetalleOcurrencia.ToString("#,##0.00")%>
                     </div>
                 </td>
             </tr>

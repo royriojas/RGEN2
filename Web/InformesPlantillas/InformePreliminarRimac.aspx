@@ -120,10 +120,10 @@
               %>
               
             </div> --%>
-            <div class="infoSeccion" id="_damageDiv">
+            <div class="infoSeccion" id="_damageDiv" runat="server" >
               <h3>
                 DAÑOS</h3>
-              <uc4:Damage ID="Damage2" OnEmpty="EmptyDamage" runat="server" />
+              <uc4:Damage ID="Damage1" OnEmpty="EmptyDamage" runat="server" />
             </div>
             <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).CausasSiniestro) %>'>
               <h3>

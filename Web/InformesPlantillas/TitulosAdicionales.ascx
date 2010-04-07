@@ -7,7 +7,7 @@
           <h3>
             <asp:Literal ID="SubtituloSeccionLabel" runat="server" Text='<%# Eval("tituloPadre") %>'></asp:Literal>
           </h3>
-          <asp:Literal ID="ContenidoSeccionLabel" runat="server" Text='<%# R3M.Common.Util.ReplaceASBR(Eval("contenidoPadre")) %>'></asp:Literal>
+          <asp:Literal ID="ContenidoSeccionLabel" runat="server" Text='<%# Eval("contenidoPadre") %>'></asp:Literal>
         </ItemTemplate>
 		
       </cc1:repeater>
