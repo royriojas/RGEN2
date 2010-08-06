@@ -112,14 +112,7 @@
               <%#((AjusteDto) Container.DataItem).Investigaciones
               %>
             </div>
-            <%-- <div class="infoSeccion" style='<%# CCSOL.Utiles.Utilidades.IsNull(((AjusteDto) (Container.DataItem)).DescripcionDamage) %>'>
-              <h3>
-                DAÑOS</h3>
-              <!-- //TODO Check this -->
-              <%#((AjusteDto) Container.DataItem).DescripcionDamage 
-              %>
-              
-            </div> --%>
+           
             <div class="infoSeccion" id="_damageDiv" runat="server" >
               <h3>
                 DAÑOS</h3>

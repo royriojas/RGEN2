@@ -276,9 +276,13 @@ namespace R3M.Common
 
             pdfConverter.PdfFooterOptions.DrawFooterLine = false;
 
-            pdfConverter.PdfFooterOptions.FooterText = "";
-            pdfConverter.PdfFooterOptions.PageNumberText = "Página";
-            pdfConverter.PdfFooterOptions.ShowPageNumber = true;
+            pdfConverter.PdfFooterOptions.TextArea = new TextArea(0, 30, "Página &p; de &P;", new System.Drawing.Font(new System.Drawing.FontFamily("Times New Roman"), 10, System.Drawing.GraphicsUnit.Point));
+
+            //pdfConverter.PdfFooterOptions.PageNumberText = "Página";
+            //pdfConverter.PdfFooterOptions.ShowPageNumber = true;
+            pdfConverter.PdfFooterOptions.TextArea.EmbedTextFont = true;
+            pdfConverter.PdfFooterOptions.TextArea.TextAlign = HorizontalTextAlign.Right;
+
 
 
 

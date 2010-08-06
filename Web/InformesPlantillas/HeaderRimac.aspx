@@ -5,8 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head >
     <title>Rimac</title>
-	 <link href='<%= ResolveUrl("~/InformesPlantillas/infRimac.css?nc=" + DateTime.Now.Ticks) %>'
-    rel="Stylesheet" type="text/css" />
+	 <link href='<%= ResolveUrl("~/InformesPlantillas/infRimac.css?nc=" + DateTime.Now.Ticks) %>' rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">

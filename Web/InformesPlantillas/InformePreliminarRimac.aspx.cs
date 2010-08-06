@@ -89,7 +89,7 @@ public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.P
 
     protected void EmptyDeducibles(object sender, EventArgs e)
     {
-        //_clausulasDiv
+       
         HtmlGenericControl deduciblesDiv = FormViewInforme.FindControl("_deduciblesDiv") as HtmlGenericControl;
         if (deduciblesDiv != null)
         {
@@ -99,7 +99,7 @@ public partial class InformesPlantillas_InformePreliminarRimac : System.Web.UI.P
 
     protected void EmptyDamage(object sender, EventArgs e)
     {
-        //_clausulasDiv
+       
         HtmlGenericControl damageDiv = FormViewInforme.FindControl("_damageDiv") as HtmlGenericControl;
         if (damageDiv != null)
         {
